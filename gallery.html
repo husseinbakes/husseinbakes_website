@@ -3,173 +3,180 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery | Hussein Bakes</title>
+  <title>Hussein Bakes | Cake Gallery</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="images/Logo.webp" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Great+Vibes&family=Montserrat&display=swap" rel="stylesheet" />
+  <script src="js/script.js" defer></script>
 </head>
 <body>
-  <nav>
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">
-        <img src="images/Logo.webp" alt="Hussein Bakes Logo" />
-      </a>
-      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html" class="active">Gallery</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <header class="hero">
-    <div class="hero-overlay"></div>
-    <img src="images/Herohero.webp" alt="Cake Background" class="hero-background" />
-    <h1>Our Cake Menu</h1>
-    <p>Explore our handcrafted signature, wedding, and custom cakes.</p>
-  </header>
+<!-- Navigation -->
+<nav>
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="images/logo.webp" alt="Hussein Bakes Logo" /></a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+    </ul>
+  </div>
+</nav>
 
-  <section class="gallery-section">
-    <div class="search-bar">
-      <input type="text" id="searchInput" placeholder="Search for a cake..." />
-    </div>
-    <div class="filter-buttons">
-      <button data-filter="all" class="active">All</button>
-      <button data-filter="signature">Signature</button>
-      <button data-filter="wedding">Wedding</button>
-      <button data-filter="mini">Mini & Bento</button>
-      <button data-filter="custom">Custom</button>
-    </div>
+<!-- Gallery Section -->
+<section class="gallery-section">
+  <h2>Our Cake Menu</h2>
 
-    <div class="gallery-grid">
-      <!-- Cake card -->
-      <div class="cake-card" data-category="signature">
-        <img src="images/Very-vanilla.webp" alt="Very Vanilla Cake">
-        <h3>Very Vanilla Cake</h3>
-        <p class="price">Ksh 2,000.00</p>
-        <p class="description">Moist vanilla sponge layered with silky buttercream and colorful sprinkles.</p>
-        <a href="https://wa.me/254710975805" class="order-button" target="_blank">Order Now</a>
-      </div>
-
-      <div class="cake-card" data-category="signature">
-        <img src="images/Chocolate-obsession.webp" alt="Chocolate Obsession">
-        <h3>Chocolate Obsession</h3>
-        <p class="price">Ksh 3,000.00</p>
-        <p class="description">Rich chocolate cake with smooth chocolate buttercream.</p>
-        <a href="https://wa.me/254710975805" class="order-button" target="_blank">Order Now</a>
-      </div>
-
-      <div class="cake-card" data-category="signature">
-        <img src="images/Tuxedo.webp" alt="Tuxedo Cake">
-        <h3>Tuxedo Cake</h3>
-        <p class="price">Ksh 3,000.00</p>
-        <p class="description">Vanilla & chocolate cake with dual buttercream flavors.</p>
-        <a href="https://wa.me/254710975805" class="order-button" target="_blank">Order Now</a>
-      </div>
-
-      <div class="cake-card" data-category="signature">
-        <img src="images/Black-on-white.webp" alt="Black On White Cake">
-        <h3>Black On White</h3>
-        <p class="price">Ksh 3,500.00</p>
-        <p class="description">Vanilla sponge with chocolate buttercream, decorated with sprinkles.</p>
-        <a href="https://wa.me/254710975805" class="order-button" target="_blank">Order Now</a>
-      </div>
-
-      <div class="cake-card" data-category="signature">
-        <img src="images/Funfetti.webp" alt="Funfetti Cake">
-        <h3>Funfetti Cake</h3>
-        <p class="price">Ksh 3,000.00</p>
-        <p class="description">Colorful vanilla cake with matching sprinkle buttercream.</p>
-        <a href="https://wa.me/254710975805" class="order-button" target="_blank">Order Now</a>
-      </div>
-
-      <div class="cake-card" data-category="signature">
-        <img src="images/Salted-caramel.webp" alt="Salted Caramel Cake">
-        <h3>Salted Caramel</h3>
-        <p class="price">Ksh 3,000.00</p>
-        <p class="description">Chocolate cake filled with salted caramel buttercream.</p>
-        <a href="https://wa.me/254710975805" class="order-button" target="_blank">Order Now</a>
-      </div>
-
-      <div class="cake-card" data-category="signature">
-        <img src="images/Cookie-dough.webp" alt="Cookie Dough Cake">
-        <h3>Cookie Dough Cake</h3>
-        <p class="price">Ksh 3,000.00</p>
-        <p class="description">Vanilla & chocolate cake with cookie dough buttercream.</p>
-        <a href="https://wa.me/254710975805" class="order-button" target="_blank">Order Now</a>
-      </div>
-
-      <div class="cake-card" data-category="signature">
-        <img src="images/Chocolate-Oreo.webp" alt="Chocolate Oreo Cake">
-        <h3>Chocolate Oreo Cake</h3>
-        <p class="price">Ksh 3,500.00</p>
-        <p class="description">Chocolate cake with Oreo buttercream and crushed Oreos.</p>
-        <a href="https://wa.me/254710975805" class="order-button" target="_blank">Order Now</a>
-      </div>
-
-      <div class="cake-card" data-category="signature">
-        <img src="images/Chocolate-raspberry.webp" alt="Chocolate Raspberry Cake">
-        <h3>Chocolate Raspberry Fudge</h3>
-        <p class="price">Ksh 3,500.00</p>
-        <p class="description">Chocolate cake layered with raspberry jam and ganache drip.</p>
-        <a href="https://wa.me/254710975805" class="order-button" target="_blank">Order Now</a>
-      </div>
-
-      <div class="cake-card" data-category="signature">
-        <img src="images/White-chocolate-raspberry.webp" alt="White Chocolate Raspberry Cake">
-        <h3>White Chocolate Raspberry</h3>
-        <p class="price">Ksh 3,500.00</p>
-        <p class="description">Vanilla cake with raspberries and white chocolate ganache.</p>
-        <a href="https://wa.me/254710975805" class="order-button" target="_blank">Order Now</a>
-      </div>
-
-      <div class="cake-card" data-category="signature">
-        <img src="images/Strawberry-cream.webp" alt="Strawberries & Cream Cake">
-        <h3>Strawberries & Cream</h3>
-        <p class="price">Ksh 3,000.00</p>
-        <p class="description">Vanilla cake with raspberry syrup, jam, and fresh strawberries.</p>
-        <a href="https://wa.me/254710975805" class="order-button" target="_blank">Order Now</a>
-      </div>
-
-      <div class="cake-card" data-category="signature">
-        <img src="images/Carrot-cake.webp" alt="Carrot Cake">
-        <h3>Carrot Cake</h3>
-        <p class="price">Ksh 3,500.00</p>
-        <p class="description">Spiced carrot cake topped with cream cheese icing.</p>
-        <a href="https://wa.me/254710975805" class="order-button" target="_blank">Order Now</a>
-      </div>
-
-      <div class="cake-card" data-category="wedding">
-        <img src="images/Wedding-cake.webp" alt="Wedding Cake">
-        <h3>Wedding Cake</h3>
-        <p class="price">From Ksh 17,000.00</p>
-        <p class="description">Elegant tiered cakes custom-designed for your special day.</p>
-        <a href="https://wa.me/254710975805" class="order-button" target="_blank">Order Now</a>
-      </div>
-
-      <div class="cake-card" data-category="mini">
-        <img src="images/Bentos-mini.webp" alt="Bento Mini Cakes">
-        <h3>Bento & Mini Cakes</h3>
-        <p class="price">Ksh 1,500.00</p>
-        <p class="description">Compact, cute, and personalized mini cakes.</p>
-        <a href="https://wa.me/254710975805" class="order-button" target="_blank">Order Now</a>
-      </div>
-    </div>
-  </section>
-
-  <a href="#" class="back-to-top" aria-label="Back to top">&#9650;</a>
-
-  <div class="whatsapp-float">
-    <a href="https://wa.me/254710975805" target="_blank">
-      <img src="images/Whatsapp-icon.webp" alt="Chat on WhatsApp" />
-    </a>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search cakes..." />
   </div>
 
-  <footer>
-    © 2025 Hussein Bakes. All rights reserved.
-  </footer>
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-category="all">All</button>
+    <button class="filter-btn" data-category="signature">Signature</button>
+    <button class="filter-btn" data-category="speciality">Speciality</button>
+    <button class="filter-btn" data-category="wedding">Wedding</button>
+    <button class="filter-btn" data-category="mini">Mini</button>
+    <button class="filter-btn" data-category="custom">Custom</button>
+  </div>
 
-  <script src="js/script.js"></script>
+  <div class="gallery-grid" id="cakeGallery">
+    <!-- Sample Cake Card -->
+    <div class="cake-card" data-category="signature">
+      <img src="images/Very-vanilla.webp" alt="Very Vanilla Cake" />
+      <h3>Very Vanilla Cake</h3>
+      <p class="price">Ksh 2,000.00</p>
+      <p class="description">Moist vanilla sponge layered with silky vanilla buttercream and colorful sprinkles. Perfect for all ages.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="signature">
+      <img src="images/Chocolate-obsession.webp" alt="Chocolate Obsession" />
+      <h3>Chocolate Obsession</h3>
+      <p class="price">Ksh 3,000.00</p>
+      <p class="description">Rich chocolate cake frosted with smooth buttercream. Deep, decadent, and unforgettable.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="signature">
+      <img src="images/Tuxedo.webp" alt="Tuxedo Cake" />
+      <h3>Tuxedo Cake</h3>
+      <p class="price">Ksh 3,000.00</p>
+      <p class="description">Elegant mix of chocolate and vanilla layers with smooth dual buttercream.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="signature">
+      <img src="images/Black-on-white.webp" alt="Black On White" />
+      <h3>Black On White</h3>
+      <p class="price">Ksh 3,500.00</p>
+      <p class="description">Vanilla sponge with chocolate buttercream, sprinkles, and rosettes. A classy twist.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="signature">
+      <img src="images/Funfetti.webp" alt="Funfetti Cake" />
+      <h3>Funfetti Cake</h3>
+      <p class="price">Ksh 3,000.00</p>
+      <p class="description">Colorful vanilla sprinkle cake with matching sprinkle buttercream. Perfect for parties.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="speciality">
+      <img src="images/Salted-caramel.webp" alt="Salted Caramel" />
+      <h3>Salted Caramel</h3>
+      <p class="price">Ksh 3,000.00</p>
+      <p class="description">Chocolate cake with salted caramel buttercream. Sweet, salty, and indulgent.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="speciality">
+      <img src="images/Cookie-dough.webp" alt="Cookie Dough Cake" />
+      <h3>Cookie Dough Cake</h3>
+      <p class="price">Ksh 3,000.00</p>
+      <p class="description">Vanilla & chocolate layers with cookie dough frosting and mini cookie dough bites.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="speciality">
+      <img src="images/Chocolate-Oreo.webp" alt="Chocolate Oreo" />
+      <h3>Chocolate Oreo Cake</h3>
+      <p class="price">Ksh 3,500.00</p>
+      <p class="description">Chocolate cake with Oreo buttercream, topped with crushed Oreos. Oreo lover’s dream!</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="speciality">
+      <img src="images/Chocolate-raspberry.webp" alt="Chocolate Raspberry Fudge Cake" />
+      <h3>Chocolate Raspberry Fudge Cake</h3>
+      <p class="price">Ksh 3,500.00</p>
+      <p class="description">Moist chocolate layers with raspberry jam, buttercream, fresh raspberries, and ganache.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="speciality">
+      <img src="images/White-chocolate-raspberry.webp" alt="White Chocolate Raspberry" />
+      <h3>White Chocolate Raspberry</h3>
+      <p class="price">Ksh 3,500.00</p>
+      <p class="description">Vanilla cake with raspberry jam, fresh berries, and white chocolate ganache. Light and fruity.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="speciality">
+      <img src="images/Strawberry-cream.webp" alt="Strawberries & Cream" />
+      <h3>Strawberries & Cream</h3>
+      <p class="price">Ksh 3,000.00</p>
+      <p class="description">Vanilla sponge with raspberry syrup, fresh strawberries, and meringue buttercream.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="speciality">
+      <img src="images/Carrot-cake.webp" alt="Carrot Cake" />
+      <h3>Carrot Cake</h3>
+      <p class="price">Ksh 3,500.00</p>
+      <p class="description">Moist spiced carrot cake with cream cheese frosting and carrot crumble topping.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="wedding">
+      <img src="images/Wedding-cake.webp" alt="Wedding Cake" />
+      <h3>Wedding Cake</h3>
+      <p class="price">From Ksh 17,000.00</p>
+      <p class="description">Elegant tiered cakes customized for your big day. Choose luxury floral or classic white.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="mini">
+      <img src="images/Bentos-mini.webp" alt="Bento & Mini Cakes" />
+      <h3>Bento & Mini Cakes</h3>
+      <p class="price">Ksh 1,500.00</p>
+      <p class="description">Compact, fun, and cute! Perfect for gifts or small celebrations. Available in various styles.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="custom">
+      <img src="images/Black-on-white.webp" alt="Custom Cakes" />
+      <h3>Custom Celebration Cakes</h3>
+      <p class="price">From Ksh 2,000.00</p>
+      <p class="description">Birthday? Graduation? We'll match your theme, colors, and size. Fully custom designs!</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  © 2025 Hussein Bakes. All rights reserved.
+  <br /><br />
+  <a href="#" class="back-to-top" aria-label="Back to top">&#9650;</a>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/254710975805" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  <img src="images/whatsapp-icon.webp" alt="Chat on WhatsApp" />
+</a>
+
 </body>
 </html>
