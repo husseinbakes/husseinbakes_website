@@ -1,59 +1,51 @@
-// Mobile menu toggle
+// Mobile Menu Toggle
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
 menuToggle.addEventListener('click', () => {
-  const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+  const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
   menuToggle.setAttribute('aria-expanded', !expanded);
   navLinks.classList.toggle('open');
 });
 
-// Back to top button visibility
-const backToTopButton = document.querySelector('.back-to-top');
-
+// Back to Top Button
+const backToTop = document.querySelector('.back-to-top');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 300) {
-    backToTopButton.style.display = 'block';
+    backToTop.style.display = 'block';
   } else {
-    backToTopButton.style.display = 'none';
+    backToTop.style.display = 'none';
   }
 });
-
-// Scroll to top on click
-backToTopButton.addEventListener('click', () => {
+backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Gallery Filtering (Optional enhancement)
-const searchInput = document.getElementById('searchInput');
-const filterButtons = document.querySelectorAll('.filter-buttons button');
-const cakeCards = document.querySelectorAll('.cake-card');
+// Gallery Filter + Search (if used in gallery.html)
+document.addEventListener("DOMContentLoaded", () => {
+  const filterButtons = document.querySelectorAll(".filter-buttons button");
+  const cards = document.querySelectorAll(".cake-card");
+  const searchInput = document.getElementById("searchInput");
 
-if (searchInput) {
-  searchInput.addEventListener('input', () => {
-    const query = searchInput.value.toLowerCase();
-    cakeCards.forEach(card => {
-      const title = card.querySelector('h3').textContent.toLowerCase();
-      card.style.display = title.includes(query) ? 'flex' : 'none';
-    });
-  });
-}
+  if (filterButtons.length && cards.length && searchInput) {
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
 
-if (filterButtons.length > 0) {
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-      const category = button.getAttribute('data-category');
-
-      cakeCards.forEach(card => {
-        const cardCategory = card.getAttribute('data-category');
-        if (category === 'all' || cardCategory === category) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
+        const category = button.dataset.category;
+        cards.forEach(card => {
+          card.style.display = category === "all" || card.dataset.category === category ? "flex" : "none";
+        });
       });
     });
-  });
-}
+
+    searchInput.addEventListener("input", () => {
+      const value = searchInput.value.toLowerCase();
+      cards.forEach(card => {
+        const name = card.querySelector("h3").textContent.toLowerCase();
+        card.style.display = name.includes(value) ? "flex" : "none";
+      });
+    });
+  }
+});
