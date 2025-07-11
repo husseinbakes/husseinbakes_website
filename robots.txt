@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://husseinbakes.github.io/husseinbakes_website/sitemap.xml
