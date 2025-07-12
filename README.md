@@ -7,7 +7,7 @@ Welcome to the official GitHub repository for **Hussein Bakes**, a Kitui-based b
 ## 🌟 Live Website
 
 ➡️ [View Live website
-[*(http://husseinbakes.github.io/husseinbakes_website/)*]
+*(http://husseinbakes.github.io/husseinbakes_website/)*]
 ---
 
 ## 📸 Features
