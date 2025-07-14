@@ -61,5 +61,4 @@ For cake orders or collaboration:
 
 ✅ **Next step**: Paste this into your repository as `README.md` and commit.
 
-Would you like a **second README for the menu project** (`our-menu`), or help styling this for Instagram Bio Link, QR codes, or Canva flyers?
 
