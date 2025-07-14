@@ -128,7 +128,8 @@ header.hero {
   max-width: 300px;
   height: auto;
   margin-bottom: 20px;
-  z-index: 0;
+  z-index: 2;
+  position relative;
 }
 header.hero h1 {
   font-family: 'Cinzel', serif;
