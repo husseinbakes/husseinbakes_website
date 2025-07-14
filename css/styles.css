@@ -11,14 +11,18 @@
   --box-shadow-strong: rgba(216, 195, 132, 0.6);
 }
 
-/* Base Reset & Typography */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* Reset & Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: 'Montserrat', sans-serif;
   background: var(--dark-background);
   color: var(--light-text);
-  line-height: 1.6;
   font-size: 16px;
+  line-height: 1.6;
   scroll-behavior: smooth;
 }
 a {
@@ -32,12 +36,12 @@ a:hover, a:focus {
   outline-offset: 2px;
 }
 
-/* Navigation Bar */
+/* Navigation */
 nav {
   position: sticky;
   top: 0;
-  background: var(--medium-dark-background);
   z-index: 999;
+  background: var(--medium-dark-background);
   box-shadow: 0 2px 8px var(--shadow-color);
 }
 .nav-container {
@@ -69,7 +73,7 @@ nav {
   color: var(--dark-text);
 }
 
-/* Hamburger Menu */
+/* Mobile Menu */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -128,8 +132,6 @@ header.hero {
   max-width: 300px;
   height: auto;
   margin-bottom: 20px;
-  z-index: 2;
-  position relative;
 }
 header.hero h1 {
   font-family: 'Cinzel', serif;
@@ -175,7 +177,7 @@ header.hero p {
   color: var(--dark-text);
 }
 
-/* Sections */
+/* Section Styling */
 section {
   max-width: 1200px;
   margin: 60px auto;
@@ -248,7 +250,7 @@ section p {
   margin-top: 15px;
 }
 
-/* Footer & Buttons */
+/* Footer */
 footer {
   background: var(--medium-dark-background);
   color: #888;
@@ -256,6 +258,8 @@ footer {
   font-size: 0.9em;
   text-align: center;
 }
+
+/* Back to Top */
 .back-to-top {
   display: none;
   position: fixed;
@@ -295,7 +299,7 @@ footer {
   width: 35px;
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 600px) {
   .nav-links {
     display: none;
@@ -311,99 +315,26 @@ footer {
   .nav-links.open {
     display: flex;
   }
-  .menu-toggle { display: flex; }
-  .hero-logo-img { max-width: 200px; }
-  header.hero h1 { font-size: 28px; }
-  .hero-buttons { flex-direction: column; }
+  .menu-toggle {
+    display: flex;
+  }
+  .hero-logo-img {
+    max-width: 200px;
+  }
+  header.hero h1 {
+    font-size: 28px;
+  }
+  .hero-buttons {
+    flex-direction: column;
+  }
   .hero-buttons .button {
     width: 90%;
     max-width: 300px;
   }
-  .back-to-top, .whatsapp-float {
+  .back-to-top,
+  .whatsapp-float {
     width: 50px;
     height: 50px;
     right: 20px;
   }
-}/* Gallery Styles */
-.gallery-section {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-.search-bar {
-  text-align: center;
-  margin-bottom: 20px;
-}
-#searchInput {
-  padding: 10px;
-  width: 90%;
-  max-width: 400px;
-  border: 1px solid var(--primary-gold);
-  background: var(--dark-background);
-  color: var(--light-text);
-  border-radius: 6px;
-}
-.filter-buttons {
-  text-align: center;
-  margin-bottom: 30px;
-}
-.filter-buttons button {
-  background: transparent;
-  color: var(--primary-gold);
-  border: 1px solid var(--primary-gold);
-  padding: 8px 16px;
-  margin: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-}
-.filter-buttons button.active,
-.filter-buttons button:hover {
-  background: var(--primary-gold);
-  color: var(--dark-text);
-}
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-.cake-card {
-  background: var(--medium-dark-background);
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 12px var(--shadow-color);
-  display: flex;
-  flex-direction: column;
-}
-.cake-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-.cake-card h3 {
-  margin: 12px 0 8px;
-  color: var(--primary-gold);
-  font-family: 'Cinzel', serif;
-}
-.cake-card .price {
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-.cake-card .description {
-  font-size: 14px;
-  color: var(--medium-text);
-  margin-bottom: auto;
-}
-.order-button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: var(--primary-gold);
-  color: var(--dark-text);
-  border-radius: 6px;
-  font-weight: bold;
-  text-decoration: none;
-}
-.order-button:hover {
-  background: var(--primary-gold-light);
 }
