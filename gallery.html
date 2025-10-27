@@ -1,220 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Essential Meta Tags -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow" />
-  <meta name="description" content="Hussein Bakes – Custom cakes for weddings, birthdays, and celebrations in Nairobi & Kitui. Order beautifully handcrafted cakes online." />
-  <meta name="keywords" content="custom cakes, Nairobi bakery, Kitui cakes, Hussein Bakes, wedding cakes, birthday cakes, Kenya" />
+
+  <meta name="description" content="Browse the full Hussein Bakes Cake Menu and Gallery. View Signature, Speciality, and Custom cakes available for order and delivery in Nairobi & Kitui." />
+  <meta name="keywords" content="cake menu Nairobi, cake gallery Kenya, custom cakes, Nairobi cakes, Kitui bakery, Hussein Bakes, wedding cakes prices, birthday cake flavors" />
   <meta name="author" content="Hussein Salim" />
+  
+  <link rel="canonical" href="https://husseinbakes.github.io/husseinbakes_website/gallery.html" />
 
-  <!-- Title -->
-  <title>Hussein Bakes | Custom Cakes Nairobi & Kitui</title>
+  <title>Cake Menu & Gallery | Hussein Bakes - Nairobi & Kitui</title>
 
-  <!-- Favicon -->
   <link rel="icon" href="images/logo.webp" type="image/webp" />
 
-  <!-- Open Graph (Facebook/WhatsApp) -->
-  <meta property="og:title" content="Hussein Bakes – Custom Cakes in Nairobi & Kitui" />
-  <meta property="og:description" content="Elegant, handmade cakes for birthdays, weddings & celebrations. Place your order today!" />
-  <meta property="og:image" content="https://husseinbakes.github.io/Husseinbakes-menu/images/Herohero.webp" />
-  <meta property="og:url" content="https://husseinbakes.github.io/Husseinbakes-menu/" />
+  <meta property="og:title" content="Hussein Bakes – Full Cake Menu & Gallery" />
+  <meta property="og:description" content="Elegant, handmade cakes for birthdays, weddings & celebrations. See our full menu and place your order today!" />
+  <meta property="og:image" content="https://husseinbakes.github.io/husseinbakes_website/images/Herohero.webp" />
+  <meta property="og:url" content="https://husseinbakes.github.io/husseinbakes_website/gallery.html" /> 
   <meta property="og:type" content="website" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Hussein Bakes – Custom Cakes" />
-  <meta name="twitter:description" content="Handmade cakes in Nairobi & Kitui for weddings, birthdays & events." />
-  <meta name="twitter:image" content="https://husseinbakes.github.io/Husseinbakes-menu/images/Herohero.webp" />
+  <meta name="twitter:title" content="Hussein Bakes – Full Cake Menu" />
+  <meta name="twitter:description" content="Handmade cakes in Nairobi & Kitui for weddings, birthdays & events. View our full menu here." />
+  <meta name="twitter:image" content="https://husseinbakes.github.io/husseinbakes_website/images/Herohero.webp" />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Great+Vibes&family=Montserrat&display=swap" rel="stylesheet" />
 
-  <!-- Styles -->
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fffaf9;
-      color: #333;
-    }
-    nav {
-      background: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding: 0.6rem 1.5rem;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-    .nav-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .nav-logo img {
-      height: 50px;
-      width: auto;
-    }
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-      margin: 0;
-      padding: 0;
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 600;
-    }
-    .nav-links a.active {
-      color: #b84a62;
-      border-bottom: 2px solid #b84a62;
-    }
+  <link rel="stylesheet" href="css/styles.css" />
 
-    .gallery-section {
-      padding: 2rem 1rem 4rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .gallery-section h2 {
-      font-family: 'Cinzel', serif;
-      font-size: 2rem;
-      color: #b84a62;
-      margin-bottom: 1rem;
-    }
-    .search-bar input {
-      width: 90%;
-      max-width: 400px;
-      padding: 0.6rem;
-      margin: 1rem 0;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    .filter-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-bottom: 2rem;
-    }
-    .filter-btn {
-      border: 1px solid #b84a62;
-      background: #fff;
-      color: #b84a62;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-    .filter-btn.active, .filter-btn:hover {
-      background: #b84a62;
-      color: #fff;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-    .cake-card {
-      background: #fff;
-      border-radius: 10px;
-      padding: 1rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    .cake-card:hover {
-      transform: translateY(-5px);
-    }
-    .cake-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      max-height: 220px;
-      object-fit: cover;
-    }
-    .cake-card h3 {
-      font-size: 1.2rem;
-      color: #333;
-      margin-top: 0.7rem;
-    }
-    .cake-card .price {
-      color: #b84a62;
-      font-weight: bold;
-    }
-    .cake-card .description {
-      font-size: 0.9rem;
-      color: #666;
-      min-height: 50px;
-    }
-    .order-button {
-      display: inline-block;
-      margin-top: 0.5rem;
-      background: #b84a62;
-      color: #fff;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-    .order-button:hover {
-      background: #a23c54;
-    }
-
-    footer {
-      text-align: center;
-      background: #f9f9f9;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #555;
-      margin-top: 2rem;
-    }
-
-    .back-to-top {
-      display: inline-block;
-      text-decoration: none;
-      color: #b84a62;
-      font-size: 1.5rem;
-    }
-
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
-    }
-    .whatsapp-float img {
-      width: 55px;
-      height: 55px;
-    }
-
-    @media (max-width: 600px) {
-      .nav-links { display: none; }
-      .cake-card img {
-        max-height: 180px;
-      }
-      .gallery-section h2 {
-        font-size: 1.6rem;
-      }
-    }
-  </style>
-
-  <!-- Structured Data -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X0Y6TR3Z3H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-X0Y6TR3Z3H');
+  </script>
+  
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Bakery",
     "name": "Hussein Bakes",
-    "image": "https://husseinbakes.github.io/Husseinbakes-menu/images/logo.webp",
+    "image": "https://husseinbakes.github.io/husseinbakes_website/images/logo.webp",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Kitui",
@@ -224,19 +55,22 @@
     },
     "telephone": "+254710975805",
     "email": "husseinbakes@gmail.com",
-    "url": "https://husseinbakes.github.io/Husseinbakes-menu/",
+    "url": "https://husseinbakes.github.io/husseinbakes_website/gallery.html", 
     "priceRange": "$$",
     "openingHours": "Mo-Su 00:00-23:59"
   }
   </script>
+  
+  <script src="js/script.js" defer></script>
 </head>
-
 <body>
 
-<!-- NAVIGATION -->
 <nav>
   <div class="nav-container">
     <a href="index.html" class="nav-logo"><img src="images/logo.webp" alt="Hussein Bakes Logo" /></a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="gallery.html" class="active">Gallery</a></li>
@@ -244,71 +78,155 @@
   </div>
 </nav>
 
-<!-- GALLERY -->
 <section class="gallery-section">
-  <h2>Our Cake Menu</h2>
+  <h2>Hussein Bakes Cake Menu</h2>
+
   <div class="search-bar">
-    <input type="text" id="searchInput" placeholder="Search cakes..." />
+    <input type="text" id="searchInput" placeholder="Search cakes by name or flavor..." />
   </div>
 
   <div class="filter-buttons">
-    <button class="filter-btn active" data-category="all">All</button>
+    <button class="filter-btn active" data-category="all">All Cakes</button>
     <button class="filter-btn" data-category="signature">Signature</button>
     <button class="filter-btn" data-category="speciality">Speciality</button>
     <button class="filter-btn" data-category="wedding">Wedding</button>
-    <button class="filter-btn" data-category="mini">Mini</button>
-    <button class="filter-btn" data-category="custom">Custom</button>
+    <button class="filter-btn" data-category="mini">Bento / Mini</button>
+    <button class="filter-btn" data-category="custom">Custom Designs</button>
   </div>
 
   <div class="gallery-grid" id="cakeGallery">
-    <!-- ✅ Paste your cake cards here (same structure as before) -->
+    <div class="cake-card" data-category="signature">
+      <img src="images/Very-vanilla.webp" alt="Very Vanilla Cake" />
+      <h3>Very Vanilla Cake</h3>
+      <p class="price">Ksh 2,000.00</p>
+      <p class="description">Moist vanilla sponge layered with silky vanilla buttercream and colorful sprinkles. Perfect for all ages.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="signature">
+      <img src="images/Chocolate-obsession.webp" alt="Chocolate Obsession Cake" />
+      <h3>Chocolate Obsession</h3>
+      <p class="price">Ksh 3,000.00</p>
+      <p class="description">Rich chocolate cake frosted with smooth buttercream. Deep, decadent, and unforgettable.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="signature">
+      <img src="images/tuxedo.webp" alt="Tuxedo Cake" />
+      <h3>Tuxedo Cake</h3>
+      <p class="price">Ksh 3,000.00</p>
+      <p class="description">Elegant mix of chocolate and vanilla layers with smooth dual buttercream.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="signature">
+      <img src="images/Black-on-white.webp" alt="Black On White Cake" />
+      <h3>Black On White</h3>
+      <p class="price">Ksh 3,500.00</p>
+      <p class="description">Vanilla sponge with chocolate buttercream, sprinkles, and rosettes. A classy twist.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="signature">
+      <img src="images/Funfetti.webp" alt="Funfetti Cake" />
+      <h3>Funfetti Cake</h3>
+      <p class="price">Ksh 3,000.00</p>
+      <p class="description">Colorful vanilla sprinkle cake with matching sprinkle buttercream. Perfect for parties.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="speciality">
+      <img src="images/Salted-caramel.webp" alt="Salted Caramel Cake" />
+      <h3>Salted Caramel</h3>
+      <p class="price">Ksh 3,000.00</p>
+      <p class="description">Chocolate cake with salted caramel buttercream. Sweet, salty, and indulgent.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="speciality">
+      <img src="images/Cookie-dough.webp" alt="Cookie Dough Cake" />
+      <h3>Cookie Dough Cake</h3>
+      <p class="price">Ksh 3,000.00</p>
+      <p class="description">Vanilla & chocolate layers with cookie dough frosting and mini cookie dough bites.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="speciality">
+      <img src="images/Chocolate-Oreo.webp" alt="Chocolate Oreo Cake" />
+      <h3>Chocolate Oreo Cake</h3>
+      <p class="price">Ksh 3,500.00</p>
+      <p class="description">Chocolate cake with Oreo buttercream, topped with crushed Oreos. Oreo lover’s dream!</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="speciality">
+      <img src="images/Chocolate-raspberry.webp" alt="Chocolate Raspberry Fudge Cake" />
+      <h3>Chocolate Raspberry Fudge</h3>
+      <p class="price">Ksh 3,500.00</p>
+      <p class="description">Moist chocolate layers with raspberry jam, buttercream, fresh raspberries, and ganache.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="speciality">
+      <img src="images/White-chocolate-raspberry.webp" alt="White Chocolate Raspberry Cake" />
+      <h3>White Chocolate Raspberry</h3>
+      <p class="price">Ksh 3,500.00</p>
+      <p class="description">Vanilla cake with raspberry jam, fresh berries, and white chocolate ganache. Light and fruity.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="speciality">
+      <img src="images/Strawberry-cream.webp" alt="Strawberries and Cream Cake" />
+      <h3>Strawberries & Cream</h3>
+      <p class="price">Ksh 3,000.00</p>
+      <p class="description">Vanilla sponge with raspberry syrup, fresh strawberries, and meringue buttercream.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="speciality">
+      <img src="images/Carrot-cake.webp" alt="Carrot Cake" />
+      <h3>Carrot Cake</h3>
+      <p class="price">Ksh 3,500.00</p>
+      <p class="description">Moist spiced carrot cake with cream cheese frosting and carrot crumble topping.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="wedding">
+      <img src="images/Wedding-cake.webp" alt="Tiered Wedding Cake" />
+      <h3>Wedding Cake</h3>
+      <p class="price">From Ksh 17,000.00</p>
+      <p class="description">Elegant tiered cakes customized for your big day. Choose luxury floral or classic white.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="mini">
+      <img src="images/Bentos-mini.webp" alt="Bento Box and Mini Cakes" />
+      <h3>Bento & Mini Cakes</h3>
+      <p class="price">Ksh 1,500.00</p>
+      <p class="description">Compact, fun, and cute! Perfect for gifts or small celebrations. Available in various styles.</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
+    <div class="cake-card" data-category="custom">
+      <img src="images/Black-on-white.webp" alt="Custom Celebration Cakes" />
+      <h3>Custom Celebration Cakes</h3>
+      <p class="price">From Ksh 2,000.00</p>
+      <p class="description">Birthday? Graduation? We'll match your theme, colors, and size. Fully custom designs!</p>
+      <a href="https://wa.me/254710975805" class="order-button" target="_blank">Place Order</a>
+    </div>
+
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   © 2025 Hussein Bakes. All rights reserved.
   <br /><br />
   <a href="#" class="back-to-top" aria-label="Back to top">&#9650;</a>
 </footer>
 
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/254710975805" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-  <img src="images/whatsapp-icon.webp" alt="Chat on WhatsApp" loading="lazy" />
+<a href="https://wa.me/254710975805" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <img src="images/whatsapp-icon.webp" alt="Chat on WhatsApp" />
 </a>
-
-<!-- JavaScript -->
-<script>
-  // 🔍 Search filter
-  const searchInput = document.getElementById('searchInput');
-  const cakeCards = document.querySelectorAll('.cake-card');
-  searchInput.addEventListener('input', () => {
-    const query = searchInput.value.toLowerCase();
-    cakeCards.forEach(card => {
-      const title = card.querySelector('h3').textContent.toLowerCase();
-      card.style.display = title.includes(query) ? '' : 'none';
-    });
-  });
-
-  // 🧁 Category filter
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const category = btn.dataset.category;
-      cakeCards.forEach(card => {
-        card.style.display = category === 'all' || card.dataset.category === category ? '' : 'none';
-      });
-    });
-  });
-
-  // ⬆️ Back to top
-  document.querySelector('.back-to-top').addEventListener('click', e => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-</script>
 
 </body>
 </html>
