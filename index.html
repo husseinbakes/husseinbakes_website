@@ -12,136 +12,83 @@
   <link rel="icon" href="images/favicon-96x96.png" type="image/png" sizes="96x96" />
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="images/web-app-manifest-192x192.png" type="image/png" sizes="192x192" />
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180" /> 
-  <title>Hussein Bakes | Custom Cakes in Kitui & Nairobi</title>
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180" /> 
+<title>Hussein Bakes | Custom Cakes in Kitui & Nairobi</title>
 
-  <meta property="og:title" content="Hussein Bakes – Custom Cakes in Kitui & Nairobi" />
-  <meta property="og:description" content="Elegant, handmade cakes for birthdays, weddings & celebrations. Place your order today!" />
-  <meta property="og:image" content="https://husseinbakes.github.io/husseinbakes_website/images/Herohero.webp" />
-  <meta property="og:url" content="https://husseinbakes.github.io/husseinbakes_website/" />
-  <meta property="og:type" content="website" />
+<link rel="preload" href="images/Herohero.webp" as="image" />
+  
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Great+Vibes&family=Montserrat&display=swap" />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Great+Vibes&family=Montserrat&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Great+Vibes&family=Montserrat&display=swap" />
+</noscript>
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Hussein Bakes – Custom Cakes" />
-  <meta name="twitter:description" content="Elegant custom cakes for weddings, birthdays & celebrations in Kitui & Nairobi. Order from Hussein Bakes today." />
-  <meta name="twitter:image" content="https://husseinbakes.github.io/husseinbakes_website/images/Herohero.webp" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Great+Vibes&family=Montserrat&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="css/styles.css" />
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X0Y6TR3Z3H"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-X0Y6TR3Z3H');
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Bakery",
-    "name": "Hussein Bakes",
-    "image": "https://husseinbakes.github.io/Husseinbakes-menu/images/logo.webp",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Kitui",
-      "addressRegion": "Kitui",
-      "postalCode": "90200",
-      "addressCountry": "KE"
-    },
-    "telephone": "+254710975805",
-    "email": "husseinbakes@gmail.com",
-    "url": "https://husseinbakes.github.io/Husseinbakes-menu/",
-    "priceRange": "$$",
-    "openingHours": "Mo-Su 00:00-23:59"
-  }
-  </script>
-
-  <script src="js/script.js" defer></script>
+<link rel="stylesheet" href="css/styles.css" />
+    
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Bakery",
+      "name": "Hussein Bakes",
+      "image": "https://husseinbakes.github.io/husseinbakes_website/images/logo.webp", 
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kitui",
+        "addressRegion": "Kitui County",
+        "postalCode": "90200",
+        "addressCountry": "KE"
+      },
+      "areaServed": ["Kitui", "Nairobi"], 
+      "telephone": "+254103477701", "email": "husseinbakes@gmail.com",
+      "url": "https://husseinbakes.github.io/husseinbakes_website/", 
+      "priceRange": "$$",
+      "openingHours": "Mo-Su 00:00-23:59"
+    }
+</script>
+    
+<script src="js/script.js" defer></script>
 </head>
 <body>
+  <section id="reviews" aria-labelledby="reviews-heading">
+    <h2 id="reviews-heading">What Our Customers Say</h2>
+    <div class="testimonials-carousel" role="region" aria-label="Customer Testimonials Carousel">
+            <div class="testimonial-card"> 
+        <p>"The best cake I've ever had! Moist, flavorful, and beautifully decorated."</p>
+        <cite>– Aisha, Nairobi</cite>
+      </div>
+      <div class="testimonial-card">         <p>"Professional service and amazing taste. I recommend Hussein Bakes to everyone!"</p>
+        <cite>– Brian, Westlands</cite>
+      </div>
+      <div class="testimonial-card">         <p>"Ordered for my mom’s birthday — she was blown away. Elegant and delicious!"</p>
+        <cite>– Zainab, Kitui</cite>
+      </div>
+    </div>
+  </section>
 
-  <nav role="navigation" aria-label="Main menu">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo" aria-label="Hussein Bakes Home">
-        <img src="images/logo.webp" alt="Hussein Bakes Logo - Crafted Elegance" />
-      </a>
-      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="https://husseinbakes.github.io/Order-form/">Order Now</a></li>
-      </ul>
-    </div>
-  </nav>
+  <section id="contact" aria-labelledby="order-heading">
+    <h2 id="order-heading">Ready to Order?</h2>
+    <p>Use our dedicated **Custom Order Form** to start your request. We’ll capture all details and confirm your quote via WhatsApp.</p>
+    <a href="https://husseinbakes.github.io/Order-form/" class="button primary-cta">Start My Custom Order</a>
+        <p class="secondary-contact">For quick questions, chat with us: <a href="https://wa.me/254103477701" target="_blank">WhatsApp Chat</a></p>
+  </section>
 
-  <header class="hero" role="banner">
-  <img 
-    src="images/Herohero.webp" 
-    alt="Delicious custom cake background, symbolizing luxury and elegance" 
-    class="hero-background"
-    width="1920" 
-    height="1080" 
-    loading="lazy" 
-  />
-  <div class="hero-overlay"></div>
-  <h1>Crafting Sweet Memories</h1>
-  <p>Elegant, handmade cakes for all your special moments in **Nairobi & Kitui**</p>
-  <div class="hero-buttons">
-    <a href="https://husseinbakes.github.io/our-menu/" class="button">See Our Menu</a>
-    <a href="https://husseinbakes.github.io/Order-form/" class="button secondary">Place Custom Order</a> 
-    <a href="gallery.html" class="button">View Gallery</a> 
-  </div>
-</header>
+  <footer role="contentinfo">
+    <p>© 2025 Hussein Bakes. All rights reserved.</p>
+    <a href="#top" class="back-to-top" aria-label="Back to top of page">&#9650;</a>
+  </footer>
 
+    <a href="https://wa.me/254103477701" class="whatsapp-float" target="_blank" aria-label="Place a Custom Cake Order">
+        <img src="images/whatsapp-icon.webp" alt="Order Form Link" />
+    </a>
 
-  <section id="about" aria-labelledby="about-heading">
-    <h2 id="about-heading">About Hussein Bakes</h2>
-    <p>At **Hussein Bakes**, every cake is a unique creation made with love, professional attention to detail, and premium ingredients. We specialize in bespoke designs for weddings, birthdays, graduations, and corporate events. **Delivery available across Nairobi & Kitui**.</p>
-  </section>
-
-  <section id="reviews" aria-labelledby="reviews-heading">
-    <h2 id="reviews-heading">What Our Customers Say</h2>
-    <div class="testimonials-carousel" role="region" aria-label="Customer Testimonials Carousel">
-      <div class="testimonial-card" role="testimonial">
-        <p>"The best cake I've ever had! Moist, flavorful, and beautifully decorated."</p>
-        <cite>– Aisha, Nairobi</cite>
-      </div>
-      <div class="testimonial-card" role="testimonial">
-        <p>"Professional service and amazing taste. I recommend Hussein Bakes to everyone!"</p>
-        <cite>– Brian, Westlands</cite>
-      </div>
-      <div class="testimonial-card" role="testimonial">
-        <p>"Ordered for my mom’s birthday — she was blown away. Elegant and delicious!"</p>
-        <cite>– Zainab, Kitui</cite>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" aria-labelledby="order-heading">
-    <h2 id="order-heading">Ready to Order?</h2>
-    <p>Use our dedicated **Custom Order Form** to start your request. We’ll capture all details and confirm your quote via WhatsApp.</p>
-    <a href="https://husseinbakes.github.io/Order-form/" class="button primary-cta">Start My Custom Order</a>
-    <p class="secondary-contact">For quick questions, chat with us: <a href="https://wa.me/254710975805" target="_blank">WhatsApp Chat</a></p>
-  </section>
-
-  <footer role="contentinfo">
-    <p>© 2025 Hussein Bakes. All rights reserved.</p>
-    <a href="#top" class="back-to-top" aria-label="Back to top of page">&#9650;</a>
-  </footer>
-
-  <a href="https://husseinbakes.github.io/Order-form/" class="whatsapp-float" aria-label="Place a Custom Cake Order">
-    <img src="images/whatsapp-icon.webp" alt="Order Form Link" />
-  </a>
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X0Y6TR3Z3H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-X0Y6TR3Z3H');
+    </script>
 </body>
 </html>
