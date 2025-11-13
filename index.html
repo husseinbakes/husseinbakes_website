@@ -35,6 +35,67 @@
   <noscript>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Great+Vibes&family=Montserrat&display=swap" />
   </noscript>
+<style>
+/* CLS FIX: Critical CSS Inlining */
+:root {
+  --primary-gold: #d8c384;
+  --dark-background: #000;
+  --medium-dark-background: #111;
+  --light-text: #fff;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--dark-background);
+  color: var(--light-text);
+  scroll-behavior: smooth;
+}
+/* Navigation Structure */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: var(--medium-dark-background);
+  /* Height is crucial for preventing shift */
+  height: 70px; 
+}
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Logo Sizing */
+.nav-logo img {
+  height: 50px;
+  /* width is explicitly set in HTML, but height confirms reserved space */
+}
+/* Hero Section Sizing */
+header.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* Setting minimum height helps reserve space while background loads */
+  min-height: 100vh; 
+  padding: 0 20px;
+  overflow: hidden;
+}
+.hero-background {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+</style>
 
     <link rel="stylesheet" href="css/styles.css" />
     
