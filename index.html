@@ -8,37 +8,34 @@
   <meta name="keywords" content="custom cakes Kitui, wedding cakes Kenya, birthday cakes Nairobi, order cakes online, Hussein Bakes, cake delivery Kitui" />
   <meta name="author" content="Hussein Salim" />
   <link rel="canonical" href="https://husseinbakes.github.io/husseinbakes_website/" />
-
-  <!-- Single favicon is usually sufficient for modern browsers -->
-  <link rel="icon" href="images/favicon-96x96.png" type="image/png" sizes="96x96" />
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180" />
+  
+  <link rel="icon" href="images/logo-50.webp" type="image/webp" sizes="50x50" />
+  <link rel="apple-touch-icon" href="images/logo-50.webp" sizes="50x50" />
 
   <title>Hussein Bakes | Custom Cakes in Kitui & Nairobi</title>
 
-  <!-- Social Meta -->
+  <!-- Open Graph / Facebook -->
   <meta property="og:title" content="Hussein Bakes – Custom Cakes in Kitui & Nairobi" />
   <meta property="og:description" content="Elegant, handmade cakes for birthdays, weddings & celebrations. Place your order today!" />
-  <meta property="og:image" content="https://husseinbakes.github.io/husseinbakes_website/images/Herohero.webp" />
+  <meta property="og:image" content="https://husseinbakes.github.io/husseinbakes_website/images/Herohero-1920.avif" />
   <meta property="og:url" content="https://husseinbakes.github.io/husseinbakes_website/" />
   <meta property="og:type" content="website" />
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Hussein Bakes – Custom Cakes" />
   <meta name="twitter:description" content="Elegant custom cakes for weddings, birthdays & celebrations in Kitui & Nairobi. Order from Hussein Bakes today." />
-  <meta name="twitter:image" content="https://husseinbakes.github.io/husseinbakes_website/images/Herohero.webp" />
+  <meta name="twitter:image" content="https://husseinbakes.github.io/husseinbakes_website/images/Herohero-1920.avif" />
 
-  <link rel="preload" href="images/Herohero.webp" as="image" fetchpriority="high" />
+  <!-- Preload the LCP image in AVIF format -->
+  <link rel="preload" as="image" href="images/Herohero-1024.avif" imagesrcset="images/Herohero-600.avif 600w, images/Herohero-1024.avif 1024w, images/Herohero-1920.avif 1920w" imagesizes="(max-width: 700px) 100vw, 90vw" fetchpriority="high">
 
-  <!-- Fonts: Preconnect and Preload, then async Stylesheet -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Great+Vibes&family=Montserrat&display=swap" />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Great+Vibes&family=Montserrat&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Great+Vibes&family=Montserrat&display=swap" />
-  </noscript>
+  <!-- Google Fonts: efficient preconnect + font-display swap by default -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Great+Vibes&family=Montserrat&display=swap">
 
-  <!-- Critical CSS: Keep only above-the-fold styles here, move the rest to styles.css -->
+  <!-- Inline ONLY critical CSS (nav, hero, and layout only) -->
   <style>
     :root {
       --primary-gold: #d8c384;
@@ -46,16 +43,18 @@
       --medium-dark-background: #111;
       --light-text: #fff;
     }
-    * { box-sizing: border-box; }
+    *{box-sizing:border-box}
     body {
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
       background: var(--dark-background);
       color: var(--light-text);
       scroll-behavior: smooth;
+      font-family: 'Montserrat', Arial, sans-serif;
     }
     nav {
-      position: sticky; top: 0; z-index: 999;
+      position: sticky;
+      top: 0;
+      z-index: 999;
       background: var(--medium-dark-background);
       height: 70px;
     }
@@ -67,7 +66,7 @@
       justify-content: space-between;
       align-items: center;
     }
-    .nav-logo img { height: 50px; }
+    .nav-logo img {height: 50px; width: 50px;}
     header.hero {
       position: relative;
       display: flex;
@@ -85,17 +84,73 @@
       object-fit: cover;
       z-index: -2;
     }
+    .hero-buttons { min-height: 120px; }
+    .hero-buttons .button {
+      display: inline-block;
+      padding: 12px 32px;
+      margin: 5px;
+      background: var(--primary-gold);
+      color: #111;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: background .2s;
+    }
+    .hero-buttons .button.secondary {
+      background: transparent;
+      color: var(--primary-gold); border:1px solid var(--primary-gold);
+    }
+    .hero-buttons .button:hover, .hero-buttons .button.secondary:hover {
+      background: #fff; color: #111;
+    }
+    .nav-links {
+      display: flex;
+    }
+    @media (max-width: 700px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: var(--medium-dark-background);
+        position: absolute;
+        top: 70px; right: 0;
+        width: 200px; padding: 20px 0;
+        border-radius: 0 0 0 12px;
+        box-shadow: -2px 0 8px rgba(0,0,0,0.15);
+      }
+      .nav-links.open{display:flex;}
+      .menu-toggle {
+        display: inline-block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        height: 36px; width: 44px;
+        position: relative;
+      }
+      .menu-toggle span {
+        display: block;
+        height: 4px;
+        width: 28px;
+        margin: 5px auto;
+        background: var(--primary-gold);
+        border-radius: 2px;
+        transition: all .3s;
+      }
+    }
+    @media (min-width: 701px){
+      .menu-toggle{display:none;}
+    }
   </style>
 
+  <!-- All other CSS for components, sections, gallery, etc -->
   <link rel="stylesheet" href="css/styles.css" />
-  
-  <!-- Structured Data -->
+
+  <!-- Structured Data for SEO -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Bakery",
     "name": "Hussein Bakes",
-    "image": "https://husseinbakes.github.io/husseinbakes_website/images/logo.webp",
+    "image": "https://husseinbakes.github.io/husseinbakes_website/images/logo-50.webp",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Kitui",
@@ -111,14 +166,13 @@
     "openingHours": "Mo-Su 00:00-23:59"
   }
   </script>
-
-  <script src="js/script.js" defer></script>
 </head>
+
 <body>
   <nav role="navigation" aria-label="Main menu">
     <div class="nav-container">
       <a href="index.html" class="nav-logo" aria-label="Hussein Bakes Home">
-        <img src="images/logo.webp" alt="Hussein Bakes Logo - Crafted Elegance" />
+        <img src="images/logo-50.webp" alt="Hussein Bakes Logo - Crafted Elegance" width="50" height="50" />
       </a>
       <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span>
@@ -136,7 +190,22 @@
 
   <main id="top">
     <header class="hero" role="banner">
-      <img src="images/Herohero.webp" alt="Delicious custom cake background, symbolizing luxury and elegance" class="hero-background" width="1920" height="1080" loading="eager" fetchpriority="high" />
+      <picture>
+        <source srcset="
+          images/Herohero-600.avif 600w,
+          images/Herohero-1024.avif 1024w,
+          images/Herohero-1920.avif 1920w" sizes="(max-width: 700px) 100vw, 90vw" type="image/avif">
+        <source srcset="
+          images/Herohero-600.webp 600w,
+          images/Herohero-1024.webp 1024w,
+          images/Herohero-1920.webp 1920w" sizes="(max-width: 700px) 100vw, 90vw" type="image/webp">
+        <img src="images/Herohero-1024.avif"
+             width="636" height="954"
+             alt="Delicious custom cake background, symbolizing luxury and elegance"
+             class="hero-background"
+             loading="eager"
+             fetchpriority="high" />
+      </picture>
       <div class="hero-overlay"></div>
       <h1>Crafting Sweet Memories</h1>
       <p>Elegant, handmade cakes for all your special moments in <strong>Nairobi & Kitui</strong></p>
@@ -183,11 +252,48 @@
     <a href="#top" class="back-to-top" aria-label="Back to top of page">&#9650;</a>
   </footer>
 
+  <!-- WhatsApp Floating Button -->
   <a href="https://wa.me/254103477701" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Place a Custom Cake Order">
-    <img src="images/whatsapp-icon.webp" alt="Order Form Link" />
+    <img src="images/whatsapp-icon-48.webp" alt="Order Form Link" width="48" height="48" loading="lazy" />
   </a>
 
-  <!-- Google Analytics tag (place after all interactive content) -->
+  <!-- Example (gallery images) -->
+  <!--
+  <img src="images/gallery01-400.avif"
+       srcset="images/gallery01-400.avif 400w, images/gallery01-800.avif 800w, images/gallery01-1200.avif 1200w"
+       sizes="(max-width: 700px) 100vw, 33vw"
+       width="400" height="400"
+       alt="Chocolate drip cake in our gallery" loading="lazy">
+  -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      if(toggle && navLinks){
+        toggle.addEventListener('click', function() {
+          const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+          this.setAttribute('aria-expanded', !expanded);
+          navLinks.classList.toggle('open');
+          // Focus management for accessibility
+          if(!expanded){
+            const firstLink = navLinks.querySelector('a');
+            if(firstLink) firstLink.focus();
+          }
+        });
+        // Allow closing with Escape for accessibility
+        document.addEventListener('keydown', function(e) {
+          if(e.key === "Escape" && navLinks.classList.contains('open')) {
+            toggle.setAttribute('aria-expanded','false');
+            navLinks.classList.remove('open');
+            toggle.focus();
+          }
+        });
+      }
+    });
+  </script>
+
+  <!-- Google Analytics – after all interactivity for best performance -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-X0Y6TR3Z3H"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
