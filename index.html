@@ -146,34 +146,69 @@
   <link rel="stylesheet" href="css/styles.css" />
 
   <!-- Structured Data for SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Bakery",
-    "name": "Hussein Bakes",
-    "image": "https://husseinbakes.github.io/husseinbakes_website/images/logo-50.webp",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Kitui",
-      "addressRegion": "Kitui County",
-      "postalCode": "90200",
-      "addressCountry": "KE"
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Bakery",
+  "name": "Hussein Bakes",
+  "image": "https://husseinbakes.github.io/husseinbakes_website/images/logo.webp",
+  "url": "https://husseinbakes.github.io/husseinbakes_website/",
+  "telephone": "+254103477701",
+  "email": "husseinbakes@gmail.com",
+  "priceRange": "$$",
+  
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Kitui",
+    "addressRegion": "Kitui County",
+    "postalCode": "90200",
+    "addressCountry": "KE"
+  },
+  
+  "areaServed": ["Kitui", "Nairobi", "Mwingi", "Machakos", "Tala"],
+  
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "07:30",
+      "closes": "23:30"
     },
-    "areaServed": ["Kitui", "Nairobi"],
-    "telephone": "+254103477701",
-    "email": "husseinbakes@gmail.com",
-    "url": "https://husseinbakes.github.io/husseinbakes_website/",
-    "priceRange": "$$",
-    "openingHours": "Mo-Su 00:00-23:59"
-  }
-  </script>
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "09:00",
+      "closes": "23:30"
+    }
+  ],
+  
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Hussein Bakes Cake Menu",
+    "url": "https://husseinbakes.github.io/husseinbakes_website/gallery.html"
+  },
+  
+  "sameAs": [
+    "https://www.facebook.com/HusseinBakes",
+    "https://www.instagram.com/husseinbakes/",
+    "https://www.tiktok.com/@husseinbakes"
+  ]
+}
+</script>
 </head>
 
 <body>
   <nav role="navigation" aria-label="Main menu">
     <div class="nav-container">
       <a href="index.html" class="nav-logo" aria-label="Hussein Bakes Home">
-        <img src="images/logo-50.webp" alt="Hussein Bakes Logo - Crafted Elegance" width="50" height="50" />
+        <img src="images/logo.webp" alt="Hussein Bakes Logo - Crafted Elegance" width="50" height="50" />
       </a>
       <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span>
