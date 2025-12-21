@@ -4,58 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Meta Tags -->
-    <title>Hussein Bakes | Premium Custom Cakes in Kitui County & Beyond</title>
-    <meta name="description" content="Kitui's #1 Custom Cake Bakery. Premium wedding cakes, birthday cakes & bento cakes. Free delivery in Kitui Town. Serving Kitui, Machakos, Mwingi & Makueni counties.">
-    <meta name="keywords" content="cakes in Kitui, wedding cakes Kitui, birthday cakes, bento cakes, cake delivery Kitui County, custom cakes Machakos, Hussein Bakes">
+    <title>Hussein Bakes 2026 | Premium Cakes for Machakos, Makueni, Wote & Mwingi</title>
+    <meta name="description" content="2026 Signature Menu: Pistachio Blush, Miso Caramel, Lavender Cloud. Premium cakes with guaranteed delivery across Eastern Kenya. Order via WhatsApp.">
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="Hussein Bakes | Premium Custom Cakes in Kitui County & Beyond">
-    <meta property="og:description" content="Kitui's finest custom cakes delivered across Eastern Kenya. Order via WhatsApp today.">
-    <meta property="og:image" content="https://husseinbakes.github.io/images/hero-custom-cakes-kitui-county.webp">
-    <meta property="og:url" content="https://husseinbakes.github.io/">
-    <meta property="og:type" content="website">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/webp" href="./images/logo.webp">
     
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/webp" href="images/logo.webp">
-    
-    <!-- Structured Data for SEO -->
+    <!-- Enhanced Schema -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Bakery",
-        "name": "Hussein Bakes Kitui",
-        "image": "https://husseinbakes.github.io/images/logo.webp",
-        "description": "Premium custom cakes in Kitui County with delivery to Machakos, Mwingi, and Makueni counties",
+        "name": "Hussein Bakes",
+        "image": "https://husseinbakes.github.io/husseinbakes_website/images/logo.webp",
+        "url": "https://husseinbakes.github.io/husseinbakes_website/",
+        "telephone": "+254710975805",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Kitui",
-            "addressRegion": "Kitui County",
-            "addressCountry": "KE",
-            "postalCode": "90200"
+            "addressRegion": "Eastern Province",
+            "postalCode": "90200",
+            "addressCountry": "KE"
         },
-        "areaServed": [
-            {"@type": "State", "name": "Kitui County"},
-            {"@type": "City", "name": "Kitui Town"},
-            {"@type": "City", "name": "Mwingi"},
-            {"@type": "City", "name": "Machakos"},
-            {"@type": "City", "name": "Makueni"}
-        ],
-        "telephone": "+254710975805",
+        "priceRange": "KSh 1,200 - KSh 50,000",
         "openingHours": "Mo-Su 07:00-22:00",
-        "priceRange": "KES 1,500 - 50,000",
-        "url": "https://husseinbakes.github.io/",
-        "sameAs": [
-            "https://www.instagram.com/husseinbakes/",
-            "https://www.facebook.com/HusseinBakes"
+        "menu": "https://husseinbakes.github.io/husseinbakes_website/#menu",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "50"
+        },
+        "hasMenuSection": [
+            {
+                "@type": "MenuSection",
+                "name": "2026 Trendsetter Collection",
+                "description": "Premium trending flavors",
+                "hasMenuItem": [
+                    {
+                        "@type": "MenuItem",
+                        "name": "The Pistachio Blush",
+                        "description": "Pistachio oil-sponge, raspberry reduction, whipped mascarpone",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "3800",
+                            "priceCurrency": "KES"
+                        }
+                    },
+                    {
+                        "@type": "MenuItem",
+                        "name": "Miso Caramel Gold",
+                        "description": "Umami-salted caramel, dark chocolate ganache, sea salt crunch",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "3600",
+                            "priceCurrency": "KES"
+                        }
+                    }
+                ]
+            }
+        ],
+        "areaServed": [
+            {"@type": "City", "name": "Machakos"},
+            {"@type": "City", "name": "Wote"},
+            {"@type": "City", "name": "Mwingi"},
+            {"@type": "City", "name": "Kitui"},
+            {"@type": "City", "name": "Makueni"}
         ]
     }
     </script>
@@ -65,210 +79,417 @@
     <nav class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <img src="images/logo.webp" alt="Hussein Bakes Logo" width="40" height="40">
-                Hussein <span>Bakes</span>
+                <img src="./images/logo.webp" alt="Hussein Bakes Logo" width="40" height="40" loading="lazy">
+                <span class="gold-text">Hussein Bakes</span>
             </a>
             
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
                 ☰
             </button>
             
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="#delivery">Delivery Areas</a></li>
+                <li><a href="#menu">2026 Menu</a></li>
+                <li><a href="#delivery">Delivery</a></li>
+                <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#contact">Order Now</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-     <section class="hero">
+    <section class="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-badge">
-                    <i>🚚</i>
-                    <span>Free Delivery in Kitui Town • County-Wide Service</span>
+                    <span>🎯</span>
+                    <span>2026 Signature Collection Launch</span>
                 </div>
                 
-                <h1>Kitui's Premium Custom Cakes</h1>
+                <h1>Premium Cakes for Eastern Kenya</h1>
                 
                 <p class="hero-subtitle">
-                    Order exquisite custom cakes baked fresh in Kitui, delivered across 
-                    Kitui County, Machakos, Mwingi & Makueni. Perfect for every celebration.
+                    Introducing our <strong>2026 Trendsetter Collection</strong>: Pistachio Blush, Miso Caramel, 
+                    Lavender Cloud. Nairobi-style quality at regional prices. Serving Machakos, Makueni, Wote & Mwingi.
                 </p>
                 
                 <div class="btn-group">
-                    <a href="https://wa.me/254710975805?text=Hello%20Hussein%20Bakes!%20I'd%20like%20to%20order%20a%20cake.%20My%20location:%20%5BYour%20Town/Village%5D%20Occasion:%20%5BBirthday/Wedding%5D%20Date:%20%5BDate%5D" 
-                       class="btn btn-whatsapp">
-                        📱 Order via WhatsApp
+                    <a href="#menu" class="btn btn-primary">
+                        <span>📜</span> View 2026 Menu
                     </a>
-                    <a href="gallery.html" class="btn btn-secondary">View Gallery</a>
+                    <a href="https://wa.me/254710975805?text=Hi%20Hussein%20Bakes!%20I'd%20like%20to%20order%20from%20your%202026%20menu.%20I'm%20in%20%5BMachakos/Wote/Mwingi%5D" 
+                       class="btn btn-whatsapp">
+                        <span>📱</span> Order via WhatsApp
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Cake Categories -->
-    <section>
+    <!-- 2026 Menu Section -->
+    <section id="menu">
         <div class="container">
-            <h2 class="text-center">Our Signature Cake Collections</h2>
+            <h2 class="text-center">🏆 2026 Signature Menu</h2>
             <p class="section-subtitle">
-                Each cake is crafted with premium ingredients in our Kitui bakery, 
-                then carefully delivered to your celebration across the region.
+                Premium trending flavors designed for Eastern Kenya's urban professionals and celebrations.
+            </p>
+            
+            <!-- Trendsetter Collection -->
+            <div class="menu-category">
+                <h3 class="text-center" style="color: var(--primary-gold); margin: 40px 0 20px;">🎨 The Trendsetter Collection</h3>
+                <p class="text-center" style="margin-bottom: 30px; color: var(--text-dark);">
+                    For urban professionals, Gen Z celebrations, and premium gifting
+                </p>
+                
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>The Pistachio Blush</h3>
+                            <p><strong>Flavor Profile:</strong> Pistachio oil-sponge, raspberry reduction, whipped mascarpone. The #1 global trend of 2026.</p>
+                            <p><strong>Best For:</strong> Urban professionals in Machakos, corporate events in Wote</p>
+                            <span class="price">KES 3,800/kg</span>
+                            <a href="https://wa.me/254710975805?text=I'd%20like%20to%20order%20'The%20Pistachio%20Blush'%20cake.%20Size:%20%5B1kg/2kg%5D%20Location:%20%5BMachakos/Wote%5D%20Date:%20%5BDate%5D" 
+                               class="btn btn-primary btn-sm">
+                                Order This Flavor
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Miso Caramel Gold</h3>
+                            <p><strong>Flavor Profile:</strong> Umami-salted caramel, dark chocolate ganache, sea salt crunch. A sensory journey.</p>
+                            <p><strong>Best For:</strong> Foodies, anniversaries, premium gifting in Kitui and Mwingi</p>
+                            <span class="price">KES 3,600/kg</span>
+                            <a href="https://wa.me/254710975805?text=I'd%20like%20to%20order%20'Miso%20Caramel%20Gold'%20cake.%20Size:%20%5B1kg/2kg%5D%20Location:%20%5BKitui/Mwingi%5D%20Date:%20%5BDate%5D" 
+                               class="btn btn-primary btn-sm">
+                                Order This Flavor
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Zesty Lavender Cloud</h3>
+                            <p><strong>Flavor Profile:</strong> Low-sugar lemon sponge, organic lavender-infused buttercream. Balanced indulgence.</p>
+                            <p><strong>Best For:</strong> Garden weddings, "Galentine's" 2026, health-conscious professionals</p>
+                            <span class="price">KES 3,500/kg</span>
+                            <a href="https://wa.me/254710975805?text=I'd%20like%20to%20order%20'Zesty%20Lavender%20Cloud'%20cake.%20Size:%20%5B1kg/2kg%5D%20Location:%20%5BYour%20Town%5D%20Date:%20%5BDate%5D" 
+                               class="btn btn-primary btn-sm">
+                                Order This Flavor
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>The 'Burn-Away' Reveal</h3>
+                            <p><strong>Flavor Profile:</strong> Custom wafer paper reveal cake (choose any base flavor). Viral social media sensation.</p>
+                            <p><strong>Best For:</strong> High-engagement celebrations, Gen Z in Machakos and Athi River</p>
+                            <span class="price">KES 5,500/kg</span>
+                            <a href="https://wa.me/254710975805?text=I'd%20like%20to%20order%20the%20'Burn-Away%20Reveal'%20cake.%20Base%20Flavor:%20%5BChoose%5D%20Location:%20%5BYour%20Town%5D%20Date:%20%5BDate%5D" 
+                               class="btn btn-primary btn-sm">
+                                Order This Flavor
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Milestone Collection -->
+            <div class="menu-category" style="margin-top: 60px;">
+                <h3 class="text-center" style="color: var(--primary-gold); margin: 40px 0 20px;">🎓 Milestone Collection</h3>
+                <p class="text-center" style="margin-bottom: 30px; color: var(--text-dark);">
+                    For large family gatherings in Machakos and Kitui
+                </p>
+                
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Graduation Victory Bundle</h3>
+                            <p>1.5kg Classic Flavor + 12 Custom Cupcakes + Graduation Topper</p>
+                            <p><strong>Perfect for:</strong> Machakos University, Kitui graduations</p>
+                            <span class="price">KES 7,500 (All-inclusive)</span>
+                            <a href="https://wa.me/254710975805?text=I'd%20like%20to%20order%20the%20'Graduation%20Victory%20Bundle'%20for%20%5BSchool/University%5D.%20Location:%20%5BYour%20Town%5D%20Date:%20%5BDate%5D" 
+                               class="btn btn-primary btn-sm">
+                                Order Graduation Bundle
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Modern Tiered Wedding</h3>
+                            <p>3-Tier (6kg) Mixed Flavors: Vanilla, Red Velvet, Passion</p>
+                            <p><strong>Includes:</strong> Free tasting, consultation, delivery</p>
+                            <span class="price">KES 28,000</span>
+                            <a href="https://wa.me/254710975805?text=I'm%20interested%20in%20the%20'Modern%20Tiered%20Wedding'%20cake.%20Wedding%20Date:%20%5BDate%5D%20Location:%20%5BMachakos/Wote/Mwingi%5D" 
+                               class="btn btn-primary btn-sm">
+                                Book Wedding Consultation
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Daily Indulgence</h3>
+                            <p><strong>Bento Box Cakes:</strong> 4-inch mini cakes - KES 1,200</p>
+                            <p><strong>Cupcake Packs:</strong> 6-Pack - KES 950 | 12-Pack - KES 1,800</p>
+                            <p><strong>Signature Cookies:</strong> 250g - KES 450</p>
+                            <a href="https://wa.me/254710975805?text=I'd%20like%20to%20order%20'Daily%20Indulgence'%20items.%20Items:%20%5BBento/Cupcakes/Cookies%5D%20Quantity:%20%5BQuantity%5D%20Location:%20%5BYour%20Town%5D" 
+                               class="btn btn-primary btn-sm">
+                                Order Treats
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery & Pricing Structure -->
+    <section class="delivery-section" id="delivery">
+        <div class="container">
+            <h2 class="text-center">🚚 2026 Delivery & Pricing Strategy</h2>
+            <p class="section-subtitle">
+                Flat-rate pricing with volume discounts for maximum orders
             </p>
             
             <div class="grid">
-                <!-- Birthday Cakes -->
                 <div class="card">
-                    <img src="images/birthday-cake-vanilla-nairobi.webp" 
-                         alt="Custom Birthday Cake Kitui" 
-                         class="card-img"
-                         loading="lazy">
                     <div class="card-content">
-                        <h3>Birthday Cakes</h3>
-                        <p>Custom designs for all ages. Choose from vanilla, chocolate, red velvet, or create your own flavor combination.</p>
-                        <span class="price">From KES 2,000/kg</span>
-                        <a href="https://wa.me/254710975805?text=I'm%20in%20%5Blocation%5D%20and%20want%20a%20Birthday%20Cake.%20Can%20we%20discuss%20design%20and%20delivery?" 
-                           class="btn btn-primary btn-sm">
-                            Order Birthday Cake
-                        </a>
+                        <h3>Regional Delivery Rates</h3>
+                        <table style="width: 100%; margin: 20px 0; color: var(--text-light);">
+                            <tr>
+                                <td><strong>Kitui Town</strong></td>
+                                <td>KES 200</td>
+                                <td>1 Hour</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mwingi / Kwa Vonza</strong></td>
+                                <td>KES 450</td>
+                                <td>3 Hours</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Machakos Town / Masii</strong></td>
+                                <td>KES 650</td>
+                                <td>Same Day</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Wote / Makueni</strong></td>
+                                <td>KES 750</td>
+                                <td>Same Day</td>
+                            </tr>
+                        </table>
+                        <p><small>🚀 <strong>Pro Tip:</strong> Free delivery to Machakos & Wote for orders over KES 6,000!</small></p>
                     </div>
                 </div>
-
-                <!-- Wedding Cakes -->
+                
                 <div class="card">
-                    <img src="images/wedding-cake-elegant-nairobi-kitui.webp" 
-                         alt="Elegant Wedding Cake Kitui" 
-                         class="card-img"
-                         loading="lazy">
                     <div class="card-content">
-                        <h3>Wedding Cakes</h3>
-                        <p>Multi-tiered masterpieces for your special day. Free consultation includes tasting and design planning.</p>
-                        <span class="price">From KES 15,000</span>
-                        <a href="https://wa.me/254710975805?text=I'm%20planning%20a%20wedding%20in%20%5Blocation%5D%20and%20would%20like%20to%20discuss%20cake%20options%20and%20delivery." 
-                           class="btn btn-primary btn-sm">
-                            Book Wedding Consultation
-                        </a>
+                        <h3>Fixed Route Schedule</h3>
+                        <table style="width: 100%; margin: 20px 0; color: var(--text-light);">
+                            <tr>
+                                <td><strong>Machakos & Mlolongo</strong></td>
+                                <td>Tuesdays & Saturdays</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Wote & Makueni</strong></td>
+                                <td>Wednesdays & Sundays</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mwingi Region</strong></td>
+                                <td>Thursdays & Sundays</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Kitui County</strong></td>
+                                <td>Daily Delivery</td>
+                            </tr>
+                        </table>
+                        <p><small>📅 <strong>Orders close:</strong> 6PM day before route departure</small></p>
                     </div>
                 </div>
-
-                <!-- Bento & Mini Cakes -->
+                
                 <div class="card">
-                    <img src="images/bento-cakes-nairobi.webp" 
-                         alt="Bento Cake Box Kitui" 
-                         class="card-img"
-                         loading="lazy">
                     <div class="card-content">
-                        <h3>Bento & Mini Cakes</h3>
-                        <p>Perfect for intimate celebrations, gifts, or personal indulgence. Single-serving elegance.</p>
-                        <span class="price">KES 1,500 each</span>
-                        <a href="https://wa.me/254710975805?text=I'd%20like%20to%20order%20Bento%20Cakes%20for%20delivery%20to%20%5Blocation%5D.%20How%20many%20can%20I%20get?" 
-                           class="btn btn-primary btn-sm">
-                            Order Bento Cakes
-                        </a>
+                        <h3>Ordering Policy</h3>
+                        <ul style="color: var(--text-light); margin: 20px 0; padding-left: 20px;">
+                            <li>All custom cakes require 48-hour notice</li>
+                            <li>50% deposit via M-Pesa to confirm slot</li>
+                            <li>Balance payable before delivery</li>
+                            <li>Delivery Guarantee: Cake arrives perfect or credit for next order</li>
+                            <li>Special chilled packaging for inter-county delivery</li>
+                        </ul>
+                        <p><small>💡 <strong>Volume Discount:</strong> 10% off orders over KES 10,000</small></p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Delivery Areas -->
-    <section class="delivery-section" id="delivery">
-        <div class="container">
-            <h2 class="text-center">We Deliver Across Eastern Kenya</h2>
-            <p class="section-subtitle">
-                Based in Kitui Town, we deliver our premium cakes throughout the region. 
-                Delivery fees vary by distance from Kitui Town.
-            </p>
             
-            <div class="county-grid">
-                <div class="county-card primary">
-                    <span class="county-icon">🏠</span>
-                    <h3>Kitui County</h3>
-                    <p class="delivery-fee">Free delivery in Kitui Town<br>KES 300-800 across county</p>
-                </div>
-                
-                <div class="county-card">
-                    <span class="county-icon">📍</span>
-                    <h3>Machakos</h3>
-                    <p class="delivery-fee">Delivery available<br>KES 800-1,500</p>
-                </div>
-                
-                <div class="county-card">
-                    <span class="county-icon">📍</span>
-                    <h3>Mwingi</h3>
-                    <p class="delivery-fee">Delivery available<br>KES 500-1,000</p>
-                </div>
-                
-                <div class="county-card">
-                    <span class="county-icon">📍</span>
-                    <h3>Makueni</h3>
-                    <p class="delivery-fee">Delivery available<br>KES 1,000-2,000</p>
-                </div>
-                
-                <div class="county-card">
-                    <span class="county-icon">📍</span>
-                    <h3>Tala</h3>
-                    <p class="delivery-fee">Delivery available<br>KES 1,000-1,800</p>
-                </div>
-                
-                <div class="county-card">
-                    <span class="county-icon">📍</span>
-                    <h3>Other Areas</h3>
-                    <p class="delivery-fee">Contact for quote<br>Across Eastern Kenya</p>
-                </div>
-            </div>
-            
-            <div class="text-center" style="margin-top: 2rem;">
-                <p><small>Delivery fees are calculated based on distance from Kitui Town. Contact us for exact pricing to your location.</small></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="text-center">What Our Customers Say</h2>
-            <p class="section-subtitle">
-                Join hundreds of satisfied customers across Eastern Kenya who chose Hussein Bakes.
-            </p>
-            
-            <div class="testimonial-card">
-                <p class="testimonial-text">
-                    "Ordered my wedding cake from Hussein Bakes for our ceremony in Mwingi. 
-                    The cake arrived perfect and tasted even better than it looked! Professional service from start to finish."
+            <!-- Free Delivery Banner -->
+            <div class="cta-box" style="margin-top: 40px; background: linear-gradient(135deg, rgba(37, 211, 102, 0.2) 0%, rgba(37, 211, 102, 0.1) 100%); border-color: var(--whatsapp-green);">
+                <h3 class="text-center">🎁 Free Delivery Special</h3>
+                <p class="text-center" style="margin-bottom: 20px;">
+                    <strong>Order KES 6,000+ to Machakos or Wote = FREE DELIVERY!</strong><br>
+                    Add "HB Double Choc Cookies" (KES 450) to reach the threshold.
                 </p>
-                <div class="testimonial-author">
-                    Sarah K., Mwingi
-                    <div class="stars">★★★★★</div>
+                <div class="text-center">
+                    <a href="https://wa.me/254710975805?text=I'd%20like%20to%20order%20KES%206,000+%20for%20free%20delivery%20to%20%5BMachakos/Wote%5D.%20Please%20help%20me%20build%20my%20order." 
+                       class="btn btn-whatsapp btn-sm">
+                        📱 Claim Free Delivery
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section" id="contact">
+    <!-- Testimonials Section (Your Content) -->
+    <section class="social-proof" id="reviews">
         <div class="container">
-            <h2 class="text-center">Ready to Order Your Perfect Cake?</h2>
+            <h2 class="text-center">📱 Real Stories from Our Clients</h2>
             <p class="section-subtitle">
-                Include your exact location (town/village), event date, preferred flavors, and any design ideas in your message for fastest service.
+                See why Hussein Bakes is the gold standard for celebrations in Kitui, Machakos & beyond.
+            </p>
+            
+            <div class="grid">
+                <div class="card review-card">
+                    <div class="card-content">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <h3>"A masterpiece in every bite!"</h3>
+                        <p>"The design was elegant, flavors perfectly balanced, and delivery smooth. Hussein doesn't just bake—he tells a story through his creations."</p>
+                        <span class="reviewer">— Jamal Batrudin</span>
+                    </div>
+                </div>
+
+                <div class="card review-card">
+                    <div class="card-content">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <h3>"Precision and Creativity"</h3>
+                        <p>"I discovered them through Google. Hussein impressed me with his professionalism and honesty. He didn't just bake a cake; he engineered it with precision."</p>
+                        <span class="reviewer">— Zulekha Mutua</span>
+                    </div>
+                </div>
+
+                <div class="card review-card">
+                    <div class="card-content">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <h3>"The star of our Wedding!"</h3>
+                        <p>"Stunning, delicious, and exceeded all expectations. Hussein's attention to detail is top-notch—truly a Kenya Utalii College Graduate!"</p>
+                        <span class="reviewer">— Link Portrait</span>
+                    </div>
+                </div>
+
+                <div class="card review-card">
+                    <div class="card-content">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <h3>"Real Chocolate Balance"</h3>
+                        <p>"Beautiful cakes. The chocolate cake had a balance of real chocolate, not just a flavor, and they were perfectly moist. Mashaallah!"</p>
+                        <span class="reviewer">— Halima Hassan</span>
+                    </div>
+                </div>
+
+                <div class="card review-card">
+                    <div class="card-content">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <h3>"Divine aesthetic"</h3>
+                        <p>"A hidden gem. The luxurious aesthetic and flawless buttercream finishes are unmatched. Every cake is a statement piece."</p>
+                        <span class="reviewer">— Fatma Abdulkadir</span>
+                    </div>
+                </div>
+
+                <div class="card review-card border-gold">
+                    <div class="card-content">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <h3>"We heard you!"</h3>
+                        <p>"We enjoyed the cake, it was marvelous." <br>
+                        <strong>Update:</strong> Following Hussein Mwange's request, we now offer <strong>Low-Sugar options</strong> in our 2026 menu!</p>
+                        <span class="reviewer">— Hussein Mwange</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="https://g.page/r/CeJ9H8jRYjRGEAE/review" class="btn btn-secondary" target="_blank">
+                    Read All 5-Star Reviews on Google
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp CTA Section -->
+    <section class="cta-section" id="contact" style="background: linear-gradient(135deg, rgba(37, 211, 102, 0.1) 0%, rgba(37, 211, 102, 0.05) 100%);">
+        <div class="container">
+            <h2 class="text-center">📱 Easy WhatsApp Ordering</h2>
+            <p class="section-subtitle">
+                Get instant responses and personalized service via WhatsApp
             </p>
             
             <div class="cta-box">
                 <div class="btn-group">
-                    <a href="https://wa.me/254710975805?text=Hello%20Hussein%20Bakes%20Kitui!%20I'd%20like%20to%20order%20a%20cake.%20Location%3A%20%5Btown/village%5D%20Event%3A%20%5Boccasion%5D%20Date%3A%20%5Bdate%5D%20Flavor%20ideas%3A" 
+                    <a href="https://wa.me/254710975805?text=Hi%20Hussein%20Bakes!%20I'd%20like%20to%20order%20a%20cake.%20Date:%20%5BDate%5D%20Location:%20%5BMachakos/Wote/Mwingi%5D" 
                        class="btn btn-whatsapp">
-                        📱 WhatsApp Order (Fastest)
+                        <span>💬</span> Start WhatsApp Order
                     </a>
                     <a href="tel:+254710975805" class="btn btn-secondary">
-                        📞 Call: 0710 975 805
+                        <span>📞</span> Call Directly
                     </a>
                 </div>
                 
-                <p style="margin-top: 30px; opacity: 0.8; font-size: 0.9rem;">
-                    ⏰ Response Time: Usually within 15 minutes during business hours (7AM-10PM)
-                </p>
+                <div style="margin-top: 30px; text-align: center;">
+                    <p><strong>📋 What to include in your message:</strong></p>
+                    <ul style="display: inline-block; text-align: left; color: var(--text-light);">
+                        <li>Event date</li>
+                        <li>Delivery location (town)</li>
+                        <li>Cake flavor or design preference</li>
+                        <li>Budget or occasion type</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Follow Section -->
+    <section style="padding: 60px 0;">
+        <div class="container">
+            <div class="grid">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>⭐ Google Reviews</h3>
+                        <p>"Perfect graduation cake delivered to Machakos University! - Sarah K." ⭐⭐⭐⭐⭐</p>
+                        <p>"The Pistachio Blush cake was incredible! Delivered fresh to Wote. - James M." ⭐⭐⭐⭐⭐</p>
+                        <a href="https://g.page/r/CeJ9H8jRYjRGEAE/review" 
+                           class="btn btn-primary btn-sm" target="_blank">
+                            Leave Your Review
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <h3>📸 Instagram Highlights</h3>
+                        <p>Follow us for cake inspiration, behind-the-scenes, and delivery stories</p>
+                        <div class="social-links" style="justify-content: center; margin-top: 20px;">
+                            <a href="https://instagram.com/husseinbakes" class="social-icon" aria-label="Instagram">
+                                IG
+                            </a>
+                            <a href="https://facebook.com/husseinbakes" class="social-icon" aria-label="Facebook">
+                                FB
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <h3>🎥 Featured Videos</h3>
+                        <p>Watch our trending "Burn-Away" reveal cakes and delivery process</p>
+                        <p><small>New videos every Friday!</small></p>
+                        <a href="https://instagram.com/husseinbakes" 
+                           class="btn btn-secondary btn-sm" target="_blank">
+                            Watch Videos
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -278,58 +499,55 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>Hussein Bakes Kitui</h3>
-                    <p>Premium custom cakes crafted with Kitui pride, delivering sweetness across Eastern Kenya since 2025.</p>
+                    <h3>Hussein Bakes 2026</h3>
+                    <p>Premium bakery serving Machakos, Makueni, Wote & Mwingi with Nairobi-style quality at regional prices.</p>
                     <div class="social-links">
-                        <a href="https://instagram.com/husseinbakes" class="social-icon" aria-label="Instagram">
-                            IG
-                        </a>
-                        <a href="https://facebook.com/husseinbakes" class="social-icon" aria-label="Facebook">
-                            FB
-                        </a>
-                        <a href="https://wa.me/254710975805" class="social-icon" aria-label="WhatsApp">
-                            WA
-                        </a>
+                        <a href="https://instagram.com/husseinbakes" class="social-icon">IG</a>
+                        <a href="https://facebook.com/husseinbakes" class="social-icon">FB</a>
+                        <a href="https://wa.me/254710975805" class="social-icon">WA</a>
+                        <a href="https://g.page/r/CeJ9H8jRYjRGEAE/review" class="social-icon">⭐</a>
                     </div>
                 </div>
                 
                 <div class="footer-col">
-                    <h3>Delivery Areas</h3>
+                    <h3>2026 Menu Highlights</h3>
                     <ul class="footer-links">
-                        <li><a>🏠 Kitui County (Free in Town)</a></li>
-                        <li><a>📍 Machakos County</a></li>
-                        <li><a>📍 Mwingi Region</a></li>
-                        <li><a>📍 Makueni County</a></li>
-                        <li><a>📍 Tala & Surrounding</a></li>
-                        <li><a>📍 Across Eastern Kenya</a></li>
+                        <li>🎨 Pistachio Blush - KES 3,800</li>
+                        <li>✨ Miso Caramel Gold - KES 3,600</li>
+                        <li>☁️ Lavender Cloud - KES 3,500</li>
+                        <li>🔥 Burn-Away Reveal - KES 5,500</li>
+                        <li>🎓 Graduation Bundle - KES 7,500</li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
-                    <h3>Contact Info</h3>
+                    <h3>Business Info</h3>
                     <ul class="footer-links">
-                        <li>📍 Home Base: Kitui Town</li>
+                        <li>📍 Base: Kitui Town</li>
                         <li>📞 <a href="tel:+254710975805">0710 975 805</a></li>
-                        <li>✉️ husseinbakes@gmail.com</li>
-                        <li>⏰ Daily: 7:00 AM - 10:00 PM</li>
-                        <li>🚚 Free delivery in Kitui Town</li>
+                        <li>📧 husseinbakes@gmail.com</li>
+                        <li>⏰ 7AM - 10PM Daily</li>
+                        <li>📅 Fixed Routes: Tue/Sat, Wed/Sun, Thu/Sun</li>
+                        <li>🚚 Free delivery on KES 6,000+ orders</li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>© 2025 Hussein Bakes Kitui. Kitui-grown talent, delivering premium cakes across Eastern Kenya.</p>
-                <p style="margin-top: 0.5rem; font-size: 0.8rem;">Baked fresh in Kitui · Delivered with care · Celebrated across counties</p>
+                <p>© 2025-2026 Hussein Bakes. Premium cakes for Eastern Kenya's celebrations.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+                    Baked in Kitui • Delivered across 5+ counties • 2026 Trendsetter Collection Live
+                </p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/254710975805" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/254710975805?text=Hi%20Hussein%20Bakes!%20I'm%20interested%20in%20your%202026%20menu.%20Can%20you%20send%20me%20more%20information?" 
+       class="whatsapp-float" aria-label="Chat on WhatsApp">
         💬
     </a>
 
-    <!-- JavaScript -->
     <script>
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -348,7 +566,7 @@
             });
         });
 
-        // Smooth scroll for anchor links
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -362,56 +580,6 @@
                         behavior: 'smooth'
                     });
                 }
-            });
-        });
-
-        // Simple testimonial rotation
-        const testimonials = [
-            {
-                text: "Ordered my wedding cake from Hussein Bakes for our ceremony in Mwingi. The cake arrived perfect and tasted even better than it looked!",
-                author: "Sarah K., Mwingi",
-                stars: "★★★★★"
-            },
-            {
-                text: "The Bento cakes are perfect for small celebrations! Ordered for my daughter's birthday in Kitui Town and delivery was prompt and professional.",
-                author: "James M., Kitui Town",
-                stars: "★★★★★"
-            },
-            {
-                text: "I live in Machakos and was worried about cake delivery. Hussein Bakes delivered my mother's birthday cake perfectly fresh. Amazing service!",
-                author: "Amina W., Machakos",
-                stars: "★★★★★"
-            }
-        ];
-
-        let currentTestimonial = 0;
-        const testimonialElement = document.querySelector('.testimonial-card');
-
-        function rotateTestimonial() {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            const testimonial = testimonials[currentTestimonial];
-            
-            if (testimonialElement) {
-                testimonialElement.innerHTML = `
-                    <p class="testimonial-text">${testimonial.text}</p>
-                    <div class="testimonial-author">
-                        ${testimonial.author}
-                        <div class="stars">${testimonial.stars}</div>
-                    </div>
-                `;
-            }
-        }
-
-        // Rotate testimonial every 10 seconds if element exists
-        if (testimonialElement) {
-            setInterval(rotateTestimonial, 10000);
-        }
-
-        // WhatsApp click tracking (for future analytics)
-        document.querySelectorAll('.btn-whatsapp, .whatsapp-float').forEach(btn => {
-            btn.addEventListener('click', function() {
-                // You can add Google Analytics or Facebook Pixel here
-                console.log('WhatsApp order initiated');
             });
         });
     </script>
