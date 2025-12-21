@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Cake Gallery & Full Menu | Hussein Bakes Kitui</title>
+    <meta name="description" content="Browse our full custom cake gallery. Wedding cakes, birthday cakes, bento cakes & specialty designs from Hussein Bakes Kitui.">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/webp" href="images/logo.webp">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.webp" alt="Hussein Bakes Logo" width="40" height="40">
+                Hussein <span>Bakes</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                ☰
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="index.html#delivery">Delivery</a></li>
+                <li><a href="index.html#contact">Order Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Gallery Header -->
+    <section class="hero" style="padding-top: 140px; padding-bottom: 60px;">
+        <div class="container">
+            <h1>Our Complete Cake Gallery</h1>
+            <p class="hero-subtitle">
+                Browse our full collection of custom cakes. Click "Order This Cake" to start a WhatsApp order with the cake details pre-filled.
+            </p>
+            
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All Cakes</button>
+                <button class="filter-btn" data-filter="birthday">Birthday Cakes</button>
+                <button class="filter-btn" data-filter="wedding">Wedding Cakes</button>
+                <button class="filter-btn" data-filter="bento">Bento & Mini</button>
+                <button class="filter-btn" data-filter="specialty">Specialty Cakes</button>
+                <button class="filter-btn" data-filter="chocolate">Chocolate Lovers</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section>
+        <div class="container">
+            <div class="grid" id="galleryGrid">
+                <!-- Birthday Cakes -->
+                <div class="card gallery-item" data-category="birthday">
+                    <img src="images/birthday-cake-vanilla-nairobi.webp" 
+                         alt="Vanilla Birthday Cake Kitui" 
+                         class="card-img"
+                         loading="lazy">
+                    <div class="card-content">
+                        <h3>Classic Vanilla Birthday Cake</h3>
+                        <p>Moist vanilla sponge with silky buttercream and colorful sprinkles. Perfect for all ages and celebrations.</p>
+                        <span class="price">KES 2,500</span>
+                        <a href="https://wa.me/254710975805?text=I'd%20like%20to%20order%20the%20Classic%20Vanilla%20Birthday%20Cake%20from%20your%20gallery.%20Location:%20%5BYour%20Town%5D" 
+                           class="btn btn-primary btn-sm">
+                            Order This Cake
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card gallery-item" data-category="birthday">
+                    <img src="images/birthday-cake-funfetti-nairobi.webp" 
+                         alt="Funfetti Birthday Cake Kitui" 
+                         class="card-img"
+                         loading="lazy">
+                    <div class="card-content">
+                        <h3>Funfetti Birthday Cake</h3>
+                        <p>Colorful sprinkle-filled vanilla cake with matching sprinkle buttercream. The ultimate party cake!</p>
+                        <span class="price">KES 3,000</span>
+                        <a href="https://wa.me/254710975805?text=I'd%20like%20to%20order%20the%20Funfetti%20Birthday%20Cake%20from%20your%20gallery.%20Location:%20%5BYour%20Town%5D" 
+                           class="btn btn-primary btn-sm">
+                            Order This Cake
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card gallery-item" data-category="birthday">
+                    <img src="images/birthday-cake-chocolate-oreo.webp" 
+                         alt="Chocolate Oreo Birthday Cake" 
+                         class="card-img"
+                         loading="lazy">
+                    <div class="card-content">
+                        <h3>Chocolate Oreo Birthday Cake</h3>
+                        <p>Rich chocolate cake layered with Oreo cookie buttercream and cookie chunks. Chocolate lover's dream.</p>
+                        <span class="price">KES 3,200</span>
+                        <a href="https://wa.me/254710975805?text=I'd%20like%20to%20order%20the%20Chocolate%20Oreo%20Birthday%20Cake%20from%20your%20gallery.%20Location:%20%5BYour%20Town%5D" 
+                           class="btn btn-primary btn-sm">
+                            Order This Cake
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card gallery-item" data-category="birthday">
+                    <img src="images/birthday-cake-cookie-dough.webp" 
+                         alt="Cookie Dough Birthday Cake" 
+                         class="card-img"
+                         loading="lazy">
+                    <div class="card-content">
+                        <h3>Cookie Dough Birthday Cake</h3>
+                        <p>Vanilla cake with edible cookie dough pieces and brown sugar buttercream. Unique and delicious!</p>
+                        <span class="price">KES 3,500</span>
+                        <a href="https://wa.me/254710975805?text=I'd%20like%20to%20order%20the%20Cookie%20Dough%20Birthday%20Cake%20from%20your%20gallery.%20Location:%20%5BYour%20Town%5D" 
+                           class="btn btn-primary btn-sm">
+                            Order This Cake
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Wedding Cakes -->
+                <div class="card gallery-item" data-category="wedding">
+                    <img src="images/wedding-cake-elegant-nairobi-kitui.webp" 
+                         alt="Elegant Wedding Cake Kitui" 
+                         class="card-img"
+                         loading="lazy">
+                    <div class="card-content">
+                        <h3>Elegant Wedding Cake</h3>
+                        <p>3-tier wedding cake with fondant finish, sugar flowers, and elegant detailing. Perfect for formal weddings.</p>
+                        <span class="price">From KES 18,000</span>
+                        <a href="https://wa.me/254710975805?text=I'm%20interested%20in%20the%20Elegant%20Wedding%20Cake%20from%20your%20gallery.%20Can%20we%20discuss%20details%20and%20delivery?" 
+                           class="btn btn-primary btn-sm">
+                            Book Consultation
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card gallery-item" data-category="wedding">
+                    <img src="images/wedding-cake-white-chocolate-raspberry.webp" 
+                         alt="White Chocolate Raspberry Wedding Cake" 
+                         class="card-img"
+                         loading="lazy">
+                    <div class="card-content">
+                        <h3>White Chocolate Raspberry Wedding Cake</h3>
+                        <p>Velvety vanilla cake with layers of raspberry jam and whipped white chocolate ganache. Romantic and delicious.</p>
+                        <span class="price">KES 4,500/kg</span>
+                        <a href="https://wa.me/254710975805?text=I'd%20like%20to%20order%20the%20White%20Chocolate%20Raspberry%20Wedding%20Cake%20from%20your%20gallery.%20Location:%20%5BYour%20Town%5D" 
+                           class="btn btn-primary btn-sm">
+                            Order This Cake
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card gallery-item" data-category="wedding">
+                    <img src="images/wedding-cake-tuxedo-design.webp" 
+                         alt="Tuxedo Design Wedding Cake" 
+                         class="card-img"
+                         loading="lazy">
+                    <div class="card-content">
+                        <h3>Tuxedo Design Wedding Cake</h3>
+                        <p>Modern black and white tuxedo-inspired design with clean lines. Perfect for contemporary weddings.</p>
+                        <span class="price">From KES 20,000</span>
+                        <a href="https://wa.me/254710975805?text=I'm%20interested%20in%20the%20Tuxedo%20Design%20Wedding%20Cake%20from%20your%20gallery.%20Location:%20%5BYour%20Town%5D" 
+                           class="btn btn-primary btn-sm">
+                            Book Consultation
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Bento Cakes -->
+                <div class="card gallery-item" data-category="bento">
+                    <img src="images/bento-cakes-nairobi.webp" 
+                         alt="Bento Cakes Kitui" 
+                         class="card-img"
+                         loading="lazy">
+                    <div class="card-content">
+                        <h3>Bento Cakes Collection</h3>
+                        <p>Trendy bento-style cakes in compact boxes. Ideal for two, perfect as gifts. Custom messages available.</p>
+                        <span class="price">KES 1,500 each</span>
+                        <a href="https://wa.me/254710975805?text=I'd%20like%20to%20order%20Bento%20Cakes%20from%20your%20gallery.%20Location:%20%5BYour%20Town%5D%20Quantity:%20%5BHow%20many%5D" 
+                           class="btn btn-primary btn-sm">
+                            Order Bento Cakes
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Specialty Cakes -->
+                <div class="card gallery-item" data-category="specialty">
+                    <img src="images/specialty-cake-salted-caramel.webp" 
+                         alt="Salted Caramel Cake Kitui" 
+                         class="card-img"
+                         loading="lazy">
+                    <div class="card-content">
+                        <h3>Salted Caramel Cake</h3>
+                        <p>Rich chocolate sponge layered with smooth salted caramel buttercream and sea salt flakes. Sweet and salty perfection.</p>
+                        <span class="price">KES 3,500</span>
+                        <a href="https://wa.me/254710975805?text=I'd%20like%20to%20order%20the%20Salted%20Caramel%20Cake%20from%20your%20gallery.%20Location:%20%5BYour%20Town%5D" 
+                           class="btn btn-primary btn-sm">
+                            Order This Cake
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card gallery-item" data-category="specialty">
+                    <img src="images/carrot-cake-nairobi.webp" 
+                         alt="Carrot Cake Kitui" 
+                         class="card-img"
+                         loading="lazy">
+                    <div class="card-content">
+                        <h3>Carrot Cake</h3>
+                        <p>Moist spiced carrot cake with a hint of cinnamon, walnuts, and rich cream cheese frosting. Always a crowd favorite.</p>
+                        <span class="price">KES 3,500</span>
+                        <a href="https://wa.me/254710975805?text=I'd%20like%20to%20order%20the%20Carrot%20Cake%20from%20your%20gallery.%20Location:%20%5BYour%20Town%5D" 
+                           class="btn btn-primary btn-sm">
+                            Order This Cake
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card gallery-item" data-category="specialty">
+                    <img src="images/minimalist-black-white-cake.webp" 
+                         alt="Black & White Cake Kitui" 
+                         class="card-img"
+                         loading="lazy">
+                    <div class="card-content">
+                        <h3>Minimalist Black & White Cake</h3>
+                        <p>Vanilla sponge with chocolate buttercream, sprinkles, and elegant rosette detailing. Modern and sophisticated.</p>
+                        <span class="price">KES 3,500</span>
+                        <a href="https://wa.me/254710975805?text=I'd%20like%20to%20order%20the%20Black%20%26%20White%20Cake%20from%20your%20gallery.%20Location:%20%5BYour%20Town%5D" 
+                           class="btn btn-primary btn-sm">
+                            Order This Cake
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card gallery-item" data-category="specialty">
+                    <img src="images/specialty-cake-chocolate-raspberry.webp" 
+                         alt="Chocolate Raspberry Cake" 
+                         class="card-img"
+                         loading="lazy">
+                    <div class="card-content">
+                        <h3>Chocolate Raspberry Cake</h3>
+                        <p>Dark chocolate cake with fresh raspberry filling and chocolate ganache. Perfect for special occasions.</p>
+                        <span class="price">KES 4,000</span>
+                        <a href="https://wa.me/254710975805?text=I'd%20like%20to%20order%20the%20Chocolate%20Raspberry%20Cake%20from%20your%20gallery.%20Location:%20%5BYour%20Town%5D" 
+                           class="btn btn-primary btn-sm">
+                            Order This Cake
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card gallery-item" data-category="specialty">
+                    <img src="images/Strawberry-cream.webp" 
+                         alt="Strawberry Cream Cake" 
+                         class="card-img"
+                         loading="lazy">
+                    <div class="card-content">
+                        <h3>Strawberry Cream Cake</h3>
+                        <p>Light vanilla sponge with fresh strawberry filling and whipped cream frosting. Fresh and delightful.</p>
+                        <span class="price">KES 3,200</span>
+                        <a href="https://wa.me/254710975805?text=I'd%20like%20to%20order%20the%20Strawberry%20Cream%20Cake%20from%20your%20gallery.%20Location:%20%5BYour%20Town%5D" 
+                           class="btn btn-primary btn-sm">
+                            Order This Cake
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Chocolate Lovers -->
+                <div class="card gallery-item" data-category="chocolate">
+                    <img src="images/Chocolate-obsession.webp" 
+                         alt="Chocolate Obsession Cake" 
+                         class="card-img"
+                         loading="lazy">
+                    <div class="card-content">
+                        <h3>Chocolate Obsession Cake</h3>
+                        <p>Triple chocolate cake with dark, milk, and white chocolate layers. For true chocolate lovers only.</p>
+                        <span class="price">KES 4,200</span>
+                        <a href="https://wa.me/254710975805?text=I'd%20like%20to%20order%20the%20Chocolate%20Obsession%20Cake%20from%20your%20gallery.%20Location:%20%5BYour%20Town%5D" 
+                           class="btn btn-primary btn-sm">
+                            Order This Cake
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Images (Specialty) -->
+                <div class="card gallery-item" data-category="specialty">
+                    <img src="images/hero-custom-cakes-nairobi-kitui.webp" 
+                         alt="Custom Cake Design Kitui" 
+                         class="card-img"
+                         loading="lazy">
+                    <div class="card-content">
+                        <h3>Custom Design Cake</h3>
+                        <p>Fully custom designed cake. Send us your ideas and we'll bring them to life with premium ingredients.</p>
+                        <span class="price">From KES 3,000</span>
+                        <a href="https://wa.me/254710975805?text=I%20have%20a%20custom%20cake%20design%20in%20mind.%20Can%20we%20discuss%20creating%20a%20custom%20cake?%20Location:%20%5BYour%20Town%5D" 
+                           class="btn btn-primary btn-sm">
+                            Discuss Custom Design
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Additional Avif Images -->
+                <div class="card gallery-item" data-category="specialty">
+                    <img src="images/Herohero.webp" 
+                         alt="Premium Cake Collection Kitui" 
+                         class="card-img"
+                         loading="lazy">
+                    <div class="card-content">
+                        <h3>Premium Cake Collection</h3>
+                        <p>A selection of our finest cakes showcasing different designs, flavors, and techniques from our Kitui bakery.</p>
+                        <span class="price">From KES 2,500</span>
+                        <a href="https://wa.me/254710975805?text=I'm%20interested%20in%20your%20Premium%20Cake%20Collection.%20Location:%20%5BYour%20Town%5D" 
+                           class="btn btn-primary btn-sm">
+                            View Options
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Empty State Message -->
+            <div id="noCakesMessage" style="display: none; text-align: center; padding: 60px 20px;">
+                <h3 style="color: var(--text-light); margin-bottom: 20px;">No cakes found in this category</h3>
+                <p>Try selecting a different category or <a href="#contact">contact us</a> for custom orders.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="text-center">Don't See Your Perfect Cake?</h2>
+            <p class="section-subtitle">
+                We create custom designs! Send us your idea via WhatsApp and we'll bring it to life.
+            </p>
+            
+            <div class="cta-box">
+                <div class="btn-group">
+                    <a href="https://wa.me/254710975805?text=Hello!%20I%20have%20a%20custom%20cake%20idea%20not%20in%20your%20gallery.%20Can%20we%20discuss%20creating%20a%20custom%20design?%20Location:%20%5BYour%20Town%5D" 
+                       class="btn btn-whatsapp">
+                        📱 Discuss Custom Design
+                    </a>
+                    <a href="index.html" class="btn btn-secondary">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Hussein Bakes Kitui</h3>
+                    <p>Premium custom cakes baked fresh in Kitui, delivering sweetness across Eastern Kenya.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Cake Gallery</a></li>
+                        <li><a href="index.html#delivery">Delivery Areas</a></li>
+                        <li><a href="index.html#contact">Order Now</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li>📞 <a href="tel:+254710975805">0710 975 805</a></li>
+                        <li>📍 Kitui Town, Kitui County</li>
+                        <li>⏰ 7AM - 10PM Daily</li>
+                        <li>🚚 Free delivery in Kitui Town</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2025 Hussein Bakes Kitui. Premium cakes for Eastern Kenya.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/254710975805" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        💬
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            this.innerHTML = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '☰';
+            });
+        });
+
+        // Gallery Filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const noCakesMessage = document.getElementById('noCakesMessage');
+
+        function filterGallery() {
+            const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+            let visibleItems = 0;
+            
+            galleryItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+                
+                if (activeFilter === 'all' || category === activeFilter) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 10);
+                    visibleItems++;
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                }
+            });
+            
+            // Show/hide "no cakes" message
+            if (visibleItems === 0) {
+                noCakesMessage.style.display = 'block';
+            } else {
+                noCakesMessage.style.display = 'none';
+            }
+        }
+
+        // Add click events to filter buttons
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filter items
+                filterGallery();
+            });
+        });
+
+        // Initialize gallery
+        filterGallery();
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                
+                const targetId = this.getAttribute('href');
+                if (targetId.startsWith('#')) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Lazy load images
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const image = entry.target;
+                            image.src = image.dataset.src;
+                            image.classList.remove('lazy');
+                            imageObserver.unobserve(image);
+                        }
+                    });
+                });
+
+                images.forEach(image => {
+                    image.dataset.src = image.src;
+                    image.src = '';
+                    imageObserver.observe(image);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
