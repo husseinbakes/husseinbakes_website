@@ -1,347 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
-  <meta name="description" content="Elegant custom cakes for weddings, birthdays & celebrations in Kitui and Nairobi. View our gallery and place your custom order today." />
-  <meta name="keywords" content="custom cakes Kitui, wedding cakes Kenya, birthday cakes Nairobi, order cakes online, Hussein Bakes, cake delivery Kitui" />
-  <meta name="author" content="Hussein Salim" />
-  <link rel="canonical" href="https://husseinbakes.github.io/husseinbakes_website/" />
-  
-<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-<link rel="icon" href="images/logo.webp" type="image/webp" sizes="50x50" />
-<link rel="apple-touch-icon" href="images/logo.webp" sizes="50x50" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Hussein Bakes | Custom Cakes in Kitui</title>
+<title>Custom Cakes in Nairobi & Kitui | Hussein Bakes</title>
+<meta name="description" content="Hussein Bakes crafts refined custom cakes in Nairobi and Kitui. Birthday cakes, wedding cakes, bento cakes, and specialty flavors made to order.">
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="Hussein Bakes – Custom Cakes in Kitui & Nairobi" />
-  <meta property="og:description" content="Elegant, handmade cakes for birthdays, weddings & celebrations. Place your order today!" />
-  <meta property="og:image" content="https://husseinbakes.github.io/husseinbakes_website/images/Herohero-1920.avif" />
-  <meta property="og:url" content="https://husseinbakes.github.io/husseinbakes_website/" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Hussein Bakes – Custom Cakes" />
-  <meta name="twitter:description" content="Elegant custom cakes for weddings, birthdays & celebrations in Kitui & Nairobi. Order from Hussein Bakes today." />
-  <meta name="twitter:image" content="https://husseinbakes.github.io/husseinbakes_website/images/Herohero-1920.avif" />
-
-  <!-- Preload the LCP image in AVIF format -->
-  <link rel="preload" as="image" href="images/Herohero-1024.avif" imagesrcset="images/Herohero-600.avif 600w, images/Herohero-1024.avif 1024w, images/Herohero-1920.avif 1920w" imagesizes="(max-width: 700px) 100vw, 90vw" fetchpriority="high">
-
-  <!-- Google Fonts: efficient preconnect + font-display swap by default -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Great+Vibes&family=Montserrat&display=swap">
-
-  <!-- Inline ONLY critical CSS (nav, hero, and layout only) -->
-  <style>
-    :root {
-      --primary-gold: #d8c384;
-      --dark-background: #000;
-      --medium-dark-background: #111;
-      --light-text: #fff;
-    }
-    *{box-sizing:border-box}
-    body {
-      margin: 0; padding: 0;
-      background: var(--dark-background);
-      color: var(--light-text);
-      scroll-behavior: smooth;
-      font-family: 'Montserrat', Arial, sans-serif;
-    }
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      background: var(--medium-dark-background);
-      height: 70px;
-    }
-    .nav-container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .nav-logo img {height: 50px; width: 50px;}
-    header.hero {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      min-height: 100vh;
-      padding: 0 20px;
-      overflow: hidden;
-    }
-    .hero-background {
-      position: absolute; top: 0; left: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;
-      z-index: -2;
-    }
-    .hero-buttons { min-height: 120px; }
-    .hero-buttons .button {
-      display: inline-block;
-      padding: 12px 32px;
-      margin: 5px;
-      background: var(--primary-gold);
-      color: #111;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 700;
-      transition: background .2s;
-    }
-    .hero-buttons .button.secondary {
-      background: transparent;
-      color: var(--primary-gold); border:1px solid var(--primary-gold);
-    }
-    .hero-buttons .button:hover, .hero-buttons .button.secondary:hover {
-      background: #fff; color: #111;
-    }
-    .nav-links {
-      display: flex;
-    }
-    @media (max-width: 700px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background: var(--medium-dark-background);
-        position: absolute;
-        top: 70px; right: 0;
-        width: 200px; padding: 20px 0;
-        border-radius: 0 0 0 12px;
-        box-shadow: -2px 0 8px rgba(0,0,0,0.15);
-      }
-      .nav-links.open{display:flex;}
-      .menu-toggle {
-        display: inline-block;
-        background: none;
-        border: none;
-        cursor: pointer;
-        height: 36px; width: 44px;
-        position: relative;
-      }
-      .menu-toggle span {
-        display: block;
-        height: 4px;
-        width: 28px;
-        margin: 5px auto;
-        background: var(--primary-gold);
-        border-radius: 2px;
-        transition: all .3s;
-      }
-    }
-    @media (min-width: 701px){
-      .menu-toggle{display:none;}
-    }
-  </style>
-
-  <!-- All other CSS for components, sections, gallery, etc -->
-  <link rel="stylesheet" href="css/styles.css" />
-
-  <!-- Structured Data for SEO -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Bakery",
-  "name": "Hussein Bakes",
-  "image": "https://husseinbakes.github.io/husseinbakes_website/images/logo.webp",
-  "url": "https://husseinbakes.github.io/husseinbakes_website/",
-  "telephone": "+254103477701",
-  "email": "husseinbakes@gmail.com",
-  "priceRange": "$$",
-  
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Kitui",
-    "addressRegion": "Kitui County",
-    "postalCode": "90200",
-    "addressCountry": "KE"
-  },
-  
-  "areaServed": ["Kitui", "Nairobi", "Mwingi", "Machakos", "Tala"],
-  
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-      ],
-      "opens": "07:30",
-      "closes": "23:30"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Sunday",
-      "opens": "09:00",
-      "closes": "23:30"
-    }
-  ],
-  
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Hussein Bakes Cake Menu",
-    "url": "https://husseinbakes.github.io/husseinbakes_website/gallery.html"
-  },
-  
-  "sameAs": [
-    "https://www.facebook.com/HusseinBakes",
-    "https://www.instagram.com/husseinbakes/",
-    "https://www.tiktok.com/@husseinbakes"
-  ]
-}
-</script>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="print.css" media="print">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Cinzel:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <nav role="navigation" aria-label="Main menu">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo" aria-label="Hussein Bakes Home">
-        <img src="images/logo.webp" alt="Hussein Bakes Logo - Crafted Elegance" width="50" height="50" />
-      </a>
-      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="https://husseinbakes.github.io/Order-form/">Order Now</a></li>
-      </ul>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <div class="nav-brand"><a href="index.html">Hussein Bakes</a></div>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="#menu">Menu</a>
+      <a href="contact.html">Contact</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <main id="top">
-    <header class="hero" role="banner">
-      <picture>
-        <source srcset="
-          images/Herohero-600.avif 600w,
-          images/Herohero-1024.avif 1024w,
-          images/Herohero-1920.avif 1920w" sizes="(max-width: 700px) 100vw, 90vw" type="image/avif">
-        <source srcset="
-          images/Herohero-600.webp 600w,
-          images/Herohero-1024.webp 1024w,
-          images/Herohero-1920.webp 1920w" sizes="(max-width: 700px) 100vw, 90vw" type="image/webp">
-        <img src="images/Herohero-1024.avif"
-             width="636" height="954"
-             alt="Delicious custom cake background, symbolizing luxury and elegance"
-             class="hero-background"
-             loading="eager"
-             fetchpriority="high" />
-      </picture>
-      <div class="hero-overlay"></div>
-      <h1>Crafting Sweet Memories</h1>
-      <p>Elegant, handmade cakes for all your special moments in <strong>Nairobi & Kitui</strong></p>
-      <div class="hero-buttons">
-        <a href="https://husseinbakes.github.io/our-menu/" class="button">See Our Menu</a>
-        <a href="https://husseinbakes.github.io/Order-form/" class="button secondary">Place Custom Order</a>
-        <a href="gallery.html" class="button">View Gallery</a>
-      </div>
-    </header>
+<header class="hero">
+  <h1>Crafted Cakes for Meaningful Moments</h1>
+  <p>
+    Refined, made-to-order cakes in <strong>Nairobi (Westlands)</strong> and <strong>Kitui</strong>.  
+    Designed for celebration, intimacy, and quiet elegance.
+  </p>
+  <div class="cta-group">
+    <a class="cta" href="https://wa.me/254710975805?text=Hello%20Hussein%20Bakes,%20I%20would%20like%20to%20start%20an%20order.">
+      Order via WhatsApp
+    </a>
+    <a class="cta secondary" href="#menu">View Menu</a>
+  </div>
+</header>
 
-    <section id="about" aria-labelledby="about-heading">
-      <h2 id="about-heading">About Hussein Bakes</h2>
-      <p>At <strong>Hussein Bakes</strong>, every cake is a unique creation made with love, professional attention to detail, and premium ingredients. We specialize in bespoke designs for weddings, birthdays, graduations, and all your celebrations.</p>
-    </section>
+<section class="section">
+<h2>The Bakery</h2>
+<p>
+Hussein Bakes specializes in small-batch, premium cakes crafted with precision and restraint.  
+Each order is prepared individually to ensure quality, consistency, and intention.
+</p>
+</section>
 
-    <section id="reviews" aria-labelledby="reviews-heading">
-      <h2 id="reviews-heading">What Our Customers Say</h2>
-      <div class="testimonials-carousel" role="region" aria-label="Customer Testimonials Carousel">
-        <div class="testimonial-card">
-          <p>"The best cake I've ever had! Moist, flavorful, and beautifully decorated."</p>
-          <cite>– Aisha, Nairobi</cite>
-        </div>
-        <div class="testimonial-card">
-          <p>"Professional service and amazing taste. I recommend Hussein Bakes to everyone!"</p>
-          <cite>– Brian, Westlands</cite>
-        </div>
-        <div class="testimonial-card">
-          <p>"Ordered for my mom’s birthday — she was blown away. Elegant and delicious!"</p>
-          <cite>– Zainab, Kitui</cite>
-        </div>
-      </div>
-    </section>
+<section id="menu" class="section alt">
+<h2>Signature Offerings</h2>
 
-    <section id="contact" aria-labelledby="order-heading">
-      <h2 id="order-heading">Ready to Order?</h2>
-      <p>Use our dedicated <strong>Custom Order Form</strong> to start your request. We’ll capture all details and confirm your quote via WhatsApp.</p>
-      <a href="https://husseinbakes.github.io/Order-form/" class="button primary-cta">Start My Custom Order</a>
-      <p class="secondary-contact">For quick questions, chat with us: <a href="https://wa.me/254103477701" target="_blank" rel="noopener">WhatsApp Chat</a></p>
-    </section>
-  </main>
+<div class="grid">
 
-  <footer role="contentinfo">
-    <p>© 2025 Hussein Bakes. All rights reserved.</p>
-    <a href="#top" class="back-to-top" aria-label="Back to top of page">&#9650;</a>
-  </footer>
+<div class="card">
+<img src="images/Very-vanilla.webp" alt="Birthday Cakes Nairobi Kitui">
+<div class="card-content">
+<h3>Birthday Cakes</h3>
+<p>Clean designs, custom flavors.<br><strong>From KES 2,000/kg</strong></p>
+<a class="text-link" href="https://wa.me/254710975805?text=I%20would%20like%20a%20Birthday%20Cake">Inquire →</a>
+</div>
+</div>
 
-  <!-- WhatsApp Floating Button -->
-  <img src="images/whatsapp-icon.webp" alt="Order Form Link" width="48" height="48" loading="lazy" />
+<div class="card">
+<img src="images/hero-weddingcake.webp" alt="Wedding Cakes Nairobi Kitui">
+<div class="card-content">
+<h3>Wedding Cakes</h3>
+<p>Elegant, structured designs.<br><strong>From KES 15,000</strong></p>
+<a class="text-link" href="https://wa.me/254710975805?text=I%20would%20like%20a%20Wedding%20Cake">Inquire →</a>
+</div>
+</div>
 
-  <!-- Example (gallery images) -->
-  <!--
-  <img src="images/gallery01-400.avif"
-       srcset="images/gallery01-400.avif 400w, images/gallery01-800.avif 800w, images/gallery01-1200.avif 1200w"
-       sizes="(max-width: 700px) 100vw, 33vw"
-       width="400" height="400"
-       alt="Chocolate drip cake in our gallery" loading="lazy">
-  -->
+<div class="card">
+<img src="images/Mini-boxes.webp" alt="Bento Cakes Nairobi">
+<div class="card-content">
+<h3>Bento Cakes</h3>
+<p>Minimal cakes for intimate moments.<br><strong>KES 1,500</strong></p>
+<a class="text-link" href="https://wa.me/254710975805?text=I%20would%20like%20a%20Bento%20Cake">Inquire →</a>
+</div>
+</div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const toggle = document.querySelector('.menu-toggle');
-      const navLinks = document.querySelector('.nav-links');
-      if(toggle && navLinks){
-        toggle.addEventListener('click', function() {
-          const expanded = this.getAttribute('aria-expanded') === 'true' || false;
-          this.setAttribute('aria-expanded', !expanded);
-          navLinks.classList.toggle('open');
-          // Focus management for accessibility
-          if(!expanded){
-            const firstLink = navLinks.querySelector('a');
-            if(firstLink) firstLink.focus();
-          }
-        });
-        // Allow closing with Escape for accessibility
-        document.addEventListener('keydown', function(e) {
-          if(e.key === "Escape" && navLinks.classList.contains('open')) {
-            toggle.setAttribute('aria-expanded','false');
-            navLinks.classList.remove('open');
-            toggle.focus();
-          }
-        });
-      }
-    });
-  </script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3FHMRT7QFT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<div class="card">
+<img src="images/Salted-caramel.webp" alt="Specialty Cakes Kenya">
+<div class="card-content">
+<h3>Specialty Flavors</h3>
+<p>Salted caramel, blueberry, red velvet.<br><strong>From KES 3,000/kg</strong></p>
+<a class="text-link" href="https://wa.me/254710975805?text=I%20would%20like%20Specialty%20Cakes">Inquire →</a>
+</div>
+</div>
 
-  gtag('config', 'G-3FHMRT7QFT');
-</script>
-  <!-- Google Analytics – after all interactivity for best performance -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X0Y6TR3Z3H"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-X0Y6TR3Z3H');
-  </script>
+</div>
+</section>
+
+<footer class="site-footer">
+<p>© 2025 Hussein Bakes · Nairobi & Kitui</p>
+</footer>
+
 </body>
 </html>
