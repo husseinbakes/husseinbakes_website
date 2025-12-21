@@ -92,3 +92,58 @@ color:#aaa;
 text-align:center;
 padding:40px;
 }
+/* =========================
+   PRINT STYLES
+   ========================= */
+@media print {
+
+  body {
+    background: #ffffff;
+    color: #000000;
+    font-size: 11pt;
+    font-family: 'Inter', sans-serif;
+  }
+
+  nav,
+  .cta,
+  .cta-group,
+  .text-link {
+    display: none !important;
+  }
+
+  .hero,
+  .section {
+    margin: 20px auto;
+    text-align: left;
+  }
+
+  .hero h1 {
+    font-size: 18pt;
+  }
+
+  .grid {
+    display: block;
+  }
+
+  .card {
+    border: 1px solid #cccccc;
+    margin-bottom: 20px;
+    page-break-inside: avoid;
+  }
+
+  .card img {
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  footer {
+    margin-top: 40px;
+    font-size: 9pt;
+    color: #555555;
+  }
+}
