@@ -3,169 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cakes in Kitui | Birthday, Wedding & Custom Cakes – Hussein Bakes</title>
-  <meta name="description" content="Order birthday cakes, wedding cakes, kids cartoon cakes and custom cakes in Kitui. View cake gallery, flavors, prices & order via WhatsApp." />
-  <meta name="keywords" content="cakes in Kitui, birthday cakes Kitui, wedding cakes Kitui, kids cakes Kitui, custom cakes Kitui, Hussein Bakes" />
-
+  <title>Cakes in Kitui | Hussein Bakes</title>
+  <meta name="description" content="Order custom birthday cakes, wedding cakes, kids cartoon cakes and celebration cakes in Kitui. Freshly baked with premium flavors." />
+  <meta name="keywords" content="cakes in Kitui, birthday cakes Kitui, wedding cakes Kitui, custom cakes Kitui, Hussein Bakes" />
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Product + Review Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Birthday Cakes",
-    "brand": "Hussein Bakes",
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "KES",
-      "price": "2500",
-      "availability": "https://schema.org/InStock"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "50"
-    }
-  }
-  </script>
 </head>
-
 <body class="bg-slate-950 text-white">
 
-<!-- HEADER -->
-<header class="sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-white/10">
+<header class="sticky top-0 z-50 bg-black/70 backdrop-blur border-b border-white/10">
   <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
     <h1 class="font-bold text-lg">Hussein Bakes</h1>
-    <nav class="flex gap-4 text-sm items-center">
+    <nav class="flex gap-4 items-center text-sm">
       <a href="menu.html" class="text-white/70 hover:text-white">Menu</a>
-      <a href="cakes.html" class="font-semibold text-pink-400">Cakes</a>
+      <a href="cakes.html" class="font-semibold text-white">Cakes</a>
       <a href="pizza.html" class="text-white/70 hover:text-white">Pizza</a>
       <a href="https://wa.me/254710975805" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-full font-semibold">Order</a>
     </nav>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="px-4 py-28 text-center">
-  <h1 class="text-4xl sm:text-5xl font-black mb-6">Cakes Made for Every Celebration 🎂</h1>
-  <p class="text-white/70 max-w-2xl mx-auto text-lg">
-    From simple birthday cakes to elegant wedding cakes, Hussein Bakes creates beautiful, delicious cakes trusted by families across Kitui.
-  </p>
-</section>
-
-<!-- CAKE TYPES -->
-<section class="max-w-7xl mx-auto px-4 py-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
-  <div class="border border-white/10 rounded-3xl p-6 text-center">
-    <h3 class="font-bold text-xl mb-2">🎉 Birthday Cakes</h3>
-    <p class="text-white/60 mb-2">Themed & no-theme options</p>
-    <p class="font-semibold text-pink-400">From KES 2,500</p>
-  </div>
-
-  <div class="border border-white/10 rounded-3xl p-6 text-center">
-    <h3 class="font-bold text-xl mb-2">🧸 Kids Cartoon Cakes</h3>
-    <p class="text-white/60 mb-2">Custom cartoon designs</p>
-    <p class="font-semibold text-pink-400">Custom Pricing</p>
-  </div>
-
-  <div class="border border-white/10 rounded-3xl p-6 text-center">
-    <h3 class="font-bold text-xl mb-2">💍 Wedding Cakes</h3>
-    <p class="text-white/60 mb-2">Elegant multi-tier cakes</p>
-    <p class="font-semibold text-pink-400">By Consultation</p>
-  </div>
-
-  <div class="border border-white/10 rounded-3xl p-6 text-center">
-    <h3 class="font-bold text-xl mb-2">✨ Custom Cakes</h3>
-    <p class="text-white/60 mb-2">Any design, any occasion</p>
-    <p class="font-semibold text-pink-400">KES 3,500 / kg</p>
-  </div>
-
-</section>
-
-<!-- FLAVORS -->
-<section class="max-w-5xl mx-auto px-4 py-24 text-center">
-  <h2 class="text-3xl sm:text-4xl font-black mb-10">Available Cake Flavors
-<p class="text-white/60 text-sm mt-2">👉 Tap on a flavor below to view a real cake photo</p></h2>
-
-  <div class="flex flex-wrap gap-4 justify-center">
-    <button onclick="openFlavor('vanilla')" class="flavor-btn">Vanilla</button>
-    <button onclick="openFlavor('blackforest')" class="flavor-btn">Black Forest</button>
-    <button onclick="openFlavor('redvelvet')" class="flavor-btn">Red Velvet</button>
-    <button onclick="openFlavor('lemon')" class="flavor-btn">Lemon</button>
-    <button onclick="openFlavor('cardamom')" class="flavor-btn">Cardamom</button>
-  </div>
-</section>
-
-<!-- GALLERY -->
-<section class="max-w-7xl mx-auto px-4 py-24">
-  <h2 class="text-4xl font-black text-center mb-12">Cake Gallery</h2>
-
-  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-    <div onclick="openCake('birthday')" class="relative cursor-pointer">
-      <img src="images/cakes/birthday.jpg" class="rounded-2xl w-full h-56 object-cover">
-      <span class="cake-tag">🎂 Birthday Cake</span>
-    </div>
-
-    <div onclick="openCake('notheme')" class="relative cursor-pointer">
-      <img src="images/cakes/notheme.jpg" class="rounded-2xl w-full h-56 object-cover">
-      <span class="cake-tag">🎉 No Theme Cake</span>
-    </div>
-
-    <div onclick="openCake('kids')" class="relative cursor-pointer">
-      <img src="images/cakes/kids.jpg" class="rounded-2xl w-full h-56 object-cover">
-      <span class="cake-tag">🧸 Kids Cartoon</span>
-    </div>
-
-    <div onclick="openCake('wedding')" class="relative cursor-pointer">
-      <img src="images/cakes/wedding.jpg" class="rounded-2xl w-full h-56 object-cover">
-      <span class="cake-tag">💍 Wedding Cake</span>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
 <section class="px-4 py-24 text-center">
-  <h3 class="text-3xl font-bold mb-4">Ready to Order Your Cake?</h3>
-  <p class="text-white/60 mb-8">Message us on WhatsApp to discuss size, flavor & delivery.</p>
-  <a href="https://wa.me/254710975805?text=I%20would%20like%20to%20order%20a%20cake" class="bg-green-600 hover:bg-green-700 px-10 py-4 rounded-full font-bold text-lg">Order on WhatsApp</a>
+  <h1 class="text-4xl sm:text-5xl font-black mb-6">Custom Cakes in Kitui 🎂</h1>
+  <p class="text-white/70 max-w-3xl mx-auto text-lg">Beautiful, delicious cakes made fresh for birthdays, weddings, kids and all celebrations.</p>
 </section>
 
-<!-- FOOTER -->
+<section class="max-w-6xl mx-auto px-4 py-16 grid sm:grid-cols-2 gap-8">
+
+  <div class="border border-white/10 rounded-3xl p-8">
+    <h2 class="text-2xl font-bold mb-2">🎉 Birthday Cakes</h2>
+    <p class="text-white/60 mb-4">Custom themed or simple no-theme cakes.</p>
+    <ul class="text-white/70 mb-4">
+      <li>No-theme birthday cake – <strong>KES 2,500</strong></li>
+      <li>Themed birthday cake – Custom price</li>
+    </ul>
+  </div>
+
+  <div class="border border-white/10 rounded-3xl p-8">
+    <h2 class="text-2xl font-bold mb-2">👶 Kids Cartoon Cakes</h2>
+    <p class="text-white/60 mb-4">Fun cartoon designs loved by kids.</p>
+    <p class="text-white/70">Custom pricing based on design.</p>
+  </div>
+
+  <div class="border border-white/10 rounded-3xl p-8">
+    <h2 class="text-2xl font-bold mb-2">💍 Wedding Cakes</h2>
+    <p class="text-white/60 mb-4">Elegant multi-tier wedding cakes.</p>
+    <p class="text-white/70">Consultation & custom pricing.</p>
+  </div>
+
+  <div class="border border-white/10 rounded-3xl p-8">
+    <h2 class="text-2xl font-bold mb-2">🎂 Celebration Cakes</h2>
+    <p class="text-white/60 mb-4">Perfect for anniversaries & special moments.</p>
+    <p class="text-white/70">Custom pricing.</p>
+  </div>
+
+</section>
+
+<section class="max-w-6xl mx-auto px-4 py-20">
+  <h2 class="text-3xl font-black text-center mb-10">Cake Gallery (Seeing is Believing 👀)</h2>
+  <div class="grid sm:grid-cols-3 gap-6">
+    <div class="relative">
+      <img src="images/birthday-cake.jpg" alt="Birthday Cake" class="rounded-2xl" />
+      <span class="absolute top-3 left-3 bg-orange-600 px-3 py-1 rounded-full text-sm">Birthday Cake</span>
+    </div>
+    <div class="relative">
+      <img src="images/kids-cake.jpg" alt="Kids Cartoon Cake" class="rounded-2xl" />
+      <span class="absolute top-3 left-3 bg-orange-600 px-3 py-1 rounded-full text-sm">Kids Cartoon</span>
+    </div>
+    <div class="relative">
+      <img src="images/wedding-cake.jpg" alt="Wedding Cake" class="rounded-2xl" />
+      <span class="absolute top-3 left-3 bg-orange-600 px-3 py-1 rounded-full text-sm">Wedding Cake</span>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-5xl mx-auto px-4 py-20 text-center">
+  <h2 class="text-3xl font-black mb-4">Available Cake Flavors</h2>
+  <p class="text-white/60 mb-8">👇 Click a flavor to preview</p>
+  <div class="flex flex-wrap justify-center gap-4">
+    <button onclick="showFlavor('Vanilla')" class="bg-orange-600 px-6 py-3 rounded-full">Vanilla</button>
+    <button onclick="showFlavor('Black Forest')" class="bg-orange-600 px-6 py-3 rounded-full">Black Forest</button>
+    <button onclick="showFlavor('Red Velvet')" class="bg-orange-600 px-6 py-3 rounded-full">Red Velvet</button>
+    <button onclick="showFlavor('Lemon')" class="bg-orange-600 px-6 py-3 rounded-full">Lemon</button>
+    <button onclick="showFlavor('Cardamom')" class="bg-orange-600 px-6 py-3 rounded-full">Cardamom</button>
+  </div>
+  <p id="flavorPreview" class="mt-6 text-white/70"></p>
+</section>
+
+<section class="max-w-4xl mx-auto px-4 py-20 text-center">
+  <h2 class="text-3xl font-black mb-6">Order Your Cake</h2>
+  <a href="https://wa.me/254710975805?text=Hello%20Hussein%20Bakes%20%F0%9F%91%8B%0AI%E2%80%99d%20like%20to%20order%20a%20cake.%0ACake%20Type:%20__%0AFlavor:%20__%0ASize:%20__%0APickup%20Date:%20__" class="bg-green-600 hover:bg-green-700 px-10 py-4 rounded-full font-bold">Order on WhatsApp</a>
+</section>
+
 <footer class="border-t border-white/10 py-10 text-center text-white/50">
-  © 2025 Hussein Bakes • Kitui, Kenya
+  <p>© 2025 Hussein Bakes • Kitui, Kenya</p>
 </footer>
 
-<!-- MODALS -->
-<div id="cakeModal" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50">
-  <div class="relative max-w-lg mx-4">
-    <button onclick="closeCake()" class="absolute -top-10 right-0 text-white text-3xl">×</button>
-    <img id="cakeImg" class="rounded-2xl w-full">
-    <p id="cakeTitle" class="text-white text-center mt-4 font-bold text-xl"></p>
-  </div>
-</div>
-
-<div id="flavorModal" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50">
-  <div class="relative max-w-md mx-4">
-    <button onclick="closeFlavor()" class="absolute -top-10 right-0 text-white text-3xl">×</button>
-    <img id="flavorImg" class="rounded-2xl w-full">
-    <p id="flavorName" class="text-white text-center mt-4 font-bold text-xl"></p>
-  </div>
-</div>
-
-<style>
-.flavor-btn { background:#ec4899;color:white;padding:10px 18px;border-radius:9999px;font-weight:600; }
-.flavor-btn:hover { background:#db2777; }
-.cake-tag { position:absolute;bottom:10px;left:10px;background:rgba(0,0,0,.7);padding:6px 12px;border-radius:9999px;font-size:.8rem;font-weight:600; }
-</style>
-
 <script>
-const cakes={birthday:{title:"Birthday Cake",img:"images/cakes/birthday.jpg"},notheme:{title:"No Theme Birthday Cake – KES 2,500",img:"images/cakes/notheme.jpg"},kids:{title:"Kids Cartoon Cake",img:"images/cakes/kids.jpg"},wedding:{title:"Wedding Cake",img:"images/cakes/wedding.jpg"}};
-const flavors={vanilla:{name:"Vanilla Cake",img:"images/flavors/vanilla.jpg"},blackforest:{name:"Black Forest Cake",img:"images/flavors/blackforest.jpg"},redvelvet:{name:"Red Velvet Cake",img:"images/flavors/redvelvet.jpg"},lemon:{name:"Lemon Cake",img:"images/flavors/lemon.jpg"},cardamom:{name:"Cardamom Cake",img:"images/flavors/cardamom.jpg"}};
-function openCake(k){cakeImg.src=cakes[k].img;cakeTitle.innerText=cakes[k].title;cakeModal.classList.remove('hidden');cakeModal.classList.add('flex');}
-function closeCake(){cakeModal.classList.add('hidden');cakeModal.classList.remove('flex');}
-function openFlavor(k){flavorImg.src=flavors[k].img;flavorName.innerText=flavors[k].name;flavorModal.classList.remove('hidden');flavorModal.classList.add('flex');}
-function closeFlavor(){flavorModal.classList.add('hidden');flavorModal.classList.remove('flex');}
+  function showFlavor(flavor) {
+    document.getElementById('flavorPreview').innerText = flavor + ' flavor selected. A preview will be shared on WhatsApp when ordering.';
+  }
 </script>
 
 </body>
