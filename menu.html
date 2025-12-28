@@ -7,108 +7,33 @@
   <title>Hussein Bakes | Cakes & Pizza in Kitui Town</title>
 
   <meta name="description" content="Hussein Bakes is a trusted bakery in Kitui Town offering custom birthday cakes, wedding cakes, and freshly baked pizza. Order easily via WhatsApp." />
-  <meta name="keywords" content="Hussein Bakes, bakery in Kitui, cakes in Kitui Town, pizza in Kitui, birthday cakes Kitui, wedding cakes Kitui" />
 
-  <link rel="canonical" href="https://husseinbakes.github.io/husseinbakes_website/" />
+  <link rel="canonical" href="https://husseinbakes.github.io/husseinbakes_website/menu.html" />
 
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- BUSINESS SCHEMA -->
+  <!-- LOCAL BUSINESS SCHEMA -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Bakery",
     "name": "Hussein Bakes",
-    "url": "https://husseinbakes.github.io/husseinbakes_website/",
+    "url": "https://husseinbakes.github.io/husseinbakes_website/menu.html",
+    "logo": "https://husseinbakes.github.io/husseinbakes_website/images/logo.webp",
+    "image": "https://husseinbakes.github.io/husseinbakes_website/images/logo.webp",
     "telephone": "+254710975805",
     "priceRange": "KES",
-    "image": "https://husseinbakes.github.io/husseinbakes_website/images/logo.png",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Kitui Town",
       "addressRegion": "Kitui County",
       "addressCountry": "KE"
     },
-    "servesCuisine": ["Bakery", "Cakes", "Pizza"],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "50"
-    }
+    "servesCuisine": ["Bakery", "Cakes", "Pizza"]
   }
   </script>
-
-  <!-- PRODUCT: CAKES -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Custom Cakes in Kitui",
-    "description": "Custom birthday, wedding, and celebration cakes made in Kitui Town by Hussein Bakes.",
-    "brand": { "@type": "Brand", "name": "Hussein Bakes" },
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "KES",
-      "price": "2500",
-      "availability": "https://schema.org/InStock",
-      "url": "https://husseinbakes.github.io/husseinbakes_website/cakes.html"
-    }
-  }
-  </script>
-
-  <!-- PRODUCT: PIZZA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Fresh Pizza in Kitui",
-    "description": "Freshly baked pizza in Kitui Town with beef, chicken, and cheese options.",
-    "brand": { "@type": "Brand", "name": "Hussein Bakes" },
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "KES",
-      "price": "600",
-      "availability": "https://schema.org/InStock",
-      "url": "https://husseinbakes.github.io/husseinbakes_website/pizza.html"
-    }
-  }
-  </script>
-
-  <!-- FAQ SCHEMA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much do cakes cost in Kitui Town?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Cake prices at Hussein Bakes in Kitui Town start from affordable custom rates depending on size and design."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you sell pizza in Kitui Town?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Hussein Bakes offers freshly baked pizza in Kitui Town with beef, chicken, and cheese options."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How can I order from Hussein Bakes?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can order cakes or pizza from Hussein Bakes via WhatsApp for quick service and delivery arrangements."
-        }
-      }
-    ]
-  }
-  </script>
-
 </head>
+
 <body class="bg-slate-950 text-white">
 
 <!-- HEADER -->
@@ -116,7 +41,7 @@
   <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
     <h1 class="font-bold text-lg">Hussein Bakes</h1>
     <nav class="flex gap-4 items-center text-sm">
-      <a href="/" class="font-semibold text-white">Menu</a>
+      <a href="menu.html" class="font-semibold text-white">Menu</a>
       <a href="cakes.html" class="text-white/70 hover:text-white">Cakes</a>
       <a href="pizza.html" class="text-white/70 hover:text-white">Pizza</a>
       <a href="https://wa.me/254710975805" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-full font-semibold">Order</a>
@@ -126,9 +51,11 @@
 
 <!-- HERO -->
 <section class="px-4 py-28 text-center">
-  <h2 class="text-4xl sm:text-5xl font-black mb-6">Cakes & Pizza in Kitui Town</h2>
+  <h2 class="text-4xl sm:text-5xl font-black mb-6">
+    Cakes & Pizza in Kitui Town
+  </h2>
   <p class="text-white/70 max-w-2xl mx-auto text-lg">
-    From beautiful custom cakes to freshly baked pizza — made with quality ingredients you can trust.
+    Custom celebration cakes and freshly baked pizza made with quality ingredients you can trust.
   </p>
 </section>
 
@@ -138,24 +65,34 @@
   <div class="border border-white/10 rounded-3xl p-10 text-center">
     <div class="text-6xl mb-6">🎂</div>
     <h3 class="text-3xl font-bold mb-4">Cakes</h3>
-    <p class="text-white/60 mb-8">Birthday cakes, wedding cakes, and custom designs.</p>
-    <a href="cakes.html" class="inline-block bg-pink-600 px-8 py-4 rounded-full font-bold">View Cakes</a>
+    <p class="text-white/60 mb-8">
+      Birthday cakes, wedding cakes, kids cartoon cakes & custom designs.
+    </p>
+    <a href="cakes.html" class="inline-block bg-pink-600 px-8 py-4 rounded-full font-bold">
+      View Cakes
+    </a>
   </div>
 
   <div class="border border-white/10 rounded-3xl p-10 text-center">
     <div class="text-6xl mb-6">🍕</div>
     <h3 class="text-3xl font-bold mb-4">Pizza</h3>
-    <p class="text-white/60 mb-8">Fresh oven-baked pizza for families and friends.</p>
-    <a href="pizza.html" class="inline-block bg-orange-600 px-8 py-4 rounded-full font-bold">View Pizza</a>
+    <p class="text-white/60 mb-8">
+      Fresh oven-baked pizza for families, friends & events.
+    </p>
+    <a href="pizza.html" class="inline-block bg-orange-600 px-8 py-4 rounded-full font-bold">
+      View Pizza
+    </a>
   </div>
 
 </section>
 
 <!-- ABOUT -->
 <section class="max-w-4xl mx-auto px-4 py-24 text-center">
-  <h3 class="text-3xl sm:text-4xl font-black mb-6">About Hussein Bakes</h3>
+  <h3 class="text-3xl sm:text-4xl font-black mb-6">
+    About Hussein Bakes
+  </h3>
   <p class="text-white/70 text-lg">
-    Hussein Bakes is a locally owned bakery in Kitui Town, Kitui County, specializing in custom cakes and freshly baked pizza. We focus on quality, consistency, and memorable taste.
+    Hussein Bakes is a locally owned bakery in Kitui Town specializing in custom cakes and freshly baked pizza. We focus on quality, consistency, and memorable taste.
   </p>
 </section>
 
