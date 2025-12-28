@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- MENU / HOME -->
   <url>
-    <loc>https://husseinbakes.github.io/husseinbakes_website/</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority> </url>
-  
+    <loc>https://husseinbakes.github.io/husseinbakes_website/menu.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- CAKES PAGE -->
   <url>
-    <loc>https://husseinbakes.github.io/husseinbakes_website/gallery.html</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority> </url>
-  
-  </urlset>
+    <loc>https://husseinbakes.github.io/husseinbakes_website/cakes.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- PIZZA PAGE -->
+  <url>
+    <loc>https://husseinbakes.github.io/husseinbakes_website/pizza.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+</urlset>
