@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Pizza in Kitui Town | Fresh Homemade Pizza – Hussein Bakes</title>
+  <title>Pizza in Kitui Town | Hussein Bakes</title>
 
   <meta name="description" content="Order fresh homemade pizza in Kitui Town from Hussein Bakes. Beef pizza, Chicken Tikka pizza, Cheese pizza & Veg pizza. Made fresh on order." />
 
@@ -20,7 +20,6 @@
     "name": "Hussein Bakes",
     "url": "https://husseinbakes.github.io/husseinbakes_website/",
     "telephone": "+254710975805",
-    "image": "https://husseinbakes.github.io/husseinbakes_website/images/logo.webp",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Kitui Town",
@@ -30,135 +29,126 @@
     "servesCuisine": ["Pizza", "Bakery"]
   }
   </script>
-
-  <!-- PRODUCT SCHEMA: BEEF PIZZA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Beef Pizza",
-    "image": "https://husseinbakes.github.io/husseinbakes_website/images/hussein-bakes-beef-pizza.jpeg",
-    "description": "Freshly baked beef pizza with seasoned minced beef, rich tomato sauce and melted mozzarella cheese.",
-    "brand": { "@type": "Brand", "name": "Hussein Bakes" },
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "KES",
-      "price": "700",
-      "availability": "https://schema.org/InStock"
-    }
-  }
-  </script>
-
-  <!-- PRODUCT SCHEMA: CHICKEN TIKKA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Chicken Tikka Pizza",
-    "image": "https://husseinbakes.github.io/husseinbakes_website/images/hussein-bakes-chicken-tikka.jpeg",
-    "description": "Chicken tikka pizza made with tender chicken, mild spices, rich sauce and melted cheese.",
-    "brand": { "@type": "Brand", "name": "Hussein Bakes" },
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "KES",
-      "price": "750",
-      "availability": "https://schema.org/InStock"
-    }
-  }
-  </script>
-
-  <!-- PRODUCT SCHEMA: CHEESE -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Cheese Pizza",
-    "image": "https://husseinbakes.github.io/husseinbakes_website/images/hussein-bakes-cheese-pizza.jpeg",
-    "description": "Classic cheese pizza with rich tomato sauce and generous mozzarella cheese.",
-    "brand": { "@type": "Brand", "name": "Hussein Bakes" },
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "KES",
-      "price": "500",
-      "availability": "https://schema.org/InStock"
-    }
-  }
-  </script>
-
-  <!-- PRODUCT SCHEMA: VEGETABLE -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Vegetable Pizza",
-    "image": "https://husseinbakes.github.io/husseinbakes_website/images/hussein-bakes-vegetarian-pizza.jpeg",
-    "description": "Vegetable pizza made with fresh mixed vegetables, tomato sauce and melted cheese.",
-    "brand": { "@type": "Brand", "name": "Hussein Bakes" },
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "KES",
-      "price": "600",
-      "availability": "https://schema.org/InStock"
-    }
-  }
-  </script>
-
 </head>
 
 <body class="bg-slate-950 text-white">
+
+<header class="sticky top-0 z-50 bg-black/70 backdrop-blur border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h2 class="font-bold text-lg">Hussein Bakes</h2>
+    <nav class="flex gap-4 items-center text-sm">
+      <a href="menu.html" class="text-white/70 hover:text-white">Menu</a>
+      <a href="cakes.html" class="text-white/70 hover:text-white">Cakes</a>
+      <a href="pizza.html" class="font-semibold text-white">Pizza</a>
+      <a href="https://wa.me/254710975805" class="bg-green-600 px-4 py-2 rounded-full font-semibold">Order</a>
+    </nav>
+  </div>
+</header>
 
 <!-- HERO -->
 <section class="px-4 py-24 text-center">
   <h1 class="text-4xl sm:text-5xl font-black mb-6">Fresh Pizza in Kitui Town 🍕</h1>
   <p class="text-white/70 max-w-3xl mx-auto text-lg">
-    Fresh homemade pizza prepared on order by Hussein Bakes. Quality ingredients, family sizes & great taste.
+    Freshly baked homemade pizza made on order by Hussein Bakes. Trusted by families across Kitui.
   </p>
 </section>
 
-<!-- FRIDAY PROMO -->
-<section class="max-w-5xl mx-auto px-4 mb-20">
-  <div class="border-2 border-orange-500 rounded-3xl p-8 text-center bg-orange-500/10">
-    <h2 class="text-3xl font-black mb-4 text-orange-400">🔥 BUY 1 GET 1 FREE</h2>
-    <p class="text-white/80">Large Chicken Tikka & Beef Spicy • Fridays Only</p>
-  </div>
-</section>
-
-<!-- MENU -->
+<!-- PIZZA MENU -->
 <section class="max-w-6xl mx-auto px-4 py-16 grid sm:grid-cols-2 gap-8">
 
-  <!-- Beef -->
+  <!-- Beef Pizza -->
   <div class="border border-white/10 rounded-3xl p-8">
-    <img src="images/hussein-bakes-beef-pizza.jpeg" alt="Beef Pizza in Kitui" class="rounded-xl mb-4">
     <h2 class="text-2xl font-bold mb-2">🍖 Beef Pizza</h2>
-    <p class="text-white/60">Seasoned minced beef, rich sauce & mozzarella cheese.</p>
+    <p class="text-white/60 mb-4">Seasoned beef, rich tomato sauce and melted mozzarella.</p>
+    <ul class="text-white/70 mb-4">
+      <li>Small – KES 700</li>
+      <li>Medium – KES 1,050</li>
+      <li>Large – KES 1,400</li>
+    </ul>
   </div>
 
-  <!-- Chicken -->
+  <!-- Chicken Tikka -->
   <div class="border border-white/10 rounded-3xl p-8">
-    <img src="images/hussein-bakes-chicken-tikka.jpeg" alt="Chicken Tikka Pizza in Kitui" class="rounded-xl mb-4">
     <h2 class="text-2xl font-bold mb-2">🍗 Chicken Tikka Pizza</h2>
-    <p class="text-white/60">Tender chicken tikka with mild spices & melted cheese.</p>
+    <p class="text-white/60 mb-4">Tender chicken tikka, mild spices, rich sauce & cheese.</p>
+    <ul class="text-white/70 mb-4">
+      <li>Small – KES 750</li>
+      <li>Medium – KES 1,100</li>
+      <li>Large – KES 1,500</li>
+    </ul>
+    <p class="text-green-400 font-semibold">Buy 1 Get 1 Free – Fridays</p>
   </div>
 
   <!-- Cheese -->
   <div class="border border-white/10 rounded-3xl p-8">
-    <img src="images/hussein-bakes-cheese-pizza.jpeg" alt="Cheese Pizza in Kitui" class="rounded-xl mb-4">
     <h2 class="text-2xl font-bold mb-2">🧀 Cheese Pizza</h2>
-    <p class="text-white/60">Classic cheese pizza with rich tomato sauce.</p>
+    <p class="text-white/60 mb-4">Classic cheese-only pizza with tomato sauce.</p>
+    <ul class="text-white/70 mb-4">
+      <li>Small – KES 500</li>
+      <li>Medium – KES 800</li>
+      <li>Large – KES 1,100</li>
+    </ul>
   </div>
 
   <!-- Veg -->
   <div class="border border-white/10 rounded-3xl p-8">
-    <img src="images/hussein-bakes-vegetarian-pizza.jpeg" alt="Vegetable Pizza in Kitui" class="rounded-xl mb-4">
-    <h2 class="text-2xl font-bold mb-2">🥬 Vegetable Pizza</h2>
-    <p class="text-white/60">Fresh vegetables with cheese & tomato sauce.</p>
+    <h2 class="text-2xl font-bold mb-2">🥬 Veg Pizza</h2>
+    <p class="text-white/60 mb-4">Fresh mixed vegetables with melted cheese.</p>
+    <ul class="text-white/70 mb-4">
+      <li>Small – KES 600</li>
+      <li>Medium – KES 900</li>
+      <li>Large – KES 1,200</li>
+    </ul>
   </div>
 
 </section>
 
+<!-- ORDER NOTICE -->
+<section class="max-w-3xl mx-auto px-4 py-16 text-center">
+  <div class="border border-orange-500/40 rounded-2xl p-6 bg-orange-500/5">
+    <h2 class="text-xl font-bold mb-2 text-orange-400">Ordering Information</h2>
+    <p class="text-white/70">Orders are prepared fresh. Please order <strong>3–4 hours in advance</strong>.</p>
+    <p class="text-white/70">Delivery within Kitui Town • Pickup available</p>
+  </div>
+</section>
+
 <footer class="border-t border-white/10 py-10 text-center text-white/50">
-  © 2025 Hussein Bakes • Kitui Town, Kenya
+  <p>© 2025 Hussein Bakes • Kitui Town, Kenya</p>
 </footer>
+
+<!-- PRODUCT SCHEMA -->
+<script type="application/ld+json">
+[
+  {
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "name":"Beef Pizza in Kitui",
+    "brand":{"@type":"Brand","name":"Hussein Bakes"},
+    "offers":{"@type":"Offer","priceCurrency":"KES","price":"700","availability":"https://schema.org/InStock"}
+  },
+  {
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "name":"Chicken Tikka Pizza in Kitui",
+    "brand":{"@type":"Brand","name":"Hussein Bakes"},
+    "offers":{"@type":"Offer","priceCurrency":"KES","price":"750","availability":"https://schema.org/InStock"}
+  },
+  {
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "name":"Cheese Pizza in Kitui",
+    "brand":{"@type":"Brand","name":"Hussein Bakes"},
+    "offers":{"@type":"Offer","priceCurrency":"KES","price":"500","availability":"https://schema.org/InStock"}
+  },
+  {
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "name":"Vegetable Pizza in Kitui",
+    "brand":{"@type":"Brand","name":"Hussein Bakes"},
+    "offers":{"@type":"Offer","priceCurrency":"KES","price":"600","availability":"https://schema.org/InStock"}
+  }
+]
+</script>
 
 </body>
 </html>
