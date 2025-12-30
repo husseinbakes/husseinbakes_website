@@ -1,93 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="https://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- HOMEPAGE - HIGHEST PRIORITY -->
   <url>
     <loc>https://husseinbakes.github.io/husseinbakes_website/</loc>
     <lastmod>2025-01-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/logo.webp</image:loc>
-      <image:title>Hussein Bakes Logo - Premium Bakery in Kitui Town</image:title>
-    </image:image>
   </url>
 
-  <!-- CAKES PAGE -->
   <url>
     <loc>https://husseinbakes.github.io/husseinbakes_website/cakes.html</loc>
     <lastmod>2025-01-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/cakes/vanilla.jpg</image:loc>
-      <image:title>Vanilla Cake - Custom Cakes in Kitui Town</image:title>
-    </image:image>
   </url>
 
-  <!-- PIZZA PAGE -->
   <url>
     <loc>https://husseinbakes.github.io/husseinbakes_website/pizza.html</loc>
     <lastmod>2025-01-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/pizza/beef.jpg</image:loc>
-      <image:title>Beef Pizza - Fresh Pizza in Kitui Town</image:title>
-    </image:image>
   </url>
 
-  <!-- IMPORTANT PRODUCT PAGES (For SEO) -->
-  <!-- Vanilla Cake -->
-  <url>
-    <loc>https://husseinbakes.github.io/husseinbakes_website/product.html?id=vanilla-cake</loc>
-    <lastmod>2025-01-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/cakes/vanilla.jpg</image:loc>
-      <image:title>Vanilla Cake in Kitui Town - Hussein Bakes</image:title>
-      <image:caption>Custom vanilla cake with white buttercream frosting</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Signature Cake -->
-  <url>
-    <loc>https://husseinbakes.github.io/husseinbakes_website/product.html?id=vanilla-cardamom</loc>
-    <lastmod>2025-01-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Chocolate Cake -->
-  <url>
-    <loc>https://husseinbakes.github.io/husseinbakes_website/product.html?id=chocolate-cake</loc>
-    <lastmod>2025-01-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Beef Pizza -->
   <url>
     <loc>https://husseinbakes.github.io/husseinbakes_website/product.html?id=beef-pizza</loc>
     <lastmod>2025-01-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/pizza/beef.jpg</image:loc>
-      <image:title>Beef Pizza in Kitui Town - Hussein Bakes</image:title>
-      <image:caption>Fresh beef pizza with mozzarella cheese</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Chicken Tikka Pizza -->
-  <url>
-    <loc>https://husseinbakes.github.io/husseinbakes_website/product.html?id=chicken-tikka-pizza</loc>
-    <lastmod>2025-01-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
 
 </urlset>
