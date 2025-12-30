@@ -1,4 +1,36 @@
+# Hussein Bakes - Kitui Town Bakery
 User-agent: *
 Allow: /
+Disallow: /js/
+Disallow: /css/
 
+# Sitemap location
 Sitemap: https://husseinbakes.github.io/husseinbakes_website/sitemap.xml
+
+# Crawl delay (be nice to Google)
+Crawl-delay: 2
+
+# Preferred domain (use www if you have it, but GitHub Pages doesn't need this)
+# Host: husseinbakes.github.io
+
+# Additional instructions for specific bots
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /images/
+Disallow: /js/
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SEMrushBot
+Disallow: /
