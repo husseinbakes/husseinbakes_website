@@ -4,13 +4,66 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Hussein Bakes | Cakes & Pizza in Kitui Town</title>
+  <title>Hussein Bakes | Premium Cakes & Pizza in Kitui Town</title>
 
-  <meta name="description" content="Hussein Bakes is a trusted bakery in Kitui Town offering custom birthday cakes, wedding cakes, and freshly baked pizza. Order easily via WhatsApp." />
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Hussein Bakes is a premium bakery in Kitui Town offering custom cakes (48-hour pre-order) and fresh pizza (3-4 hour preparation). Order via WhatsApp for pickup or delivery." />
+  <meta name="keywords" content="Kitui bakery, custom cakes Kitui, pizza Kitui, birthday cakes Kitui, wedding cakes Kitui, fresh pizza Kitui" />
+  <meta name="author" content="Hussein Salim" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://husseinbakes.github.io/husseinbakes_website/" />
+  <meta property="og:title" content="Hussein Bakes | Premium Cakes & Pizza in Kitui Town" />
+  <meta property="og:description" content="Custom cakes & fresh pizza in Kitui Town. Order via WhatsApp for pickup or delivery." />
+  <meta property="og:image" content="https://husseinbakes.github.io/husseinbakes_website/images/logo.webp" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://husseinbakes.github.io/husseinbakes_website/" />
+  <meta property="twitter:title" content="Hussein Bakes | Premium Cakes & Pizza in Kitui Town" />
+  <meta property="twitter:description" content="Custom cakes & fresh pizza in Kitui Town. Order via WhatsApp for pickup or delivery." />
+  <meta property="twitter:image" content="https://husseinbakes.github.io/husseinbakes_website/images/logo.webp" />
 
   <link rel="canonical" href="https://husseinbakes.github.io/husseinbakes_website/" />
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicons -->
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="images/site.webmanifest">
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'midnight': '#0B1320',
+            'offwhite': '#F3F2EE',
+            'softgray': '#CFCBC3',
+            'goldlight': '#E6C97A',
+            'metgold': '#C9A24D',
+            'golddeep': '#A8833A',
+          },
+          fontFamily: {
+            'playfair': ['Playfair Display', 'serif'],
+            'inter': ['Inter', 'sans-serif'],
+          },
+          backgroundImage: {
+            'gold-gradient': 'linear-gradient(135deg, #E6C97A, #C9A24D, #A8833A)',
+            'gold-gradient-hover': 'linear-gradient(135deg, #C9A24D, #A8833A, #8B6B2E)',
+          }
+        }
+      }
+    }
+  </script>
 
   <!-- LOCAL BUSINESS SCHEMA -->
   <script type="application/ld+json">
@@ -18,88 +71,211 @@
     "@context": "https://schema.org",
     "@type": "Bakery",
     "name": "Hussein Bakes",
-    "url": "https://husseinbakes.github.io/husseinbakes_website/menu.html",
-    "logo": "https://husseinbakes.github.io/husseinbakes_website/images/logo.webp",
-    "image": "https://husseinbakes.github.io/husseinbakes_website/images/logo.webp",
+    "url": "https://husseinbakes.github.io/husseinbakes_website/",
     "telephone": "+254710975805",
-    "priceRange": "KES",
+    "priceRange": "KES 500 - 10000",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Kitui Town",
       "addressRegion": "Kitui County",
       "addressCountry": "KE"
     },
-    "servesCuisine": ["Bakery", "Cakes", "Pizza"]
+    "servesCuisine": ["Bakery", "Cakes", "Pizza"],
+    "openingHours": "Mo-Su 09:00-20:00",
+    "image": "https://husseinbakes.github.io/husseinbakes_website/images/logo.webp"
   }
   </script>
+  
+  <!-- Google Site Verification -->
   <meta name="google-site-verification" content="Hbt1zbIzg7kF7JBxvnhPjlfDtL4dCvUsFbIrU3_qNns" />
 </head>
 
-<body class="bg-slate-950 text-white">
+<body class="bg-midnight text-offwhite font-inter">
 
 <!-- HEADER -->
-<header class="sticky top-0 z-50 bg-black/70 backdrop-blur border-b border-white/10">
+<header class="sticky top-0 z-50 bg-midnight/95 backdrop-blur border-b border-metgold/20">
   <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-    <h1 class="font-bold text-lg">Hussein Bakes</h1>
-    <nav class="flex gap-4 items-center text-sm">
-      <a href="index.html" class="font-semibold text-white">home</a>
-      <a href="cakes.html" class="text-white/70 hover:text-white">Cakes</a>
-      <a href="pizza.html" class="text-white/70 hover:text-white">Pizza</a>
-      <a href="https://wa.me/254710975805" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-full font-semibold">Order</a>
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="images/logo.webp" alt="Hussein Bakes Logo" class="h-10 w-auto" width="40" height="40">
+      <div class="hidden md:block">
+        <div class="font-playfair text-xl font-semibold text-offwhite">HUSSEIN BAKES</div>
+        <div class="text-softgray text-xs tracking-wider">KITUI TOWN</div>
+      </div>
+    </a>
+    
+    <!-- Navigation -->
+    <nav class="flex gap-6 items-center text-sm">
+      <a href="index.html" class="font-medium text-metgold">Home</a>
+      <a href="cakes.html" class="text-softgray hover:text-offwhite transition duration-200">Cakes</a>
+      <a href="pizza.html" class="text-softgray hover:text-offwhite transition duration-200">Pizza</a>
+      <a href="https://wa.me/254710975805" 
+         class="bg-gold-gradient text-midnight hover:bg-gold-gradient-hover px-5 py-2.5 rounded-full font-semibold flex items-center gap-2 transition-all duration-300 shadow-lg hover:shadow-metgold/20">
+        <img src="images/whatsapp-icon.webp" alt="WhatsApp" class="h-4 w-4" width="16" height="16">
+        Order Now
+      </a>
     </nav>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="px-4 py-28 text-center">
-  <h2 class="text-4xl sm:text-5xl font-black mb-6">
-    Cakes & Pizza in Kitui Town
-  </h2>
-  <p class="text-white/70 max-w-2xl mx-auto text-lg">
-    Custom celebration cakes and freshly baked pizza made with quality ingredients you can trust.
-  </p>
+<!-- HERO SECTION -->
+<section class="relative px-4 py-24 text-center">
+  <!-- Background with overlay -->
+  <div class="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-950"></div>
+  
+  <!-- Content -->
+  <div class="relative z-10 max-w-4xl mx-auto">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-playfair font-semibold mb-6 leading-tight">
+      Premium Baked Goods in <span class="text-metgold">Kitui Town</span>
+    </h1>
+    
+    <p class="text-offwhite/80 text-lg sm:text-xl max-w-2xl mx-auto mb-8">
+      Custom celebration cakes & fresh artisanal pizza. Order via WhatsApp for pickup or delivery in Kitui.
+    </p>
+    
+    <!-- CTA Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+      <a href="cakes.html" 
+         class="bg-metgold hover:bg-golddeep text-midnight font-bold py-4 px-8 rounded-full text-lg transition duration-300 shadow-lg hover:shadow-metgold/20">
+        🎂 Browse Cakes
+      </a>
+      
+      <a href="pizza.html"
+         class="border border-metgold/40 hover:border-metgold bg-midnight text-metgold hover:bg-metgold/10 py-4 px-8 rounded-full font-medium transition duration-200">
+        🍕 Browse Pizza
+      </a>
+    </div>
+    
+    <div class="flex flex-wrap justify-center gap-6 text-offwhite/60 text-sm">
+      <div class="flex items-center gap-2">
+        <div class="w-2 h-2 bg-metgold rounded-full"></div>
+        <span>Custom Cake Designs</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="w-2 h-2 bg-metgold rounded-full"></div>
+        <span>Fresh Pizza Daily</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="w-2 h-2 bg-metgold rounded-full"></div>
+        <span>Kitui Owned & Operated</span>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- MENU LINKS -->
-<section class="max-w-6xl mx-auto px-4 py-16 grid sm:grid-cols-2 gap-8">
-
-  <div class="border border-white/10 rounded-3xl p-10 text-center">
-    <div class="text-6xl mb-6">🎂</div>
-    <h3 class="text-3xl font-bold mb-4">Cakes</h3>
-    <p class="text-white/60 mb-8">
-      Birthday cakes, wedding cakes, kids cartoon cakes & custom designs.
-    </p>
-    <a href="cakes.html" class="inline-block bg-pink-600 px-8 py-4 rounded-full font-bold">
-      View Cakes
-    </a>
+<!-- FEATURES -->
+<section class="max-w-6xl mx-auto px-4 py-16">
+  <div class="grid md:grid-cols-3 gap-8">
+    <div class="text-center p-8 border border-metgold/20 rounded-2xl hover:border-metgold/40 transition">
+      <div class="text-4xl mb-4">🎂</div>
+      <h3 class="font-playfair text-xl font-semibold mb-3">Custom Cakes</h3>
+      <p class="text-softgray">Birthday, wedding, and celebration cakes made to order with 48-hour pre-order.</p>
+      <a href="cakes.html" class="inline-block mt-4 text-metgold hover:text-goldlight font-medium">View Collection →</a>
+    </div>
+    
+    <div class="text-center p-8 border border-metgold/20 rounded-2xl hover:border-metgold/40 transition">
+      <div class="text-4xl mb-4">🍕</div>
+      <h3 class="font-playfair text-xl font-semibold mb-3">Fresh Pizza</h3>
+      <p class="text-softgray">Beef, chicken, cheese, and veg pizza ready in 3-4 hours. Friday BOGO specials!</p>
+      <a href="pizza.html" class="inline-block mt-4 text-metgold hover:text-goldlight font-medium">View Menu →</a>
+    </div>
+    
+    <div class="text-center p-8 border border-metgold/20 rounded-2xl hover:border-metgold/40 transition">
+      <div class="text-4xl mb-4">🚚</div>
+      <h3 class="font-playfair text-xl font-semibold mb-3">Easy Ordering</h3>
+      <p class="text-softgray">Order via WhatsApp with pickup or delivery in Kitui Town. Fast, simple, reliable.</p>
+      <a href="https://wa.me/254710975805" class="inline-block mt-4 text-metgold hover:text-goldlight font-medium">Order Now →</a>
+    </div>
   </div>
-
-  <div class="border border-white/10 rounded-3xl p-10 text-center">
-    <div class="text-6xl mb-6">🍕</div>
-    <h3 class="text-3xl font-bold mb-4">Pizza</h3>
-    <p class="text-white/60 mb-8">
-      Fresh oven-baked pizza for families, friends & events.
-    </p>
-    <a href="pizza.html" class="inline-block bg-orange-600 px-8 py-4 rounded-full font-bold">
-      View Pizza
-    </a>
-  </div>
-
 </section>
 
-<!-- ABOUT -->
-<section class="max-w-4xl mx-auto px-4 py-24 text-center">
-  <h3 class="text-3xl sm:text-4xl font-black mb-6">
-    About Hussein Bakes
-  </h3>
-  <p class="text-white/70 text-lg">
-    Hussein Bakes is a locally owned bakery in Kitui Town specializing in custom cakes and freshly baked pizza. We focus on quality, consistency, and memorable taste.
-  </p>
+<!-- ORDERING INFO -->
+<section class="max-w-4xl mx-auto px-4 py-16">
+  <div class="bg-midnight border border-metgold/30 rounded-3xl p-10 text-center">
+    <h2 class="font-playfair text-3xl font-semibold mb-6">How to Order</h2>
+    
+    <div class="grid md:grid-cols-3 gap-6 mb-8">
+      <div class="text-center">
+        <div class="text-2xl mb-3 text-metgold">1</div>
+        <h4 class="font-semibold mb-2">Browse & Select</h4>
+        <p class="text-softgray text-sm">Choose from cakes or pizza menu</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="text-2xl mb-3 text-metgold">2</div>
+        <h4 class="font-semibold mb-2">Customize Your Order</h4>
+        <p class="text-softgray text-sm">Select size, add-ons, delivery option</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="text-2xl mb-3 text-metgold">3</div>
+        <h4 class="font-semibold mb-2">Confirm via WhatsApp</h4>
+        <p class="text-softgray text-sm">Review & send order directly to us</p>
+      </div>
+    </div>
+    
+    <a href="https://wa.me/254710975805" 
+       class="inline-block bg-gold-gradient text-midnight hover:bg-gold-gradient-hover font-semibold py-4 px-10 rounded-full text-lg flex items-center gap-3 mx-auto transition-all duration-300">
+      <img src="images/whatsapp-icon.webp" alt="WhatsApp" class="h-6 w-6" width="24" height="24">
+      Start Your Order on WhatsApp
+    </a>
+  </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="border-t border-white/10 py-10 text-center text-white/50">
-  <p>© 2025 Hussein Bakes • Kitui Town, Kitui County, Kenya</p>
+<footer class="border-t border-metgold/10 py-12">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex flex-col lg:flex-row justify-between items-center gap-8">
+      <!-- Brand -->
+      <div class="text-center lg:text-left">
+        <div class="flex items-center justify-center lg:justify-start gap-3 mb-4">
+          <img src="images/logo.webp" alt="Hussein Bakes Logo" class="h-12 w-auto" width="48" height="48">
+          <div>
+            <h3 class="font-playfair text-xl font-semibold">HUSSEIN BAKES</h3>
+            <p class="text-softgray text-sm">Premium Bakery • Kitui Town</p>
+          </div>
+        </div>
+        <p class="text-softgray text-sm max-w-xs">
+          Custom cakes & fresh pizza made daily in Kitui Town. Order via WhatsApp for pickup or delivery.
+        </p>
+      </div>
+      
+      <!-- Contact -->
+      <div class="text-center">
+        <h4 class="font-semibold mb-4 text-metgold">Contact Us</h4>
+        <div class="space-y-2">
+          <a href="tel:+254710975805" class="block text-offwhite hover:text-metgold transition">
+            📞 +254 710 975 805
+          </a>
+          <a href="https://wa.me/254710975805" class="block text-offwhite hover:text-metgold transition">
+            💬 Order on WhatsApp
+          </a>
+          <p class="text-softgray text-sm">📍 Kitui Town, Kitui County</p>
+        </div>
+      </div>
+      
+      <!-- Quick Links -->
+      <div class="text-center">
+        <h4 class="font-semibold mb-4 text-metgold">Quick Links</h4>
+        <div class="space-y-2">
+          <a href="index.html" class="block text-softgray hover:text-offwhite">Home</a>
+          <a href="cakes.html" class="block text-softgray hover:text-offwhite">Cakes Menu</a>
+          <a href="pizza.html" class="block text-softgray hover:text-offwhite">Pizza Menu</a>
+          <a href="product.html?id=vanilla-cake" class="block text-softgray hover:text-offwhite">Sample Order</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="border-t border-metgold/10 mt-8 pt-8 text-center">
+      <p class="text-softgray text-sm">
+        © 2025 Hussein Bakes. All rights reserved. Kitui Town, Kenya
+      </p>
+      <p class="text-softgray text-xs mt-1">
+        Made with ❤️ in Kitui | VAT No. Pending
+      </p>
+    </div>
+  </div>
 </footer>
 
 </body>
