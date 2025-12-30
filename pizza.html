@@ -4,150 +4,351 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Pizza in Kitui Town | Hussein Bakes</title>
+  <title>Pizza in Kitui Town | Fresh Beef, Chicken Tikka, Cheese & Veg Pizza – Hussein Bakes</title>
 
-  <meta name="description" content="Order fresh homemade pizza in Kitui Town from Hussein Bakes. Beef pizza, Chicken Tikka pizza, Cheese pizza & Veg pizza. Made fresh on order." />
-
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Order fresh pizza in Kitui Town! Beef pizza, Chicken Tikka pizza, Cheese pizza, Vegetable pizza from KES 500. 3-4 hour preparation. Friday BOGO specials! Delivery available." />
+  <meta name="keywords" content="pizza Kitui, beef pizza Kitui, chicken tikka pizza Kitui, cheese pizza Kitui, veg pizza Kitui, pizza delivery Kitui, Friday pizza special Kitui" />
+  
   <link rel="canonical" href="https://husseinbakes.github.io/husseinbakes_website/pizza.html" />
 
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <!-- BUSINESS SCHEMA -->
+  <!-- Favicons -->
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="images/site.webmanifest">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'midnight': '#0B1320',
+            'offwhite': '#F3F2EE',
+            'softgray': '#CFCBC3',
+            'goldlight': '#E6C97A',
+            'metgold': '#C9A24D',
+            'golddeep': '#A8833A',
+          },
+          fontFamily: {
+            'playfair': ['Playfair Display', 'serif'],
+            'inter': ['Inter', 'sans-serif'],
+          },
+          backgroundImage: {
+            'gold-gradient': 'linear-gradient(135deg, #E6C97A, #C9A24D, #A8833A)',
+            'gold-gradient-hover': 'linear-gradient(135deg, #C9A24D, #A8833A, #8B6B2E)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- BREADCRUMB SCHEMA -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Bakery",
-    "name": "Hussein Bakes",
-    "url": "https://husseinbakes.github.io/husseinbakes_website/",
-    "telephone": "+254710975805",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Kitui Town",
-      "addressRegion": "Kitui County",
-      "addressCountry": "KE"
-    },
-    "servesCuisine": ["Pizza", "Bakery"]
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://husseinbakes.github.io/husseinbakes_website/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Pizza",
+        "item": "https://husseinbakes.github.io/husseinbakes_website/pizza.html"
+      }
+    ]
   }
   </script>
 </head>
 
-<body class="bg-slate-950 text-white">
+<body class="bg-midnight text-offwhite font-inter">
 
-<header class="sticky top-0 z-50 bg-black/70 backdrop-blur border-b border-white/10">
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-midnight/95 backdrop-blur border-b border-metgold/20">
   <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-    <h2 class="font-bold text-lg">Hussein Bakes</h2>
-    <nav class="flex gap-4 items-center text-sm">
-      <a href="index.html" class="text-white/70 hover:text-white">Menu</a>
-      <a href="cakes.html" class="text-white/70 hover:text-white">Cakes</a>
-      <a href="pizza.html" class="font-semibold text-white">Pizza</a>
-      <a href="https://wa.me/254710975805" class="bg-green-600 px-4 py-2 rounded-full font-semibold">Order</a>
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="images/logo.webp" alt="Hussein Bakes Logo" class="h-10 w-auto" width="40" height="40">
+      <div class="hidden md:block">
+        <div class="font-playfair text-xl font-semibold text-offwhite">HUSSEIN BAKES</div>
+        <div class="text-softgray text-xs tracking-wider">KITUI TOWN</div>
+      </div>
+    </a>
+    
+    <!-- Navigation -->
+    <nav class="flex gap-6 items-center text-sm">
+      <a href="index.html" class="text-softgray hover:text-offwhite transition duration-200">Home</a>
+      <a href="cakes.html" class="text-softgray hover:text-offwhite transition duration-200">Cakes</a>
+      <a href="pizza.html" class="font-medium text-metgold">Pizza</a>
+      <a href="https://wa.me/254710975805" 
+         class="bg-gold-gradient text-midnight hover:bg-gold-gradient-hover px-5 py-2.5 rounded-full font-semibold flex items-center gap-2 transition-all duration-300 shadow-lg hover:shadow-metgold/20">
+        <img src="images/whatsapp-icon.webp" alt="WhatsApp" class="h-4 w-4" width="16" height="16">
+        Order Now
+      </a>
     </nav>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="px-4 py-24 text-center">
-  <h1 class="text-4xl sm:text-5xl font-black mb-6">Fresh Pizza in Kitui Town 🍕</h1>
-  <p class="text-white/70 max-w-3xl mx-auto text-lg">
-    Freshly baked homemade pizza made on order by Hussein Bakes. Trusted by families across Kitui.
-  </p>
-</section>
-
-<!-- PIZZA MENU -->
-<section class="max-w-6xl mx-auto px-4 py-16 grid sm:grid-cols-2 gap-8">
-
-  <!-- Beef Pizza -->
-  <div class="border border-white/10 rounded-3xl p-8">
-    <h2 class="text-2xl font-bold mb-2">🍖 Beef Pizza</h2>
-    <p class="text-white/60 mb-4">Seasoned beef, rich tomato sauce and melted mozzarella.</p>
-    <ul class="text-white/70 mb-4">
-      <li>Small – KES 700</li>
-      <li>Medium – KES 1,050</li>
-      <li>Large – KES 1,400</li>
-    </ul>
-  </div>
-
-  <!-- Chicken Tikka -->
-  <div class="border border-white/10 rounded-3xl p-8">
-    <h2 class="text-2xl font-bold mb-2">🍗 Chicken Tikka Pizza</h2>
-    <p class="text-white/60 mb-4">Tender chicken tikka, mild spices, rich sauce & cheese.</p>
-    <ul class="text-white/70 mb-4">
-      <li>Small – KES 750</li>
-      <li>Medium – KES 1,100</li>
-      <li>Large – KES 1,500</li>
-    </ul>
-    <p class="text-green-400 font-semibold">Buy 1 Get 1 Free – Fridays</p>
-  </div>
-
-  <!-- Cheese -->
-  <div class="border border-white/10 rounded-3xl p-8">
-    <h2 class="text-2xl font-bold mb-2">🧀 Cheese Pizza</h2>
-    <p class="text-white/60 mb-4">Classic cheese-only pizza with tomato sauce.</p>
-    <ul class="text-white/70 mb-4">
-      <li>Small – KES 500</li>
-      <li>Medium – KES 800</li>
-      <li>Large – KES 1,100</li>
-    </ul>
-  </div>
-
-  <!-- Veg -->
-  <div class="border border-white/10 rounded-3xl p-8">
-    <h2 class="text-2xl font-bold mb-2">🥬 Veg Pizza</h2>
-    <p class="text-white/60 mb-4">Fresh mixed vegetables with melted cheese.</p>
-    <ul class="text-white/70 mb-4">
-      <li>Small – KES 600</li>
-      <li>Medium – KES 900</li>
-      <li>Large – KES 1,200</li>
-    </ul>
-  </div>
-
-</section>
-
-<!-- ORDER NOTICE -->
-<section class="max-w-3xl mx-auto px-4 py-16 text-center">
-  <div class="border border-orange-500/40 rounded-2xl p-6 bg-orange-500/5">
-    <h2 class="text-xl font-bold mb-2 text-orange-400">Ordering Information</h2>
-    <p class="text-white/70">Orders are prepared fresh. Please order <strong>3–4 hours in advance</strong>.</p>
-    <p class="text-white/70">Delivery within Kitui Town • Pickup available</p>
+<section class="px-4 py-16 text-center">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="font-playfair text-4xl md:text-5xl font-semibold mb-6">Fresh Artisanal Pizza</h1>
+    <p class="text-softgray text-lg md:text-xl max-w-2xl mx-auto mb-8">
+      Handcrafted pizza made fresh to order. <span class="text-metgold font-medium">Ready in 3-4 hours.</span> Delivery available in Kitui Town.
+    </p>
+    
+    <!-- Friday Offer Banner -->
+    <div class="inline-flex items-center gap-2 px-6 py-3 bg-goldlight/10 border border-goldlight/30 rounded-full mb-8">
+      <span class="text-goldlight font-bold">🎁 FRIDAY SPECIAL:</span>
+      <span class="text-offwhite">Buy 1 Get 1 Free on Chicken Tikka & Beef Pizza!</span>
+    </div>
   </div>
 </section>
 
-<footer class="border-t border-white/10 py-10 text-center text-white/50">
-  <p>© 2025 Hussein Bakes • Kitui Town, Kenya</p>
+<!-- PIZZA GRID -->
+<section class="max-w-7xl mx-auto px-4 py-8 pb-16">
+  <div id="pizzaGrid" class="grid md:grid-cols-2 gap-8">
+    <!-- Pizza will be loaded here by JavaScript -->
+  </div>
+</section>
+
+<!-- ORDERING INFO -->
+<section class="max-w-4xl mx-auto px-4 py-16">
+  <div class="bg-midnight border border-metgold/30 rounded-3xl p-10">
+    <h2 class="font-playfair text-3xl font-semibold mb-6 text-center">Pizza Ordering Information</h2>
+    
+    <div class="grid md:grid-cols-2 gap-8 mb-8">
+      <div>
+        <h3 class="font-semibold text-lg mb-4 text-metgold">⏱️ Preparation & Delivery</h3>
+        <ul class="space-y-3 text-softgray">
+          <li class="flex items-start gap-2">
+            <div class="w-5 h-5 rounded-full bg-metgold/20 flex items-center justify-center mt-0.5">
+              <div class="w-2 h-2 rounded-full bg-metgold"></div>
+            </div>
+            <span><strong>3-4 hour preparation time</strong> required for all orders</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <div class="w-5 h-5 rounded-full bg-metgold/20 flex items-center justify-center mt-0.5">
+              <div class="w-2 h-2 rounded-full bg-metgold"></div>
+            </div>
+            <span><strong>Delivery available</strong> within Kitui Town for KES 100</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <div class="w-5 h-5 rounded-full bg-metgold/20 flex items-center justify-center mt-0.5">
+              <div class="w-2 h-2 rounded-full bg-metgold"></div>
+            </div>
+            <span><strong>Free pickup</strong> at Hussein Bakes, Kitui Town</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <div class="w-5 h-5 rounded-full bg-metgold/20 flex items-center justify-center mt-0.5">
+              <div class="w-2 h-2 rounded-full bg-metgold"></div>
+            </div>
+            <span><strong>Delivery until 6:00 PM</strong> daily</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold text-lg mb-4 text-metgold">🎁 Friday Specials</h3>
+        <div class="bg-goldlight/10 border border-goldlight/20 rounded-xl p-4 mb-4">
+          <p class="text-goldlight font-semibold mb-2">Buy 1 Get 1 Free Every Friday!</p>
+          <p class="text-softgray text-sm">Applies to Beef Pizza & Chicken Tikka Pizza only. Pre-order available all week for Friday pickup/delivery.</p>
+        </div>
+        
+        <h4 class="font-medium mb-2 text-softgray">Available Sizes:</h4>
+        <ul class="text-softgray text-sm space-y-1">
+          <li>• <strong>Medium:</strong> 12" (Perfect for 2-3 people)</li>
+          <li>• <strong>Large (Family):</strong> 14" (Perfect for 3-4 people)</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="text-center">
+      <a href="https://wa.me/254710975805?text=Hello%20Hussein%20Bakes!%20I'd%20like%20to%20order%20pizza.%0A%0APizza%20Type:%20__%0ASize:%20__%0ADelivery/Pickup:%20__%0ATime%20Needed:%20__"
+         class="inline-block bg-gold-gradient text-midnight hover:bg-gold-gradient-hover font-semibold py-4 px-10 rounded-full text-lg flex items-center gap-3 mx-auto transition-all duration-300">
+        <img src="images/whatsapp-icon.webp" alt="WhatsApp" class="h-6 w-6" width="24" height="24">
+        Order Pizza via WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-metgold/10 py-12">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex flex-col lg:flex-row justify-between items-center gap-8">
+      <!-- Brand -->
+      <div class="text-center lg:text-left">
+        <div class="flex flex-col items-center lg:items-start gap-4">
+          <img src="images/logo.webp" alt="Hussein Bakes Logo" class="h-14 w-auto" width="56" height="56">
+          <div>
+            <div class="font-playfair text-xl font-semibold">HUSSEIN BAKES</div>
+            <div class="text-softgray text-sm tracking-wider">PREMIUM BAKERY • KITUI TOWN</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contact -->
+      <div class="text-center">
+        <h4 class="font-semibold mb-4 text-metgold">Contact Us</h4>
+        <div class="space-y-3">
+          <a href="tel:+254710975805" class="block text-offwhite hover:text-metgold transition">
+            📞 +254 710 975 805
+          </a>
+          <a href="https://wa.me/254710975805" class="block text-offwhite hover:text-metgold transition">
+            💬 WhatsApp Orders
+          </a>
+        </div>
+      </div>
+      
+      <!-- Navigation -->
+      <div class="text-center">
+        <h4 class="font-semibold mb-4 text-metgold">Navigation</h4>
+        <div class="space-y-3">
+          <a href="index.html" class="block text-softgray hover:text-offwhite transition font-light">Home</a>
+          <a href="cakes.html" class="block text-softgray hover:text-offwhite transition font-light">Cakes</a>
+          <a href="pizza.html" class="block text-softgray hover:text-offwhite transition font-light">Pizza</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="border-t border-metgold/10 mt-8 pt-8 text-center">
+      <p class="text-softgray text-sm font-light">
+        © 2025 Hussein Bakes. All rights reserved.
+      </p>
+      <p class="text-softgray text-xs mt-1">
+        Pizza: 3-4 hour prep • Delivery until 6 PM • Friday BOGO specials
+      </p>
+    </div>
+  </div>
 </footer>
 
-<!-- PRODUCT SCHEMA -->
-<script type="application/ld+json">
-[
-  {
-    "@context":"https://schema.org",
-    "@type":"Product",
-    "name":"Beef Pizza in Kitui",
-    "brand":{"@type":"Brand","name":"Hussein Bakes"},
-    "offers":{"@type":"Offer","priceCurrency":"KES","price":"700","availability":"https://schema.org/InStock"}
-  },
-  {
-    "@context":"https://schema.org",
-    "@type":"Product",
-    "name":"Chicken Tikka Pizza in Kitui",
-    "brand":{"@type":"Brand","name":"Hussein Bakes"},
-    "offers":{"@type":"Offer","priceCurrency":"KES","price":"750","availability":"https://schema.org/InStock"}
-  },
-  {
-    "@context":"https://schema.org",
-    "@type":"Product",
-    "name":"Cheese Pizza in Kitui",
-    "brand":{"@type":"Brand","name":"Hussein Bakes"},
-    "offers":{"@type":"Offer","priceCurrency":"KES","price":"500","availability":"https://schema.org/InStock"}
-  },
-  {
-    "@context":"https://schema.org",
-    "@type":"Product",
-    "name":"Vegetable Pizza in Kitui",
-    "brand":{"@type":"Brand","name":"Hussein Bakes"},
-    "offers":{"@type":"Offer","priceCurrency":"KES","price":"600","availability":"https://schema.org/InStock"}
-  }
-]
+<!-- PRODUCTS SCRIPT -->
+<script src="js/products.js"></script>
+
+<!-- PIZZA GRID SCRIPT -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const pizzaGrid = document.getElementById('pizzaGrid');
+    const pizzas = window.getProductsByCategory('pizza');
+    const isFriday = window.isFriday();
+    
+    if (!pizzas || pizzas.length === 0) {
+      pizzaGrid.innerHTML = `
+        <div class="col-span-2 text-center py-12 text-softgray">
+          <p class="text-lg mb-4">No pizzas available at the moment.</p>
+          <p>Please check back soon or contact us directly for orders.</p>
+        </div>
+      `;
+      return;
+    }
+    
+    pizzaGrid.innerHTML = '';
+    
+    pizzas.forEach(pizza => {
+      const priceRange = window.getProductPriceRange(pizza);
+      const minPrice = priceRange.min;
+      const maxPrice = priceRange.max;
+      
+      // Format price range display
+      let priceDisplay = `KES ${minPrice.toLocaleString()}`;
+      if (minPrice !== maxPrice) {
+        priceDisplay = `KES ${minPrice.toLocaleString()} - ${maxPrice.toLocaleString()}`;
+      }
+      
+      // Check if this pizza has Friday offer
+      const hasFridayOffer = pizza.id === 'beef-pizza' || pizza.id === 'chicken-tikka-pizza';
+      const fridayOfferText = isFriday ? 
+        "🎁 TODAY: Buy 1 Get 1 Free!" : 
+        "📅 Friday: Buy 1 Get 1 Free";
+      
+      const card = document.createElement('article');
+      card.className = 'border border-metgold/20 rounded-2xl overflow-hidden hover:border-metgold/40 hover:bg-midnight/50 transition duration-300 group';
+      
+      card.innerHTML = `
+        <!-- Product Image Container -->
+        <div class="relative overflow-hidden h-64 bg-midnight/50">
+          <!-- Landscape Pizza Image -->
+          <img src="${pizza.image}" 
+               alt="${pizza.name} - Fresh pizza in Kitui Town by Hussein Bakes" 
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+               width="600" height="256"
+               onerror="this.src='https://placehold.co/800x400/0B1320/F3F2EE?text=${encodeURIComponent(pizza.name + ' Pizza')}'">
+          
+          <!-- Price Badge -->
+          <div class="absolute top-4 right-4 bg-midnight/90 text-metgold text-xs px-3 py-1.5 rounded-full backdrop-blur-sm font-semibold">
+            ${priceDisplay}
+          </div>
+          
+          <!-- Popular Badge -->
+          ${pizza.badge ? `
+          <div class="absolute top-4 left-4 bg-metgold text-midnight text-xs px-3 py-1.5 rounded-full font-semibold">
+            ${pizza.badge}
+          </div>
+          ` : ''}
+          
+          <!-- Friday Offer Ribbon -->
+          ${hasFridayOffer ? `
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-goldlight/90 to-metgold/90 text-midnight text-center py-2 px-4 font-bold text-sm">
+            ${fridayOfferText}
+          </div>
+          ` : ''}
+        </div>
+        
+        <!-- Product Info -->
+        <div class="p-6">
+          <h2 class="font-playfair text-xl font-semibold mb-2 group-hover:text-metgold transition">${pizza.name}</h2>
+          <p class="text-softgray text-sm mb-4 font-light">${pizza.description}</p>
+          
+          <!-- Size Options -->
+          <div class="mb-4">
+            <div class="text-sm text-softgray mb-2">Available sizes & prices:</div>
+            <div class="flex flex-wrap gap-2">
+              ${Object.entries(pizza.prices).map(([size, price]) => `
+                <div class="px-3 py-1.5 bg-midnight border border-metgold/20 rounded-lg text-xs">
+                  <div class="font-medium">${size}</div>
+                  <div class="text-metgold">KES ${price.toLocaleString()}</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+          
+          <!-- Add-ons Preview -->
+          ${pizza.addons && pizza.addons.length > 0 ? `
+          <div class="mb-4">
+            <div class="text-sm text-softgray mb-1">Available add-ons:</div>
+            <div class="text-xs text-softgray truncate">
+              ${pizza.addons.slice(0, 3).map(addon => addon.name).join(' • ')}
+              ${pizza.addons.length > 3 ? ' • ...' : ''}
+            </div>
+          </div>
+          ` : ''}
+          
+          <!-- Order Button -->
+          <a href="product.html?id=${pizza.id}"
+             class="block w-full border border-metgold text-metgold hover:bg-metgold hover:text-midnight text-center py-3 rounded-lg font-medium transition duration-300 group-hover:border-metgold/60"
+             aria-label="Order ${pizza.name} - Fresh pizza from Hussein Bakes">
+            View Details & Order Now
+          </a>
+        </div>
+      `;
+      
+      pizzaGrid.appendChild(card);
+    });
+  });
 </script>
 
 </body>
