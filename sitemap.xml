@@ -57,34 +57,35 @@
     </image:image>
   </url>
 
-  <url>
+    <url>
     <loc>https://husseinbakes.github.io/husseinbakes_website/product.html?id=beef-pizza</loc>
     <image:image>
-      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/pizza/beef.jpg</image:loc>
-      <image:caption>Fresh Beef Pizza Kitui - Hussein Bakes</image:caption>
+      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/hussein-bakes-beef-pizza-kitui.jpeg</image:loc>
+      <image:caption>Fresh Beef Pizza in Kitui Town - Hussein Bakes</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://husseinbakes.github.io/husseinbakes_website/product.html?id=chicken-tikka-pizza</loc>
     <image:image>
-      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/pizza/chicken.jpg</image:loc>
-      <image:caption>Spicy Chicken Tikka Pizza - Hussein Bakes Kitui</image:caption>
+      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/hussein-bakes-chicken-tikka-pizza.jpeg</image:loc>
+      <image:caption>Artisanal Chicken Tikka Pizza - Hussein Bakes Kitui</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://husseinbakes.github.io/husseinbakes_website/product.html?id=cheese-pizza</loc>
     <image:image>
-      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/pizza/cheese.jpg</image:loc>
-      <image:caption>Classic Mozzarella Cheese Pizza - Hussein Bakes Kitui</image:caption>
+      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/hussein-bakes-classic-cheese-pizza.jpeg</image:loc>
+      <image:caption>Classic Cheese Pizza - Hussein Bakes Kitui</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://husseinbakes.github.io/husseinbakes_website/product.html?id=vegetable-pizza</loc>
     <image:image>
-      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/pizza/vegetable.jpg</image:loc>
+      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/hussein-bakes-vegetable-pizza.jpeg</image:loc>
       <image:caption>Fresh Vegetable Pizza - Hussein Bakes Kitui</image:caption>
     </image:image>
   </url>
+
 
 </urlset>
 
