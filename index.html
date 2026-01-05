@@ -127,115 +127,165 @@
   </div>
 </header>
 
-<!-- HERO SECTION -->
-<section class="relative px-4 py-24 text-center">
-  <!-- Background with overlay -->
-  <div class="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-950"></div>
+<section class="relative px-4 py-24 text-center overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-midnight to-slate-950"></div>
+  <div class="absolute inset-0 opacity-10 bg-[url('images/texture-pattern.png')] pointer-events-none"></div>
   
-  <!-- Content -->
   <div class="relative z-10 max-w-4xl mx-auto">
-    <h1 class="text-4xl sm:text-5xl md:text-6xl font-playfair font-semibold mb-6 leading-tight">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-playfair font-semibold mb-6 leading-tight animate-fade-in">
       Premium Baked Goods in <span class="text-metgold">Kitui Town</span>
     </h1>
     
-    <p class="text-offwhite/80 text-lg sm:text-xl max-w-2xl mx-auto mb-8">
-      Custom celebration cakes & fresh artisanal pizza. Order via WhatsApp for pickup or delivery in Kitui.
+    <p class="text-offwhite/80 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+      Custom celebration cakes & artisanal slow-proofed pizza. Crafted with precision, delivered with care.
     </p>
     
-    <!-- CTA Buttons -->
-    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+    <div class="flex flex-col sm:flex-row gap-5 justify-center items-center mb-12">
       <a href="cakes.html" 
-         class="bg-metgold hover:bg-golddeep text-midnight font-bold py-4 px-8 rounded-full text-lg transition duration-300 shadow-lg hover:shadow-metgold/20">
+         class="w-full sm:w-auto bg-gold-gradient hover:bg-gold-gradient-hover text-midnight font-bold py-4 px-10 rounded-full text-lg transition duration-300 shadow-xl hover:shadow-metgold/20 flex items-center justify-center gap-2">
         🎂 Browse Cakes
       </a>
       
       <a href="pizza.html"
-         class="border border-metgold/40 hover:border-metgold bg-midnight text-metgold hover:bg-metgold/10 py-4 px-8 rounded-full font-medium transition duration-200">
-        🍕 Browse Pizza
+         class="w-full sm:w-auto border-2 border-metgold/40 hover:border-metgold bg-midnight/50 text-metgold hover:bg-metgold/10 py-4 px-10 rounded-full font-semibold transition duration-300 flex items-center justify-center gap-2">
+        🍕 View Pizza Menu
       </a>
     </div>
     
-    <div class="flex flex-wrap justify-center gap-6 text-offwhite/60 text-sm">
+    <div class="flex flex-wrap justify-center gap-8 text-offwhite/50 text-sm uppercase tracking-widest">
       <div class="flex items-center gap-2">
-        <div class="w-2 h-2 bg-metgold rounded-full"></div>
-        <span>Custom Cake Designs</span>
+        <span class="text-metgold">✦</span> Custom Designs
       </div>
       <div class="flex items-center gap-2">
-        <div class="w-2 h-2 bg-metgold rounded-full"></div>
-        <span>Fresh Pizza Daily</span>
+        <span class="text-metgold">✦</span> Fresh Daily
       </div>
       <div class="flex items-center gap-2">
-        <div class="w-2 h-2 bg-metgold rounded-full"></div>
-        <span>Kitui Owned & Operated</span>
+        <span class="text-metgold">✦</span> Kitui Owned
       </div>
     </div>
   </div>
 </section>
 
-<!-- FEATURES -->
-<section class="max-w-6xl mx-auto px-4 py-16">
-  <div class="text-center mb-12">
-    <h2 class="font-playfair text-3xl md:text-4xl font-semibold mb-4">The Hussein Bakes Standard</h2>
-    <p class="text-softgray max-w-2xl mx-auto">Why we are Kitui Town's favorite destination for premium celebration cakes and artisanal pizza.</p>
+<section class="max-w-6xl mx-auto px-4 py-20">
+  <div class="text-center mb-16">
+    <h2 class="font-playfair text-3xl md:text-5xl font-semibold mb-4 text-offwhite">The Hussein Bakes Standard</h2>
+    <div class="h-1 w-20 bg-metgold mx-auto mb-6"></div>
+    <p class="text-softgray max-w-2xl mx-auto text-lg">
+      We believe that true quality cannot be rushed. Discover why we are Kitui's premier choice for celebrations.
+    </p>
   </div>
 
   <div class="grid md:grid-cols-3 gap-8">
-    <div class="text-center p-8 border border-metgold/20 rounded-2xl hover:border-metgold/40 transition bg-midnight/30">
-      <div class="text-4xl mb-4">✨</div>
-      <h3 class="font-playfair text-xl font-semibold mb-3">Premium Artistry</h3>
-      <p class="text-softgray">We don't just bake; we create. Every cake is a hand-crafted masterpiece using the finest ingredients for a taste as beautiful as the design.</p>
-      <a href="cakes.html" class="inline-block mt-4 text-metgold hover:text-goldlight font-medium">Explore Creations →</a>
+    <div class="group p-8 border border-metgold/10 rounded-3xl hover:border-metgold/40 transition-all duration-500 bg-midnight/40 backdrop-blur-sm relative">
+      <div class="text-4xl mb-6 transform group-hover:scale-110 transition-transform">✨</div>
+      <h3 class="font-playfair text-2xl font-semibold mb-4 text-metgold">Premium Artistry</h3>
+      <p class="text-softgray leading-relaxed mb-6">
+        Every cake is a hand-crafted masterpiece. We use only premium ingredients to ensure a taste that matches our exquisite designs.
+      </p>
+      <a href="cakes.html" class="text-metgold font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+        Explore Cakes <span>→</span>
+      </a>
     </div>
     
-    <div class="text-center p-8 border border-metgold/20 rounded-2xl hover:border-metgold/40 transition bg-midnight/30">
-      <div class="text-4xl mb-4">🍕</div>
-      <h3 class="font-playfair text-xl font-semibold mb-3">Artisanal Freshness</h3>
-      <p class="text-softgray">Our pizza dough is made fresh daily and slow-proofed for the perfect crust. We bake to order to ensure every slice reaches you at its peak flavor.</p>
-      <a href="pizza.html" class="inline-block mt-4 text-metgold hover:text-goldlight font-medium">View the Menu →</a>
+    <div class="group p-8 border border-metgold/10 rounded-3xl hover:border-metgold/40 transition-all duration-500 bg-midnight/40 backdrop-blur-sm">
+      <div class="text-4xl mb-6 transform group-hover:scale-110 transition-transform">🍕</div>
+      <h3 class="font-playfair text-2xl font-semibold mb-4 text-metgold">Artisanal Dough</h3>
+      <p class="text-softgray leading-relaxed mb-6">
+        Our pizza dough is slow-proofed for 24 hours to develop maximum flavor and the perfect light, airy crust you won't find anywhere else.
+      </p>
+      <a href="pizza.html" class="text-metgold font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+        View Menu <span>→</span>
+      </a>
     </div>
     
-    <div class="text-center p-8 border border-metgold/20 rounded-2xl hover:border-metgold/40 transition bg-midnight/30">
-      <div class="text-4xl mb-4">🤝</div>
-      <h3 class="font-playfair text-xl font-semibold mb-3">Personalized Service</h3>
-      <p class="text-softgray">As a Kitui-owned bakery, we value the personal touch. Order directly via WhatsApp to discuss your custom designs and delivery needs.</p>
-      <a href="https://wa.me/254710975805" class="inline-block mt-4 text-metgold hover:text-goldlight font-medium">Chat with us →</a>
+    <div class="group p-8 border border-metgold/10 rounded-3xl hover:border-metgold/40 transition-all duration-500 bg-midnight/40 backdrop-blur-sm">
+      <div class="text-4xl mb-6 transform group-hover:scale-110 transition-transform">🤝</div>
+      <h3 class="font-playfair text-2xl font-semibold mb-4 text-metgold">Direct Service</h3>
+      <p class="text-softgray leading-relaxed mb-6">
+        No middle-men. Speak directly with our bakers via WhatsApp to customize your order exactly to your liking.
+      </p>
+      <a href="https://wa.me/254710975805" class="text-metgold font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+        Chat With Us <span>→</span>
+      </a>
     </div>
   </div>
 </section>
 
-
-<!-- ORDERING INFO -->
-<section class="max-w-4xl mx-auto px-4 py-16">
-  <div class="bg-midnight border border-metgold/30 rounded-3xl p-10 text-center">
-    <h2 class="font-playfair text-3xl font-semibold mb-6">How to Order</h2>
+<section class="max-w-7xl mx-auto px-4 py-20 border-y border-metgold/10 bg-midnight/20">
+  <div class="flex flex-col lg:flex-row items-center gap-16">
+    <div class="lg:w-1/2 order-2 lg:order-1">
+      <h2 class="font-playfair text-4xl font-semibold mb-8 text-offwhite">Crafted with Patience</h2>
+      <div class="space-y-8">
+        <div class="flex gap-5">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-metgold/10 border border-metgold/30 flex items-center justify-center text-metgold font-bold">01</div>
+          <div>
+            <h4 class="font-semibold text-xl mb-2">Quality Takes Time</h4>
+            <p class="text-softgray leading-relaxed">By requiring 48-hour notice for cakes and 3-hour notice for pizza, we guarantee your order is baked fresh—never from a freezer.</p>
+          </div>
+        </div>
+        <div class="flex gap-5">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-metgold/10 border border-metgold/30 flex items-center justify-center text-metgold font-bold">02</div>
+          <div>
+            <h4 class="font-semibold text-xl mb-2">The Freshness Promise</h4>
+            <p class="text-softgray leading-relaxed">Our small-batch approach ensures that every ingredient is sourced at peak freshness for the best results in Kitui.</p>
+          </div>
+        </div>
+      </div>
+    </div>
     
-    <div class="grid md:grid-cols-3 gap-6 mb-8">
-      <div class="text-center">
-        <div class="text-2xl mb-3 text-metgold">1</div>
-        <h4 class="font-semibold mb-2">Browse & Select</h4>
-        <p class="text-softgray text-sm">Choose from cakes or pizza menu</p>
+    <div class="lg:w-1/2 order-1 lg:order-2">
+      <div class="relative p-10 bg-gold-gradient rounded-[2rem] text-midnight shadow-2xl overflow-hidden group">
+        <div class="absolute -right-10 -bottom-10 opacity-10 group-hover:scale-110 transition-transform duration-700 text-9xl">👨‍🍳</div>
+        <div class="relative z-10">
+          <p class="text-2xl font-playfair italic mb-8 leading-relaxed">
+            "We founded Hussein Bakes on a simple promise: to bring the highest standard of artisanal baking to Kitui Town. We take the extra time because you deserve the difference."
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full border-2 border-midnight flex items-center justify-center font-bold">HS</div>
+            <div>
+              <p class="font-bold text-lg">Hussein Salim</p>
+              <p class="text-sm font-medium uppercase tracking-widest">Founder & Master Baker</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-5xl mx-auto px-4 py-20">
+  <div class="bg-midnight border border-metgold/30 rounded-[3rem] p-12 text-center shadow-2xl">
+    <h2 class="font-playfair text-4xl font-semibold mb-4 text-offwhite">How to Order</h2>
+    <p class="text-softgray mb-12">Three simple steps to premium baked goods.</p>
+    
+    <div class="grid md:grid-cols-3 gap-10 mb-12">
+      <div class="relative">
+        <div class="text-5xl font-playfair font-bold text-metgold/10 absolute -top-4 left-1/2 -translate-x-1/2">01</div>
+        <h4 class="font-bold text-lg mb-2 relative z-10">Browse Our Menu</h4>
+        <p class="text-softgray text-sm">Select your favorite cake or pizza from our collection.</p>
       </div>
       
-      <div class="text-center">
-        <div class="text-2xl mb-3 text-metgold">2</div>
-        <h4 class="font-semibold mb-2">Customize Your Order</h4>
-        <p class="text-softgray text-sm">Select size, add-ons, delivery option</p>
+      <div class="relative">
+        <div class="text-5xl font-playfair font-bold text-metgold/10 absolute -top-4 left-1/2 -translate-x-1/2">02</div>
+        <h4 class="font-bold text-lg mb-2 relative z-10">Customize Details</h4>
+        <p class="text-softgray text-sm">Pick your size, flavors, and any special instructions.</p>
       </div>
       
-      <div class="text-center">
-        <div class="text-2xl mb-3 text-metgold">3</div>
-        <h4 class="font-semibold mb-2">Confirm via WhatsApp</h4>
-        <p class="text-softgray text-sm">Review & send order directly to us</p>
+      <div class="relative">
+        <div class="text-5xl font-playfair font-bold text-metgold/10 absolute -top-4 left-1/2 -translate-x-1/2">03</div>
+        <h4 class="font-bold text-lg mb-2 relative z-10">WhatsApp Confirm</h4>
+        <p class="text-softgray text-sm">Instantly send your order to us for final confirmation.</p>
       </div>
     </div>
     
     <a href="https://wa.me/254710975805" 
-       class="inline-block bg-gold-gradient text-midnight hover:bg-gold-gradient-hover font-semibold py-4 px-10 rounded-full text-lg flex items-center gap-3 mx-auto transition-all duration-300">
-      <img src="images/whatsapp-icon.webp" alt="WhatsApp" class="h-6 w-6" width="24" height="24">
-      Start Your Order on WhatsApp
+       class="inline-flex bg-gold-gradient text-midnight hover:scale-105 transition-all duration-300 font-bold py-5 px-12 rounded-full text-xl shadow-lg items-center gap-3">
+      <img src="images/whatsapp-icon.webp" alt="WhatsApp" class="h-6 w-6">
+      Order Now on WhatsApp
     </a>
   </div>
 </section>
+
 
 <!-- FOOTER -->
 <footer class="border-t border-metgold/10 py-12">
