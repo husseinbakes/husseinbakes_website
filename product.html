@@ -418,19 +418,22 @@
           <h1 class="font-playfair text-3xl md:text-4xl font-semibold mb-4">${currentProduct.name}</h1>
           <p class="text-softgray text-lg mb-6">${currentProduct.description}</p>
           
-          <div class="mb-8 p-4 border-2 border-metgold/30 bg-midnight rounded-lg">
+          <div class="mb-8 p-4 border border-metgold/30 bg-midnight/50 rounded-lg">
   <div class="flex items-center gap-3">
-    <div class="text-metgold text-2xl">✨</div>
+    <div class="text-metgold text-2xl">👨‍🍳</div>
     <div>
       <p class="text-metgold font-bold uppercase text-sm tracking-wide">
-        ${currentProduct.category === 'cakes' ? 'Custom Crafted for You' : 'Freshly Baked to Order'}
+        ${currentProduct.category === 'cakes' ? 'Custom Crafted for Your Event' : 'Freshly Baked to Your Order'}
       </p>
       <p class="text-softgray text-sm">
-        ${currentProduct.category === 'cakes' ? 'Please order 48 hours in advance for the perfect design.' : 'We prepare your pizza fresh from scratch. Order early for timed pickup or delivery!'}
+        ${currentProduct.category === 'cakes' 
+          ? 'To ensure the perfect design and flavor, please allow 48 hours for preparation.' 
+          : 'We make our dough fresh for every order. Please allow 3 hours for the perfect artisanal crust.'}
       </p>
     </div>
   </div>
 </div>
+
 
           
           <!-- Size Selection -->
