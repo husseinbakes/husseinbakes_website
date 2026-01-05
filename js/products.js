@@ -185,58 +185,56 @@ const products = {
     }
   ],
   
-  // ============================
+    // ============================
   // PIZZA - 3-4 HOUR PREPARATION
   // ============================
   pizza: [
     {
       id: "beef-pizza",
       name: "Beef Pizza",
-      description: "Seasoned ground beef, rich tomato sauce, and melted mozzarella cheese. A classic favorite.",
+      description: "Seasoned ground beef, rich tomato sauce, and melted mozzarella cheese.",
       image: "images/pizza/beef.jpg",
       badge: "Popular",
       rules: {
         preparation: "3-4 hours",
         delivery: "Available within Kitui Town (KES 100)",
-        notice: "Friday: Buy 1 Get 1 Free (Pre-order available all week)"
+        notice: "Friday SPECIAL: Buy 1 Get 1 Free on MEDIUM size!"
       },
       prices: {
-        "Medium (12\")": 650,
-        "Large - Family Size (14\")": 1100
+        "Small (9\")": 550,
+        "Medium (12\")": 850,
+        "Large - Family Size (14\")": 1200
       },
       addons: [
         { name: "Extra Cheese", price: 150 },
-        { name: "Extra Beef Topping", price: 200 },
-        { name: "Mushrooms", price: 80 },
-        { name: "Onions", price: 60 }
+        { name: "Extra Beef Topping", price: 200 }
       ]
     },
     {
       id: "chicken-tikka-pizza",
       name: "Chicken Tikka Pizza",
-      description: "Tender chicken tikka pieces with mild spices, rich sauce, and cheese. Mildly spiced.",
+      description: "Tender chicken tikka pieces with mild spices, rich sauce, and cheese.",
       image: "images/pizza/chicken.jpg",
       badge: "Popular",
       rules: {
         preparation: "3-4 hours",
         delivery: "Available within Kitui Town (KES 100)",
-        notice: "Friday: Buy 1 Get 1 Free (Pre-order available all week)"
+        notice: "Friday SPECIAL: Buy 1 Get 1 Free on MEDIUM size!"
       },
       prices: {
-        "Medium (12\")": 650,
-        "Large - Family Size (14\")": 1100
+        "Small (9\")": 550,
+        "Medium (12\")": 850,
+        "Large - Family Size (14\")": 1200
       },
       addons: [
         { name: "Extra Cheese", price: 150 },
-        { name: "Extra Chicken Tikka", price: 200 },
-        { name: "Onions", price: 60 },
-        { name: "Capsicum", price: 70 }
+        { name: "Extra Chicken Tikka", price: 200 }
       ]
     },
     {
       id: "cheese-pizza",
       name: "Cheese Pizza",
-      description: "Classic cheese-only pizza with rich tomato sauce. Perfect for kids and cheese lovers.",
+      description: "Classic cheese-only pizza with rich tomato sauce. Perfect for kids.",
       image: "images/pizza/cheese.jpg",
       badge: null,
       rules: {
@@ -245,40 +243,37 @@ const products = {
         notice: null
       },
       prices: {
-        "Medium (12\")": 800,
-        "Large - Family Size (14\")": 1500
+        "Small (9\")": 550,
+        "Medium (12\")": 850,
+        "Large - Family Size (14\")": 1200
       },
       addons: [
-        { name: "Extra Cheese", price: 150 },
-        { name: "Mozzarella Blend", price: 120 },
-        { name: "Add Beef Topping", price: 200 },
-        { name: "Add Chicken Topping", price: 200 }
+        { name: "Extra Cheese", price: 150 }
       ]
     },
     {
       id: "vegetable-pizza",
       name: "Vegetable Pizza",
-      description: "Fresh mixed vegetables (bell peppers, onions, tomatoes) with light cheese. Healthy option.",
+      description: "Fresh mixed vegetables (bell peppers, onions, tomatoes) with light cheese.",
       image: "images/pizza/vegetable.jpg",
       badge: null,
       rules: {
-        preparation: "3-4 hours",
-        delivery: "Available within Kitui Town (KES 100)",
-        notice: null
-      },
+  preparation: "Freshly hand-crafted",
+  delivery: "Available within Kitui Town (KES 100)",
+  notice: "Freshness takes time: We recommend ordering 3 hours in advance for the perfect crust."
+}
+
       prices: {
-        "Medium (12\")": 500,
-        "Large - Family Size (14\")": 900
+        "Small (9\")": 550,
+        "Medium (12\")": 850,
+        "Large - Family Size (14\")": 1200
       },
       addons: [
         { name: "Extra Cheese", price: 150 },
-        { name: "Extra Vegetable Mix", price: 120 },
-        { name: "Olives", price: 80 },
-        { name: "Sweet Corn", price: 60 }
+        { name: "Olives", price: 80 }
       ]
     }
   ]
-};
 
 // ============================
 // HELPER FUNCTIONS
