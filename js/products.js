@@ -1,21 +1,23 @@
-// js/products.js - Hussein Bakes Product Database
-// Last Updated: 2025
+/**
+ * js/products.js - Hussein Bakes Product Database
+ * Optimized for Premium Branding & Local SEO
+ * Last Updated: 2026
+ */
 
 const products = {
   // ============================
-  // CAKES - 48 HOUR PRE-ORDER
+  // CAKES - CUSTOM CRAFTED (48H)
   // ============================
   cakes: [
     {
       id: "vanilla-cake",
       name: "Vanilla Cake",
-      description: "Soft, classic vanilla sponge with premium vanilla buttercream. Perfect for birthdays and celebrations.",
-      image: "images/cakes/vanilla.jpg",
+      description: "Soft, classic vanilla sponge with premium vanilla buttercream. A timeless celebration favorite.",
+      image: "images/hussein-bakes-vanilla-cake-kitui.jpeg",
       badge: "Popular",
       rules: {
-        preparation: "48 hours",
-        delivery: "Pickup only at Hussein Bakes, Kitui Town",
-        notice: "All cakes require 48-hour advance order"
+        preparation: "Custom Crafted",
+        notice: "To ensure the perfect design and flavor, please allow 48 hours for preparation."
       },
       prices: {
         "1kg (Serves 8-10)": 2500,
@@ -27,316 +29,151 @@ const products = {
         { name: "Custom Message Writing", price: 0 },
         { name: "Extra Cream Layer", price: 300 },
         { name: "Chocolate Drizzle/Drip", price: 500 },
-        { name: "Fresh Fruit Topping", price: 600 },
         { name: "Premium Fondant Decoration", price: 1200 }
       ]
     },
     {
       id: "vanilla-cardamom",
       name: "Vanilla & Cardamom Cake",
-      description: "Our signature cake! Warm cardamom-infused sponge with delicate vanilla buttercream. A Kitui favorite.",
-      image: "images/cakes/vanilla-cardamom.jpg",
+      description: "Our signature masterpiece. Warm cardamom-infused sponge with delicate buttercream. A local Kitui specialty.",
+      image: "images/hussein-bakes-signature-cardamom-cake.jpeg",
       badge: "Signature",
       rules: {
-        preparation: "48 hours",
-        delivery: "Pickup only at Hussein Bakes, Kitui Town",
-        notice: "Signature recipe - 48-hour advance order required"
+        preparation: "Signature Craft",
+        notice: "Our signature recipe requires a 48-hour preparation for the perfect infusion of spice."
       },
-      prices: {
-        "1kg (Serves 8-10)": 2500,
-        "2kg (Serves 15-20)": 4500,
-        "3kg (Serves 25-30)": 6500,
-        "4kg (Serves 35-40)": 8500
-      },
-      addons: []
+      prices: { "1kg": 2500, "2kg": 4500, "3kg": 6500, "4kg": 8500 },
+      addons: [{ name: "Custom Message Writing", price: 0 }]
     },
     {
       id: "chocolate-cake",
       name: "Chocolate Cake",
-      description: "Rich, moist chocolate sponge with smooth chocolate ganache. Every chocolate lover's dream.",
-      image: "images/cakes/chocolate.jpg",
+      description: "Rich, moist chocolate sponge with smooth chocolate ganache. Pure chocolate indulgence.",
+      image: "images/hussein-bakes-rich-chocolate-cake.jpeg",
       badge: "Popular",
-      rules: {
-        preparation: "48 hours",
-        delivery: "Pickup only at Hussein Bakes, Kitui Town",
-        notice: "All cakes require 48-hour advance order"
-      },
-      prices: {
-        "1kg (Serves 8-10)": 2500,
-        "2kg (Serves 15-20)": 4500,
-        "3kg (Serves 25-30)": 6500,
-        "4kg (Serves 35-40)": 8500
-      },
-      addons: []
-    },
-    {
-      id: "double-chocolate",
-      name: "Double Chocolate Cake",
-      description: "Double the chocolate! Extra chocolate layers and rich frosting for intense chocolate flavor.",
-      image: "images/cakes/double-chocolate.jpg",
-      badge: null,
-      rules: {
-        preparation: "48 hours",
-        delivery: "Pickup only at Hussein Bakes, Kitui Town",
-        notice: "All cakes require 48-hour advance order"
-      },
-      prices: {
-        "1kg (Serves 8-10)": 2500,
-        "2kg (Serves 15-20)": 4500,
-        "3kg (Serves 25-30)": 6500,
-        "4kg (Serves 35-40)": 8500
-      },
-      addons: []
-    },
-    {
-      id: "black-forest",
-      name: "Black Forest Cake",
-      description: "Classic German-style chocolate sponge with whipped cream and cherry layers. Elegant and delicious.",
-      image: "images/cakes/black-forest.jpg",
-      badge: "Popular",
-      rules: {
-        preparation: "48 hours",
-        delivery: "Pickup only at Hussein Bakes, Kitui Town",
-        notice: "All cakes require 48-hour advance order"
-      },
-      prices: {
-        "1kg (Serves 8-10)": 2500,
-        "2kg (Serves 15-20)": 4500,
-        "3kg (Serves 25-30)": 6500,
-        "4kg (Serves 35-40)": 8500
-      },
-      addons: []
-    },
-    {
-      id: "white-forest",
-      name: "White Forest Cake",
-      description: "Light vanilla sponge with whipped cream and cherry filling. A beautiful, delicate option.",
-      image: "images/cakes/white-forest.jpg",
-      badge: null,
-      rules: {
-        preparation: "48 hours",
-        delivery: "Pickup only at Hussein Bakes, Kitui Town",
-        notice: "All cakes require 48-hour advance order"
-      },
-      prices: {
-        "1kg (Serves 8-10)": 2500,
-        "2kg (Serves 15-20)": 4500,
-        "3kg (Serves 25-30)": 6500,
-        "4kg (Serves 35-40)": 8500
-      },
-      addons: []
-    },
-    {
-      id: "blueberry",
-      name: "Blueberry Cake",
-      description: "Soft vanilla sponge with fresh blueberry compote and cream. Refreshing and fruity.",
-      image: "images/cakes/blueberry.jpg",
-      badge: null,
-      rules: {
-        preparation: "48 hours",
-        delivery: "Pickup only at Hussein Bakes, Kitui Town",
-        notice: "All cakes require 48-hour advance order"
-      },
-      prices: {
-        "1kg (Serves 8-10)": 2500,
-        "2kg (Serves 15-20)": 4500,
-        "3kg (Serves 25-30)": 6500,
-        "4kg (Serves 35-40)": 8500
-      },
-      addons: []
+      rules: { preparation: "Custom Crafted", notice: "Please allow 48 hours to ensure a perfectly moist and rich finish." },
+      prices: { "1kg": 2500, "2kg": 4500, "3kg": 6500, "4kg": 8500 },
+      addons: [{ name: "Custom Message Writing", price: 0 }]
     },
     {
       id: "red-velvet",
       name: "Red Velvet Cake",
-      description: "Classic red velvet with signature cream cheese frosting. Rich color, luxurious taste.",
-      image: "images/cakes/red-velvet.jpg",
+      description: "Classic red velvet with signature cream cheese frosting. Elegant and luxurious.",
+      image: "images/hussein-bakes-luxury-red-velvet-cake.jpeg",
       badge: "Popular",
-      rules: {
-        preparation: "48 hours",
-        delivery: "Pickup only at Hussein Bakes, Kitui Town",
-        notice: "All cakes require 48-hour advance order"
-      },
-      prices: {
-        "1kg (Serves 8-10)": 2500,
-        "2kg (Serves 15-20)": 4500,
-        "3kg (Serves 25-30)": 6500,
-        "4kg (Serves 35-40)": 8500
-      },
-      addons: []
+      rules: { preparation: "Custom Crafted", notice: "48-hour pre-order required for the perfect luxury finish." },
+      prices: { "1kg": 2500, "2kg": 4500, "3kg": 6500, "4kg": 8500 },
+      addons: [{ name: "Custom Message Writing", price: 0 }]
     },
     {
-      id: "cinnamon",
-      name: "Cinnamon Spice Cake",
-      description: "Warm cinnamon-spiced cake with caramel drizzle. Perfect for cozy celebrations.",
-      image: "images/cakes/cinnamon.jpg",
-      badge: null,
-      rules: {
-        preparation: "48 hours",
-        delivery: "Pickup only at Hussein Bakes, Kitui Town",
-        notice: "All cakes require 48-hour advance order"
-      },
-      prices: {
-        "1kg (Serves 8-10)": 2500,
-        "2kg (Serves 15-20)": 4500,
-        "3kg (Serves 25-30)": 6500,
-        "4kg (Serves 35-40)": 8500
-      },
-      addons: []
+      id: "black-forest",
+      name: "Black Forest Cake",
+      description: "Chocolate sponge layered with fresh whipped cream and cherries. A classic celebration choice.",
+      image: "images/hussein-bakes-black-forest-cake-kitui.jpeg",
+      badge: "Classic",
+      rules: { preparation: "Custom Crafted", notice: "We use fresh cream; please allow 48 hours for prep." },
+      prices: { "1kg": 2500, "2kg": 4500, "3kg": 6500, "4kg": 8500 },
+      addons: [{ name: "Custom Message Writing", price: 0 }]
     }
   ],
   
-      // ============================
-  // PIZZA - 3-4 HOUR PREPARATION
+  // ============================
+  // PIZZA - ARTISANAL FRESH (3H)
   // ============================
   pizza: [
     {
       id: "beef-pizza",
       name: "Beef Pizza",
-      description: "Seasoned ground beef, rich tomato sauce, and melted mozzarella cheese.",
-      image: "images/hussein-bakes-beef-pizza-kitui.jpeg", // Matches your filename
-      badge: "Popular",
+      description: "Seasoned ground beef and melted mozzarella on our slow-proofed artisanal crust.",
+      image: "images/hussein-bakes-beef-pizza-kitui.jpeg",
+      badge: "Friday BOGO",
+      rules: {
+        preparation: "Freshly Hand-Crafted",
+        notice: "We make our dough fresh. Order early for timed pickup or delivery (approx 3 hours)."
+      },
       prices: {
-        "Small": 550,
-        "Medium": 850,
-        "Large": 1200
-      }
+        "Small (9\")": 550,
+        "Medium (12\")": 850,
+        "Large - Family Size (14\")": 1200
+      },
+      addons: [
+        { name: "Extra Cheese", price: 150 },
+        { name: "Extra Beef Topping", price: 200 }
+      ]
     },
     {
       id: "chicken-tikka-pizza",
       name: "Chicken Tikka Pizza",
-      description: "Tender chicken tikka pieces with mild spices, rich sauce, and cheese.",
-      image: "images/hussein-bakes-chicken-tikka-pizza.jpeg", // Matches your filename
-      badge: "Popular",
+      description: "Mildly spiced chicken tikka pieces on a fresh artisanal crust. Kitui's favorite slice.",
+      image: "images/hussein-bakes-chicken-tikka-pizza.jpeg",
+      badge: "Friday BOGO",
+      rules: {
+        preparation: "Freshly Hand-Crafted",
+        notice: "Our artisanal dough takes 3 hours to proof for the perfect light and airy crust."
+      },
       prices: {
-        "Small": 550,
-        "Medium": 850,
-        "Large": 1200
+        "Small (9\")": 550,
+        "Medium (12\")": 850,
+        "Large - Family Size (14\")": 1200
       }
     },
     {
       id: "cheese-pizza",
       name: "Cheese Pizza",
-      description: "Classic cheese-only pizza with rich tomato sauce. Perfect for kids.",
-      image: "images/hussein-bakes-classic-cheese-pizza.jpeg", // Matches your filename
-      badge: null,
-      prices: {
-        "Small": 550,
-        "Medium": 850,
-        "Large": 1200
-      }
+      description: "The ultimate cheese lover's delight. A premium blend of mozzarella on tomato base.",
+      image: "images/hussein-bakes-classic-cheese-pizza.jpeg",
+      badge: "Classic",
+      rules: { preparation: "Freshly Hand-Crafted", notice: "Freshly baked to order. Recommended 3-hour notice." },
+      prices: { "Small": 550, "Medium": 850, "Large": 1200 }
     },
     {
       id: "vegetable-pizza",
       name: "Vegetable Pizza",
-      description: "Fresh mixed vegetables (bell peppers, onions, tomatoes) with light cheese.",
-      image: "images/hussein-bakes-vegetable-pizza.jpeg", // Matches your filename
-      badge: null,
-      prices: {
-        "Small": 550,
-        "Medium": 850,
-        "Large": 1200
-      }
+      description: "Loaded with fresh bell peppers, onions, and tomatoes on a golden crust.",
+      image: "images/hussein-bakes-vegetable-pizza.jpeg",
+      badge: "Vegetarian",
+      rules: { preparation: "Freshly Hand-Crafted", notice: "Freshly baked to order. Recommended 3-hour notice." },
+      prices: { "Small": 550, "Medium": 850, "Large": 1200 }
     }
   ]
-
+};
 
 // ============================
-// HELPER FUNCTIONS
+// CORE LOGIC FUNCTIONS
 // ============================
 
-/**
- * Get product by ID from any category
- * @param {string} productId - The product ID to find
- * @returns {Object|null} - Product object or null if not found
- */
-function getProductById(productId) {
+window.getProductsByCategory = (category) => products[category] || [];
+
+window.getProductById = (productId) => {
   for (let category in products) {
     const product = products[category].find(p => p.id === productId);
     if (product) {
-      product.category = category; // Add category for easy reference
+      product.category = category;
       return product;
     }
   }
   return null;
-}
+};
 
-/**
- * Get all products from a specific category
- * @param {string} category - 'cakes' or 'pizza'
- * @returns {Array} - Array of products
- */
-function getProductsByCategory(category) {
-  return products[category] || [];
-}
-
-/**
- * Get price range for a product
- * @param {Object} product - Product object
- * @returns {Object} - {min: number, max: number}
- */
-function getProductPriceRange(product) {
+window.getProductPriceRange = (product) => {
   const prices = Object.values(product.prices);
-  return {
-    min: Math.min(...prices),
-    max: Math.max(...prices)
-  };
-}
+  return { min: Math.min(...prices), max: Math.max(...prices) };
+};
 
-/**
- * Check if today is Friday
- * @returns {boolean} - True if today is Friday
- */
-function isFriday() {
-  return new Date().getDay() === 5; // 5 = Friday
-}
+window.isFriday = () => new Date().getDay() === 5;
 
-/**
- * Get Friday offer text for a product
- * @param {Object} product - Product object
- * @returns {string|null} - Offer text or null
- */
-function getFridayOffer(product) {
+window.getFridayOffer = (product) => {
+  // Friday Special applies to Beef and Chicken Tikka (Medium Size)
   if (product.category === 'pizza' && (product.id === 'beef-pizza' || product.id === 'chicken-tikka-pizza')) {
-    const today = new Date();
-    const isFriday = today.getDay() === 5;
-    
-    if (isFriday) {
-      return "🎉 TODAY: Buy 1 Get 1 Free!";
+    if (window.isFriday()) {
+      return "🎉 TODAY: Buy 1 Get 1 Free on Medium Size!";
     } else {
-      // Calculate next Friday
-      const nextFriday = new Date(today);
-      const daysUntilFriday = (5 - today.getDay() + 7) % 7 || 7;
-      nextFriday.setDate(today.getDate() + daysUntilFriday);
-      const formattedDate = nextFriday.toLocaleDateString('en-KE', { 
-        weekday: 'long', 
-        day: 'numeric', 
-        month: 'short' 
-      });
-      
-      return `📅 Pre-order for ${formattedDate} & get Buy 1 Get 1 Free`;
+      return "📅 Pre-order for Friday: Buy 1 Get 1 Free (Medium Size)";
     }
   }
   return null;
-}
+};
 
-/**
- * Calculate delivery fee based on option
- * @param {string} deliveryOption - 'Pickup' or 'Delivery'
- * @returns {number} - Delivery fee in KES
- */
-function getDeliveryFee(deliveryOption) {
-  return deliveryOption === 'Delivery' ? 100 : 0;
-}
+window.getDeliveryFee = (deliveryOption) => (deliveryOption === 'Delivery' ? 100 : 0);
 
-// ============================
-// EXPORT TO GLOBAL SCOPE
-// ============================
-window.productsData = products;
-window.getProductById = getProductById;
-window.getProductsByCategory = getProductsByCategory;
-window.getProductPriceRange = getProductPriceRange;
-window.isFriday = isFriday;
-window.getFridayOffer = getFridayOffer;
-window.getDeliveryFee = getDeliveryFee;
-
-console.log('Hussein Bakes Products loaded successfully!');
+console.log('Hussein Bakes: Optimized Product Engine Loaded!');
