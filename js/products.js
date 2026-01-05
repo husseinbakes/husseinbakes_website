@@ -185,7 +185,7 @@ const products = {
     }
   ],
   
-    // ============================
+      // ============================
   // PIZZA - 3-4 HOUR PREPARATION
   // ============================
   pizza: [
@@ -193,87 +193,52 @@ const products = {
       id: "beef-pizza",
       name: "Beef Pizza",
       description: "Seasoned ground beef, rich tomato sauce, and melted mozzarella cheese.",
-      image: "images/pizza/beef.jpg",
+      image: "images/hussein-bakes-beef-pizza-kitui.jpeg", // Matches your filename
       badge: "Popular",
-      rules: {
-        preparation: "3-4 hours",
-        delivery: "Available within Kitui Town (KES 100)",
-        notice: "Friday SPECIAL: Buy 1 Get 1 Free on MEDIUM size!"
-      },
       prices: {
-        "Small (9\")": 550,
-        "Medium (12\")": 850,
-        "Large - Family Size (14\")": 1200
-      },
-      addons: [
-        { name: "Extra Cheese", price: 150 },
-        { name: "Extra Beef Topping", price: 200 }
-      ]
+        "Small": 550,
+        "Medium": 850,
+        "Large": 1200
+      }
     },
     {
       id: "chicken-tikka-pizza",
       name: "Chicken Tikka Pizza",
       description: "Tender chicken tikka pieces with mild spices, rich sauce, and cheese.",
-      image: "images/pizza/chicken.jpg",
+      image: "images/hussein-bakes-chicken-tikka-pizza.jpeg", // Matches your filename
       badge: "Popular",
-      rules: {
-        preparation: "3-4 hours",
-        delivery: "Available within Kitui Town (KES 100)",
-        notice: "Friday SPECIAL: Buy 1 Get 1 Free on MEDIUM size!"
-      },
       prices: {
-        "Small (9\")": 550,
-        "Medium (12\")": 850,
-        "Large - Family Size (14\")": 1200
-      },
-      addons: [
-        { name: "Extra Cheese", price: 150 },
-        { name: "Extra Chicken Tikka", price: 200 }
-      ]
+        "Small": 550,
+        "Medium": 850,
+        "Large": 1200
+      }
     },
     {
       id: "cheese-pizza",
       name: "Cheese Pizza",
       description: "Classic cheese-only pizza with rich tomato sauce. Perfect for kids.",
-      image: "images/pizza/cheese.jpg",
+      image: "images/hussein-bakes-classic-cheese-pizza.jpeg", // Matches your filename
       badge: null,
-      rules: {
-        preparation: "3-4 hours",
-        delivery: "Available within Kitui Town (KES 100)",
-        notice: null
-      },
       prices: {
-        "Small (9\")": 550,
-        "Medium (12\")": 850,
-        "Large - Family Size (14\")": 1200
-      },
-      addons: [
-        { name: "Extra Cheese", price: 150 }
-      ]
+        "Small": 550,
+        "Medium": 850,
+        "Large": 1200
+      }
     },
     {
       id: "vegetable-pizza",
       name: "Vegetable Pizza",
       description: "Fresh mixed vegetables (bell peppers, onions, tomatoes) with light cheese.",
-      image: "images/pizza/vegetable.jpg",
+      image: "images/hussein-bakes-vegetable-pizza.jpeg", // Matches your filename
       badge: null,
-      rules: {
-  preparation: "Freshly hand-crafted",
-  delivery: "Available within Kitui Town (KES 100)",
-  notice: "Freshness takes time: We recommend ordering 3 hours in advance for the perfect crust."
-}
-
       prices: {
-        "Small (9\")": 550,
-        "Medium (12\")": 850,
-        "Large - Family Size (14\")": 1200
-      },
-      addons: [
-        { name: "Extra Cheese", price: 150 },
-        { name: "Olives", price: 80 }
-      ]
+        "Small": 550,
+        "Medium": 850,
+        "Large": 1200
+      }
     }
   ]
+
 
 // ============================
 // HELPER FUNCTIONS
