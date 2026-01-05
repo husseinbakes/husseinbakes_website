@@ -418,21 +418,20 @@
           <h1 class="font-playfair text-3xl md:text-4xl font-semibold mb-4">${currentProduct.name}</h1>
           <p class="text-softgray text-lg mb-6">${currentProduct.description}</p>
           
-          <!-- Preparation Time Notice -->
-          <div class="mb-8 p-4 border-2 ${currentProduct.category === 'cakes' ? 'border-red-500/50 bg-red-500/10' : 'border-metgold/30 bg-midnight.
-'} rounded-lg">
-            <div class="flex items-center gap-3">
-              <div class="${currentProduct.category === 'cakes' ? 'text-red-400' : 'text-goldlight'} text-2xl">⏱️</div>
-              <div>
-                <p class="${currentProduct.category === 'cakes' ? 'text-red-400' : 'text-goldlight'} font-bold uppercase text-sm tracking-wide">
-                  ${currentProduct.category === 'cakes' ? '48-HOUR PRE-ORDER REQUIRED' : '3-4 HOUR PREPARATION REQUIRED'}
-                </p>
-                <p class="${currentProduct.category === 'cakes' ? 'text-red-400/90' : 'text-goldlight/90'} text-sm">
-                  ${currentProduct.rules.notice || `Please order ${currentProduct.category === 'cakes' ? '2 days' : '3-4 hours'} in advance`}
-                </p>
-              </div>
-            </div>
-          </div>
+          <div class="mb-8 p-4 border-2 border-metgold/30 bg-midnight rounded-lg">
+  <div class="flex items-center gap-3">
+    <div class="text-metgold text-2xl">✨</div>
+    <div>
+      <p class="text-metgold font-bold uppercase text-sm tracking-wide">
+        ${currentProduct.category === 'cakes' ? 'Custom Crafted for You' : 'Freshly Baked to Order'}
+      </p>
+      <p class="text-softgray text-sm">
+        ${currentProduct.category === 'cakes' ? 'Please order 48 hours in advance for the perfect design.' : 'We prepare your pizza fresh from scratch. Order early for timed pickup or delivery!'}
+      </p>
+    </div>
+  </div>
+</div>
+
           
           <!-- Size Selection -->
           <div class="mb-8">
