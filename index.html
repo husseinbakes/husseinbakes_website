@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hussein Bakes | The Modern Exhibition</title>
-  <meta name="description" content="A curated culinary experience in Kitui. Premium custom cakes and artisanal pizza." />
-<link rel="manifest" href="manifest.json">
+  <title>Hussein Bakes | Premium Bakery & Pizza Kitui</title>
+  <meta name="description" content="Order premium custom cakes and fresh artisanal pizza in Kitui Town. 48-hour pre-order for cakes, 3-hour prep for pizza." />
+  <link rel="manifest" href="manifest.json">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -17,560 +17,587 @@
     :root {
       --gold: #C9A24D;
       --midnight: #05090F;
-      /* Updated for Clearer Glass */
-      --glass: rgba(255, 255, 255, 0.015);
-      --glass-border: rgba(255, 255, 255, 0.12);
+      /* ULTRA CLEAR GLASS */
+      --glass: rgba(255, 255, 255, 0.02);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      --glass-hover: rgba(255, 255, 255, 0.05);
     }
 
     body {
       background-color: var(--midnight);
       color: #F3F2EE;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif; /* More modern/app-like font */
       overflow-x: hidden;
-      background-image: radial-gradient(circle at 50% 0%, #111826, #05090F 80%);
+      background-image: radial-gradient(circle at 50% 0%, #1a2333, #05090F 70%);
+      background-attachment: fixed;
     }
 
     h1, h2, h3, .serif {
       font-family: 'Playfair Display', serif;
     }
 
-    /* Scrollbar Styling */
+    /* Scrollbar */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--midnight); }
     ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
     ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
 
-    /* Updated Glass Panel - Less Smokey, More Transparent */
-    .glass-panel {
+    /* The Glass Card */
+    .glass-card {
       background: var(--glass);
-      backdrop-filter: blur(4px); /* Reduced blur for clarity */
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border: 1px solid var(--glass-border);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      transition: all 0.4s ease;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .glass-panel:hover {
-      background: rgba(255, 255, 255, 0.04);
+    .glass-card:hover {
+      background: var(--glass-hover);
       border-color: var(--gold);
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px -10px rgba(0,0,0,0.6);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px -8px rgba(0, 0, 0, 0.4);
     }
 
-    /* Animation Utilities */
-    .fade-up {
-      animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-      opacity: 0;
-      transform: translateY(30px);
+    /* Interactive Elements */
+    .btn-primary {
+      background: var(--gold);
+      color: var(--midnight);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      transition: all 0.3s ease;
     }
     
-    .delay-100 { animation-delay: 0.1s; }
-    .delay-200 { animation-delay: 0.2s; }
-    .delay-300 { animation-delay: 0.3s; }
+    .btn-primary:hover {
+      background: #fff;
+      transform: scale(1.02);
+    }
 
-    @keyframes fadeUp {
+    /* Animations */
+    .fade-in-up {
+      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    
+    @keyframes fadeInUp {
       to { opacity: 1; transform: translateY(0); }
     }
 
-    .friday-badge {
-      background: linear-gradient(135deg, #C9A24D, #E6C97A);
-      color: #05090F;
-      font-weight: bold;
-    }
-
-    /* Marquee / Slider Styles */
-    .marquee-container {
-      overflow: hidden;
-      position: relative;
-      width: 100%;
+    /* Review Scroller */
+    .marquee-wrapper {
       mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      width: 100%;
+      overflow: hidden;
     }
-
-    .marquee-content {
+    
+    .marquee-track {
       display: flex;
       gap: 2rem;
       width: max-content;
-      animation: scrollLeft 40s linear infinite;
+      animation: scroll 60s linear infinite;
     }
-
-    .marquee-content:hover {
-      animation-play-state: paused;
-    }
-
-    @keyframes scrollLeft {
+    
+    .marquee-track:hover { animation-play-state: paused; }
+    
+    @keyframes scroll {
       0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); } /* Moves half way because we duplicate content */
+      100% { transform: translateX(-50%); }
     }
 
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #1F2937;
+      border: 1px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-family: serif;
+      font-weight: bold;
+    }
+
+    /* Print Hiding */
     @media print {
+      .no-print { display: none !important; }
       body { background: white; color: black; }
-      .no-print { display: none; }
-      .print-content { page-break-after: avoid; }
-      .glass-panel { border: 1px solid #999; color: black; }
     }
   </style>
 </head>
 
 <body class="antialiased selection:bg-[#C9A24D] selection:text-black">
 
-<nav class="fixed w-full z-50 transition-all duration-300 border-b border-white/5 bg-[#05090F]/80 backdrop-blur-xl no-print">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<nav class="fixed w-full z-50 border-b border-white/5 bg-[#05090F]/90 backdrop-blur-xl no-print">
+  <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+    
     <a href="#" class="flex items-center gap-3 group">
-      <div class="w-9 h-9 border border-[#C9A24D] flex items-center justify-center text-[#C9A24D] text-xs font-bold transition-all duration-500 group-hover:bg-[#C9A24D] group-hover:text-black">HB</div>
-      <div class="hidden md:block">
-        <span class="serif text-lg tracking-wide text-gray-200 block leading-none group-hover:text-[#C9A24D] transition">HUSSEIN BAKES</span>
-        <span class="text-[9px] uppercase tracking-[0.2em] text-gray-500">The Gallery</span>
+      <div class="w-10 h-10 border border-[#C9A24D] flex items-center justify-center text-[#C9A24D] font-serif font-bold text-lg rounded-sm group-hover:bg-[#C9A24D] group-hover:text-[#05090F] transition-colors">HB</div>
+      <div>
+        <span class="serif text-xl text-white block leading-none tracking-wide">HUSSEIN BAKES</span>
+        <span class="text-[10px] text-gray-500 uppercase tracking-[0.2em]">Kitui Town</span>
       </div>
     </a>
 
-    <div class="flex items-center gap-8 text-sm font-light">
-      <div class="hidden md:flex gap-6 text-gray-400">
-        <button onclick="scrollToSection('gallery')" class="hover:text-[#C9A24D] transition">Exhibition</button>
-        <button onclick="scrollToSection('testimonials')" class="hover:text-[#C9A24D] transition">Reviews</button>
-        <button onclick="scrollToSection('menu')" class="hover:text-[#C9A24D] transition">Menu</button>
-      </div>
-      
-      <button onclick="toggleCart()" class="flex items-center gap-3 text-[#C9A24D] hover:text-white transition group">
-        <span class="text-xs uppercase tracking-widest group-hover:translate-x-1 transition-transform">Your Order</span>
-        <div class="relative w-8 h-8 rounded-full border border-[#C9A24D]/30 flex items-center justify-center group-hover:border-[#C9A24D]">
-          <span id="cartBadge" class="text-[10px] font-bold">0</span>
-        </div>
-      </button>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
+      <button onclick="scrollToSection('menu-section')" class="hover:text-white transition">Menu</button>
+      <button onclick="scrollToSection('reviews')" class="hover:text-white transition">Reviews</button>
+      <button onclick="scrollToSection('info')" class="hover:text-white transition">Info</button>
     </div>
+    
+    <button onclick="toggleCart()" class="flex items-center gap-3 bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full border border-white/5 transition group">
+      <span class="text-xs text-[#C9A24D] font-bold uppercase tracking-wider group-hover:text-white">Order</span>
+      <div class="bg-[#C9A24D] text-[#05090F] w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold" id="cartBadge">0</div>
+    </button>
   </div>
 </nav>
 
-<header class="relative min-h-screen flex items-center justify-center px-6 pt-20 overflow-hidden">
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#C9A24D] opacity-[0.03] blur-[120px] rounded-full pointer-events-none"></div>
+<header class="relative pt-32 pb-20 px-6 min-h-[85vh] flex items-center justify-center text-center overflow-hidden">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#C9A24D] opacity-[0.04] blur-[150px] rounded-full pointer-events-none"></div>
 
-  <div class="relative z-10 text-center max-w-4xl mx-auto">
-    <div class="fade-up">
-      <div class="inline-block border border-[#C9A24D]/30 px-4 py-1.5 rounded-full mb-8 backdrop-blur-sm">
-        <span class="text-[#C9A24D] text-[10px] uppercase tracking-[0.3em] font-medium">Est. Kitui • Kenya</span>
-      </div>
+  <div class="relative z-10 max-w-4xl mx-auto">
+    <div class="fade-in-up" style="animation-delay: 0.1s;">
+      <span class="inline-block py-1 px-3 rounded-full border border-[#C9A24D]/30 bg-[#C9A24D]/5 text-[#C9A24D] text-[11px] font-bold uppercase tracking-widest mb-6">
+        Premium Bakery & Pizzeria
+      </span>
     </div>
     
-    <h1 class="text-5xl md:text-8xl text-white mb-8 leading-tight fade-up delay-100 serif font-medium">
-      Crafted with <span class="italic text-[#C9A24D]">Patience</span>.<br />
-      Defined by <span class="italic text-gray-400">Quality</span>.
+    <h1 class="fade-in-up text-5xl md:text-7xl lg:text-8xl text-white mb-8 font-medium leading-[1.1]" style="animation-delay: 0.2s;">
+      Taste the <span class="text-[#C9A24D] italic">Artistry</span> <br />
+      in Every Bite.
     </h1>
     
-    <p class="text-gray-400 text-lg font-light leading-relaxed max-w-xl mx-auto mb-12 fade-up delay-200">
-      A digital exhibition of artisanal baking. From 48-hour fermented doughs to intricate cake architecture, we invite you to experience the art of slow food.
+    <p class="fade-in-up text-gray-400 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto mb-12" style="animation-delay: 0.3s;">
+      Kitui's premier destination for custom cakes (48hr pre-order) and fresh, artisanal pizza. Quality ingredients, crafted with patience.
     </p>
 
-    <div class="flex flex-col sm:flex-row justify-center gap-6 fade-up delay-300">
-      <button onclick="scrollToSection('gallery')" class="group relative px-8 py-4 bg-[#C9A24D] text-[#05090F] text-sm font-semibold tracking-widest overflow-hidden">
-        <span class="relative z-10 group-hover:text-white transition-colors duration-300">ENTER GALLERY</span>
-        <div class="absolute inset-0 bg-[#05090F] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+    <div class="fade-in-up flex flex-col sm:flex-row justify-center gap-4" style="animation-delay: 0.4s;">
+      <button onclick="scrollToSection('menu-section')" class="btn-primary px-8 py-4 rounded-full text-sm uppercase tracking-widest shadow-[0_0_20px_rgba(201,162,77,0.3)]">
+        View Digital Menu
       </button>
-    </div>
-    <div id="fridayTimer" class="mt-8 text-xs text-gray-500 tracking-widest fade-up delay-300"></div>
-  </div>
-
-  <div class="absolute bottom-0 left-1/2 w-[1px] h-24 bg-gradient-to-b from-transparent via-[#C9A24D]/50 to-transparent"></div>
-</header>
-
-<section id="gallery" class="py-32 px-6">
-  <div class="max-w-7xl mx-auto">
-    <div class="flex flex-col md:flex-row justify-between items-end mb-20">
-      <div>
-        <span class="text-[#C9A24D] text-xs uppercase tracking-widest block mb-3">Curated Collection</span>
-        <h2 class="text-4xl text-white serif">Current Works</h2>
-      </div>
-      
-      <div class="flex gap-8 mt-8 md:mt-0 text-sm font-light border-b border-white/10 pb-2">
-        <button onclick="filterGallery('all')" id="filterAll" class="text-white hover:text-[#C9A24D] transition">All</button>
-        <button onclick="filterGallery('cakes')" id="filterCakes" class="text-gray-500 hover:text-[#C9A24D] transition">Cakes</button>
-        <button onclick="filterGallery('pizza')" id="filterPizza" class="text-gray-500 hover:text-[#C9A24D] transition">Pizza</button>
-      </div>
-    </div>
-
-    <div id="galleryGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-  </div>
-</section>
-
-<section id="testimonials" class="py-32 bg-[#080d16] overflow-hidden">
-  <div class="max-w-full">
-    <div class="text-center mb-16 px-6">
-      <span class="text-[#C9A24D] text-xs uppercase tracking-widest block mb-3">Trusted Reviews</span>
-      <h2 class="text-4xl text-white serif">What Our Clients Say</h2>
-      <p class="text-gray-500 text-sm mt-4">Rated 5-stars on Google. Hussein Bakes Bondeni.</p>
-    </div>
-
-    <div class="marquee-container">
-      <div class="marquee-content">
-        <div class="glass-panel p-8 rounded-sm min-w-[350px] md:min-w-[450px]">
-          <div class="flex items-center gap-1 mb-4"><span class="text-[#C9A24D]">★★★★★</span></div>
-          <p class="text-gray-300 mb-4 italic">"The cakes are absolutely phenomenal. The craftsmanship is evident in every bite. Hussein takes his time, and it shows."</p>
-          <p class="text-gray-500 text-sm">— Sarah M. | Wedding Cake</p>
-        </div>
-
-        <div class="glass-panel p-8 rounded-sm min-w-[350px] md:min-w-[450px]">
-          <div class="flex items-center gap-1 mb-4"><span class="text-[#C9A24D]">★★★★★</span></div>
-          <p class="text-gray-300 mb-4 italic">"Fresh pizza, custom cakes, and the most attentive customer service. Worth every shilling."</p>
-          <p class="text-gray-500 text-sm">— James K. | Regular Customer</p>
-        </div>
-
-        <div class="glass-panel p-8 rounded-sm min-w-[350px] md:min-w-[450px]">
-          <div class="flex items-center gap-1 mb-4"><span class="text-[#C9A24D]">★★★★★</span></div>
-          <p class="text-gray-300 mb-4 italic">"The Cardamom cake is a masterpiece. Local pride. Hussein Bakes is Kitui's best-kept secret."</p>
-          <p class="text-gray-500 text-sm">— Grace N. | Birthday Celebration</p>
-        </div>
-
-        <div class="glass-panel p-8 rounded-sm min-w-[350px] md:min-w-[450px]">
-          <div class="flex items-center gap-1 mb-4"><span class="text-[#C9A24D]">★★★★★</span></div>
-          <p class="text-gray-300 mb-4 italic">"Friday pizza specials? Absolute game-changer. Best value in Kitui Town."</p>
-          <p class="text-gray-500 text-sm">— Michael T. | Friday Beef Special</p>
-        </div>
-
-        <div class="glass-panel p-8 rounded-sm min-w-[350px] md:min-w-[450px]">
-          <div class="flex items-center gap-1 mb-4"><span class="text-[#C9A24D]">★★★★★</span></div>
-          <p class="text-gray-300 mb-4 italic">"I ordered a cake for my parents' anniversary and it was stunning. Not too sweet, just perfect."</p>
-          <p class="text-gray-500 text-sm">— Zainab A. | Anniversary</p>
-        </div>
-
-        <div class="glass-panel p-8 rounded-sm min-w-[350px] md:min-w-[450px]">
-          <div class="flex items-center gap-1 mb-4"><span class="text-[#C9A24D]">★★★★★</span></div>
-          <p class="text-gray-300 mb-4 italic">"The cakes are absolutely phenomenal. The craftsmanship is evident in every bite. Hussein takes his time, and it shows."</p>
-          <p class="text-gray-500 text-sm">— Sarah M. | Wedding Cake</p>
-        </div>
-
-        <div class="glass-panel p-8 rounded-sm min-w-[350px] md:min-w-[450px]">
-          <div class="flex items-center gap-1 mb-4"><span class="text-[#C9A24D]">★★★★★</span></div>
-          <p class="text-gray-300 mb-4 italic">"Fresh pizza, custom cakes, and the most attentive customer service. Worth every shilling."</p>
-          <p class="text-gray-500 text-sm">— James K. | Regular Customer</p>
-        </div>
-
-        <div class="glass-panel p-8 rounded-sm min-w-[350px] md:min-w-[450px]">
-          <div class="flex items-center gap-1 mb-4"><span class="text-[#C9A24D]">★★★★★</span></div>
-          <p class="text-gray-300 mb-4 italic">"The Cardamom cake is a masterpiece. Local pride. Hussein Bakes is Kitui's best-kept secret."</p>
-          <p class="text-gray-500 text-sm">— Grace N. | Birthday Celebration</p>
-        </div>
-
-        <div class="glass-panel p-8 rounded-sm min-w-[350px] md:min-w-[450px]">
-          <div class="flex items-center gap-1 mb-4"><span class="text-[#C9A24D]">★★★★★</span></div>
-          <p class="text-gray-300 mb-4 italic">"Friday pizza specials? Absolute game-changer. Best value in Kitui Town."</p>
-          <p class="text-gray-500 text-sm">— Michael T. | Friday Beef Special</p>
-        </div>
-
-        <div class="glass-panel p-8 rounded-sm min-w-[350px] md:min-w-[450px]">
-            <div class="flex items-center gap-1 mb-4"><span class="text-[#C9A24D]">★★★★★</span></div>
-            <p class="text-gray-300 mb-4 italic">"I ordered a cake for my parents' anniversary and it was stunning. Not too sweet, just perfect."</p>
-            <p class="text-gray-500 text-sm">— Zainab A. | Anniversary</p>
-          </div>
-      </div>
-    </div>
-
-    <div class="text-center mt-12">
-      <a href="https://g.page/r/husseinbakes" target="_blank" class="inline-block px-8 py-3 border border-[#C9A24D] text-[#C9A24D] hover:bg-[#C9A24D] hover:text-[#05090F] transition duration-300 text-sm tracking-widest">
-        VIEW ALL REVIEWS ON GOOGLE
+      <a href="https://wa.me/254710975805" target="_blank" class="px-8 py-4 rounded-full border border-white/10 text-white hover:bg-white/5 transition text-sm uppercase tracking-widest font-medium">
+        Contact on WhatsApp
       </a>
     </div>
-  </div>
-</section>
 
-<section id="menu" class="py-20 px-6">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl text-white serif italic">The Complete Index</h2>
-      <p class="text-gray-500 text-sm mt-2">Browse all available works. Click any item to add to your collection.</p>
+    <div id="fridayTimer" class="mt-12 text-sm text-gray-500 font-mono fade-in-up" style="animation-delay: 0.5s;"></div>
+  </div>
+</header>
+
+<section id="menu-section" class="py-24 px-6 relative">
+  <div class="max-w-7xl mx-auto">
+    
+    <div class="flex flex-col md:flex-row justify-between items-end mb-10 border-b border-white/5 pb-6">
+      <div>
+        <h2 id="menuTitle" class="text-4xl text-white serif mb-2">Our Menu</h2>
+        <p class="text-gray-500 text-sm">Select a category to browse products.</p>
+      </div>
+      
+      <button id="backBtn" onclick="showCategories()" class="hidden text-[#C9A24D] hover:text-white transition flex items-center gap-2 text-sm font-medium mt-4 md:mt-0">
+        ← Back to Categories
+      </button>
     </div>
-    <div id="menuList" class="space-y-4"></div>
+
+    <div id="categoryView" class="grid grid-cols-1 md:grid-cols-2 gap-6 fade-in-up">
+        
+        <div onclick="renderMenu('cakes')" class="glass-card group cursor-pointer relative overflow-hidden rounded-2xl h-[450px] flex flex-col justify-end p-8">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10"></div>
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center opacity-40 group-hover:scale-105 transition duration-700"></div>
+            
+            <div class="relative z-20">
+                <div class="w-12 h-12 rounded-full bg-[#C9A24D] text-[#05090F] flex items-center justify-center text-2xl mb-4">🎂</div>
+                <h3 class="text-3xl text-white serif mb-2">Custom Cakes</h3>
+                <p class="text-gray-300 text-sm mb-6 max-w-sm">Signature Vanilla, Black Forest, and Red Velvet. 48-hour pre-order required for custom designs.</p>
+                <div class="inline-flex items-center gap-2 text-[#C9A24D] text-sm font-bold uppercase tracking-wider">
+                    Browse Cakes <span class="group-hover:translate-x-2 transition">→</span>
+                </div>
+            </div>
+        </div>
+
+        <div onclick="renderMenu('pizza')" class="glass-card group cursor-pointer relative overflow-hidden rounded-2xl h-[450px] flex flex-col justify-end p-8">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10"></div>
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center opacity-40 group-hover:scale-105 transition duration-700"></div>
+            
+            <div class="relative z-20">
+                <div class="w-12 h-12 rounded-full bg-[#C9A24D] text-[#05090F] flex items-center justify-center text-2xl mb-4">🍕</div>
+                <h3 class="text-3xl text-white serif mb-2">Artisanal Pizza</h3>
+                <p class="text-gray-300 text-sm mb-6 max-w-sm">Fresh dough, premium toppings. Beef, Chicken Tikka & Veg. Ready in 3-4 hours.</p>
+                <div class="inline-flex items-center gap-2 text-[#C9A24D] text-sm font-bold uppercase tracking-wider">
+                    Browse Pizza <span class="group-hover:translate-x-2 transition">→</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="productGrid" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        </div>
+
   </div>
 </section>
 
-<footer class="py-12 border-t border-white/5 text-center text-gray-600 text-xs tracking-widest no-print">
-  <p class="mb-4">HUSSEIN BAKES • KITUI TOWN</p>
-  <p class="opacity-50">© 2026 DIGITAL GALLERY EDITION</p>
+<section id="info" class="py-20 px-6 bg-black/20 border-t border-white/5">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 text-center md:text-left">
+    
+    <div>
+      <h3 class="serif text-xl text-white mb-4">Location</h3>
+      <p class="text-gray-400 text-sm leading-relaxed">
+        Kitui Town, Kenya.<br>
+        Delivery available within town limits.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="serif text-xl text-white mb-4">Opening Hours</h3>
+      <p class="text-gray-400 text-sm leading-relaxed">
+        Mon - Sat: 08:00 AM - 08:00 PM<br>
+        Sunday: 10:00 AM - 06:00 PM
+      </p>
+    </div>
+
+    <div>
+      <h3 class="serif text-xl text-white mb-4">Contact</h3>
+      <p class="text-gray-400 text-sm leading-relaxed mb-2">
+        <a href="tel:+254710975805" class="hover:text-[#C9A24D] transition">+254 710 975 805</a>
+      </p>
+      <a href="https://wa.me/254710975805" class="text-[#C9A24D] text-sm font-medium hover:underline">Chat on WhatsApp</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="reviews" class="py-24 overflow-hidden relative">
+  <div class="absolute inset-0 bg-[#C9A24D]/5 blur-3xl"></div>
+  
+  <div class="max-w-7xl mx-auto px-6 mb-12 flex items-end justify-between">
+    <div>
+      <span class="text-[#C9A24D] text-xs font-bold uppercase tracking-widest mb-2 block">Testimonials</span>
+      <h2 class="text-4xl text-white serif">Customer Love</h2>
+    </div>
+    <div class="flex gap-2 text-[#C9A24D]">★★★★★</div>
+  </div>
+
+  <div class="marquee-wrapper">
+    <div id="reviewsTrack" class="marquee-track">
+      </div>
+  </div>
+  
+  <div class="text-center mt-12">
+    <a href="https://g.page/r/husseinbakes" target="_blank" class="inline-block border-b border-[#C9A24D] pb-1 text-[#C9A24D] text-sm uppercase tracking-widest hover:text-white hover:border-white transition">
+      Read all Google Reviews
+    </a>
+  </div>
+</section>
+
+<footer class="py-10 border-t border-white/5 text-center bg-[#020305] no-print">
+  <div class="mb-4 text-[#C9A24D] font-bold serif text-xl">HB</div>
+  <p class="text-gray-600 text-xs tracking-widest uppercase mb-2">Hussein Bakes • Kitui Town</p>
+  <p class="text-gray-700 text-[10px]">© 2026. All rights reserved.</p>
 </footer>
 
-<div id="cartOverlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-500 no-print" onclick="toggleCart()"></div>
+<div id="cartOverlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300" onclick="toggleCart()"></div>
 
-<div id="cartSidebar" class="fixed top-0 right-0 h-full w-full max-w-md bg-[#0B1320]/95 backdrop-blur-xl border-l border-[#C9A24D]/20 z-[70] transform translate-x-full transition-transform duration-500 flex flex-col shadow-2xl no-print overflow-hidden">
-  <div class="p-8 flex justify-between items-center border-b border-white/5 sticky top-0 bg-[#0B1320]/95 backdrop-blur">
-    <h2 class="serif text-xl text-white italic">Acquisitions</h2>
-    <button onclick="toggleCart()" class="text-gray-400 hover:text-[#C9A24D] transition">✕</button>
+<div id="cartSidebar" class="fixed top-0 right-0 h-full w-full max-w-md bg-[#0B1320] border-l border-white/10 z-[70] transform translate-x-full transition-transform duration-300 flex flex-col shadow-2xl">
+  
+  <div class="p-6 border-b border-white/5 flex justify-between items-center bg-[#0B1320]">
+    <h2 class="serif text-xl text-white">Your Order</h2>
+    <button onclick="toggleCart()" class="w-8 h-8 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 text-gray-400">✕</button>
   </div>
 
-  <div id="cartItems" class="flex-1 overflow-y-auto p-8 space-y-6">
+  <div id="cartItems" class="flex-1 overflow-y-auto p-6 space-y-4">
+    <div class="h-full flex flex-col items-center justify-center text-gray-500 gap-4">
+      <span class="text-4xl opacity-20">🛒</span>
+      <p class="text-sm">Your cart is empty.</p>
+      <button onclick="toggleCart()" class="text-[#C9A24D] text-sm hover:underline">Browse Menu</button>
+    </div>
+  </div>
+
+  <div class="p-6 bg-[#080C14] border-t border-white/5 space-y-4">
+    <div class="flex justify-between items-center text-sm">
+      <span class="text-gray-400">Total Estimate</span>
+      <span id="cartTotal" class="text-[#C9A24D] text-xl font-bold">KES 0</span>
     </div>
 
-  <div class="p-8 bg-[#05090F] border-t border-white/5 space-y-4 sticky bottom-0">
-    <div class="flex justify-between items-center">
-      <span class="text-gray-400 text-xs uppercase tracking-widest">Total Estimate</span>
-      <span id="cartTotal" class="text-[#C9A24D] text-xl serif">KES 0</span>
-    </div>
-
-    <div class="space-y-2">
-      <button onclick="checkoutWhatsApp()" class="w-full py-3 bg-[#C9A24D] text-[#05090F] font-bold tracking-widest hover:bg-white transition duration-500 text-sm">
-        WHATSAPP ORDER
-      </button>
-      <button onclick="printOrder()" class="w-full py-2 border border-gray-600 text-gray-400 hover:text-white transition duration-300 text-xs">
-        PRINT SUMMARY
-      </button>
-    </div>
-    <p class="text-gray-600 text-[11px] text-center">48hrs (Cakes) • 3-4hrs (Pizza)</p>
+    <button onclick="checkoutWhatsApp()" class="w-full py-4 bg-[#C9A24D] hover:bg-white text-[#05090F] font-bold rounded-lg transition duration-300 text-sm uppercase tracking-widest shadow-lg">
+      Complete Order on WhatsApp
+    </button>
+    <p class="text-center text-[10px] text-gray-600">Payment via M-Pesa upon confirmation.</p>
   </div>
 </div>
 
-<div id="optionModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-[80] hidden flex items-center justify-center p-6">
-    <div class="glass-panel p-8 max-w-md w-full relative">
+<div id="optionModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-[80] hidden flex items-center justify-center p-4">
+    <div class="glass-card p-6 md:p-8 rounded-2xl max-w-sm w-full relative">
         <button onclick="closeOptionModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white">✕</button>
-        <h3 id="modalTitle" class="text-xl serif text-white mb-2">Select Size</h3>
-        <p id="modalDesc" class="text-sm text-gray-500 mb-6">Choose your preference</p>
         
-        <div id="modalOptions" class="space-y-3"></div>
+        <h3 id="modalTitle" class="text-2xl serif text-white mb-1">Product Name</h3>
+        <p id="modalDesc" class="text-xs text-gray-400 mb-6">Select a variation below.</p>
+        
+        <div id="modalOptions" class="space-y-3">
+          </div>
     </div>
 </div>
 
 <script>
-  // --- INVENTORY DATA ---
+  // --- 1. DATA CONFIGURATION ---
+  
+  const reviewsData = [
+    { name: "Fatma Abdulkadir", initial: "FA", text: "Absolutely divine! Hussein Bakes is a hidden gem. The flawless buttercream finishes are unmatched." },
+    { name: "Abigail Teresia", initial: "AT", text: "Finally, proper pizza in Kitui! Freshly baked, not frozen. Definitely the best pizza place in town right now." },
+    { name: "Maryam Ore", initial: "MO", text: "I tried the Friday Buy-1-Get-1-Free offer and it was totally worth it! Fresh, hot, and delicious." },
+    { name: "Jeanette Atieno", initial: "JA", text: "5 stars isn't enough! Flavors, presentation, and service - everything is top-notch!" },
+    { name: "Leila Jams", initial: "LJ", text: "The wedding cake was the star of our special day! Exceeded all our expectations." },
+    { name: "Hussein Mwange", initial: "HM", text: "We enjoyed the cake it was marvelous. Thank you." },
+    { name: "Halima Hassan", initial: "HH", text: "The chocolate cake had a beautiful balance of real chocolate not just flavor." },
+    { name: "Jamal Batrudin", initial: "JB", text: "“A masterpiece in every bite!” You can feel the love and artistry in every detail." },
+    { name: "Wattah", initial: "W", text: "The pizza was hot, fresh, and made to order. Definitely coming back again." },
+    { name: "Zulekha Mutua", initial: "ZM", text: "One of the best decisions I’ve made. He engineered the cake with precision and creativity." }
+  ];
+
   const inventory = [
     // CAKES
-    { id: 1, type: 'cakes', name: 'Signature Vanilla', basePrice: 2500, desc: 'Soft vanilla sponge with premium buttercream.', img: '🎂', tag: 'Classic', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, prep: '48hr'},
-    { id: 2, type: 'cakes', name: 'Vanilla & Cardamom', basePrice: 2500, desc: 'Cardamom-infused masterpiece. Kitui specialty.', img: '🍰', tag: 'Signature', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, prep: '48hr'},
-    { id: 3, type: 'cakes', name: 'Midnight Chocolate', basePrice: 2500, desc: 'Rich chocolate with smooth ganache.', img: '🍫', tag: 'Best Seller', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, prep: '48hr'},
-    { id: 4, type: 'cakes', name: 'Red Velvet Dream', basePrice: 2500, desc: 'Classic with cream cheese frosting.', img: '🧁', tag: 'Luxury', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, prep: '48hr'},
-    { id: 5, type: 'cakes', name: 'Black Forest Symphony', basePrice: 2500, desc: 'Chocolate, cream & fresh cherries.', img: '🍒', tag: 'Classic', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, prep: '48hr'},
-    { id: 6, type: 'cakes', name: 'Golden Harvest', basePrice: 3000, desc: 'Spiced carrot cake with walnuts.', img: '🥕', tag: 'New', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, prep: '48hr'},
-    { id: 7, type: 'cakes', name: 'Citrus Sculpt', basePrice: 3000, desc: 'Zesty lemon with blueberries.', img: '🍋', tag: 'Bright', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, prep: '48hr'},
-    { id: 8, type: 'cakes', name: 'Mocha Architecture', basePrice: 3000, desc: 'Espresso with salted caramel.', img: '☕', tag: 'Bold', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, prep: '48hr'},
+    { id: 1, type: 'cakes', name: 'Signature Vanilla', basePrice: 2500, desc: 'Soft vanilla sponge, premium buttercream.', img: '🎂', tag: 'Classic', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}},
+    { id: 2, type: 'cakes', name: 'Vanilla & Cardamom', basePrice: 2500, desc: 'Cardamom-infused. Kitui specialty.', img: '🍰', tag: 'Signature', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}},
+    { id: 3, type: 'cakes', name: 'Midnight Chocolate', basePrice: 2500, desc: 'Rich chocolate, smooth ganache.', img: '🍫', tag: 'Bestseller', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}},
+    { id: 4, type: 'cakes', name: 'Red Velvet Dream', basePrice: 2500, desc: 'Classic w/ cream cheese frosting.', img: '🧁', tag: 'Luxury', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}},
+    { id: 5, type: 'cakes', name: 'Black Forest', basePrice: 2500, desc: 'Chocolate, cream & fresh cherries.', img: '🍒', tag: 'Classic', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}},
+    { id: 6, type: 'cakes', name: 'Golden Harvest', basePrice: 3000, desc: 'Spiced carrot cake with walnuts.', img: '🥕', tag: 'New', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}},
+    { id: 7, type: 'cakes', name: 'Citrus Sculpt', basePrice: 3000, desc: 'Zesty lemon with blueberries.', img: '🍋', tag: 'Fresh', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}},
     
-    // PIZZAS
-    { id: 17, type: 'pizza', name: 'Beef Supremo', desc: 'Ground beef & herbs on artisanal crust.', img: '🍕', tag: 'Friday 1+1', prep: '3-4hr', offer: 'Friday Special', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}},
-    { id: 18, type: 'pizza', name: 'Chicken Tikka', desc: 'Spiced tikka chicken, onions, peppers.', img: '🍗', tag: 'Premium', prep: '3-4hr', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}},
-    { id: 19, type: 'pizza', name: 'Garden Veg', desc: 'Fresh peppers, onions, tomatoes.', img: '🥬', tag: 'Vegetarian', prep: '3-4hr', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}},
-    { id: 20, type: 'pizza', name: 'Classic Cheese', desc: 'Premium mozzarella blend.', img: '🧀', tag: 'Vegetarian', prep: '3-4hr', sizes: {'Small (9")': 500, 'Medium (12")': 800, 'Large (14")': 1150}}
+    // PIZZA
+    { id: 17, type: 'pizza', name: 'Beef Supremo', desc: 'Seasoned beef, herbs, mozzarella.', img: '🍕', tag: 'Friday Offer', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}},
+    { id: 18, type: 'pizza', name: 'Chicken Tikka', desc: 'Spiced chicken, onions, peppers.', img: '🍗', tag: 'Spicy', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}},
+    { id: 19, type: 'pizza', name: 'Garden Veg', desc: 'Peppers, onions, tomatoes, olives.', img: '🥬', tag: 'Veggie', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}},
+    { id: 20, type: 'pizza', name: 'Classic Cheese', desc: 'Rich tomato base, extra mozzarella.', img: '🧀', tag: 'Kids Love', sizes: {'Small (9")': 500, 'Medium (12")': 800, 'Large (14")': 1150}}
   ];
 
   let cart = [];
   let currentSelection = null;
 
+  // --- 2. INITIALIZATION ---
+
   document.addEventListener('DOMContentLoaded', () => {
-    updateFridayCountdown();
-    setInterval(updateFridayCountdown, 60000); // Update every minute
-    renderGallery('all');
-    renderMenu();
+    updateFridayTimer();
+    renderReviews();
+    setInterval(updateFridayTimer, 60000);
   });
 
-  // --- LOGIC ---
-
-  function updateFridayCountdown() {
+  function updateFridayTimer() {
     const now = new Date();
-    const dayOfWeek = now.getDay();
-    const hoursLeft = 23 - now.getHours();
+    const day = now.getDay();
+    const el = document.getElementById('fridayTimer');
     
-    let message = '';
-    if (dayOfWeek === 5) {
-      message = '🎉 TODAY: FRIDAY SPECIALS ACTIVE!';
+    if (day === 5) {
+      el.innerHTML = '<span class="text-[#C9A24D]">🎉 Friday Special Active: Buy 1 Get 1 Free (Medium Pizza)</span>';
     } else {
-      const daysLeft = (5 - dayOfWeek + 7) % 7 || 7;
-      message = `⏳ Next Friday Special in ${daysLeft} days`;
+      const daysLeft = (5 - day + 7) % 7 || 7;
+      el.innerText = `Next Friday Special in ${daysLeft} days`;
     }
-    document.getElementById('fridayTimer').innerText = message;
   }
 
   function scrollToSection(id) {
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
   }
 
-  // --- GALLERY RENDERER ---
-  function renderGallery(filter) {
-    const grid = document.getElementById('galleryGrid');
+  // --- 3. MENU RENDERING ---
+
+  function showCategories() {
+    document.getElementById('categoryView').classList.remove('hidden');
+    document.getElementById('productGrid').classList.add('hidden');
+    document.getElementById('backBtn').classList.add('hidden');
+    document.getElementById('menuTitle').innerText = 'Our Menu';
+  }
+
+  function renderMenu(category) {
+    // Switch Views
+    document.getElementById('categoryView').classList.add('hidden');
+    document.getElementById('productGrid').classList.remove('hidden');
+    document.getElementById('backBtn').classList.remove('hidden');
+    
+    // Update Title
+    const title = category === 'cakes' ? 'Custom Cakes' : 'Fresh Pizza';
+    document.getElementById('menuTitle').innerText = title;
+
+    // Render Items
+    const grid = document.getElementById('productGrid');
     grid.innerHTML = '';
     
-    // Toggle active tabs
-    ['filterAll', 'filterCakes', 'filterPizza'].forEach(id => {
-       const el = document.getElementById(id);
-       el.classList.remove('text-[#C9A24D]', 'text-gray-500');
-       // Simple logic to highlight active tab
-       if(id.toLowerCase().includes(filter)) {
-           el.classList.add('text-[#C9A24D]');
-       } else if (filter === 'all' && id === 'filterAll') {
-           el.classList.add('text-[#C9A24D]');
-       } else {
-           el.classList.add('text-gray-500');
-       }
-    });
-
-    const items = filter === 'all' ? inventory : inventory.filter(i => i.type === filter);
+    const items = inventory.filter(i => i.type === category);
     
     items.forEach((item, index) => {
-      const card = document.createElement('div');
-      card.className = 'glass-panel p-6 rounded-sm relative group overflow-hidden';
-      // Staggered animation
-      card.style.animation = `fadeUp 0.8s ease-out ${index * 0.05}s forwards`;
-      card.style.opacity = '0';
-      
       const sizes = Object.keys(item.sizes);
-      const displayPrice = item.sizes[sizes[0]].toLocaleString();
+      const startPrice = item.sizes[sizes[0]].toLocaleString();
       
-      card.innerHTML = `
-        <div class="absolute top-4 right-4 z-10 flex flex-col gap-2 items-end">
-           <span class="text-[9px] uppercase tracking-wider text-[#C9A24D] border border-[#C9A24D]/30 px-2 py-1 rounded-full backdrop-blur-md">${item.tag}</span>
-           ${item.offer ? `<span class="text-[7px] uppercase tracking-wider friday-badge px-2 py-0.5 rounded-full shadow-lg glow">${item.offer}</span>` : ''}
+      const el = document.createElement('div');
+      el.className = 'glass-card p-6 rounded-xl flex flex-col relative group fade-in-up';
+      el.style.animationDelay = `${index * 0.05}s`;
+      
+      el.innerHTML = `
+        <div class="absolute top-4 right-4">
+           <span class="text-[10px] uppercase tracking-wider font-bold text-[#C9A24D] bg-[#C9A24D]/10 px-2 py-1 rounded border border-[#C9A24D]/20">${item.tag}</span>
         </div>
         
-        <div class="aspect-square bg-[#05090F]/30 mb-6 flex items-center justify-center text-6xl shadow-inner rounded-sm group-hover:bg-[#05090F]/50 transition duration-500">
-          <span class="group-hover:scale-110 group-hover:rotate-3 transition duration-700 select-none filter drop-shadow-lg">${item.img}</span>
-        </div>
+        <div class="text-5xl mb-4 transform group-hover:scale-110 transition duration-300 origin-left">${item.img}</div>
         
-        <div class="flex justify-between items-start mb-2">
-            <h3 class="text-white text-lg serif group-hover:text-[#C9A24D] transition duration-300">${item.name}</h3>
-        </div>
+        <h3 class="text-white text-lg font-medium mb-1">${item.name}</h3>
+        <p class="text-gray-400 text-xs mb-4 line-clamp-2 h-8">${item.desc}</p>
         
-        <p class="text-gray-500 text-xs font-light mb-4 line-clamp-2 h-8">${item.desc}</p>
-        
-        <div class="flex items-center justify-between border-t border-white/5 pt-4 mt-auto">
-            <span class="text-[#C9A24D] text-sm serif">fr. KES ${displayPrice}</span>
-            <button onclick="openOptionModal(${item.id})" class="text-xs uppercase tracking-widest text-white hover:text-[#C9A24D] transition flex items-center gap-2 group-hover:translate-x-0">
-                ADD TO CART <span class="text-lg leading-none">+</span>
-            </button>
+        <div class="mt-auto flex justify-between items-center border-t border-white/5 pt-4">
+            <span class="text-[#C9A24D] text-sm font-medium">fr. KES ${startPrice}</span>
+            <button onclick="openOptionModal(${item.id})" class="w-8 h-8 rounded-full bg-white/5 hover:bg-[#C9A24D] hover:text-[#05090F] flex items-center justify-center transition text-lg leading-none pb-1">+</button>
         </div>
       `;
-      grid.appendChild(card);
+      grid.appendChild(el);
+    });
+    
+    // Auto scroll slightly to top of menu if needed
+    document.getElementById('menu-section').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // --- 4. REVIEW RENDERING ---
+
+  function renderReviews() {
+    const track = document.getElementById('reviewsTrack');
+    // Duplicate array for infinite scroll illusion
+    const data = [...reviewsData, ...reviewsData]; 
+    
+    data.forEach(review => {
+      const card = document.createElement('div');
+      card.className = 'glass-card p-6 rounded-xl w-[350px] flex-shrink-0 flex flex-col';
+      card.innerHTML = `
+        <div class="flex items-center gap-3 mb-4">
+            <div class="avatar">${review.initial}</div>
+            <div>
+                <h4 class="text-white text-sm font-bold">${review.name}</h4>
+                <div class="text-[#C9A24D] text-xs">★★★★★</div>
+            </div>
+        </div>
+        <p class="text-gray-300 text-sm italic leading-relaxed">"${review.text}"</p>
+      `;
+      track.appendChild(card);
     });
   }
 
-  function renderMenu() {
-      const list = document.getElementById('menuList');
-      inventory.forEach(item => {
-          const div = document.createElement('div');
-          div.className = 'flex justify-between items-center py-3 border-b border-white/5 hover:bg-white/5 px-4 transition cursor-pointer group';
-          div.onclick = () => openOptionModal(item.id);
-          div.innerHTML = `
-            <div class="flex items-center gap-4">
-                <span class="opacity-50 group-hover:scale-125 transition text-lg">${item.img}</span>
-                <span class="text-gray-300 text-sm font-light group-hover:text-[#C9A24D] transition">${item.name}</span>
-            </div>
-            <span class="text-gray-600 text-xs group-hover:text-white transition">Select Size +</span>
-          `;
-          list.appendChild(div);
-      });
-  }
-
-  // --- MODAL & CART LOGIC ---
+  // --- 5. CART & MODAL LOGIC ---
 
   function openOptionModal(id) {
-      const item = inventory.find(i => i.id === id);
-      if(!item) return;
-      currentSelection = item;
-
-      document.getElementById('modalTitle').innerText = item.name;
-      const container = document.getElementById('modalOptions');
-      container.innerHTML = '';
-
-      // Generate buttons for each size
-      for (const [size, price] of Object.entries(item.sizes)) {
-          const btn = document.createElement('button');
-          btn.className = 'w-full flex justify-between items-center p-4 border border-white/10 hover:border-[#C9A24D] hover:bg-[#C9A24D]/10 transition text-sm text-gray-300';
-          btn.innerHTML = `<span>${size}</span> <span class="text-[#C9A24D]">KES ${price.toLocaleString()}</span>`;
-          btn.onclick = () => addToCart(item, size, price);
-          container.appendChild(btn);
-      }
-
-      document.getElementById('optionModal').classList.remove('hidden');
+    currentSelection = inventory.find(i => i.id === id);
+    if (!currentSelection) return;
+    
+    document.getElementById('modalTitle').innerText = currentSelection.name;
+    document.getElementById('modalDesc').innerText = currentSelection.desc;
+    
+    const container = document.getElementById('modalOptions');
+    container.innerHTML = '';
+    
+    for (const [size, price] of Object.entries(currentSelection.sizes)) {
+        const btn = document.createElement('button');
+        btn.className = 'w-full flex justify-between items-center p-4 rounded-lg border border-white/10 hover:border-[#C9A24D] hover:bg-[#C9A24D]/10 bg-white/5 transition text-sm text-gray-200';
+        btn.innerHTML = `
+            <span class="font-medium">${size}</span>
+            <span class="text-[#C9A24D] font-bold">KES ${price.toLocaleString()}</span>
+        `;
+        btn.onclick = () => addToCart(currentSelection, size, price);
+        container.appendChild(btn);
+    }
+    
+    document.getElementById('optionModal').classList.remove('hidden');
   }
 
   function closeOptionModal() {
-      document.getElementById('optionModal').classList.add('hidden');
+    document.getElementById('optionModal').classList.add('hidden');
   }
 
   function addToCart(item, size, price) {
-      cart.push({
-          id: Date.now(), // unique ID for cart item
-          name: item.name,
-          size: size,
-          price: price,
-          type: item.type
-      });
-      closeOptionModal();
-      updateCartUI();
-      toggleCart(); // Open cart to show item added
+    cart.push({ id: Date.now(), name: item.name, size, price, type: item.type });
+    closeOptionModal();
+    updateCartUI();
+    
+    // Open cart automatically on add
+    const sidebar = document.getElementById('cartSidebar');
+    if(sidebar.classList.contains('translate-x-full')) toggleCart();
   }
 
-  function removeFromCart(cartId) {
-      cart = cart.filter(i => i.id !== cartId);
-      updateCartUI();
+  function removeFromCart(id) {
+    cart = cart.filter(i => i.id !== id);
+    updateCartUI();
   }
 
   function updateCartUI() {
-      const badge = document.getElementById('cartBadge');
-      const container = document.getElementById('cartItems');
-      const totalEl = document.getElementById('cartTotal');
-
-      badge.innerText = cart.length;
-
-      if(cart.length === 0) {
-          container.innerHTML = `
-            <div class="flex flex-col items-center justify-center h-full text-gray-600 gap-4">
-                <span class="text-2xl opacity-20">❖</span>
-                <p class="text-sm font-light">Your collection is empty.</p>
+    const badge = document.getElementById('cartBadge');
+    const itemsContainer = document.getElementById('cartItems');
+    const totalEl = document.getElementById('cartTotal');
+    
+    badge.innerText = cart.length;
+    
+    if (cart.length === 0) {
+        itemsContainer.innerHTML = `
+            <div class="h-full flex flex-col items-center justify-center text-gray-500 gap-4">
+              <span class="text-4xl opacity-20">🛒</span>
+              <p class="text-sm">Your cart is empty.</p>
+              <button onclick="toggleCart()" class="text-[#C9A24D] text-sm hover:underline">Browse Menu</button>
             </div>`;
-          totalEl.innerText = 'KES 0';
-          return;
-      }
-
-      container.innerHTML = '';
-      let total = 0;
-
-      cart.forEach(item => {
-          total += item.price;
-          const div = document.createElement('div');
-          div.className = 'flex justify-between items-start border-b border-white/5 pb-4 fade-up';
-          div.innerHTML = `
+        totalEl.innerText = 'KES 0';
+        return;
+    }
+    
+    itemsContainer.innerHTML = '';
+    let total = 0;
+    
+    cart.forEach(item => {
+        total += item.price;
+        const div = document.createElement('div');
+        div.className = 'flex justify-between items-start border-b border-white/5 pb-3 animate-pulse-once';
+        div.innerHTML = `
             <div>
-                <h4 class="text-white text-sm serif">${item.name}</h4>
-                <p class="text-gray-500 text-xs mt-1">${item.size}</p>
+                <h4 class="text-white text-sm font-medium">${item.name}</h4>
+                <p class="text-gray-500 text-xs">${item.size}</p>
             </div>
             <div class="text-right">
                 <p class="text-[#C9A24D] text-sm">KES ${item.price.toLocaleString()}</p>
-                <button onclick="removeFromCart(${item.id})" class="text-[10px] text-red-400 mt-2 hover:text-white underline">Remove</button>
+                <button onclick="removeFromCart(${item.id})" class="text-[10px] text-red-400 hover:text-white mt-1">Remove</button>
             </div>
-          `;
-          container.appendChild(div);
-      });
-
-      totalEl.innerText = 'KES ' + total.toLocaleString();
+        `;
+        itemsContainer.appendChild(div);
+    });
+    
+    totalEl.innerText = 'KES ' + total.toLocaleString();
   }
 
   function toggleCart() {
-      const sidebar = document.getElementById('cartSidebar');
-      const overlay = document.getElementById('cartOverlay');
-      
-      if (sidebar.classList.contains('translate-x-full')) {
-          sidebar.classList.remove('translate-x-full');
-          overlay.classList.remove('hidden');
-          setTimeout(() => overlay.classList.remove('opacity-0'), 10);
-      } else {
-          sidebar.classList.add('translate-x-full');
-          overlay.classList.add('opacity-0');
-          setTimeout(() => overlay.classList.add('hidden'), 500);
-      }
+    const sidebar = document.getElementById('cartSidebar');
+    const overlay = document.getElementById('cartOverlay');
+    
+    if (sidebar.classList.contains('translate-x-full')) {
+        // Open
+        sidebar.classList.remove('translate-x-full');
+        overlay.classList.remove('hidden');
+        setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+    } else {
+        // Close
+        sidebar.classList.add('translate-x-full');
+        overlay.classList.add('opacity-0');
+        setTimeout(() => overlay.classList.add('hidden'), 300);
+    }
   }
 
   function checkoutWhatsApp() {
-      if(cart.length === 0) return;
-      
-      let message = "Hello Hussein Bakes, I would like to place an order from the website:\n\n";
-      let total = 0;
-      
-      cart.forEach(item => {
-          message += `▪️ ${item.name} (${item.size}) - KES ${item.price}\n`;
-          total += item.price;
-      });
-      
-      message += `\n*Total Estimate: KES ${total.toLocaleString()}*`;
-      message += `\n\nIs this available for delivery?`;
-
-      const encoded = encodeURIComponent(message);
-      window.open(`https://wa.me/254700000000?text=${encoded}`, '_blank'); // Replace with actual number
+    if (cart.length === 0) return;
+    
+    let msg = "Hello Hussein Bakes! I'd like to place an order:\n\n";
+    let total = 0;
+    
+    cart.forEach(item => {
+        msg += `🔹 ${item.name} (${item.size}) - KES ${item.price}\n`;
+        total += item.price;
+    });
+    
+    msg += `\n💰 *Total Estimate: KES ${total.toLocaleString()}*`;
+    msg += `\n📍 Delivery/Pickup?`;
+    
+    const url = `https://wa.me/254710975805?text=${encodeURIComponent(msg)}`;
+    window.open(url, '_blank');
   }
-
-  function printOrder() {
-      window.print();
-  }
-
 </script>
+
 </body>
 </html>
