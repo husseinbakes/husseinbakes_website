@@ -13,7 +13,7 @@ const products = {
       id: "vanilla-cake",
       name: "Vanilla Cake",
       description: "Soft, classic vanilla sponge with premium vanilla buttercream. A timeless celebration favorite.",
-      image: "images/hussein-bakes-vanilla-cake-kitui.jpeg",
+      image: "images/hussein-bakes-vanilla-cake-kitui.png",
       badge: "Popular",
       rules: {
         preparation: "Custom Crafted",
