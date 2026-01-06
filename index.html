@@ -4,400 +4,170 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Hussein Bakes | Premium Cakes & Pizza in Kitui Town</title>
+  <title>Hussein Bakes | Crafted with Patience. Defined by Quality.</title>
 
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Hussein Bakes is a premium bakery in Kitui Town offering custom cakes (48-hour pre-order) and fresh pizza (3-4 hour preparation). Order via WhatsApp for pickup or delivery." />
-  <meta name="keywords" content="Kitui bakery, custom cakes Kitui, pizza Kitui, birthday cakes Kitui, wedding cakes Kitui, fresh pizza Kitui" />
-  <meta name="author" content="Hussein Salim" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S36GKC7692"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  [span_0](start_span)<meta name="description" content="Hussein Bakes: Kitui's premier artisanal bakery. Specializing in custom celebration cakes and slow-proofed pizza. Crafted with patience in Kitui Town."[span_0](end_span) />
+  [span_1](start_span)<meta name="author" content="Hussein Salim"[span_1](end_span) />
 
-  gtag('config', 'G-S36GKC7692');
-</script>
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://husseinbakes.github.io/husseinbakes_website/" />
-  <meta property="og:title" content="Hussein Bakes | Premium Cakes & Pizza in Kitui Town" />
-  <meta property="og:description" content="Custom cakes & fresh pizza in Kitui Town. Order via WhatsApp for pickup or delivery." />
-  <meta property="og:image" content="https://husseinbakes.github.io/husseinbakes_website/images/logo.webp" />
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://husseinbakes.github.io/husseinbakes_website/" />
-  <meta property="twitter:title" content="Hussein Bakes | Premium Cakes & Pizza in Kitui Town" />
-  <meta property="twitter:description" content="Custom cakes & fresh pizza in Kitui Town. Order via WhatsApp for pickup or delivery." />
-  <meta property="twitter:image" content="https://husseinbakes.github.io/husseinbakes_website/images/logo.webp" />
-
-  <link rel="canonical" href="https://husseinbakes.github.io/husseinbakes_website/" />
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 
-  <!-- Favicons -->
-  <link rel="icon" href="images/favicon.ico" sizes="any">
-  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link rel="manifest" href="images/site.webmanifest">
-
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            'midnight': '#0B1320',
-            'offwhite': '#F3F2EE',
-            'softgray': '#CFCBC3',
-            'goldlight': '#E6C97A',
-            'metgold': '#C9A24D',
-            'golddeep': '#A8833A',
+            [span_2](start_span)'midnight': '#0B1320', // Deep background[span_2](end_span)
+            [span_3](start_span)'offwhite': '#F3F2EE', // Clean text[span_3](end_span)
+            [span_4](start_span)'softgray': '#CFCBC3', // Muted text[span_4](end_span)
+            [span_5](start_span)'metgold': '#C9A24D', // Metallic gold[span_5](end_span)
+            [span_6](start_span)'goldgrain': '#A8833A', // Deep gold for texture[span_6](end_span)
           },
           fontFamily: {
-            'playfair': ['Playfair Display', 'serif'],
-            'inter': ['Inter', 'sans-serif'],
-          },
-          backgroundImage: {
-            'gold-gradient': 'linear-gradient(135deg, #E6C97A, #C9A24D, #A8833A)',
-            'gold-gradient-hover': 'linear-gradient(135deg, #C9A24D, #A8833A, #8B6B2E)',
+            [span_7](start_span)'playfair': ['Playfair Display', 'serif'],[span_7](end_span)
+            [span_8](start_span)'inter': ['Inter', 'sans-serif'],[span_8](end_span)
           }
         }
       }
     }
   </script>
 
-  <!-- LOCAL BUSINESS SCHEMA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Bakery",
-    "name": "Hussein Bakes",
-    "url": "https://husseinbakes.github.io/husseinbakes_website/",
-    "telephone": "+254710975805",
-    "priceRange": "KES 500 - 10000",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Kitui Town",
-      "addressRegion": "Kitui County",
-      "addressCountry": "KE"
-    },
-    "servesCuisine": ["Bakery", "Cakes", "Pizza"],
-    "openingHours": "Mo-Su 09:00-20:00",
-    "image": "https://husseinbakes.github.io/husseinbakes_website/images/logo.webp"
-  }
-  </script>
   <style>
-  /* Custom animations for the Hussein Bakes Hero Section */
-  @keyframes fadeIn { 
-    from { opacity: 0; transform: translateY(15px); } 
-    to { opacity: 1; transform: translateY(0); } 
-  }
-  .animate-fade-in { 
-    animation: fadeIn 0.9s ease-out forwards; 
-  }
-  
-  /* Smooth scrolling for a premium feel */
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
+    /* Mimicking the grainy metallic gold feel of your logo */
+    .gold-text-texture {
+      background: linear-gradient(135deg, #E6C97A 0%, #C9A24D 45%, #8B6B2E 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.3));
+    }
+    
+    .gold-border-grain {
+      border-image: linear-gradient(to right, #C9A24D, #8B6B2E) 1;
+    }
 
-  <!-- Google Site Verification -->
-  <meta name="google-site-verification" content="Hbt1zbIzg7kF7JBxvnhPjlfDtL4dCvUsFbIrU3_qNns" />
+    .gallery-card:hover img {
+      transform: scale(1.03);
+      filter: brightness(0.9);
+    }
+    
+    .editorial-reveal {
+      animation: reveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes reveal {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 
-<body class="bg-midnight text-offwhite font-inter">
+<body class="bg-midnight text-offwhite font-inter selection:bg-metgold selection:text-midnight">
 
-<!-- HEADER -->
-<header class="sticky top-0 z-50 bg-midnight/95 backdrop-blur border-b border-metgold/20">
-  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-    <!-- Logo -->
-    <a href="index.html" class="flex items-center gap-3">
-      <img src="images/logo.webp" alt="Hussein Bakes Logo" class="h-10 w-auto" width="40" height="40">
-      <div class="hidden md:block">
-        <div class="font-playfair text-xl font-semibold text-offwhite">HUSSEIN BAKES</div>
-        <div class="text-softgray text-xs tracking-wider">KITUI TOWN</div>
+<header class="fixed top-0 w-full z-50 bg-midnight/80 backdrop-blur-md border-b border-metgold/10">
+  <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+    <a href="index.html" class="flex items-center gap-4">
+      <img src="images/logo.webp" alt="Hussein Bakes Logo" class="h-12 w-auto">
+      <div class="hidden sm:block border-l border-metgold/30 pl-4">
+        <span class="block font-playfair text-lg tracking-widest uppercase text-metgold">Hussein Bakes</span>
+        <span class="block text-[10px] tracking-[0.3em] uppercase text-softgray">Kitui Town</span>
       </div>
     </a>
     
-    <!-- Navigation -->
-    <nav class="flex gap-6 items-center text-sm">
-      <a href="index.html" class="font-medium text-metgold">Home</a>
-      <a href="cakes.html" class="text-softgray hover:text-offwhite transition duration-200">Cakes</a>
-      <a href="pizza.html" class="text-softgray hover:text-offwhite transition duration-200">Pizza</a>
-      <a href="https://wa.me/254710975805" 
-         class="bg-gold-gradient text-midnight hover:bg-gold-gradient-hover px-5 py-2.5 rounded-full font-semibold flex items-center gap-2 transition-all duration-300 shadow-lg hover:shadow-metgold/20">
-        <img src="images/whatsapp-icon.webp" alt="WhatsApp" class="h-4 w-4" width="16" height="16">
-        Order Now
+    <nav class="flex items-center gap-10">
+      <a href="cakes.html" class="text-sm tracking-widest uppercase hover:text-metgold transition duration-300">Cakes</a>
+      <a href="pizza.html" class="text-sm tracking-widest uppercase hover:text-metgold transition duration-300">Pizza</a>
+      <a href="https://wa.me/254710975805" class="bg-metgold text-midnight px-6 py-2 rounded-sm text-xs font-bold tracking-widest uppercase hover:bg-white transition duration-500">
+        Order
       </a>
     </nav>
   </div>
 </header>
 
-<section class="relative px-4 py-24 text-center overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-midnight to-slate-950"></div>
-  <div class="absolute inset-0 opacity-10 bg-[url('images/texture-pattern.png')] pointer-events-none"></div>
-  
-  <div class="relative z-10 max-w-4xl mx-auto">
-    <h1 class="text-4xl sm:text-5xl md:text-6xl font-playfair font-semibold mb-6 leading-tight animate-fade-in">
-      Premium Baked Goods in <span class="text-metgold">Kitui Town</span>
-    </h1>
-    
-    <p class="text-offwhite/80 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-      Custom celebration cakes & artisanal slow-proofed pizza. Crafted with precision, delivered with care.
-    </p>
-    
-    <div class="flex flex-col sm:flex-row gap-5 justify-center items-center mb-12">
-      <a href="cakes.html" 
-         class="w-full sm:w-auto bg-gold-gradient hover:bg-gold-gradient-hover text-midnight font-bold py-4 px-10 rounded-full text-lg transition duration-300 shadow-xl hover:shadow-metgold/20 flex items-center justify-center gap-2">
-        🎂 Browse Cakes
-      </a>
-      
-      <a href="pizza.html"
-         class="w-full sm:w-auto border-2 border-metgold/40 hover:border-metgold bg-midnight/50 text-metgold hover:bg-metgold/10 py-4 px-10 rounded-full font-semibold transition duration-300 flex items-center justify-center gap-2">
-        🍕 View Pizza Menu
-      </a>
-    </div>
-    
-    <div class="flex flex-wrap justify-center gap-8 text-offwhite/50 text-sm uppercase tracking-widest">
-      <div class="flex items-center gap-2">
-        <span class="text-metgold">✦</span> Custom Designs
-      </div>
-      <div class="flex items-center gap-2">
-        <span class="text-metgold">✦</span> Fresh Daily
-      </div>
-      <div class="flex items-center gap-2">
-        <span class="text-metgold">✦</span> Kitui Owned
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="max-w-6xl mx-auto px-4 py-20">
-  <div class="text-center mb-16">
-    <h2 class="font-playfair text-3xl md:text-5xl font-semibold mb-4 text-offwhite">The Hussein Bakes Standard</h2>
-    <div class="h-1 w-20 bg-metgold mx-auto mb-6"></div>
-    <p class="text-softgray max-w-2xl mx-auto text-lg">
-      We believe that true quality cannot be rushed. Discover why we are Kitui's premier choice for celebrations.
-    </p>
-  </div>
-
-  <div class="grid md:grid-cols-3 gap-8">
-    <div class="group p-8 border border-metgold/10 rounded-3xl hover:border-metgold/40 transition-all duration-500 bg-midnight/40 backdrop-blur-sm relative">
-      <div class="text-4xl mb-6 transform group-hover:scale-110 transition-transform">✨</div>
-      <h3 class="font-playfair text-2xl font-semibold mb-4 text-metgold">Premium Artistry</h3>
-      <p class="text-softgray leading-relaxed mb-6">
-        Every cake is a hand-crafted masterpiece. We use only premium ingredients to ensure a taste that matches our exquisite designs.
+<main class="pt-32">
+  <section class="max-w-7xl mx-auto px-6 py-24 text-center">
+    <div class="editorial-reveal">
+      <p class="text-metgold tracking-[0.4em] uppercase text-xs mb-8">The Hussein Bakes Standard</p>
+      <h1 class="text-5xl md:text-7xl font-playfair leading-tight mb-8">
+        Crafted with <span class="italic font-normal">Patience</span>.<br>
+        <span class="gold-text-texture">Defined by Quality.</span>
+      </h1>
+      <p class="max-w-xl mx-auto text-softgray leading-relaxed font-light mb-12">
+        A dedication to artisanal mastery in the heart of Kitui Town. Every creation is a dialogue between precision and time.
       </p>
-      <a href="cakes.html" class="text-metgold font-semibold flex items-center gap-2 hover:gap-3 transition-all">
-        Explore Cakes <span>→</span>
-      </a>
+      <div class="flex justify-center gap-8">
+        <a href="#gallery" class="text-sm tracking-[0.2em] uppercase border-b border-metgold/50 pb-2 hover:border-metgold transition duration-300">View Gallery</a>
+      </div>
     </div>
-    
-    <div class="group p-8 border border-metgold/10 rounded-3xl hover:border-metgold/40 transition-all duration-500 bg-midnight/40 backdrop-blur-sm">
-      <div class="text-4xl mb-6 transform group-hover:scale-110 transition-transform">🍕</div>
-      <h3 class="font-playfair text-2xl font-semibold mb-4 text-metgold">Artisanal Dough</h3>
-      <p class="text-softgray leading-relaxed mb-6">
-        Our pizza dough is slow-proofed for 24 hours to develop maximum flavor and the perfect light, airy crust you won't find anywhere else.
-      </p>
-      <a href="pizza.html" class="text-metgold font-semibold flex items-center gap-2 hover:gap-3 transition-all">
-        View Menu <span>→</span>
-      </a>
-    </div>
-    
-    <div class="group p-8 border border-metgold/10 rounded-3xl hover:border-metgold/40 transition-all duration-500 bg-midnight/40 backdrop-blur-sm">
-      <div class="text-4xl mb-6 transform group-hover:scale-110 transition-transform">🤝</div>
-      <h3 class="font-playfair text-2xl font-semibold mb-4 text-metgold">Direct Service</h3>
-      <p class="text-softgray leading-relaxed mb-6">
-        No middle-men. Speak directly with our bakers via WhatsApp to customize your order exactly to your liking.
-      </p>
-      <a href="https://wa.me/254710975805" class="text-metgold font-semibold flex items-center gap-2 hover:gap-3 transition-all">
-        Chat With Us <span>→</span>
-      </a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="max-w-7xl mx-auto px-4 py-20 border-y border-metgold/10 bg-midnight/20">
-  <div class="flex flex-col lg:flex-row items-center gap-16">
-    <div class="lg:w-1/2 order-2 lg:order-1">
-      <h2 class="font-playfair text-4xl font-semibold mb-8 text-offwhite">Crafted with Patience</h2>
-      <div class="space-y-8">
-        <div class="flex gap-5">
-          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-metgold/10 border border-metgold/30 flex items-center justify-center text-metgold font-bold">01</div>
-          <div>
-            <h4 class="font-semibold text-xl mb-2">Quality Takes Time</h4>
-            <p class="text-softgray leading-relaxed">By requiring 48-hour notice for cakes and 3-hour notice for pizza, we guarantee your order is baked fresh—never from a freezer.</p>
-          </div>
-        </div>
-        <div class="flex gap-5">
-          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-metgold/10 border border-metgold/30 flex items-center justify-center text-metgold font-bold">02</div>
-          <div>
-            <h4 class="font-semibold text-xl mb-2">The Freshness Promise</h4>
-            <p class="text-softgray leading-relaxed">Our small-batch approach ensures that every ingredient is sourced at peak freshness for the best results in Kitui.</p>
-          </div>
+  <section id="gallery" class="max-w-7xl mx-auto px-6 py-24 border-t border-metgold/10">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+      <div>
+        <h2 class="font-playfair text-4xl mb-4 text-metgold">Selected Works</h2>
+        <p class="text-softgray font-light">Custom celebration designs and artisanal slow-proofed favorites.</p>
+      </div>
+      <div class="flex gap-4">
+        <a href="cakes.html" class="text-xs uppercase tracking-widest px-4 py-2 border border-softgray/20 hover:border-metgold transition">All Cakes</a>
+        <a href="pizza.html" class="text-xs uppercase tracking-widest px-4 py-2 border border-softgray/20 hover:border-metgold transition">All Pizzas</a>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+      <div class="md:col-span-8 gallery-card group relative overflow-hidden bg-zinc-900 rounded-sm aspect-[16/9]">
+        <img src="images/hussein-bakes-signature-cardamom-cake.jpeg" alt="Signature Cardamom Cake" class="w-full h-full object-cover transition duration-1000">
+        <div class="absolute inset-0 bg-gradient-to-t from-midnight/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-8 flex flex-col justify-end">
+          <span class="text-metgold text-xs uppercase tracking-widest mb-2">Signature Series</span>
+          <h3 class="text-2xl font-playfair mb-4">Vanilla & Cardamom</h3>
+          <a href="product.html?id=vanilla-cardamom" class="text-xs uppercase border-b border-white w-fit pb-1">Inquire Now</a>
         </div>
       </div>
-    </div>
-    
-    <div class="lg:w-1/2 order-1 lg:order-2">
-      <div class="relative p-10 bg-gold-gradient rounded-[2rem] text-midnight shadow-2xl overflow-hidden group">
-        <div class="absolute -right-10 -bottom-10 opacity-10 group-hover:scale-110 transition-transform duration-700 text-9xl">👨‍🍳</div>
-        <div class="relative z-10">
-          <p class="text-2xl font-playfair italic mb-8 leading-relaxed">
-            "We founded Hussein Bakes on a simple promise: to bring the highest standard of artisanal baking to Kitui Town. We take the extra time because you deserve the difference."
-          </p>
-          <div class="flex items-center gap-4">
-            <div class="w-12 h-12 rounded-full border-2 border-midnight flex items-center justify-center font-bold">HS</div>
-            <div>
-              <p class="font-bold text-lg">Hussein Salim</p>
-              <p class="text-sm font-medium uppercase tracking-widest">Founder & Master Baker</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="max-w-5xl mx-auto px-4 py-20">
-  <div class="bg-midnight border border-metgold/30 rounded-[3rem] p-12 text-center shadow-2xl">
-    <h2 class="font-playfair text-4xl font-semibold mb-4 text-offwhite">How to Order</h2>
-    <p class="text-softgray mb-12">Three simple steps to premium baked goods.</p>
-    
-    <div class="grid md:grid-cols-3 gap-10 mb-12">
-      <div class="relative">
-        <div class="text-5xl font-playfair font-bold text-metgold/10 absolute -top-4 left-1/2 -translate-x-1/2">01</div>
-        <h4 class="font-bold text-lg mb-2 relative z-10">Browse Our Menu</h4>
-        <p class="text-softgray text-sm">Select your favorite cake or pizza from our collection.</p>
-      </div>
-      
-      <div class="relative">
-        <div class="text-5xl font-playfair font-bold text-metgold/10 absolute -top-4 left-1/2 -translate-x-1/2">02</div>
-        <h4 class="font-bold text-lg mb-2 relative z-10">Customize Details</h4>
-        <p class="text-softgray text-sm">Pick your size, flavors, and any special instructions.</p>
-      </div>
-      
-      <div class="relative">
-        <div class="text-5xl font-playfair font-bold text-metgold/10 absolute -top-4 left-1/2 -translate-x-1/2">03</div>
-        <h4 class="font-bold text-lg mb-2 relative z-10">WhatsApp Confirm</h4>
-        <p class="text-softgray text-sm">Instantly send your order to us for final confirmation.</p>
-      </div>
-    </div>
-    
-    <a href="https://wa.me/254710975805" 
-       class="inline-flex bg-gold-gradient text-midnight hover:scale-105 transition-all duration-300 font-bold py-5 px-12 rounded-full text-xl shadow-lg items-center gap-3">
-      <img src="images/whatsapp-icon.webp" alt="WhatsApp" class="h-6 w-6">
-      Order Now on WhatsApp
-    </a>
-  </div>
-</section>
-
-
-<!-- FOOTER -->
-<footer class="border-t border-metgold/10 py-12">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="flex flex-col lg:flex-row justify-between items-center gap-8">
-      <!-- Brand -->
-      <div class="text-center lg:text-left">
-        <div class="flex items-center justify-center lg:justify-start gap-3 mb-4">
-          <img src="images/logo.webp" alt="Hussein Bakes Logo" class="h-12 w-auto" width="48" height="48">
-          <div>
-            <h3 class="font-playfair text-xl font-semibold">HUSSEIN BAKES</h3>
-            <p class="text-softgray text-sm">Premium Bakery • Kitui Town</p>
-          </div>
-        </div>
-        <p class="text-softgray text-sm max-w-xs">
-          Custom cakes & fresh pizza made daily in Kitui Town. Order via WhatsApp for pickup or delivery.
-        </p>
-      </div>
-      <section class="max-w-6xl mx-auto px-4 py-16">
-  <h2 class="font-playfair text-3xl font-semibold text-center mb-6">
-    Visit Hussein Bakes – Kitui Town
-  </h2>
-
-  <p class="text-center text-softgray mb-8">
-    Find us easily on Google Maps. Pickup available in Kitui Town.
-  </p>
-
-  <<div class="rounded-2xl overflow-hidden border border-metgold/30">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15954.918987345678!2d38.0055!3d-1.3719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1825979857d47781%3A0x6a0a09e8608d0e5!2sHussein%20Bakes%20Kitui!5e0!3m2!1sen!2ske!4v1710000000000!5m2!1sen!2ske"
-    width="100%"
-    height="400"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>
-
-
-  <div class="text-center mt-6">
-    <a
-      href="https://www.google.com/maps/dir/?api=1&destination=Hussein+Bakes+Kitui"
-      target="_blank"
-      class="inline-block bg-metgold text-midnight font-semibold px-6 py-3 rounded-full hover:bg-golddeep transition">
-      📍 Get Directions
-    </a>
-  </div>
-</section>
-
-      <!-- Contact -->
-      <div class="text-center">
-        <h4 class="font-semibold mb-4 text-metgold">Contact Us</h4>
-        <div class="space-y-2">
-          <a href="tel:+254710975805" class="block text-offwhite hover:text-metgold transition">
-            📞 +254 710 975 805
-          </a>
-          <a href="https://wa.me/254710975805" class="block text-offwhite hover:text-metgold transition">
-            💬 Order on WhatsApp
-          </a>
-          <p class="text-softgray text-sm">📍 Kitui Town, Kitui County</p>
+      <div class="md:col-span-4 gallery-card group relative overflow-hidden bg-zinc-900 rounded-sm aspect-[4/5]">
+        <img src="images/hussein-bakes-beef-pizza-kitui.jpeg" alt="Artisanal Beef Pizza" class="w-full h-full object-cover transition duration-1000">
+        <div class="absolute inset-0 bg-gradient-to-t from-midnight/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-8 flex flex-col justify-end">
+          <span class="text-metgold text-xs uppercase tracking-widest mb-2">Artisanal Dough</span>
+          <h3 class="text-2xl font-playfair mb-4">Beef Pizza</h3>
+          <a href="product.html?id=beef-pizza" class="text-xs uppercase border-b border-white w-fit pb-1">Inquire Now</a>
         </div>
       </div>
       
-      <!-- Quick Links -->
-      <div class="text-center">
-        <h4 class="font-semibold mb-4 text-metgold">Quick Links</h4>
-        <div class="space-y-2">
-          <a href="index.html" class="block text-softgray hover:text-offwhite">Home</a>
-          <a href="cakes.html" class="block text-softgray hover:text-offwhite">Cakes Menu</a>
-          <a href="pizza.html" class="block text-softgray hover:text-offwhite">Pizza Menu</a>
-          <a href="product.html?id=vanilla-cake" class="block text-softgray hover:text-offwhite">Sample Order</a>
-        </div>
+      <div class="md:col-span-4 gallery-card group relative overflow-hidden rounded-sm aspect-square bg-zinc-900">
+        <img src="images/hussein-bakes-rich-chocolate-cake.jpeg" alt="Chocolate Indulgence" class="w-full h-full object-cover transition duration-700">
+      </div>
+      <div class="md:col-span-4 gallery-card group relative overflow-hidden rounded-sm aspect-square bg-zinc-900">
+        <img src="images/hussein-bakes-luxury-red-velvet-cake.jpeg" alt="Red Velvet" class="w-full h-full object-cover transition duration-700">
+      </div>
+      <div class="md:col-span-4 gallery-card group relative overflow-hidden rounded-sm aspect-square bg-zinc-900">
+        <img src="images/hussein-bakes-chicken-tikka-pizza.jpeg" alt="Chicken Tikka Pizza" class="w-full h-full object-cover transition duration-700">
       </div>
     </div>
-    
-    <!-- Copyright -->
-    <div class="border-t border-metgold/10 mt-8 pt-8 text-center">
-      <p class="text-softgray text-sm">
-        © 2025 Hussein Bakes. All rights reserved. Kitui Town, Kenya
-      </p>
-      <p class="text-softgray text-xs mt-1">
-        Made with ❤️ in Kitui | VAT No. Pending
-      </p>
+  </section>
+</main>
+
+<footer class="bg-black py-24 border-t border-metgold/10">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <img src="images/logo.webp" alt="Hussein Bakes" class="h-16 mx-auto mb-10 opacity-80 hover:opacity-100 transition">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-sm uppercase tracking-[0.2em] font-light">
+      <div>
+        <p class="text-metgold mb-4">Visit</p>
+        <p class="text-softgray">Kitui Town, Kenya</p>
+      </div>
+      <div>
+        <p class="text-metgold mb-4">Orders</p>
+        <p class="text-softgray">+254 710 975 805</p>
+      </div>
+      <div>
+        <p class="text-metgold mb-4">Crafted With</p>
+        <p class="text-softgray italic font-playfair capitalize">Patience</p>
+      </div>
+    </div>
+    <div class="mt-20 pt-8 border-t border-white/5 text-[10px] uppercase tracking-widest text-softgray/50">
+      &copy; [span_9](start_span)2026 Hussein Bakes.[span_9](end_span) All Rights Reserved.
     </div>
   </div>
 </footer>
-<a href="https://wa.me/254710975805" 
-   target="_blank"
-   class="fixed bottom-6 right-6 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 flex items-center justify-center group"
-   aria-label="Chat on WhatsApp">
-  <img src="images/whatsapp-icon.webp" alt="WhatsApp" class="w-7 h-7" width="28" height="28">
-  
-  <span class="absolute right-full mr-3 bg-midnight text-metgold px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-metgold/30 pointer-events-none">
-    Chat with Hussein Bakes
-  </span>
-</a>
 
 </body>
 </html>
