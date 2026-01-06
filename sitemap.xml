@@ -1,91 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="https://www.google.com/schemas/sitemap-image/1.1">
-
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://husseinbakes.github.io/husseinbakes_website/</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://husseinbakes.github.io/husseinbakes_website/cakes.html</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://husseinbakes.github.io/husseinbakes_website/pizza.html</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://husseinbakes.github.io/husseinbakes_website/product.html?id=vanilla-cake</loc>
-    <image:image>
-      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/cakes/vanilla.jpg</image:loc>
-      <image:caption>Classic Vanilla Cake - Hussein Bakes Kitui</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://husseinbakes.github.io/husseinbakes_website/product.html?id=vanilla-cardamom</loc>
-    <image:image>
-      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/cakes/vanilla-cardamom.jpg</image:loc>
-      <image:caption>Signature Vanilla &amp; Cardamom Cake - Hussein Bakes Kitui</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://husseinbakes.github.io/husseinbakes_website/product.html?id=chocolate-cake</loc>
-    <image:image>
-      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/cakes/chocolate.jpg</image:loc>
-      <image:caption>Rich Chocolate Cake - Hussein Bakes Kitui</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://husseinbakes.github.io/husseinbakes_website/product.html?id=black-forest</loc>
-    <image:image>
-      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/cakes/black-forest.jpg</image:loc>
-      <image:caption>Classic Black Forest Cake - Hussein Bakes Kitui</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://husseinbakes.github.io/husseinbakes_website/product.html?id=red-velvet</loc>
-    <image:image>
-      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/cakes/red-velvet.jpg</image:loc>
-      <image:caption>Luxury Red Velvet Cake - Hussein Bakes Kitui</image:caption>
-    </image:image>
-  </url>
-
-    <url>
-    <loc>https://husseinbakes.github.io/husseinbakes_website/product.html?id=beef-pizza</loc>
-    <image:image>
-      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/hussein-bakes-beef-pizza-kitui.jpeg</image:loc>
-      <image:caption>Fresh Beef Pizza in Kitui Town - Hussein Bakes</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://husseinbakes.github.io/husseinbakes_website/product.html?id=chicken-tikka-pizza</loc>
-    <image:image>
-      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/hussein-bakes-chicken-tikka-pizza.jpeg</image:loc>
-      <image:caption>Artisanal Chicken Tikka Pizza - Hussein Bakes Kitui</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://husseinbakes.github.io/husseinbakes_website/product.html?id=cheese-pizza</loc>
-    <image:image>
-      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/hussein-bakes-classic-cheese-pizza.jpeg</image:loc>
-      <image:caption>Classic Cheese Pizza - Hussein Bakes Kitui</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://husseinbakes.github.io/husseinbakes_website/product.html?id=vegetable-pizza</loc>
-    <image:image>
-      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/hussein-bakes-vegetable-pizza.jpeg</image:loc>
-      <image:caption>Fresh Vegetable Pizza - Hussein Bakes Kitui</image:caption>
-    </image:image>
-  </url>
-
-
 </urlset>
-
