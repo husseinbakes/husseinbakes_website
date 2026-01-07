@@ -68,6 +68,7 @@
       font-family: 'Playfair Display', serif;
     }
 
+    /* GLASS PANEL STYLE */
     .glass-panel {
       background: rgba(255, 255, 255, 0.02);
       backdrop-filter: blur(8px);
@@ -82,6 +83,7 @@
       box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5);
     }
 
+    /* CATEGORY CARD STYLE */
     .category-card {
       position: relative;
       overflow: hidden;
@@ -101,6 +103,7 @@
       z-index: 10;
     }
 
+    /* ANIMATIONS */
     .fade-up {
       animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
       opacity: 0;
@@ -114,18 +117,13 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* SCROLLBAR */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--midnight); }
     ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
     ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
 
-    .friday-badge {
-      background: linear-gradient(135deg, #C9A24D, #E6C97A);
-      color: #05090F;
-      font-weight: bold;
-    }
-    
-    /* Dark Map Filter */
+    /* DARK MAP FILTER */
     .map-filter {
       filter: grayscale(100%) invert(92%) contrast(83%);
       mix-blend-mode: luminosity;
@@ -197,7 +195,7 @@
             <div class="relative z-20">
                 <h3 class="text-3xl text-white serif italic mb-2">Custom Cakes</h3>
                 <p class="text-gray-400 text-sm mb-6 max-w-xs">Birthday, Wedding & Celebration Cakes. 48-hour pre-order required.</p>
-                <span class="text-[#C9A24D] text-xs uppercase tracking-widest border-b border-[#C9A24D] pb-1">Browse Collection</span>
+                <span class="text-[#C9A24D] text-xs uppercase tracking-widest border-b border-[#C9A24D] pb-1">Browse 16 Varieties</span>
             </div>
         </div>
 
@@ -208,7 +206,7 @@
             <div class="relative z-20">
                 <h3 class="text-3xl text-white serif italic mb-2">Artisanal Pizza</h3>
                 <p class="text-gray-400 text-sm mb-6 max-w-xs">Kitui's best pizza. Fresh dough, premium toppings. Delivery available.</p>
-                <span class="text-[#C9A24D] text-xs uppercase tracking-widest border-b border-[#C9A24D] pb-1">Browse Menu</span>
+                <span class="text-[#C9A24D] text-xs uppercase tracking-widest border-b border-[#C9A24D] pb-1">Browse 4 Varieties</span>
             </div>
         </div>
     </div>
@@ -295,14 +293,27 @@
 </div>
 
 <script>
-  // --- INVENTORY DATA ---
+  // --- INVENTORY DATA (FULL LIST: 16 Cakes + 4 Pizzas) ---
   const inventory = [
-    { id: 1, type: 'cakes', name: 'Signature Vanilla', basePrice: 2500, desc: 'Soft vanilla sponge with premium buttercream.', img: '🎂', tag: 'Classic', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Cream', price: 300}]},
-    { id: 2, type: 'cakes', name: 'Vanilla & Cardamom', basePrice: 2500, desc: 'Cardamom-infused masterpiece. Kitui specialty.', img: '🍰', tag: 'Signature', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500}, addons: [{name: 'Gold Leaf', price: 800}]},
-    { id: 3, type: 'cakes', name: 'Midnight Chocolate', basePrice: 2500, desc: 'Rich chocolate with smooth ganache.', img: '🍫', tag: 'Best Seller', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500}, addons: [{name: 'Extra Ganache', price: 500}]},
-    { id: 4, type: 'cakes', name: 'Red Velvet Dream', basePrice: 2500, desc: 'Classic with cream cheese frosting.', img: '🧁', tag: 'Luxury', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500}, addons: []},
-    { id: 5, type: 'cakes', name: 'Black Forest', basePrice: 2500, desc: 'Chocolate, cream & fresh cherries.', img: '🍒', tag: 'Classic', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500}, addons: []},
-    { id: 6, type: 'cakes', name: 'Golden Harvest', basePrice: 3000, desc: 'Spiced carrot cake with walnuts.', img: '🥕', tag: 'New', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500}, addons: []},
+    // 16 CAKES
+    { id: 1, type: 'cakes', name: 'Signature Vanilla', basePrice: 2500, desc: 'Soft vanilla sponge with premium buttercream.', img: '🎂', tag: 'Classic', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Cream', price: 300}, {name: 'Chocolate Drizzle', price: 500}]},
+    { id: 2, type: 'cakes', name: 'Vanilla & Cardamom', basePrice: 2500, desc: 'Cardamom-infused masterpiece. Kitui specialty.', img: '🍰', tag: 'Signature', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Cream', price: 300}, {name: 'Gold Leaf', price: 800}]},
+    { id: 3, type: 'cakes', name: 'Midnight Chocolate', basePrice: 2500, desc: 'Rich chocolate with smooth ganache.', img: '🍫', tag: 'Best Seller', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Ganache', price: 500}]},
+    { id: 4, type: 'cakes', name: 'Red Velvet Dream', basePrice: 2500, desc: 'Classic with cream cheese frosting.', img: '🧁', tag: 'Luxury', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Frosting', price: 400}]},
+    { id: 5, type: 'cakes', name: 'Black Forest Symphony', basePrice: 2500, desc: 'Chocolate, cream & fresh cherries.', img: '🍒', tag: 'Classic', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Cherries', price: 500}]},
+    { id: 6, type: 'cakes', name: 'Golden Harvest', basePrice: 3000, desc: 'Spiced carrot cake with walnuts.', img: '🥕', tag: 'New', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Walnuts', price: 400}]},
+    { id: 7, type: 'cakes', name: 'Citrus Sculpt', basePrice: 3000, desc: 'Zesty lemon with blueberries.', img: '🍋', tag: 'Bright', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Blueberry Layer', price: 600}]},
+    { id: 8, type: 'cakes', name: 'Mocha Architecture', basePrice: 3000, desc: 'Espresso with salted caramel.', img: '☕', tag: 'Bold', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Caramel Drip', price: 600}]},
+    { id: 9, type: 'cakes', name: 'White Forest', basePrice: 2500, desc: 'Vanilla with chantilly & cherries.', img: '🤍', tag: 'Light', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}]},
+    { id: 10, type: 'cakes', name: 'Strawberry Serenity', basePrice: 3000, desc: 'Fresh strawberry with mascarpone.', img: '🍓', tag: 'Fresh', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Strawberries', price: 700}]},
+    { id: 11, type: 'cakes', name: 'Pistachio Elegance', basePrice: 3000, desc: 'Pistachio sponge with pistachio cream.', img: '💚', tag: 'Gourmet', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}]},
+    { id: 12, type: 'cakes', name: 'Salted Caramel', basePrice: 3000, desc: 'Caramel sponge with caramel ganache.', img: '🍯', tag: 'Indulgent', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}]},
+    { id: 13, type: 'cakes', name: 'Lavender Dream', basePrice: 3000, desc: 'Lavender vanilla with lavender cream.', img: '💜', tag: 'Special', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}]},
+    { id: 14, type: 'cakes', name: 'Matcha & White Choco', basePrice: 3500, desc: 'Matcha sponge with white ganache.', img: '🌿', tag: 'Trending', sizes: {'1kg': 3500, '2kg': 6000, '3kg': 8000, '4kg': 10000}, addons: [{name: 'Custom Message', price: 0}]},
+    { id: 15, type: 'cakes', name: 'Ethereal Wedding Tier', basePrice: 8500, desc: 'Bespoke two-tier wedding cake.', img: '💐', tag: 'Bridal', sizes: {'Starting': 8500}, addons: [{name: 'Custom Message', price: 0}]},
+    { id: 16, type: 'cakes', name: 'Gallery Bites Box', basePrice: 1200, desc: 'Box of 6 assorted cupcakes.', img: '🧁', tag: 'Gift', sizes: {'Box of 6': 1200, 'Box of 12': 2200}, addons: []},
+    
+    // 4 PIZZAS
     { id: 17, type: 'pizza', name: 'Beef Supremo', desc: 'Ground beef & herbs on artisanal crust.', img: '🍕', tag: 'Friday 1+1', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}, addons: [{name: 'Extra Cheese', price: 150}, {name: 'Chilli Sauce', price: 50}]},
     { id: 18, type: 'pizza', name: 'Chicken Tikka', desc: 'Spiced tikka chicken, onions, peppers.', img: '🍗', tag: 'Premium', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}, addons: [{name: 'Extra Cheese', price: 150}]},
     { id: 19, type: 'pizza', name: 'Garden Veg', desc: 'Fresh peppers, onions, tomatoes.', img: '🥬', tag: 'Vegetarian', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}, addons: []},
@@ -337,7 +348,7 @@
       const minPrice = Object.values(item.sizes)[0];
       const card = document.createElement('div');
       card.className = 'glass-panel p-6 rounded-xl relative group cursor-pointer flex flex-col fade-up';
-      card.style.animationDelay = `${index * 0.1}s`;
+      card.style.animationDelay = `${index * 0.05}s`;
       card.onclick = () => openModal(item.id);
       card.innerHTML = `
         <div class="absolute top-4 right-4 z-10"><span class="text-[9px] uppercase tracking-wider text-[#C9A24D] border border-[#C9A24D]/30 px-2 py-1 rounded-sm bg-[#05090F]">${item.tag}</span></div>
