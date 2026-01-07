@@ -14,7 +14,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -57,7 +57,7 @@
     body {
       background-color: var(--midnight);
       color: #F3F2EE;
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-family: 'Inter', sans-serif;
       overflow-x: hidden;
       background-image: radial-gradient(circle at 50% 0%, #1a2333, #05090F 70%);
       background-attachment: fixed;
@@ -67,13 +67,8 @@
       font-family: 'Playfair Display', serif;
     }
 
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: var(--midnight); }
-    ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
-    ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
-
-    /* GLASS CARD */
-    .glass-card {
+    /* GLASS PANEL */
+    .glass-panel {
       background: var(--glass);
       backdrop-filter: blur(12px);
       border: 1px solid var(--glass-border);
@@ -81,24 +76,31 @@
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .glass-card:hover {
+    .glass-panel:hover {
       background: var(--glass-hover);
       border-color: var(--gold);
       transform: translateY(-4px);
       box-shadow: 0 12px 40px -8px rgba(0, 0, 0, 0.4);
     }
 
-    .btn-primary {
-      background: var(--gold);
-      color: var(--midnight);
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      transition: all 0.3s ease;
+    /* CATEGORY CARDS */
+    .category-card {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.5s ease;
     }
-    
-    .btn-primary:hover {
-      background: #fff;
+    .category-card:hover {
+      border-color: var(--gold);
       transform: scale(1.02);
+    }
+    .category-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, #05090F, transparent);
+      z-index: 10;
     }
 
     .fade-in-up {
@@ -111,28 +113,25 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* MAP FILTER (Dark Mode) */
+    /* MAP FILTER */
     .map-filter {
       filter: grayscale(100%) invert(92%) contrast(83%);
       mix-blend-mode: luminosity;
     }
 
-    /* MARQUEE REVIEWS */
+    /* MARQUEE */
     .marquee-wrapper {
       mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
       width: 100%;
       overflow: hidden;
     }
-    
     .marquee-track {
       display: flex;
       gap: 2rem;
       width: max-content;
       animation: scroll 60s linear infinite;
     }
-    
     .marquee-track:hover { animation-play-state: paused; }
-    
     @keyframes scroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
@@ -151,15 +150,19 @@
       font-family: serif;
       font-weight: bold;
     }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--midnight); }
+    ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
   </style>
 </head>
 
 <body class="antialiased selection:bg-[#C9A24D] selection:text-black">
 
-<nav class="fixed w-full z-50 border-b border-white/5 bg-[#05090F]/90 backdrop-blur-xl no-print">
+<nav class="fixed w-full z-50 border-b border-white/5 bg-[#05090F]/90 backdrop-blur-xl">
   <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
-    
-    <a href="#" class="flex items-center gap-3 group">
+    <a href="#" onclick="showCategories()" class="flex items-center gap-3 group">
       <div class="w-10 h-10 border border-[#C9A24D] flex items-center justify-center text-[#C9A24D] font-serif font-bold text-lg rounded-sm group-hover:bg-[#C9A24D] group-hover:text-[#05090F] transition-colors">HB</div>
       <div>
         <span class="serif text-xl text-white block leading-none tracking-wide">HUSSEIN BAKES</span>
@@ -173,46 +176,43 @@
       <button onclick="scrollToSection('info')" class="hover:text-white transition">Info</button>
     </div>
     
-    <button onclick="toggleCart()" class="flex items-center gap-3 bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full border border-white/5 transition group">
-      <span class="text-xs text-[#C9A24D] font-bold uppercase tracking-wider group-hover:text-white">Order</span>
-      <div class="bg-[#C9A24D] text-[#05090F] w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold" id="cartBadge">0</div>
+    <button onclick="toggleCart()" class="flex items-center gap-3 text-[#C9A24D] hover:text-white transition group">
+      <span class="text-xs font-bold uppercase tracking-wider">Order</span>
+      <div class="w-6 h-6 border border-[#C9A24D]/30 rounded-full flex items-center justify-center text-[10px] font-bold group-hover:border-[#C9A24D]" id="cartBadge">0</div>
     </button>
   </div>
 </nav>
 
-<header class="relative pt-32 pb-20 px-6 min-h-[85vh] flex items-center justify-center text-center overflow-hidden">
+<header class="relative pt-32 pb-20 px-6 flex items-center justify-center text-center overflow-hidden min-h-[85vh]">
   <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#C9A24D] opacity-[0.04] blur-[150px] rounded-full pointer-events-none"></div>
 
   <div class="relative z-10 max-w-4xl mx-auto">
-    <div class="fade-in-up" style="animation-delay: 0.1s;">
+    <div class="fade-in-up">
       <span class="inline-block py-1 px-3 rounded-full border border-[#C9A24D]/30 bg-[#C9A24D]/5 text-[#C9A24D] text-[11px] font-bold uppercase tracking-widest mb-6">
         Est. Kitui • Kenya
       </span>
     </div>
     
-    <h1 class="fade-in-up text-5xl md:text-7xl lg:text-8xl text-white mb-8 font-medium leading-[1.1] serif" style="animation-delay: 0.2s;">
+    <h1 class="fade-in-up text-5xl md:text-7xl lg:text-8xl text-white mb-8 font-medium leading-[1.1] serif">
       Hussein Bakes: <span class="italic text-[#C9A24D]">Premium</span><br />
       Custom Cakes in Kitui
     </h1>
     
-    <p class="fade-in-up text-gray-500 text-sm md:text-base font-light tracking-wide max-w-lg mx-auto mb-12 uppercase" style="animation-delay: 0.3s;">
+    <p class="fade-in-up text-gray-500 text-sm md:text-base font-light tracking-wide max-w-lg mx-auto mb-12 uppercase">
       Premium Custom Cakes & Artisanal Pizza | Order Online
     </p>
 
-    <div class="fade-in-up flex flex-col sm:flex-row justify-center gap-4" style="animation-delay: 0.4s;">
-      <button onclick="scrollToSection('menu-section')" class="btn-primary px-8 py-4 rounded-full text-sm uppercase tracking-widest shadow-[0_0_20px_rgba(201,162,77,0.3)]">
+    <div class="fade-in-up flex flex-col sm:flex-row justify-center gap-4">
+      <button onclick="scrollToSection('menu-section')" class="px-8 py-4 bg-[#C9A24D] text-[#05090F] font-bold tracking-widest hover:bg-white transition duration-300 text-sm rounded-sm uppercase">
         View Digital Menu
       </button>
-      <a href="https://wa.me/254710975805" target="_blank" class="px-8 py-4 rounded-full border border-white/10 text-white hover:bg-white/5 transition text-sm uppercase tracking-widest font-medium">
-        Contact on WhatsApp
-      </a>
     </div>
 
-    <div id="fridayTimer" class="mt-12 text-sm text-gray-500 font-mono fade-in-up" style="animation-delay: 0.5s;"></div>
+    <div id="fridayTimer" class="mt-12 text-sm text-gray-500 font-mono fade-in-up"></div>
   </div>
 </header>
 
-<section id="menu-section" class="py-24 px-6 relative">
+<section id="menu-section" class="py-24 px-6 relative min-h-screen">
   <div class="max-w-7xl mx-auto">
     
     <div class="flex flex-col md:flex-row justify-between items-end mb-10 border-b border-white/5 pb-6">
@@ -221,34 +221,27 @@
         <p class="text-gray-500 text-sm">Select a category to browse products.</p>
       </div>
       
-      <button id="backBtn" onclick="showCategories()" class="hidden text-[#C9A24D] hover:text-white transition flex items-center gap-2 text-sm font-medium mt-4 md:mt-0">
-        ← Back to Categories
+      <button id="backBtn" onclick="showCategories()" class="hidden text-[#C9A24D] hover:text-white transition flex items-center gap-2 text-sm font-medium mt-4 md:mt-0 uppercase tracking-widest">
+        ← Back to Index
       </button>
     </div>
 
     <div id="categoryView" class="grid grid-cols-1 md:grid-cols-2 gap-6 fade-in-up">
-        
-        <div onclick="renderMenu('cakes')" class="glass-card group cursor-pointer relative overflow-hidden rounded-2xl h-[450px] flex flex-col justify-end p-8 bg-[#080C14]">
+        <div onclick="renderMenu('cakes')" class="category-card h-[400px] rounded-xl bg-[#080C14] flex flex-col justify-end p-8 group">
             <div class="absolute inset-0 flex items-center justify-center text-9xl opacity-20 group-hover:opacity-30 transition duration-700 select-none">🎂</div>
             <div class="relative z-20">
-                <div class="w-12 h-12 rounded-full bg-[#C9A24D] text-[#05090F] flex items-center justify-center text-2xl mb-4">🎂</div>
-                <h3 class="text-3xl text-white serif mb-2">Custom Cakes</h3>
-                <p class="text-gray-300 text-sm mb-6 max-w-sm">Signature Vanilla, Black Forest, and Red Velvet. 48-hour pre-order required for custom designs.</p>
-                <div class="inline-flex items-center gap-2 text-[#C9A24D] text-sm font-bold uppercase tracking-wider">
-                    Browse 16 Varieties <span class="group-hover:translate-x-2 transition">→</span>
-                </div>
+                <h3 class="text-3xl text-white serif italic mb-2">Custom Cakes</h3>
+                <p class="text-gray-400 text-sm mb-6 max-w-xs">Signature sponges, premium buttercream, and artistic finishes. 48-hour pre-order required.</p>
+                <span class="text-[#C9A24D] text-xs uppercase tracking-widest border-b border-[#C9A24D] pb-1">Browse 16 Varieties</span>
             </div>
         </div>
 
-        <div onclick="renderMenu('pizza')" class="glass-card group cursor-pointer relative overflow-hidden rounded-2xl h-[450px] flex flex-col justify-end p-8 bg-[#080C14]">
+        <div onclick="renderMenu('pizza')" class="category-card h-[400px] rounded-xl bg-[#080C14] flex flex-col justify-end p-8 group">
             <div class="absolute inset-0 flex items-center justify-center text-9xl opacity-20 group-hover:opacity-30 transition duration-700 select-none">🍕</div>
             <div class="relative z-20">
-                <div class="w-12 h-12 rounded-full bg-[#C9A24D] text-[#05090F] flex items-center justify-center text-2xl mb-4">🍕</div>
-                <h3 class="text-3xl text-white serif mb-2">Artisanal Pizza</h3>
-                <p class="text-gray-300 text-sm mb-6 max-w-sm">Fresh dough, premium toppings. Beef, Chicken Tikka & Veg. Ready in 3-4 hours.</p>
-                <div class="inline-flex items-center gap-2 text-[#C9A24D] text-sm font-bold uppercase tracking-wider">
-                    Browse 4 Varieties <span class="group-hover:translate-x-2 transition">→</span>
-                </div>
+                <h3 class="text-3xl text-white serif italic mb-2">Artisanal Pizza</h3>
+                <p class="text-gray-400 text-sm mb-6 max-w-xs">Fresh dough, premium toppings. Beef, Chicken Tikka & Veg. Ready in 3-4 hours.</p>
+                <span class="text-[#C9A24D] text-xs uppercase tracking-widest border-b border-[#C9A24D] pb-1">Browse 4 Varieties</span>
             </div>
         </div>
     </div>
@@ -280,15 +273,13 @@
 </section>
 
 <section id="info" class="py-20 px-6 bg-[#080C14] border-t border-white/5">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 text-center md:text-left">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 text-center md:text-left">
     
     <div>
       <h3 class="serif text-xl text-white mb-4">Location</h3>
-      <p class="text-gray-400 text-sm leading-relaxed mb-4">
-        Kitui Town, Kenya.<br>
-        Delivery available within town limits.
+      <p class="text-gray-400 text-sm leading-relaxed mb-6">
+        Located in <strong>Bondeni, Kitui</strong>. We deliver within town limits and offer pickup for custom orders.
       </p>
-      
       <div class="h-48 rounded-xl overflow-hidden border border-white/10 opacity-80 hover:opacity-100 transition duration-500">
          <iframe 
             width="100%" 
@@ -307,80 +298,85 @@
       <h3 class="serif text-xl text-white mb-4">Opening Hours</h3>
       <div class="space-y-4">
         <p class="text-gray-300 text-sm leading-relaxed">
-          <span class="block"><span class="text-[#C9A24D] w-20 inline-block">Mon - Fri:</span> 07:30 AM – 08:00 PM</span>
-          <span class="block"><span class="text-[#C9A24D] w-20 inline-block">Sat - Sun:</span> 07:30 AM – 06:00 PM</span>
+          <span class="block mb-2"><span class="text-[#C9A24D]">Mon - Fri:</span> 07:30 AM – 08:00 PM</span>
+          <span class="block"><span class="text-[#C9A24D]">Sat - Sun:</span> 07:30 AM – 06:00 PM</span>
         </p>
-
         <div class="pt-4 border-t border-white/10">
-          <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-2 font-bold">Service Times</p>
-          <p class="text-gray-400 text-xs leading-relaxed">
-            <span class="block">🛵 Delivery: 09:00 AM – 04:00 PM</span>
-            <span class="block">🥡 Takeout: 09:00 AM – 05:00 PM</span>
-          </p>
+          <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-2 font-bold">Service</p>
+          <p class="text-gray-400 text-xs">Delivery: 09:00 AM – 04:00 PM</p>
         </div>
       </div>
     </div>
 
     <div>
       <h3 class="serif text-xl text-white mb-4">Contact</h3>
-      <p class="text-gray-400 text-sm leading-relaxed mb-2">
+      <p class="text-gray-400 text-sm leading-relaxed mb-4">
         <a href="tel:+254710975805" class="hover:text-[#C9A24D] transition">+254 710 975 805</a>
       </p>
-      <a href="https://wa.me/254710975805" class="text-[#C9A24D] text-sm font-medium hover:underline">Chat on WhatsApp</a>
+      <a href="https://wa.me/254710975805" class="inline-block px-6 py-3 border border-[#C9A24D] text-[#C9A24D] text-sm hover:bg-[#C9A24D] hover:text-black transition rounded-sm">Chat on WhatsApp</a>
     </div>
 
   </div>
 </section>
 
-<footer class="py-10 border-t border-white/5 text-center bg-[#020305] no-print">
+<footer class="py-10 border-t border-white/5 text-center bg-[#020305]">
   <div class="mb-4 text-[#C9A24D] font-bold serif text-xl">HB</div>
   <p class="text-gray-600 text-xs tracking-widest uppercase mb-2">Hussein Bakes • Kitui Town</p>
   <p class="text-gray-700 text-[10px]">© 2026. All rights reserved.</p>
 </footer>
 
 <div id="cartOverlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300" onclick="toggleCart()"></div>
-
 <div id="cartSidebar" class="fixed top-0 right-0 h-full w-full max-w-md bg-[#0B1320] border-l border-white/10 z-[70] transform translate-x-full transition-transform duration-300 flex flex-col shadow-2xl">
-  
   <div class="p-6 border-b border-white/5 flex justify-between items-center bg-[#0B1320]">
-    <h2 class="serif text-xl text-white">Your Order</h2>
-    <button onclick="toggleCart()" class="w-8 h-8 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 text-gray-400">✕</button>
+    <h2 class="serif text-xl text-white italic">Your Collection</h2>
+    <button onclick="toggleCart()" class="text-gray-400 hover:text-white">✕</button>
   </div>
-
-  <div id="cartItems" class="flex-1 overflow-y-auto p-6 space-y-4">
-    <div class="h-full flex flex-col items-center justify-center text-gray-500 gap-4">
-      <span class="text-4xl opacity-20">🛒</span>
-      <p class="text-sm">Your cart is empty.</p>
-      <button onclick="toggleCart()" class="text-[#C9A24D] text-sm hover:underline">Browse Menu</button>
-    </div>
-  </div>
-
+  <div id="cartItems" class="flex-1 overflow-y-auto p-6 space-y-4"></div>
   <div class="p-6 bg-[#080C14] border-t border-white/5 space-y-4">
     <div class="flex justify-between items-center text-sm">
       <span class="text-gray-400">Total Estimate</span>
       <span id="cartTotal" class="text-[#C9A24D] text-xl font-bold">KES 0</span>
     </div>
-
-    <button onclick="checkoutWhatsApp()" class="w-full py-4 bg-[#C9A24D] hover:bg-white text-[#05090F] font-bold rounded-lg transition duration-300 text-sm uppercase tracking-widest shadow-lg">
-      Complete Order on WhatsApp
+    <button onclick="checkoutWhatsApp()" class="w-full py-4 bg-[#C9A24D] hover:bg-white text-[#05090F] font-bold rounded-sm transition duration-300 text-sm uppercase tracking-widest shadow-lg">
+      Order on WhatsApp
     </button>
-    <p class="text-center text-[10px] text-gray-600">Payment via M-Pesa upon confirmation.</p>
   </div>
 </div>
 
-<div id="optionModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-[80] hidden flex items-center justify-center p-4">
-    <div class="glass-card p-6 md:p-8 rounded-2xl max-w-sm w-full relative bg-[#0B1320] border border-[#C9A24D]/30">
-        <button onclick="closeOptionModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white">✕</button>
-        
-        <h3 id="modalTitle" class="text-2xl serif text-white mb-1">Product Name</h3>
-        <p id="modalDesc" class="text-xs text-gray-400 mb-6">Select a variation below.</p>
-        
-        <div id="modalOptions" class="space-y-3"></div>
+<div id="detailModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-[80] hidden flex items-center justify-center p-4">
+    <div class="bg-[#0B1320] border border-[#C9A24D]/30 w-full max-w-lg rounded-xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+        <div class="p-6 border-b border-white/5 flex justify-between items-start bg-[#05090F]">
+            <div>
+                <h3 id="modalTitle" class="text-2xl text-white serif italic">Product Name</h3>
+                <span id="modalTag" class="text-[10px] text-[#C9A24D] uppercase tracking-widest mt-1 block">Tag</span>
+            </div>
+            <button onclick="closeModal()" class="text-gray-500 hover:text-white text-xl">✕</button>
+        </div>
+
+        <div class="p-6 overflow-y-auto custom-scrollbar">
+            <div class="flex justify-center mb-6 text-6xl" id="modalImg">🎂</div>
+            <p id="modalDesc" class="text-gray-400 text-sm font-light mb-8 leading-relaxed text-center">Description goes here.</p>
+            
+            <div class="mb-6">
+                <label class="text-xs text-gray-500 font-bold uppercase tracking-widest block mb-3">Select Size</label>
+                <div id="modalSizes" class="space-y-2"></div>
+            </div>
+
+            <div id="modalAddonsSection" class="hidden mb-6">
+                <label class="text-xs text-gray-500 font-bold uppercase tracking-widest block mb-3">Enhancements</label>
+                <div id="modalAddons" class="space-y-2"></div>
+            </div>
+        </div>
+
+        <div class="p-6 border-t border-white/5 bg-[#05090F] flex gap-4">
+             <button onclick="closeModal()" class="flex-1 py-3 border border-white/10 text-gray-400 hover:text-white transition rounded-sm text-sm">CANCEL</button>
+             <button id="addToCartBtn" class="flex-1 py-3 bg-[#C9A24D] text-[#05090F] font-bold tracking-widest hover:bg-white transition rounded-sm text-sm">ADD TO ORDER</button>
+        </div>
     </div>
 </div>
 
 <script>
-  // --- REAL GOOGLE REVIEWS ---
+  // --- REAL REVIEWS ---
   const reviewsData = [
     { name: "Fatma Abdulkadir", initial: "FA", text: "Absolutely divine! Hussein Bakes is a hidden gem. The flawless buttercream finishes are unmatched." },
     { name: "Abigail Teresia", initial: "AT", text: "Finally, proper pizza in Kitui! Freshly baked, not frozen. Definitely the best pizza place in town right now." },
@@ -396,33 +392,33 @@
 
   // --- FULL INVENTORY (16 Cakes + 4 Pizzas) ---
   const inventory = [
-    // --- CAKES ---
-    { id: 1, type: 'cakes', name: 'Signature Vanilla', basePrice: 2500, desc: 'Soft vanilla sponge, premium buttercream.', img: '🎂', tag: 'Classic', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}},
-    { id: 2, type: 'cakes', name: 'Vanilla & Cardamom', basePrice: 2500, desc: 'Cardamom-infused. Kitui specialty.', img: '🍰', tag: 'Signature', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}},
-    { id: 3, type: 'cakes', name: 'Midnight Chocolate', basePrice: 2500, desc: 'Rich chocolate, smooth ganache.', img: '🍫', tag: 'Bestseller', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}},
-    { id: 4, type: 'cakes', name: 'Red Velvet Dream', basePrice: 2500, desc: 'Classic w/ cream cheese frosting.', img: '🧁', tag: 'Luxury', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}},
-    { id: 5, type: 'cakes', name: 'Black Forest', basePrice: 2500, desc: 'Chocolate, cream & fresh cherries.', img: '🍒', tag: 'Classic', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}},
-    { id: 6, type: 'cakes', name: 'Golden Harvest', basePrice: 3000, desc: 'Spiced carrot cake with walnuts.', img: '🥕', tag: 'New', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}},
-    { id: 7, type: 'cakes', name: 'Citrus Sculpt', basePrice: 3000, desc: 'Zesty lemon with blueberries.', img: '🍋', tag: 'Fresh', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}},
-    { id: 8, type: 'cakes', name: 'Mocha Architecture', basePrice: 3000, desc: 'Espresso with salted caramel.', img: '☕', tag: 'Bold', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}},
-    { id: 9, type: 'cakes', name: 'White Forest', basePrice: 2500, desc: 'Vanilla with chantilly & cherries.', img: '🤍', tag: 'Light', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}},
-    { id: 10, type: 'cakes', name: 'Strawberry Serenity', basePrice: 3000, desc: 'Fresh strawberry with mascarpone.', img: '🍓', tag: 'Fresh', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}},
-    { id: 11, type: 'cakes', name: 'Pistachio Elegance', basePrice: 3000, desc: 'Pistachio sponge & cream.', img: '💚', tag: 'Gourmet', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}},
-    { id: 12, type: 'cakes', name: 'Salted Caramel', basePrice: 3000, desc: 'Caramel sponge with ganache.', img: '🍯', tag: 'Indulgent', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}},
-    { id: 13, type: 'cakes', name: 'Lavender Dream', basePrice: 3000, desc: 'Lavender vanilla with cream.', img: '💜', tag: 'Special', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}},
-    { id: 14, type: 'cakes', name: 'Matcha & White Choco', basePrice: 3500, desc: 'Matcha sponge with white ganache.', img: '🌿', tag: 'Trending', sizes: {'1kg': 3500, '2kg': 6000, '3kg': 8000, '4kg': 10000}},
-    { id: 15, type: 'cakes', name: 'Ethereal Wedding', basePrice: 8500, desc: 'Bespoke two-tier wedding cake.', img: '💐', tag: 'Bridal', sizes: {'Starting Price': 8500}},
-    { id: 16, type: 'cakes', name: 'Gallery Bites Box', basePrice: 1200, desc: 'Box of 6 assorted cupcakes.', img: '🧁', tag: 'Gift', sizes: {'Box of 6': 1200, 'Box of 12': 2200}},
+    // 16 CAKES
+    { id: 1, type: 'cakes', name: 'Signature Vanilla', basePrice: 2500, desc: 'Soft vanilla sponge with premium buttercream.', img: '🎂', tag: 'Classic', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Cream', price: 300}, {name: 'Chocolate Drizzle', price: 500}]},
+    { id: 2, type: 'cakes', name: 'Vanilla & Cardamom', basePrice: 2500, desc: 'Cardamom-infused masterpiece. Kitui specialty.', img: '🍰', tag: 'Signature', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Cream', price: 300}, {name: 'Gold Leaf', price: 800}]},
+    { id: 3, type: 'cakes', name: 'Midnight Chocolate', basePrice: 2500, desc: 'Rich chocolate with smooth ganache.', img: '🍫', tag: 'Best Seller', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Ganache', price: 500}]},
+    { id: 4, type: 'cakes', name: 'Red Velvet Dream', basePrice: 2500, desc: 'Classic with cream cheese frosting.', img: '🧁', tag: 'Luxury', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Frosting', price: 400}]},
+    { id: 5, type: 'cakes', name: 'Black Forest Symphony', basePrice: 2500, desc: 'Chocolate, cream & fresh cherries.', img: '🍒', tag: 'Classic', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Cherries', price: 500}]},
+    { id: 6, type: 'cakes', name: 'Golden Harvest', basePrice: 3000, desc: 'Spiced carrot cake with walnuts.', img: '🥕', tag: 'New', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Walnuts', price: 400}]},
+    { id: 7, type: 'cakes', name: 'Citrus Sculpt', basePrice: 3000, desc: 'Zesty lemon with blueberries.', img: '🍋', tag: 'Bright', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Blueberry Layer', price: 600}]},
+    { id: 8, type: 'cakes', name: 'Mocha Architecture', basePrice: 3000, desc: 'Espresso with salted caramel.', img: '☕', tag: 'Bold', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Caramel Drip', price: 600}]},
+    { id: 9, type: 'cakes', name: 'White Forest', basePrice: 2500, desc: 'Vanilla with chantilly & cherries.', img: '🤍', tag: 'Light', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}]},
+    { id: 10, type: 'cakes', name: 'Strawberry Serenity', basePrice: 3000, desc: 'Fresh strawberry with mascarpone.', img: '🍓', tag: 'Fresh', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Strawberries', price: 700}]},
+    { id: 11, type: 'cakes', name: 'Pistachio Elegance', basePrice: 3000, desc: 'Pistachio sponge with pistachio cream.', img: '💚', tag: 'Gourmet', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}]},
+    { id: 12, type: 'cakes', name: 'Salted Caramel', basePrice: 3000, desc: 'Caramel sponge with caramel ganache.', img: '🍯', tag: 'Indulgent', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}]},
+    { id: 13, type: 'cakes', name: 'Lavender Dream', basePrice: 3000, desc: 'Lavender vanilla with lavender cream.', img: '💜', tag: 'Special', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}]},
+    { id: 14, type: 'cakes', name: 'Matcha & White Choco', basePrice: 3500, desc: 'Matcha sponge with white ganache.', img: '🌿', tag: 'Trending', sizes: {'1kg': 3500, '2kg': 6000, '3kg': 8000, '4kg': 10000}, addons: [{name: 'Custom Message', price: 0}]},
+    { id: 15, type: 'cakes', name: 'Ethereal Wedding Tier', basePrice: 8500, desc: 'Bespoke two-tier wedding cake.', img: '💐', tag: 'Bridal', sizes: {'Starting': 8500}, addons: [{name: 'Custom Message', price: 0}]},
+    { id: 16, type: 'cakes', name: 'Gallery Bites Box', basePrice: 1200, desc: 'Box of 6 assorted cupcakes.', img: '🧁', tag: 'Gift', sizes: {'Box of 6': 1200, 'Box of 12': 2200}, addons: []},
     
-    // --- PIZZAS ---
-    { id: 17, type: 'pizza', name: 'Beef Supremo', desc: 'Seasoned beef, herbs, mozzarella.', img: '🍕', tag: 'Friday Offer', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}},
-    { id: 18, type: 'pizza', name: 'Chicken Tikka', desc: 'Spiced chicken, onions, peppers.', img: '🍗', tag: 'Spicy', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}},
-    { id: 19, type: 'pizza', name: 'Garden Veg', desc: 'Peppers, onions, tomatoes, olives.', img: '🥬', tag: 'Veggie', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}},
-    { id: 20, type: 'pizza', name: 'Classic Cheese', desc: 'Rich tomato base, extra mozzarella.', img: '🧀', tag: 'Kids Love', sizes: {'Small (9")': 500, 'Medium (12")': 800, 'Large (14")': 1150}}
+    // 4 PIZZAS
+    { id: 17, type: 'pizza', name: 'Beef Supremo', desc: 'Ground beef & herbs on artisanal crust.', img: '🍕', tag: 'Friday Offer', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}, addons: [{name: 'Extra Cheese', price: 150}, {name: 'Chilli Sauce', price: 50}]},
+    { id: 18, type: 'pizza', name: 'Chicken Tikka', desc: 'Spiced tikka chicken, onions, peppers.', img: '🍗', tag: 'Spicy', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}, addons: [{name: 'Extra Cheese', price: 150}]},
+    { id: 19, type: 'pizza', name: 'Garden Veg', desc: 'Fresh peppers, onions, tomatoes.', img: '🥬', tag: 'Veggie', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}, addons: []},
+    { id: 20, type: 'pizza', name: 'Classic Cheese', desc: 'Rich tomato base, extra mozzarella.', img: '🧀', tag: 'Kids Love', sizes: {'Small (9")': 500, 'Medium (12")': 800, 'Large (14")': 1150}, addons: []}
   ];
 
   let cart = [];
-  let currentSelection = null;
+  let currentItem = null;
 
   document.addEventListener('DOMContentLoaded', () => {
     updateFridayTimer();
@@ -434,7 +430,6 @@
     const now = new Date();
     const day = now.getDay();
     const el = document.getElementById('fridayTimer');
-    
     if (day === 5) {
       el.innerHTML = '<span class="text-[#C9A24D]">🎉 Friday Special Active: Buy 1 Get 1 Free (Medium Pizza)</span>';
     } else {
@@ -446,10 +441,9 @@
   function renderReviews() {
     const track = document.getElementById('reviewsTrack');
     const data = [...reviewsData, ...reviewsData]; 
-    
     data.forEach(review => {
       const card = document.createElement('div');
-      card.className = 'glass-card p-6 rounded-xl w-[350px] flex-shrink-0 flex flex-col justify-between';
+      card.className = 'glass-panel p-6 rounded-xl w-[350px] flex-shrink-0 flex flex-col justify-between';
       card.innerHTML = `
         <div class="flex items-center gap-3 mb-4">
             <div class="avatar">${review.initial}</div>
@@ -469,6 +463,7 @@
     document.getElementById('productGrid').classList.add('hidden');
     document.getElementById('backBtn').classList.add('hidden');
     document.getElementById('menuTitle').innerText = 'The Collection';
+    document.getElementById('menu-section').scrollIntoView({behavior: 'smooth'});
   }
 
   function renderMenu(category) {
@@ -476,7 +471,7 @@
     document.getElementById('productGrid').classList.remove('hidden');
     document.getElementById('backBtn').classList.remove('hidden');
     
-    const title = category === 'cakes' ? 'Custom Cakes' : 'Fresh Pizza';
+    const title = category === 'cakes' ? 'Custom Cakes' : 'Artisanal Pizza';
     document.getElementById('menuTitle').innerText = title;
 
     const grid = document.getElementById('productGrid');
@@ -485,121 +480,135 @@
     const items = inventory.filter(i => i.type === category);
     
     items.forEach((item, index) => {
-      const sizes = Object.keys(item.sizes);
-      const startPrice = item.sizes[sizes[0]].toLocaleString();
-      
-      const el = document.createElement('div');
-      el.className = 'glass-card p-6 rounded-xl flex flex-col relative group fade-in-up';
-      el.style.animationDelay = `${index * 0.05}s`;
-      
-      el.innerHTML = `
-        <div class="absolute top-4 right-4">
-           <span class="text-[10px] uppercase tracking-wider font-bold text-[#C9A24D] bg-[#C9A24D]/10 px-2 py-1 rounded border border-[#C9A24D]/20">${item.tag}</span>
-        </div>
-        
-        <div class="text-5xl mb-4 transform group-hover:scale-110 transition duration-300 origin-left">${item.img}</div>
-        
-        <h3 class="text-white text-lg font-medium mb-1">${item.name}</h3>
-        <p class="text-gray-400 text-xs mb-4 line-clamp-2 h-8">${item.desc}</p>
-        
-        <div class="mt-auto flex justify-between items-center border-t border-white/5 pt-4">
-            <span class="text-[#C9A24D] text-sm font-medium">fr. KES ${startPrice}</span>
-            <button onclick="openOptionModal(${item.id})" class="w-8 h-8 rounded-full bg-white/5 hover:bg-[#C9A24D] hover:text-[#05090F] flex items-center justify-center transition text-lg leading-none pb-1">+</button>
+      const minPrice = Object.values(item.sizes)[0];
+      const card = document.createElement('div');
+      card.className = 'glass-panel p-6 rounded-xl relative group cursor-pointer flex flex-col fade-in-up';
+      card.style.animationDelay = `${index * 0.05}s`;
+      card.onclick = () => openModal(item.id);
+      card.innerHTML = `
+        <div class="absolute top-4 right-4 z-10"><span class="text-[9px] uppercase tracking-wider text-[#C9A24D] border border-[#C9A24D]/30 px-2 py-1 rounded-sm bg-[#05090F]">${item.tag}</span></div>
+        <div class="text-5xl mb-6 text-center transform group-hover:scale-110 transition duration-500 py-4">${item.img}</div>
+        <h3 class="text-white text-lg serif group-hover:text-[#C9A24D] transition mb-2">${item.name}</h3>
+        <p class="text-gray-500 text-xs font-light mb-4 line-clamp-2">${item.desc}</p>
+        <div class="mt-auto pt-4 border-t border-white/5 flex justify-between items-center">
+            <span class="text-gray-400 text-xs">From KES ${minPrice.toLocaleString()}</span>
+            <span class="text-[#C9A24D] text-lg font-light">+</span>
         </div>
       `;
-      grid.appendChild(el);
+      grid.appendChild(card);
     });
-    
-    document.getElementById('menu-section').scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('menu-section').scrollIntoView({behavior: 'smooth'});
   }
 
-  function openOptionModal(id) {
-    currentSelection = inventory.find(i => i.id === id);
-    if (!currentSelection) return;
+  // --- THE RICH MODAL LOGIC (RESTORED) ---
+  function openModal(itemId) {
+    currentItem = inventory.find(i => i.id === itemId);
+    if (!currentItem) return;
     
-    document.getElementById('modalTitle').innerText = currentSelection.name;
-    document.getElementById('modalDesc').innerText = currentSelection.desc;
+    document.getElementById('modalTitle').innerText = currentItem.name;
+    document.getElementById('modalTag').innerText = currentItem.tag;
+    document.getElementById('modalDesc').innerText = currentItem.desc;
+    document.getElementById('modalImg').innerText = currentItem.img;
     
-    const container = document.getElementById('modalOptions');
-    container.innerHTML = '';
-    
-    for (const [size, price] of Object.entries(currentSelection.sizes)) {
-        const btn = document.createElement('button');
-        btn.className = 'w-full flex justify-between items-center p-4 rounded-lg border border-white/10 hover:border-[#C9A24D] hover:bg-[#C9A24D]/10 bg-white/5 transition text-sm text-gray-200 mb-2';
-        btn.innerHTML = `
-            <span class="font-medium">${size}</span>
-            <span class="text-[#C9A24D] font-bold">KES ${price.toLocaleString()}</span>
+    const sizeContainer = document.getElementById('modalSizes');
+    sizeContainer.innerHTML = '';
+    Object.entries(currentItem.sizes).forEach(([size, price], idx) => {
+        const checked = idx === 0 ? 'checked' : '';
+        sizeContainer.innerHTML += `
+            <label class="flex items-center p-3 border border-white/10 rounded-sm hover:border-[#C9A24D]/50 cursor-pointer transition bg-white/5">
+                <input type="radio" name="modal_size" value="${size}|${price}" class="mr-3 accent-[#C9A24D]" ${checked}>
+                <span class="flex-1 text-gray-300 text-sm">${size}</span>
+                <span class="text-[#C9A24D] font-mono text-sm">KES ${price.toLocaleString()}</span>
+            </label>
         `;
-        btn.onclick = () => addToCart(currentSelection, size, price);
-        container.appendChild(btn);
+    });
+
+    const addonContainer = document.getElementById('modalAddons');
+    const addonSection = document.getElementById('modalAddonsSection');
+    addonContainer.innerHTML = '';
+    
+    if (currentItem.addons && currentItem.addons.length > 0) {
+        addonSection.classList.remove('hidden');
+        currentItem.addons.forEach((addon, idx) => {
+            addonContainer.innerHTML += `
+                <label class="flex items-center p-3 border border-white/10 rounded-sm hover:border-[#C9A24D]/50 cursor-pointer transition bg-white/5">
+                    <input type="checkbox" id="addon-${idx}" data-name="${addon.name}" data-price="${addon.price}" class="modal-addon mr-3 accent-[#C9A24D]">
+                    <span class="flex-1 text-gray-300 text-sm">${addon.name}</span>
+                    ${addon.price > 0 ? `<span class="text-[#C9A24D] text-xs">+KES ${addon.price}</span>` : '<span class="text-gray-600 text-xs">Free</span>'}
+                </label>
+            `;
+        });
+    } else {
+        addonSection.classList.add('hidden');
     }
-    
-    document.getElementById('optionModal').classList.remove('hidden');
+
+    document.getElementById('addToCartBtn').onclick = () => addToCartFromModal();
+    document.getElementById('detailModal').classList.remove('hidden');
   }
 
-  function closeOptionModal() {
-    document.getElementById('optionModal').classList.add('hidden');
+  function closeModal() {
+    document.getElementById('detailModal').classList.add('hidden');
   }
 
-  function addToCart(item, size, price) {
-    cart.push({ id: Date.now(), name: item.name, size, price, type: item.type });
-    closeOptionModal();
-    updateCartUI();
-    
-    const sidebar = document.getElementById('cartSidebar');
-    if(sidebar.classList.contains('translate-x-full')) toggleCart();
+  function addToCartFromModal() {
+    if (!currentItem) return;
+    const sizeInput = document.querySelector('input[name="modal_size"]:checked');
+    if (!sizeInput) return alert('Please select a size');
+    const [size, priceRaw] = sizeInput.value.split('|');
+    let finalPrice = parseInt(priceRaw);
+    const addons = [];
+    document.querySelectorAll('.modal-addon:checked').forEach(cb => {
+        finalPrice += parseInt(cb.dataset.price);
+        addons.push(cb.dataset.name);
+    });
+    cart.push({ id: Date.now(), name: currentItem.name, size: size, addons: addons, price: finalPrice });
+    updateCartDisplay();
+    closeModal();
+    toggleCart();
   }
 
-  function removeFromCart(id) {
-    cart = cart.filter(i => i.id !== id);
-    updateCartUI();
+  function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCartDisplay();
   }
 
-  function updateCartUI() {
+  function updateCartDisplay() {
     const badge = document.getElementById('cartBadge');
-    const itemsContainer = document.getElementById('cartItems');
+    const container = document.getElementById('cartItems');
     const totalEl = document.getElementById('cartTotal');
-    
     badge.innerText = cart.length;
     
     if (cart.length === 0) {
-        itemsContainer.innerHTML = `
-            <div class="h-full flex flex-col items-center justify-center text-gray-500 gap-4">
-              <span class="text-4xl opacity-20">🛒</span>
-              <p class="text-sm">Your cart is empty.</p>
-              <button onclick="toggleCart()" class="text-[#C9A24D] text-sm hover:underline">Browse Menu</button>
-            </div>`;
+        container.innerHTML = `<div class="h-full flex flex-col items-center justify-center text-gray-600"><p class="text-sm">Collection is empty.</p></div>`;
         totalEl.innerText = 'KES 0';
         return;
     }
     
-    itemsContainer.innerHTML = '';
+    container.innerHTML = '';
     let total = 0;
     
-    cart.forEach(item => {
+    cart.forEach((item, index) => {
         total += item.price;
-        const div = document.createElement('div');
-        div.className = 'flex justify-between items-start border-b border-white/5 pb-3';
-        div.innerHTML = `
-            <div>
-                <h4 class="text-white text-sm font-medium">${item.name}</h4>
-                <p class="text-gray-500 text-xs">${item.size}</p>
-            </div>
-            <div class="text-right">
-                <p class="text-[#C9A24D] text-sm">KES ${item.price.toLocaleString()}</p>
-                <button onclick="removeFromCart(${item.id})" class="text-[10px] text-red-400 hover:text-white mt-1">Remove</button>
+        container.innerHTML += `
+            <div class="flex justify-between items-start mb-4 border-b border-white/5 pb-2">
+                <div>
+                    <h4 class="text-white text-sm font-medium serif">${item.name}</h4>
+                    <p class="text-gray-500 text-xs">${item.size}</p>
+                    ${item.addons.length ? `<p class="text-[#C9A24D] text-[10px]">+ ${item.addons.join(', ')}</p>` : ''}
+                </div>
+                <div class="text-right">
+                    <p class="text-gray-300 text-sm">KES ${item.price.toLocaleString()}</p>
+                    <button onclick="removeFromCart(${index})" class="text-[10px] text-red-400 hover:text-red-300 mt-1">Remove</button>
+                </div>
             </div>
         `;
-        itemsContainer.appendChild(div);
     });
-    
     totalEl.innerText = 'KES ' + total.toLocaleString();
   }
 
   function toggleCart() {
     const sidebar = document.getElementById('cartSidebar');
     const overlay = document.getElementById('cartOverlay');
-    
     if (sidebar.classList.contains('translate-x-full')) {
         sidebar.classList.remove('translate-x-full');
         overlay.classList.remove('hidden');
@@ -612,23 +621,20 @@
   }
 
   function checkoutWhatsApp() {
-    if (cart.length === 0) return;
-    
-    let msg = "Hello Hussein Bakes! I'd like to place an order:\n\n";
+    if (cart.length === 0) return alert('Cart is empty');
+    const phone = "254710975805";
+    let msg = "👋 Hello Hussein Bakes! I would like to place an order:\n\n";
     let total = 0;
-    
     cart.forEach(item => {
-        msg += `🔹 ${item.name} (${item.size}) - KES ${item.price}\n`;
         total += item.price;
+        msg += `▪ ${item.name} (${item.size})\n`;
+        if (item.addons.length) msg += `   + ${item.addons.join(', ')}\n`;
+        msg += `   KES ${item.price}\n\n`;
     });
-    
-    msg += `\n💰 *Total Estimate: KES ${total.toLocaleString()}*`;
-    msg += `\n📍 Delivery/Pickup?`;
-    
-    const url = `https://wa.me/254710975805?text=${encodeURIComponent(msg)}`;
-    window.open(url, '_blank');
+    msg += `💰 *TOTAL ESTIMATE: KES ${total.toLocaleString()}*\n`;
+    msg += `📍 Please confirm delivery availability.`;
+    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
   }
 </script>
-
 </body>
 </html>
