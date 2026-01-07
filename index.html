@@ -227,6 +227,7 @@
     </div>
 
     <div id="categoryView" class="grid grid-cols-1 md:grid-cols-2 gap-6 fade-in-up">
+        
         <div onclick="renderMenu('cakes')" class="category-card h-[400px] rounded-xl bg-[#080C14] flex flex-col justify-end p-8 group">
             <div class="absolute inset-0 flex items-center justify-center text-9xl opacity-20 group-hover:opacity-30 transition duration-700 select-none">🎂</div>
             <div class="relative z-20">
@@ -240,7 +241,9 @@
             <div class="absolute inset-0 flex items-center justify-center text-9xl opacity-20 group-hover:opacity-30 transition duration-700 select-none">🍕</div>
             <div class="relative z-20">
                 <h3 class="text-3xl text-white serif italic mb-2">Artisanal Pizza</h3>
-                <p class="text-gray-400 text-sm mb-6 max-w-xs">Fresh dough, premium toppings. Beef, Chicken Tikka & Veg. Ready in 3-4 hours.</p>
+                <p class="text-gray-300 text-sm mb-6 max-w-xs leading-relaxed">
+                   Our dough is perfectly fermented and crafted with precision. Quality takes time (3-4 hours notice).
+                </p>
                 <span class="text-[#C9A24D] text-xs uppercase tracking-widest border-b border-[#C9A24D] pb-1">Browse 4 Varieties</span>
             </div>
         </div>
@@ -288,7 +291,7 @@
             scrolling="no" 
             marginheight="0" 
             marginwidth="0" 
-            src="https://maps.google.com/maps?q=Hussein%20Bakes%20Kitui&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            src="https://maps.google.com/maps?q=Bondeni,Kitui&t=&z=15&ie=UTF8&iwloc=&output=embed"
             class="map-filter w-full h-full">
          </iframe>
       </div>
@@ -410,11 +413,11 @@
     { id: 15, type: 'cakes', name: 'Ethereal Wedding Tier', basePrice: 8500, desc: 'Bespoke two-tier wedding cake.', img: '💐', tag: 'Bridal', sizes: {'Starting': 8500}, addons: [{name: 'Custom Message', price: 0}]},
     { id: 16, type: 'cakes', name: 'Gallery Bites Box', basePrice: 1200, desc: 'Box of 6 assorted cupcakes.', img: '🧁', tag: 'Gift', sizes: {'Box of 6': 1200, 'Box of 12': 2200}, addons: []},
     
-    // 4 PIZZAS
-    { id: 17, type: 'pizza', name: 'Beef Supremo', desc: 'Ground beef & herbs on artisanal crust.', img: '🍕', tag: 'Friday Offer', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}, addons: [{name: 'Extra Cheese', price: 150}, {name: 'Chilli Sauce', price: 50}]},
-    { id: 18, type: 'pizza', name: 'Chicken Tikka', desc: 'Spiced tikka chicken, onions, peppers.', img: '🍗', tag: 'Spicy', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}, addons: [{name: 'Extra Cheese', price: 150}]},
-    { id: 19, type: 'pizza', name: 'Garden Veg', desc: 'Fresh peppers, onions, tomatoes.', img: '🥬', tag: 'Veggie', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}, addons: []},
-    { id: 20, type: 'pizza', name: 'Classic Cheese', desc: 'Rich tomato base, extra mozzarella.', img: '🧀', tag: 'Kids Love', sizes: {'Small (9")': 500, 'Medium (12")': 800, 'Large (14")': 1150}, addons: []}
+    // 4 PIZZAS (Updated Text)
+    { id: 17, type: 'pizza', name: 'Beef Supremo', desc: 'Seasoned beef on our signature slow-fermented dough. Worth the wait.', img: '🍕', tag: 'Friday Offer', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}, addons: [{name: 'Extra Cheese', price: 150}, {name: 'Chilli Sauce', price: 50}]},
+    { id: 18, type: 'pizza', name: 'Chicken Tikka', desc: 'Spiced tikka on precision-proofed crust. Baked to order.', img: '🍗', tag: 'Spicy', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}, addons: [{name: 'Extra Cheese', price: 150}]},
+    { id: 19, type: 'pizza', name: 'Garden Veg', desc: 'Fresh peppers and tomatoes on artisanal dough. Hand-stretched.', img: '🥬', tag: 'Veggie', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}, addons: []},
+    { id: 20, type: 'pizza', name: 'Classic Cheese', desc: 'Premium mozzarella blend on our slow-fermented base.', img: '🧀', tag: 'Kids Love', sizes: {'Small (9")': 500, 'Medium (12")': 800, 'Large (14")': 1150}, addons: []}
   ];
 
   let cart = [];
@@ -500,7 +503,7 @@
     document.getElementById('menu-section').scrollIntoView({behavior: 'smooth'});
   }
 
-  // --- THE RICH MODAL LOGIC (RESTORED) ---
+  // --- THE RICH MODAL LOGIC ---
   function openModal(itemId) {
     currentItem = inventory.find(i => i.id === itemId);
     if (!currentItem) return;
