@@ -1,64 +1,84 @@
-# 🍰 Hussein Bakes – Official Website
+🎂 Hussein Bakes – Premium Bakery Kitui
 
-Welcome to the official GitHub repository for **Hussein Bakes**, a Kitui-based bakery brand crafting luxurious, handcrafted cakes for all occasions.  
-This website features a clean, mobile-friendly landing page that showcases our custom cake gallery, popular flavors, pricing, and ordering information.
+Custom Cakes & Artisanal Pizza in Kitui Town
 
----
-
-## 🌟 Live Website
-
-➡️ [View Live Website](http://husseinbakes.github.io/husseinbakes_website/)
+🌐 View Live Website
 
 ---
 
-## 📸 Features
+📱 Order Now
 
-- ✅ Responsive landing page with elegant black & gold design  
-- ✅ Scrollable cake gallery with categories  
-- ✅ Flavors & pricing section with beautiful visuals  
-- ✅ Contact & location footer  
-- ✅ Mobile-optimized for fast loading and accessibility  
+WhatsApp: +254 710 975 805
+Location: Bondeni, Kitui Town, Kenya
+Hours: Mon-Fri 7:30AM–8PM | Sat-Sun 7:30AM–6PM
 
 ---
 
-## 🗂️ Project Structure
+🍰 Our Specialties
+
+Custom Cakes
+
+· 16+ premium cake varieties
+· Wedding cakes starting at KES 8,500
+· 48-hour advance order
+· Custom designs & messages
+
+Artisanal Pizza
+
+· Slow-fermented dough
+· 3-4 hour advance order
+· Friday Special: Buy 1 Get 1 Free (Beef Pizza)
+· KES 500–1,200
+
+---
+
+🎯 Why Choose Us?
+
+✅ Fresh & Quality – Baked when you order, no frozen
+✅ Local & Trusted – First dedicated pizza place in Kitui Town
+✅ Easy Ordering – WhatsApp, call, or online
+✅ Fast Delivery – Across Kitui Town (5km radius)
+
+---
+
+📁 Website Features
+
+```
 husseinbakes_website/
-├── index.html              # Main landing page
-├── gallery.html            # Cake gallery and categories
-├── wedding.html            # Wedding cake tiers + guide
-├── custom-cakes.html       # Custom order info and extras
-├── styles/
-│   └── styles.css          # Global styling (dark/light, gold theme)
-├── js/
-│   └── script.js           # Scroll, modals, filtering, interactions
-├── images/
-│   ├── *.webp              # Cake photos, logo, hero images
+├── index.html          # Main website
+├── images/             # All product photos
+├── sitemap.xml         # SEO optimization
+├── robots.txt          # Search engine instructions
+└── README.md           # This file
+```
 
 ---
 
-## 🚀 Want to Contribute or Customize?
-
-Clone this repo and open in your browser:
+🚀 For Developers
 
 ```bash
-git clone https://github.com/yourusername/husseinbakes_website.git
-cd husseinbakes_website
+# Clone repository
+git clone https://github.com/husseinbakes/husseinbakes_website.git
+
+# Open in browser
 open index.html
+```
 
-Or deploy to GitHub Pages / Netlify for instant hosting.
+Built with:
 
-📞 Contact
-
-For cake orders or collaboration:
-	•	📱 WhatsApp
-	•	📧 husseinbakes@gmail.com
-	•	🌍 Main Site
-	•	📍 Nairobi & Kitui, Kenya
-    
-© 2025 Hussein Bakes. All rights reserved.
+· HTML5, Tailwind CSS, JavaScript
+· Mobile-first responsive design
+· Google SEO optimized
+· Schema.org structured data
 
 ---
 
-✅ **Next step**: Paste this into your repository as `README.md` and commit.
+✨ Our Promise
 
+"Crafted with Patience. Defined by Quality."
+– Hussein Bakes
 
+---
+
+📍 Serving: Bondeni • Kitui Town • Kitui County • Eastern Kenya
+© 2026 Hussein Bakes. All rights reserved.
