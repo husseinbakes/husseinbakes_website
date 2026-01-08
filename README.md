@@ -1,4 +1,3 @@
-```markdown
 # 🎂 Hussein Bakes Kitui
 
 <div align="center">
@@ -28,7 +27,6 @@
 </div>
 
 ## 📁 Project Structure
-
 ```
 
 husseinbakes_website/
@@ -52,14 +50,6 @@ git clone https://github.com/husseinbakes/husseinbakes_website.git
 
 # Open in browser
 open index.html
-```
-
-GitHub Pages Deployment
-
-1. Push code to GitHub repository
-2. Go to Settings → Pages
-3. Select main branch as source
-4. Site goes live automatically
 
 📍 Location & Hours
 
