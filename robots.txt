@@ -1,16 +1,132 @@
-# Hussein Bakes - Kitui Town Bakery
-# Allow all bots to access CSS and JS for proper rendering
 User-agent: *
 Allow: /
-Sitemap: https://husseinbakes.github.io/husseinbakes_website/sitemap.xml
+Allow: /images/
+Allow: /images/*.jpg
+Allow: /images/*.webp
+Allow: /images/*.png
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*.log$
+Disallow: /*.env$
+Crawl-delay: 1
 
-# Optimization for specific bots
+# Googlebot specific rules
 User-agent: Googlebot
 Allow: /
+Allow: /images/
+Crawl-delay: 0.5
+Disallow: /*.php$
+Disallow: /*.js$
+Disallow: /*.css$
 
-# Block aggressive SEO bots to save bandwidth (Optional but recommended)
+# Googlebot-Image (for image indexing)
+User-agent: Googlebot-Image
+Allow: /
+Allow: /images/
+Crawl-delay: 0.3
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+Allow: /images/
+Crawl-delay: 2
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Allow: /images/
+Crawl-delay: 3
+
+# DuckDuckBot
+User-agent: DuckDuckBot
+Allow: /
+Allow: /images/
+Crawl-delay: 1
+
+# Applebot (for Siri, Spotlight)
+User-agent: Applebot
+Allow: /
+Allow: /images/
+Crawl-delay: 1
+
+# Facebook External Hit
+User-agent: facebookexternalhit/1.1
+Allow: /
+Allow: /images/
+Crawl-delay: 2
+
+# Twitterbot
+User-agent: Twitterbot
+Allow: /
+Allow: /images/
+Crawl-delay: 2
+
+# Instagram
+User-agent: Instagram
+Allow: /
+Allow: /images/
+Crawl-delay: 2
+
+# LinkedIn
+User-agent: LinkedInBot
+Allow: /
+Allow: /images/
+Crawl-delay: 2
+
+# Pinterest
+User-agent: Pinterest
+Allow: /
+Allow: /images/
+Crawl-delay: 2
+
+# WhatsApp (for link previews)
+User-agent: WhatsApp
+Allow: /
+Allow: /images/
+Crawl-delay: 2
+
+# Telegram
+User-agent: TelegramBot
+Allow: /
+Allow: /images/
+Crawl-delay: 2
+
+# SemrushBot (SEO tool - be careful)
+User-agent: SemrushBot
+Disallow: /
+
+# AhrefsBot (SEO tool - be careful)
 User-agent: AhrefsBot
 Disallow: /
 
-User-agent: SEMrushBot
+# MJ12bot
+User-agent: MJ12bot
 Disallow: /
+
+# GPTBot (OpenAI web crawler)
+User-agent: GPTBot
+Disallow: /
+
+# CCBot (Common Crawl)
+User-agent: CCBot
+Allow: /
+Crawl-delay: 5
+
+# PetalBot (Huawei)
+User-agent: PetalBot
+Allow: /
+Crawl-delay: 3
+
+# Sitemap Location
+Sitemap: https://husseinbakes.github.io/husseinbakes_website/sitemap.xml
+
+# Local SEO Signals
+# Kitui Town, Kenya focus
+# Bondeni location
+# Bakery & Pizza business
+
+# Contact Information for Google
+# Phone: +254710975805
+# Address: Bondeni, Kitui Town, Kenya
+# Business: Hussein Bakes - Premium Bakery
