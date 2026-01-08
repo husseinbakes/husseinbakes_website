@@ -1,9 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
   <url>
     <loc>https://husseinbakes.github.io/husseinbakes_website/</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2026-01-08</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    
+    <!-- SEO Images -->
+    <image:image>
+      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/husseinbakes-logo.jpg</image:loc>
+      <image:title>Hussein Bakes Logo - Premium Bakery Kitui Town</image:title>
+      <image:caption>Crafted with patience, defined by quality. Best bakery in Bondeni, Kitui.</image:caption>
+      <image:geo_location>Kitui Town, Kenya</image:geo_location>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/hussein-cake1.jpg</image:loc>
+      <image:title>Premium Custom Cakes Kitui - Hussein Bakes</image:title>
+      <image:caption>Signature custom cakes made fresh in Kitui Town. Order online.</image:caption>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/hussein-pizza1.jpg</image:loc>
+      <image:title>Artisanal Pizza Kitui - Hussein Bakes</image:title>
+      <image:caption>Slow-fermented dough pizza baked fresh in Kitui Town. Friday BOGO offer.</image:caption>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/custom-wedding-cake-kitui-two-tier.jpg</image:loc>
+      <image:title>Custom Wedding Cake Kitui - Hussein Bakes</image:title>
+      <image:caption>Bespoke two-tier wedding cake starting at KES 8,500. Kitui's premium bakery.</image:caption>
+      <image:license>https://creativecommons.org/licenses/by-nc-nd/4.0/</image:license>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/beef-pizza-fast-delivery-kitui-town.jpg</image:loc>
+      <image:title>Beef Pizza Fast Delivery Kitui Town - Hussein Bakes</image:title>
+      <image:caption>Friday Special: Buy 1 Get 1 Free beef pizza. Fast delivery in Kitui.</image:caption>
+    </image:image>
+    
+    <!-- Add more high-value product images -->
+    <image:image>
+      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/best-vanilla-birthday-cake-kitui-town.jpg</image:loc>
+      <image:title>Best Vanilla Birthday Cake Kitui Town</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/red-velvet-cake-cream-cheese-wedding-kitui.jpg</image:loc>
+      <image:title>Red Velvet Wedding Cake with Cream Cheese Kitui</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/black-forest-cake-price-kitui.jpg</image:loc>
+      <image:title>Black Forest Cake Price Kitui - Hussein Bakes</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/cupcakes-gift-box-delivery-kitui.jpg</image:loc>
+      <image:title>Cupcakes Gift Box Delivery Kitui - Hussein Bakes</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/chicken-tikka-pizza-halal-bondeni.jpg</image:loc>
+      <image:title>Halal Chicken Tikka Pizza Bondeni Kitui</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/classic-cheese-pizza-lunch-delivery-kitui.jpg</image:loc>
+      <image:title>Classic Cheese Pizza Lunch Delivery Kitui</image:title>
+    </image:image>
+    
+    <!-- More bakery images -->
+    <image:image>
+      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/cardamom-spice-cake-specialty-bakery-kenya.jpg</image:loc>
+      <image:title>Cardamom Spice Cake Specialty Bakery Kenya</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/carrot-cake-walnuts-healthy-bakery-kitui.jpg</image:loc>
+      <image:title>Carrot Cake with Walnuts Healthy Bakery Kitui</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/matcha-white-chocolate-cake-trending.jpg</image:loc>
+      <image:title>Matcha White Chocolate Cake Trending Kenya</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/white-forest-cake-anniversary-gift.jpg</image:loc>
+      <image:title>White Forest Anniversary Cake Gift Kitui</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/fresh-strawberry-cake-order-online-kitui.jpg</image:loc>
+      <image:title>Fresh Strawberry Cake Order Online Kitui</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/pistachio-gourmet-cake-luxury-kitui.jpg</image:loc>
+      <image:title>Pistachio Gourmet Luxury Cake Kitui</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/lavender-cake-unique-flavors-kenya.jpg</image:loc>
+      <image:title>Lavender Cake Unique Flavors Kenya</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/whatsapp-icon.webp</image:loc>
+      <image:title>WhatsApp Contact Hussein Bakes Kitui</image:title>
+      <image:caption>Order custom cakes and pizza via WhatsApp +254710975805</image:caption>
+    </image:image>
+    
   </url>
+  
 </urlset>
