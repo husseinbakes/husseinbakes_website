@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hussein Bakes | Premium Custom Cakes & Artisanal Pizza Kitui Town</title>
   <meta name="description" content="Hussein Bakes - Premium custom cakes and artisanal pizza in Kitui Town. Crafted with patience, defined by quality. Best bakery in Bondeni. Fast delivery. Wedding cakes specialist.">
+  
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#C9A24D">
   
   <!-- SEO Meta Tags -->
   <meta name="geo.region" content="KE-15">
@@ -22,24 +29,6 @@
   <meta name="twitter:title" content="Hussein Bakes | Premium Bakery in Kitui">
   <meta name="twitter:description" content="Crafted with patience, defined by quality. Custom cakes and pizza. Order now on WhatsApp +254710975805">
   <meta name="twitter:image" content="https://husseinbakes.github.io/husseinbakes_website/images/husseinbakes-logo.jpg">
-
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#c9a24d">
-  <meta name="msapplication-TileColor" content="#c9a24d">
-  <meta name="theme-color" content="#c9a24d">
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QWL1X2J0N"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-5QWL1X2J0N');
-  </script>
 
   <!-- JSON-LD Schema Structured Data -->
   <script type="application/ld+json">
@@ -219,82 +208,6 @@
             }
           }
         ]
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "name": "Hussein Bakes Menu - Custom Cakes & Pizza in Kitui",
-        "description": "Complete menu of premium custom cakes and artisanal pizzas available in Kitui Town",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "item": {
-              "@type": "Product",
-              "name": "Custom Wedding Cake Kitui",
-              "description": "Bespoke two tier wedding cake handcrafted in Kitui by Hussein Bakes",
-              "image": "https://husseinbakes.github.io/husseinbakes_website/images/custom-wedding-cake-kitui-two-tier.jpg",
-              "offers": {
-                "@type": "Offer",
-                "priceCurrency": "KES",
-                "price": "8500",
-                "availability": "https://schema.org/InStock",
-                "priceValidUntil": "2026-12-31"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "item": {
-              "@type": "Product",
-              "name": "Beef Pizza Fast Delivery Kitui Town",
-              "description": "Slow fermented beef pizza with fast delivery in Kitui Town",
-              "image": "https://husseinbakes.github.io/husseinbakes_website/images/beef-pizza-fast-delivery-kitui-town.jpg",
-              "offers": {
-                "@type": "Offer",
-                "priceCurrency": "KES",
-                "price": "550",
-                "availability": "https://schema.org/InStock",
-                "priceValidUntil": "2026-12-31"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "item": {
-              "@type": "Product",
-              "name": "Premium Cake Collection Kitui",
-              "description": "Custom cake collection from Hussein Bakes in Kitui Town",
-              "image": "https://husseinbakes.github.io/husseinbakes_website/images/hussein-cake1.jpg",
-              "offers": {
-                "@type": "Offer",
-                "priceCurrency": "KES",
-                "price": "2500",
-                "availability": "https://schema.org/InStock",
-                "priceValidUntil": "2026-12-31"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "item": {
-              "@type": "Product",
-              "name": "Artisanal Pizza Collection Kitui",
-              "description": "Fresh pizza collection from Hussein Bakes in Kitui Town",
-              "image": "https://husseinbakes.github.io/husseinbakes_website/images/hussein-pizza1.jpg",
-              "offers": {
-                "@type": "Offer",
-                "priceCurrency": "KES",
-                "price": "500",
-                "availability": "https://schema.org/InStock",
-                "priceValidUntil": "2026-12-31"
-              }
-            }
-          }
-        ]
       }
     ]
   }
@@ -306,577 +219,194 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    :root { 
-      --gold: #C9A24D; 
-      --midnight: #05090F; 
-      --glass: rgba(255, 255, 255, 0.03); 
-      --glass-border: rgba(255, 255, 255, 0.08); 
-      --glass-hover: rgba(255, 255, 255, 0.06); 
-    }
-    
-    /* Base Styles */
-    body { 
-      background-color: var(--midnight); 
-      color: #F3F2EE; 
-      font-family: 'Inter', sans-serif; 
-      overflow-x: hidden; 
-      background-image: radial-gradient(circle at 50% 0%, #1a2333, #05090F 70%); 
-      background-attachment: fixed; 
-      -webkit-tap-highlight-color: transparent;
-      -webkit-font-smoothing: antialiased;
-    }
-    
-    /* Typography */
+    :root { --gold: #C9A24D; --midnight: #05090F; --glass: rgba(255, 255, 255, 0.03); --glass-border: rgba(255, 255, 255, 0.08); --glass-hover: rgba(255, 255, 255, 0.06); }
+    body { background-color: var(--midnight); color: #F3F2EE; font-family: 'Inter', sans-serif; overflow-x: hidden; background-image: radial-gradient(circle at 50% 0%, #1a2333, #05090F 70%); background-attachment: fixed; }
     h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
-    .slogan { font-family: 'Playfair Display', serif; font-style: italic; }
-    
-    /* Components */
-    .glass-panel { 
-      background: var(--glass); 
-      backdrop-filter: blur(12px); 
-      border: 1px solid var(--glass-border); 
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2); 
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
-    }
-    .glass-panel:hover { 
-      background: var(--glass-hover); 
-      border-color: var(--gold); 
-      transform: translateY(-4px); 
-      box-shadow: 0 12px 40px -8px rgba(0, 0, 0, 0.4); 
-    }
-    
-    .category-card { 
-      position: relative; 
-      overflow: hidden; 
-      cursor: pointer; 
-      border: 1px solid rgba(255, 255, 255, 0.1); 
-      transition: all 0.5s ease; 
-      -webkit-tap-highlight-color: transparent;
-    }
-    .category-card:hover { 
-      border-color: var(--gold); 
-      transform: scale(1.02); 
-    }
-    .category-card::before { 
-      content: ''; 
-      position: absolute; 
-      inset: 0; 
-      background: linear-gradient(to top, #05090F, transparent); 
-      z-index: 10; 
-    }
-    
-    /* Animations */
-    .fade-in-up { 
-      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; 
-      opacity: 0; 
-      transform: translateY(20px); 
-    }
-    @keyframes fadeInUp { 
-      to { 
-        opacity: 1; 
-        transform: translateY(0); 
-      } 
-    }
-    
-    /* Reviews Marquee */
-    .marquee-wrapper { 
-      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); 
-      width: 100%; 
-      overflow: hidden; 
-      -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    }
-    .marquee-track { 
-      display: flex; 
-      gap: 2rem; 
-      width: max-content; 
-      animation: scroll 60s linear infinite; 
-      will-change: transform;
-    }
-    .marquee-track:hover { 
-      animation-play-state: paused; 
-    }
-    @keyframes scroll { 
-      0% { transform: translateX(0); } 
-      100% { transform: translateX(-50%); } 
-    }
-    
-    /* Avatar */
-    .avatar { 
-      width: 48px; 
-      height: 48px; 
-      border-radius: 50%; 
-      background: #1F2937; 
-      border: 1px solid var(--gold); 
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      color: var(--gold); 
-      font-family: serif; 
-      font-weight: bold; 
-    }
-    
-    /* Scrollbar */
+    .glass-panel { background: var(--glass); backdrop-filter: blur(12px); border: 1px solid var(--glass-border); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .glass-panel:hover { background: var(--glass-hover); border-color: var(--gold); transform: translateY(-4px); box-shadow: 0 12px 40px -8px rgba(0, 0, 0, 0.4); }
+    .category-card { position: relative; overflow: hidden; cursor: pointer; border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.5s ease; }
+    .category-card:hover { border-color: var(--gold); transform: scale(1.02); }
+    .category-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, #05090F, transparent); z-index: 10; }
+    .fade-in-up { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; transform: translateY(20px); }
+    @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+    .marquee-wrapper { mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); width: 100%; overflow: hidden; }
+    .marquee-track { display: flex; gap: 2rem; width: max-content; animation: scroll 60s linear infinite; }
+    .marquee-track:hover { animation-play-state: paused; }
+    @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .avatar { width: 48px; height: 48px; border-radius: 50%; background: #1F2937; border: 1px solid var(--gold); display: flex; align-items: center; justify-content: center; color: var(--gold); font-family: serif; font-weight: bold; }
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--midnight); }
     ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
     ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
-    
-    /* Image Optimization */
-    .category-card img { 
-      will-change: transform; 
-      transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); 
-    }
+    .category-card img { will-change: transform; transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
     .category-card:hover img { transform: scale(1.05); }
-    img { 
-      -webkit-user-drag: none; 
-      user-select: none; 
-      max-width: 100%;
-      height: auto;
-    }
-    
-    /* Bestseller Badge */
-    .bestseller-badge { 
-      position: absolute; 
-      top: 12px; 
-      left: 12px; 
-      background: linear-gradient(135deg, #C9A24D, #F7EF8A); 
-      color: #05090F; 
-      padding: 4px 12px; 
-      border-radius: 20px; 
-      font-size: 10px; 
-      font-weight: bold; 
-      text-transform: uppercase; 
-      letter-spacing: 0.5px; 
-      z-index: 20; 
-    }
-    
-    /* Loading */
-    .loading-overlay { 
-      position: fixed; 
-      inset: 0; 
-      background: #05090F; 
-      z-index: 9999; 
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      transition: opacity 0.3s; 
-    }
-    .loading-spinner { 
-      width: 48px; 
-      height: 48px; 
-      border: 3px solid rgba(201, 162, 77, 0.3); 
-      border-top-color: #C9A24D; 
-      border-radius: 50%; 
-      animation: spin 1s linear infinite; 
-    }
-    @keyframes spin { 
-      to { transform: rotate(360deg); } 
-    }
-    
-    /* Stats */
-    .stat-counter { font-family: 'Inter', sans-serif; font-weight: 700; }
-    
-    /* Loyalty Card */
-    .loyalty-card { 
-      background: linear-gradient(135deg, rgba(201, 162, 77, 0.1), rgba(201, 162, 77, 0.05)); 
-      border: 1px solid rgba(201, 162, 77, 0.3); 
-    }
-    
-    /* Logo */
+    .category-card { isolation: isolate; }
+    img { -webkit-user-drag: none; user-select: none; }
+    .slogan { font-family: 'Playfair Display', serif; font-style: italic; }
     .logo-img { width: 40px; height: 40px; object-fit: contain; }
-    
-    /* Touch-friendly buttons */
-    .touch-target {
-      min-height: 44px;
-      min-width: 44px;
-    }
-    
-    /* Mobile optimizations */
-    @media (max-width: 640px) {
-      .glass-panel {
-        backdrop-filter: blur(8px);
-      }
-      .marquee-wrapper {
-        mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
-      }
-      .category-card::before {
-        background: linear-gradient(to top, #05090F 20%, transparent);
-      }
-    }
-    
-    /* Reduced motion */
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-    }
-    
-    /* High contrast mode */
-    @media (prefers-contrast: high) {
-      .glass-panel {
-        border: 2px solid var(--gold);
-      }
-    }
-    
-    /* Dark mode adjustments (already dark) */
-    @media (prefers-color-scheme: dark) {
-      body {
-        background-color: #05090F;
-      }
-    }
   </style>
+
 </head>
 
 <body class="antialiased selection:bg-[#C9A24D] selection:text-black">
 
-<!-- Loading Screen -->
-<div id="loadingOverlay" class="loading-overlay">
-  <div class="text-center">
-    <div class="loading-spinner mb-4"></div>
-    <p class="text-gray-400 text-sm">Loading Hussein Bakes...</p>
-  </div>
-</div>
-
 <!-- SEO Image Index (Hidden, Crawlable, Valid HTML) -->
 <div style="position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;" aria-hidden="true">
-  <img src="images/best-vanilla-birthday-cake-kitui-town.jpg" alt="Best vanilla birthday cake in Kitui Town - Premium buttercream sponge from Hussein Bakes Bondeni" width="800" height="800" loading="lazy">
-  <img src="images/cardamom-spice-cake-specialty-bakery-kenya.jpg" alt="Cardamom spice cake from specialty bakery in Kenya - Unique flavor from Hussein Bakes Kitui" width="800" height="800" loading="lazy">
-  <img src="images/chocolate-cake-delivery-bondeni-kitui.jpg" alt="Chocolate cake delivery in Bondeni Kitui - Rich ganache from Hussein Bakes bakery" width="800" height="800" loading="lazy">
-  <img src="images/red-velvet-cake-cream-cheese-wedding-kitui.jpg" alt="Red velvet wedding cake with cream cheese in Kitui - Elegant wedding cake from Hussein Bakes" width="800" height="800" loading="lazy">
-  <img src="images/black-forest-cake-price-kitui.jpg" alt="Black forest cake price in Kitui - Premium chocolate and cherry cake from Hussein Bakes" width="800" height="800" loading="lazy">
-  <img src="images/carrot-cake-walnuts-healthy-bakery-kitui.jpg" alt="Carrot cake with walnuts from healthy bakery in Kitui - Fresh spiced cake from Hussein Bakes" width="800" height="800" loading="lazy">
-  <img src="images/lemon-blueberry-cake-celebration-kenya.jpg" alt="Lemon blueberry celebration cake in Kenya - Zesty fresh cake from Hussein Bakes Kitui" width="800" height="800" loading="lazy">
-  <img src="images/coffee-caramel-cake-custom-order-kitui.jpg" alt="Coffee caramel cake custom order in Kitui - Premium espresso cake from Hussein Bakes Bondeni" width="800" height="800" loading="lazy">
-  <img src="images/white-forest-cake-anniversary-gift.jpg" alt="White forest anniversary cake gift in Kitui - Elegant vanilla celebration cake from Hussein Bakes" width="800" height="800" loading="lazy">
-  <img src="images/fresh-strawberry-cake-order-online-kitui.jpg" alt="Fresh strawberry cake order online in Kitui - Premium mascarpone cake from Hussein Bakes" width="800" height="800" loading="lazy">
-  <img src="images/pistachio-gourmet-cake-luxury-kitui.jpg" alt="Pistachio gourmet luxury cake in Kitui - Premium gourmet cake from Hussein Bakes bakery" width="800" height="800" loading="lazy">
-  <img src="images/salted-caramel-cake-best-bakery-bondeni.jpg" alt="Salted caramel cake from best bakery in Bondeni Kitui - Indulgent dessert from Hussein Bakes" width="800" height="800" loading="lazy">
-  <img src="images/lavender-cake-unique-flavors-kenya.jpg" alt="Lavender cake with unique flavors in Kenya - Specialty cake from Hussein Bakes Kitui town" width="800" height="800" loading="lazy">
-  <img src="images/matcha-white-chocolate-cake-trending.jpg" alt="Matcha white chocolate cake trending in Kenya - Modern trending cake from Hussein Bakes" width="800" height="800" loading="lazy">
-  <img src="images/custom-wedding-cake-kitui-two-tier.jpg" alt="Custom wedding cake two tier in Kitui - Bespoke wedding design from Hussein Bakes premium bakery" width="800" height="800" loading="lazy">
-  <img src="images/cupcakes-gift-box-delivery-kitui.jpg" alt="Cupcakes gift box delivery in Kitui - Assorted premium cupcakes from Hussein Bakes" width="800" height="800" loading="lazy">
-  <img src="images/beef-pizza-fast-delivery-kitui-town.jpg" alt="Beef pizza fast delivery in Kitui Town - Slow-fermented artisanal pizza from Hussein Bakes" width="800" height="800" loading="lazy">
-  <img src="images/chicken-tikka-pizza-halal-bondeni.jpg" alt="Halal chicken tikka pizza in Bondeni Kitui - Spiced premium pizza from Hussein Bakes" width="800" height="800" loading="lazy">
-  <img src="images/fresh-vegetable-pizza-order-online.jpg" alt="Fresh vegetable pizza order online - Hand-stretched artisanal pizza from Hussein Bakes Kitui" width="800" height="800" loading="lazy">
-  <img src="images/classic-cheese-pizza-lunch-delivery-kitui.jpg" alt="Classic cheese pizza lunch delivery in Kitui - Premium mozzarella pizza from Hussein Bakes" width="800" height="800" loading="lazy">
-  <img src="images/husseinbakes-logo.jpg" alt="Hussein Bakes logo - Premium bakery and pizza in Kitui Town" width="200" height="200" loading="lazy">
-  <img src="images/whatsapp-icon.webp" alt="WhatsApp contact Hussein Bakes Kitui - Order custom cakes and pizza online" width="100" height="100" loading="lazy">
-  <img src="images/hussein-cake1.jpg" alt="Hussein Bakes custom cake collection Kitui Town" width="800" height="800" loading="lazy">
-  <img src="images/hussein-pizza1.jpg" alt="Hussein Bakes artisanal pizza collection Kitui Town" width="800" height="800" loading="lazy">
+  <img src="images/best-vanilla-birthday-cake-kitui-town.jpg" alt="Best vanilla birthday cake in Kitui Town - Premium buttercream sponge from Hussein Bakes Bondeni" width="800" height="800">
+  <img src="images/cardamom-spice-cake-specialty-bakery-kenya.jpg" alt="Cardamom spice cake from specialty bakery in Kenya - Unique flavor from Hussein Bakes Kitui" width="800" height="800">
+  <img src="images/chocolate-cake-delivery-bondeni-kitui.jpg" alt="Chocolate cake delivery in Bondeni Kitui - Rich ganache from Hussein Bakes bakery" width="800" height="800">
+  <img src="images/red-velvet-cake-cream-cheese-wedding-kitui.jpg" alt="Red velvet wedding cake with cream cheese in Kitui - Elegant wedding cake from Hussein Bakes" width="800" height="800">
+  <img src="images/black-forest-cake-price-kitui.jpg" alt="Black forest cake price in Kitui - Premium chocolate and cherry cake from Hussein Bakes" width="800" height="800">
+  <img src="images/carrot-cake-walnuts-healthy-bakery-kitui.jpg" alt="Carrot cake with walnuts from healthy bakery in Kitui - Fresh spiced cake from Hussein Bakes" width="800" height="800">
+  <img src="images/lemon-blueberry-cake-celebration-kenya.jpg" alt="Lemon blueberry celebration cake in Kenya - Zesty fresh cake from Hussein Bakes Kitui" width="800" height="800">
+  <img src="images/coffee-caramel-cake-custom-order-kitui.jpg" alt="Coffee caramel cake custom order in Kitui - Premium espresso cake from Hussein Bakes Bondeni" width="800" height="800">
+  <img src="images/white-forest-cake-anniversary-gift.jpg" alt="White forest anniversary cake gift in Kitui - Elegant vanilla celebration cake from Hussein Bakes" width="800" height="800">
+  <img src="images/fresh-strawberry-cake-order-online-kitui.jpg" alt="Fresh strawberry cake order online in Kitui - Premium mascarpone cake from Hussein Bakes" width="800" height="800">
+  <img src="images/pistachio-gourmet-cake-luxury-kitui.jpg" alt="Pistachio gourmet luxury cake in Kitui - Premium gourmet cake from Hussein Bakes bakery" width="800" height="800">
+  <img src="images/salted-caramel-cake-best-bakery-bondeni.jpg" alt="Salted caramel cake from best bakery in Bondeni Kitui - Indulgent dessert from Hussein Bakes" width="800" height="800">
+  <img src="images/lavender-cake-unique-flavors-kenya.jpg" alt="Lavender cake with unique flavors in Kenya - Specialty cake from Hussein Bakes Kitui town" width="800" height="800">
+  <img src="images/matcha-white-chocolate-cake-trending.jpg" alt="Matcha white chocolate cake trending in Kenya - Modern trending cake from Hussein Bakes" width="800" height="800">
+  <img src="images/custom-wedding-cake-kitui-two-tier.jpg" alt="Custom wedding cake two tier in Kitui - Bespoke wedding design from Hussein Bakes premium bakery" width="800" height="800">
+  <img src="images/cupcakes-gift-box-delivery-kitui.jpg" alt="Cupcakes gift box delivery in Kitui - Assorted premium cupcakes from Hussein Bakes" width="800" height="800">
+  <img src="images/beef-pizza-fast-delivery-kitui-town.jpg" alt="Beef pizza fast delivery in Kitui Town - Slow-fermented artisanal pizza from Hussein Bakes" width="800" height="800">
+  <img src="images/chicken-tikka-pizza-halal-bondeni.jpg" alt="Halal chicken tikka pizza in Bondeni Kitui - Spiced premium pizza from Hussein Bakes" width="800" height="800">
+  <img src="images/fresh-vegetable-pizza-order-online.jpg" alt="Fresh vegetable pizza order online - Hand-stretched artisanal pizza from Hussein Bakes Kitui" width="800" height="800">
+  <img src="images/classic-cheese-pizza-lunch-delivery-kitui.jpg" alt="Classic cheese pizza lunch delivery in Kitui - Premium mozzarella pizza from Hussein Bakes" width="800" height="800">
+  <img src="images/husseinbakes-logo.jpg" alt="Hussein Bakes logo - Premium bakery and pizza in Kitui Town" width="200" height="200">
+  <img src="images/whatsapp-icon.webp" alt="WhatsApp contact Hussein Bakes Kitui - Order custom cakes and pizza online" width="100" height="100">
+  <img src="images/hussein-cake1.jpg" alt="Hussein Bakes custom cake collection Kitui Town" width="800" height="800">
+  <img src="images/hussein-pizza1.jpg" alt="Hussein Bakes artisanal pizza collection Kitui Town" width="800" height="800">
 </div>
-
-<!-- Mobile Hours Banner -->
-<div class="md:hidden bg-gradient-to-r from-[#C9A24D]/20 to-[#C9A24D]/10 py-3 px-4 text-center border-b border-[#C9A24D]/20">
-  <p class="text-xs text-[#C9A24D] font-medium touch-target">Open: Mon-Fri 7:30AM-8PM • Sat-Sun 7:30AM-6PM • WhatsApp: +254710975805</p>
-</div>
-
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/254710975805" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-lg z-50 hover:bg-[#128C7E] transition-all duration-300 hover:scale-110 animate-bounce touch-target" style="animation-duration: 2s;" aria-label="Chat on WhatsApp">
-  <span class="text-xl block touch-target">💬</span>
-</a>
 
 <nav class="fixed w-full z-50 border-b border-white/5 bg-[#05090F]/90 backdrop-blur-xl">
-  <div class="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex justify-between items-center">
-    <a href="#" onclick="showCategories(); return false;" class="flex items-center gap-3 group touch-target">
-      <img src="images/husseinbakes-logo.jpg" alt="Hussein Bakes Logo" class="w-10 h-10 rounded-sm border border-[#C9A24D] object-cover" width="40" height="40">
+  <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+    <a href="#" onclick="showCategories()" class="flex items-center gap-3 group">
+      <!-- Fixed: Logo image instead of text -->
+      <img src="images/husseinbakes-logo.jpg" alt="Hussein Bakes Logo" class="w-10 h-10 rounded-sm border border-[#C9A24D] object-cover">
       <div>
         <span class="serif text-xl text-white block leading-none tracking-wide">HUSSEIN BAKES</span>
-        <span class="text-[10px] text-gray-500 uppercase tracking-[0.2em] hidden md:block">Kitui Town</span>
-        <span class="text-[10px] text-gray-500 uppercase tracking-[0.2em] md:hidden">Mon-Fri 7:30AM-8PM</span>
+        <span class="text-[10px] text-gray-500 uppercase tracking-[0.2em]">Kitui Town</span>
       </div>
     </a>
-    
-    <!-- Mobile Menu Button -->
-    <button id="mobileMenuBtn" class="md:hidden text-gray-400 hover:text-white touch-target" onclick="toggleMobileMenu()">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-    </button>
-    
-    <!-- Desktop Navigation -->
     <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
-      <button onclick="scrollToSection('menu-section')" class="hover:text-white transition touch-target">Menu</button>
-      <button onclick="scrollToSection('about')" class="hover:text-white transition touch-target">About</button>
-      <button onclick="scrollToSection('reviews')" class="hover:text-white transition touch-target">Reviews</button>
-      <button onclick="scrollToSection('info')" class="hover:text-white transition touch-target">Contact</button>
+      <button onclick="scrollToSection('menu-section')" class="hover:text-white transition">Menu</button>
+      <button onclick="scrollToSection('about')" class="hover:text-white transition">About</button>
+      <button onclick="scrollToSection('reviews')" class="hover:text-white transition">Reviews</button>
+      <button onclick="scrollToSection('info')" class="hover:text-white transition">Info</button>
     </div>
-    
-    <button onclick="toggleCart()" class="flex items-center gap-3 text-[#C9A24D] hover:text-white transition group touch-target">
-      <span class="text-xs font-bold uppercase tracking-wider hidden md:block">Order</span>
-      <div class="w-8 h-8 md:w-6 md:h-6 border border-[#C9A24D]/30 rounded-full flex items-center justify-center text-[10px] font-bold group-hover:border-[#C9A24D] touch-target" id="cartBadge">0</div>
+    <button onclick="toggleCart()" class="flex items-center gap-3 text-[#C9A24D] hover:text-white transition group">
+      <span class="text-xs font-bold uppercase tracking-wider">Order</span>
+      <div class="w-6 h-6 border border-[#C9A24D]/30 rounded-full flex items-center justify-center text-[10px] font-bold group-hover:border-[#C9A24D]" id="cartBadge">0</div>
     </button>
-  </div>
-  
-  <!-- Mobile Menu Dropdown -->
-  <div id="mobileMenu" class="md:hidden bg-[#05090F] border-t border-white/5 hidden">
-    <div class="px-4 py-3 space-y-3">
-      <button onclick="scrollToSection('menu-section'); toggleMobileMenu();" class="block w-full text-left text-gray-400 hover:text-white py-2 touch-target">Menu</button>
-      <button onclick="scrollToSection('about'); toggleMobileMenu();" class="block w-full text-left text-gray-400 hover:text-white py-2 touch-target">About</button>
-      <button onclick="scrollToSection('reviews'); toggleMobileMenu();" class="block w-full text-left text-gray-400 hover:text-white py-2 touch-target">Reviews</button>
-      <button onclick="scrollToSection('info'); toggleMobileMenu();" class="block w-full text-left text-gray-400 hover:text-white py-2 touch-target">Contact</button>
-      <a href="https://wa.me/254710975805" class="block w-full text-left text-[#C9A24D] hover:text-white py-2 touch-target">WhatsApp Order</a>
-    </div>
   </div>
 </nav>
 
-<header class="relative pt-32 pb-20 px-4 md:px-6 flex items-center justify-center text-center overflow-hidden min-h-[80vh] md:min-h-[85vh]">
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-[#C9A24D] opacity-[0.04] blur-[100px] md:blur-[150px] rounded-full pointer-events-none"></div>
-  <div class="relative z-10 max-w-4xl mx-auto px-4">
+<header class="relative pt-32 pb-20 px-6 flex items-center justify-center text-center overflow-hidden min-h-[85vh]">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#C9A24D] opacity-[0.04] blur-[150px] rounded-full pointer-events-none"></div>
+  <div class="relative z-10 max-w-4xl mx-auto">
     <div class="fade-in-up">
       <span class="inline-block py-1 px-3 rounded-full border border-[#C9A24D]/30 bg-[#C9A24D]/5 text-[#C9A24D] text-[11px] font-bold uppercase tracking-widest mb-6">Est. Kitui • Kenya</span>
     </div>
-    <h1 class="fade-in-up text-4xl md:text-6xl lg:text-7xl xl:text-8xl text-white mb-4 md:mb-6 font-medium leading-[1.1] serif">Hussein Bakes: <span class="italic text-[#C9A24D]">Premium</span><br class="hidden md:block" />Custom Cakes in Kitui</h1>
-    <p class="fade-in-up text-gray-400 text-sm md:text-base font-light tracking-wide max-w-lg mx-auto mb-4 uppercase px-4">Premium Custom Cakes & Artisanal Pizza | Order Online</p>
-    <div class="fade-in-up slogan text-[#C9A24D] text-sm md:text-base mb-6 md:mb-8 italic tracking-wide">Crafted with Patience. Defined by Quality.</div>
-    <div class="fade-in-up flex flex-col sm:flex-row justify-center gap-3 md:gap-4">
-      <button onclick="scrollToSection('menu-section')" class="px-6 md:px-8 py-3 md:py-4 bg-[#C9A24D] text-[#05090F] font-bold tracking-widest hover:bg-white transition duration-300 text-sm rounded-sm uppercase touch-target">View Digital Menu</button>
-      <a href="https://wa.me/254710975805" class="px-6 md:px-8 py-3 md:py-4 border border-[#C9A24D] text-[#C9A24D] hover:bg-[#C9A24D] hover:text-[#05090F] font-bold tracking-widest transition duration-300 text-sm rounded-sm uppercase text-center touch-target">Order Now</a>
+    <h1 class="fade-in-up text-5xl md:text-7xl lg:text-8xl text-white mb-6 font-medium leading-[1.1] serif">Hussein Bakes: <span class="italic text-[#C9A24D]">Premium</span><br />Custom Cakes in Kitui</h1>
+    <p class="fade-in-up text-gray-400 text-sm md:text-base font-light tracking-wide max-w-lg mx-auto mb-4 uppercase">Premium Custom Cakes & Artisanal Pizza | Order Online</p>
+    <div class="fade-in-up slogan text-[#C9A24D] text-sm md:text-base mb-8 italic tracking-wide">Crafted with Patience. Defined by Quality.</div>
+    <div class="fade-in-up flex flex-col sm:flex-row justify-center gap-4">
+      <button onclick="scrollToSection('menu-section')" class="px-8 py-4 bg-[#C9A24D] text-[#05090F] font-bold tracking-widest hover:bg-white transition duration-300 text-sm rounded-sm uppercase">View Digital Menu</button>
     </div>
-    <div id="fridayTimer" class="mt-8 md:mt-12 text-sm text-gray-500 font-mono fade-in-up px-4"></div>
+    <div id="fridayTimer" class="mt-12 text-sm text-gray-500 font-mono fade-in-up"></div>
   </div>
 </header>
 
-<!-- Social Proof Stats -->
-<section class="py-8 md:py-12 bg-gradient-to-b from-[#05090F] to-[#0A0F18]">
-  <div class="max-w-7xl mx-auto px-4 md:px-6">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-      <div class="text-center p-4">
-        <div class="stat-counter text-2xl md:text-3xl lg:text-4xl text-[#C9A24D] mb-1 md:mb-2">500+</div>
-        <div class="text-gray-400 text-xs uppercase tracking-widest">Cakes Baked</div>
-      </div>
-      <div class="text-center p-4">
-        <div class="stat-counter text-2xl md:text-3xl lg:text-4xl text-[#C9A24D] mb-1 md:mb-2">1000+</div>
-        <div class="text-gray-400 text-xs uppercase tracking-widest">Pizzas Served</div>
-      </div>
-      <div class="text-center p-4">
-        <div class="stat-counter text-2xl md:text-3xl lg:text-4xl text-[#C9A24D] mb-1 md:mb-2">50+</div>
-        <div class="text-gray-400 text-xs uppercase tracking-widest">Weddings</div>
-      </div>
-      <div class="text-center p-4">
-        <div class="stat-counter text-2xl md:text-3xl lg:text-4xl text-[#C9A24D] mb-1 md:mb-2">98%</div>
-        <div class="text-gray-400 text-xs uppercase tracking-widest">Happy Customers</div>
+<!-- About Section -->
+<section id="about" class="py-20 px-6 bg-[#05090F]">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl text-white serif mb-6">Meet Hussein Salim</h2>
+    <div class="flex flex-col md:flex-row items-center gap-8">
+      <!-- Replace hussein-photo.jpg with your actual photo -->
+      <img src="images/hussein-salim.jpg" alt="Hussein Salim, founder of Hussein Bakes Kitui" class="w-48 h-48 rounded-full object-cover border-4 border-[#C9A24D]">
+      <div class="text-left">
+        <p class="text-gray-300 mb-4">I started Hussein Bakes with a simple mission: to bring premium baked goods to Kitui Town. Every cake and pizza is personally crafted with attention to detail.</p>
+        <p class="text-gray-300 mb-4">From my experience in hospitality to baking for my community, I combine traditional techniques with modern flavors to create unique treats for Kitui.</p>
+        <p class="text-[#C9A24D] italic">- Hussein Salim, Founder & Head Baker</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Menu Section -->
-<section id="menu-section" class="py-16 md:py-24 px-4 md:px-6 relative">
+<section id="menu-section" class="py-24 px-6 relative min-h-screen">
   <div class="max-w-7xl mx-auto">
-    <div class="flex flex-col md:flex-row justify-between items-end mb-8 md:mb-10 border-b border-white/5 pb-4 md:pb-6">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-10 border-b border-white/5 pb-6">
       <div>
-        <h2 id="menuTitle" class="text-3xl md:text-4xl text-white serif mb-2">The Collection</h2>
+        <h2 id="menuTitle" class="text-4xl text-white serif mb-2">The Collection</h2>
         <p class="text-gray-500 text-sm">Select a category to browse products.</p>
       </div>
-      <button id="backBtn" onclick="showCategories()" class="hidden text-[#C9A24D] hover:text-white transition flex items-center gap-2 text-sm font-medium mt-4 md:mt-0 uppercase tracking-widest touch-target">← Back to Index</button>
+      <button id="backBtn" onclick="showCategories()" class="hidden text-[#C9A24D] hover:text-white transition flex items-center gap-2 text-sm font-medium mt-4 md:mt-0 uppercase tracking-widest">← Back to Index</button>
     </div>
-    
-    <div id="categoryView" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 fade-in-up">
-      <div onclick="renderMenu('cakes')" class="category-card h-[300px] md:h-[400px] rounded-xl bg-[#080C14] flex flex-col justify-end p-6 md:p-8 group relative overflow-hidden touch-target" role="button" tabindex="0" aria-label="View Custom Cakes">
+    <div id="categoryView" class="grid grid-cols-1 md:grid-cols-2 gap-6 fade-in-up">
+      <div onclick="renderMenu('cakes')" class="category-card h-[400px] rounded-xl bg-[#080C14] flex flex-col justify-end p-8 group relative overflow-hidden">
+        <!-- Fixed: Cake Image -->
         <img src="images/hussein-cake1.jpg" alt="Premium custom cakes by Hussein Bakes Kitui" 
              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-             loading="lazy"
-             width="600" height="400">
+             loading="lazy">
+        <!-- Gradient Overlay -->
         <div class="absolute inset-0 bg-gradient-to-t from-[#05090F] via-transparent to-transparent z-10"></div>
         <div class="relative z-20">
-          <h3 class="text-2xl md:text-3xl text-white serif italic mb-2">Custom Cakes</h3>
-          <p class="text-gray-300 text-sm mb-4 md:mb-6 max-w-xs">Signature sponges, premium buttercream, and artistic finishes. 48-hour pre-order required.</p>
+          <h3 class="text-3xl text-white serif italic mb-2">Custom Cakes</h3>
+          <p class="text-gray-300 text-sm mb-6 max-w-xs">Signature sponges, premium buttercream, and artistic finishes. 48-hour pre-order required.</p>
           <span class="text-[#C9A24D] text-xs uppercase tracking-widest border-b border-[#C9A24D] pb-1">Browse 16 Varieties</span>
         </div>
       </div>
-      
-      <div onclick="renderMenu('pizza')" class="category-card h-[300px] md:h-[400px] rounded-xl bg-[#080C14] flex flex-col justify-end p-6 md:p-8 group relative overflow-hidden touch-target" role="button" tabindex="0" aria-label="View Artisanal Pizza">
+      <div onclick="renderMenu('pizza')" class="category-card h-[400px] rounded-xl bg-[#080C14] flex flex-col justify-end p-8 group relative overflow-hidden">
+        <!-- Fixed: Pizza Image - changed to hussein-pizza1.jpg -->
         <img src="images/hussein-pizza1.jpg" alt="Artisanal pizza by Hussein Bakes Kitui" 
              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-             loading="lazy"
-             width="600" height="400">
+             loading="lazy">
+        <!-- Gradient Overlay -->
         <div class="absolute inset-0 bg-gradient-to-t from-[#05090F] via-transparent to-transparent z-10"></div>
         <div class="relative z-20">
-          <h3 class="text-2xl md:text-3xl text-white serif italic mb-2">Artisanal Pizza</h3>
-          <p class="text-gray-300 text-sm mb-4 md:mb-6 max-w-xs leading-relaxed">Our dough is perfectly fermented and crafted with precision. Quality takes time (3-4 hours notice).</p>
+          <h3 class="text-3xl text-white serif italic mb-2">Artisanal Pizza</h3>
+          <p class="text-gray-300 text-sm mb-6 max-w-xs leading-relaxed">Our dough is perfectly fermented and crafted with precision. Quality takes time (3-4 hours notice).</p>
           <span class="text-[#C9A24D] text-xs uppercase tracking-widest border-b border-[#C9A24D] pb-1">Browse 4 Varieties</span>
         </div>
       </div>
-      
-      <div onclick="renderMenu('seasonal')" class="category-card h-[300px] md:h-[400px] rounded-xl bg-[#080C14] flex flex-col justify-end p-6 md:p-8 group relative overflow-hidden touch-target" role="button" tabindex="0" aria-label="View Seasonal Specials">
-        <div class="absolute inset-0 bg-gradient-to-br from-[#C9A24D]/20 to-[#05090F] z-0"></div>
-        <div class="relative z-20">
-          <div class="inline-block mb-4 px-3 py-1 bg-[#C9A24D]/20 border border-[#C9A24D]/30 rounded-full">
-            <span class="text-[#C9A24D] text-xs uppercase tracking-widest">Limited Time</span>
-          </div>
-          <h3 class="text-2xl md:text-3xl text-white serif italic mb-2">Seasonal Specials</h3>
-          <p class="text-gray-300 text-sm mb-4 md:mb-6 max-w-xs leading-relaxed">Exclusive seasonal creations available for a limited time only. Don't miss out!</p>
-          <span class="text-[#C9A24D] text-xs uppercase tracking-widest border-b border-[#C9A24D] pb-1">View Seasonal Offers</span>
-        </div>
-      </div>
     </div>
-    
-    <div id="productGrid" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"></div>
+    <div id="productGrid" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
   </div>
 </section>
 
-<!-- Simple & Personal About Section -->
-<section id="about" class="relative py-16 md:py-24 px-4 md:px-6 overflow-hidden">
-  <!-- Background with your photo -->
-  <div class="absolute inset-0 z-0">
-    <div class="absolute inset-0 bg-gradient-to-t from-[#05090F] via-[#05090F]/90 to-[#05090F]/80"></div>
-    <img src="images/hussein-Salim.jpg" 
-         alt="Hussein Salim smiling in chef jacket - Founder of Hussein Bakes Kitui"
-         class="w-full h-full object-cover object-center opacity-20 md:opacity-25"
-         loading="lazy"
-         width="1200" height="800">
-  </div>
-  
-  <div class="relative z-10 max-w-4xl mx-auto">
-    <!-- Simple Profile -->
-    <div class="text-center mb-8 md:mb-12">
-      <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-[#C9A24D] mx-auto mb-4">
-        <img src="images/hussein-Salim.jpg" 
-             alt="Hussein Salim - Baker in Kitui"
-             class="w-full h-full object-cover object-center"
-             loading="lazy"
-             width="128" height="128">
-      </div>
-      <h2 class="text-2xl md:text-3xl text-white mb-2">Hey, I'm Hussein 👋</h2>
-      <p class="text-gray-400 text-sm md:text-base">Baker & Pizza Maker • Kitui Town</p>
-    </div>
-    
-    <!-- Simple Story -->
-    <div class="glass-panel p-6 md:p-8 rounded-2xl max-w-2xl mx-auto">
-      <div class="mb-6 md:mb-8">
-        <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-4 md:mb-6">
-          I'm just a guy from Kitui who loves baking. 
-          <span class="text-[#C9A24D] font-medium">No fancy story</span>, just good cakes and pizza made with care.
-        </p>
-        
-        <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-4 md:mb-6">
-          After years working in hospitality, I came home to do what I really love:
-          <span class="text-[#C9A24D] font-medium">making people happy with food</span>.
-        </p>
-        
-        <p class="text-gray-300 text-base md:text-lg leading-relaxed">
-          Every cake and pizza is made by me, right here in Bondeni. 
-          <span class="text-[#C9A24D] font-medium">Simple, fresh, and from the heart</span>.
-        </p>
-      </div>
-      
-      <!-- Quick Facts -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-6 md:mb-8">
-        <div class="text-center p-3 md:p-4 rounded-lg bg-white/5">
-          <div class="text-[#C9A24D] text-xl md:text-2xl mb-1">🎂</div>
-          <div class="text-white text-xs">I bake cakes</div>
-        </div>
-        <div class="text-center p-3 md:p-4 rounded-lg bg-white/5">
-          <div class="text-[#C9A24D] text-xl md:text-2xl mb-1">🍕</div>
-          <div class="text-white text-xs">I make pizza</div>
-        </div>
-        <div class="text-center p-3 md:p-4 rounded-lg bg-white/5">
-          <div class="text-[#C9A24D] text-xl md:text-2xl mb-1">⏰</div>
-          <div class="text-white text-xs">I wake up early</div>
-        </div>
-        <div class="text-center p-3 md:p-4 rounded-lg bg-white/5">
-          <div class="text-[#C9A24D] text-xl md:text-2xl mb-1">❤️</div>
-          <div class="text-white text-xs">I love Kitui</div>
-        </div>
-      </div>
-      
-      <!-- Simple Contact -->
-      <div class="pt-6 border-t border-white/10">
-        <p class="text-gray-400 text-sm mb-4 text-center">Want to chat about cakes or pizza?</p>
-        <div class="flex flex-col sm:flex-row gap-3 justify-center">
-          <a href="https://wa.me/254710975805" 
-             class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#C9A24D] hover:bg-white text-[#05090F] font-medium rounded-full transition-all duration-300 hover:scale-105 touch-target">
-            <span>💬</span>
-            <span>WhatsApp me</span>
-          </a>
-          <a href="tel:+254710975805" 
-             class="inline-flex items-center justify-center gap-2 px-6 py-3 border border-white/20 hover:border-[#C9A24D] text-white hover:text-[#C9A24D] font-medium rounded-full transition-all duration-300 touch-target">
-            <span>📞</span>
-            <span>Call me</span>
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Simple Quote -->
-    <div class="mt-8 text-center">
-      <p class="text-gray-500 text-sm italic">
-        "Just good food for good people. That's it."
-      </p>
-      <p class="text-gray-600 text-xs mt-2">- Hussein</p>
-    </div>
-  </div>
-</section>
-
-<!-- Quick Tips -->
-<div class="bg-[#05090F] py-12 md:py-16 px-4 md:px-6">
-  <div class="max-w-3xl mx-auto">
-    <h3 class="text-white text-center text-xl md:text-2xl mb-6 md:mb-8 serif">Quick Tips from My Kitchen</h3>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-      <div class="flex items-start gap-3 p-4 rounded-lg bg-white/5">
-        <div class="w-10 h-10 rounded-full bg-[#C9A24D]/20 flex items-center justify-center flex-shrink-0 mt-1">
-          <span class="text-[#C9A24D]">⏰</span>
-        </div>
-        <div>
-          <p class="text-white text-sm md:text-base mb-1">Order cakes 2 days early</p>
-          <p class="text-gray-400 text-xs md:text-sm">Good things take time to bake right</p>
-        </div>
-      </div>
-      
-      <div class="flex items-start gap-3 p-4 rounded-lg bg-white/5">
-        <div class="w-10 h-10 rounded-full bg-[#C9A24D]/20 flex items-center justify-center flex-shrink-0 mt-1">
-          <span class="text-[#C9A24D]">🍕</span>
-        </div>
-        <div>
-          <p class="text-white text-sm md:text-base mb-1">Pizza needs 3-4 hours</p>
-          <p class="text-gray-400 text-xs md:text-sm">Dough needs time to get perfect</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Reviews -->
-<section id="reviews" class="py-16 md:py-24 overflow-hidden relative border-t border-white/5 bg-[#020305]">
+<section id="reviews" class="py-24 overflow-hidden relative border-t border-white/5 bg-[#020305]">
   <div class="absolute inset-0 bg-[#C9A24D]/5 blur-3xl"></div>
-  <div class="max-w-7xl mx-auto px-4 md:px-6 mb-8 md:mb-12 flex flex-col md:flex-row items-start md:items-end justify-between relative z-10">
-    <div class="mb-4 md:mb-0">
+  <div class="max-w-7xl mx-auto px-6 mb-12 flex items-end justify-between relative z-10">
+    <div>
       <span class="text-[#C9A24D] text-xs font-bold uppercase tracking-widest mb-2 block">Testimonials</span>
-      <h2 class="text-3xl md:text-4xl text-white serif">Customer Love</h2>
+      <h2 class="text-4xl text-white serif">Customer Love</h2>
     </div>
-    <div class="flex gap-1 md:gap-2 text-[#C9A24D] text-lg md:text-xl">★★★★★</div>
+    <div class="flex gap-2 text-[#C9A24D]">★★★★★</div>
   </div>
-  
   <div class="marquee-wrapper relative z-10">
     <div id="reviewsTrack" class="marquee-track"></div>
   </div>
-  
-  <div class="text-center mt-8 md:mt-12 relative z-10">
-    <a href="https://g.page/r/husseinbakes" target="_blank" class="inline-block border-b border-[#C9A24D] pb-1 text-[#C9A24D] text-sm uppercase tracking-widest hover:text-white hover:border-white transition touch-target">Read all Google Reviews</a>
+  <div class="text-center mt-12 relative z-10">
+    <a href="https://g.page/r/husseinbakes" target="_blank" class="inline-block border-b border-[#C9A24D] pb-1 text-[#C9A24D] text-sm uppercase tracking-widest hover:text-white hover:border-white transition">Read all Google Reviews</a>
   </div>
 </section>
 
-<!-- Contact & Info -->
-<section id="info" class="py-16 md:py-20 px-4 md:px-6 bg-[#080C14] border-t border-white/5">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 md:gap-12 text-center md:text-left">
+<section id="info" class="py-20 px-6 bg-[#080C14] border-t border-white/5">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 text-center md:text-left">
     <div>
       <h3 class="serif text-xl text-white mb-4">Location</h3>
-      <p class="text-gray-400 text-sm leading-relaxed mb-6">Located in <strong class="text-white">Bondeni, Kitui</strong>. We deliver within town limits and offer pickup for custom orders.</p>
+      <p class="text-gray-400 text-sm leading-relaxed mb-6">Located in <strong>Bondeni, Kitui</strong>. We deliver within town limits and offer pickup for custom orders.</p>
       <div class="mt-4">
         <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-2 font-bold">Serving</p>
         <p class="text-gray-400 text-xs">
-          Bondeni • Kitui Town • Kitui County<br>
+          Bondeni • Kitui Town • Kitui County • Eastern Kenya<br>
           Delivery radius: 5km from Bondeni
         </p>
       </div>
       <div class="h-48 rounded-xl overflow-hidden border border-white/10 opacity-80 hover:opacity-100 transition duration-500 mt-4">
-        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Hussein%20Bakes%20Kitui&t=&z=13&ie=UTF8&iwloc=&output=embed" style="filter: grayscale(100%) invert(92%) contrast(83%); mix-blend-mode: luminosity;" title="Hussein Bakes Location Map" loading="lazy"></iframe>
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Hussein%20Bakes%20Kitui&t=&z=13&ie=UTF8&iwloc=&output=embed" style="filter: grayscale(100%) invert(92%) contrast(83%); mix-blend-mode: luminosity;"></iframe>
       </div>
     </div>
-    
     <div>
       <h3 class="serif text-xl text-white mb-4">Opening Hours</h3>
       <div class="space-y-4">
@@ -885,94 +415,61 @@
           <span class="block"><span class="text-[#C9A24D]">Sat - Sun:</span> 07:30 AM – 06:00 PM</span>
         </p>
         <div class="pt-4 border-t border-white/10">
-          <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-2 font-bold">Service Hours</p>
+          <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-2 font-bold">Service</p>
           <p class="text-gray-400 text-xs">Delivery: 09:00 AM – 04:00 PM</p>
-          <p class="text-gray-400 text-xs mt-1">Pickup: During business hours</p>
-        </div>
-        <div class="pt-4 border-t border-white/10">
-          <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-2 font-bold">Notice Required</p>
-          <p class="text-gray-400 text-xs">Custom cakes: 48 hours</p>
-          <p class="text-gray-400 text-xs">Pizza orders: 3-4 hours</p>
         </div>
       </div>
     </div>
-    
     <div>
-      <h3 class="serif text-xl text-white mb-4">Contact & Orders</h3>
+      <h3 class="serif text-xl text-white mb-4">Contact</h3>
       <p class="text-gray-400 text-sm leading-relaxed mb-4">
-        <a href="tel:+254710975805" class="hover:text-[#C9A24D] transition touch-target">+254 710 975 805</a>
+        <a href="tel:+254710975805" class="hover:text-[#C9A24D] transition">+254 710 975 805</a>
       </p>
-      <div class="space-y-3 md:space-y-4 mb-6">
-        <a href="https://wa.me/254710975805" class="inline-block w-full px-4 md:px-6 py-3 border border-[#C9A24D] text-[#C9A24D] text-sm hover:bg-[#C9A24D] hover:text-black transition rounded-sm text-center touch-target">Chat on WhatsApp</a>
-        <a href="tel:+254710975805" class="inline-block w-full px-4 md:px-6 py-3 border border-white/20 text-gray-300 text-sm hover:bg-white/5 transition rounded-sm text-center touch-target">Call to Order</a>
-      </div>
-      <div class="pt-4 border-t border-white/10">
-        <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-2 font-bold">Payment Methods</p>
-        <p class="text-gray-400 text-xs">Cash on delivery • M-Pesa • Bank transfer</p>
-      </div>
+      <a href="https://wa.me/254710975805" class="inline-block px-6 py-3 border border-[#C9A24D] text-[#C9A24D] text-sm hover:bg-[#C9A24D] hover:text-black transition rounded-sm mb-4">Chat on WhatsApp</a>
       <div class="pt-4 border-t border-white/10 mt-4">
-        <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-2 font-bold">Bulk Orders & Catering</p>
-        <p class="text-gray-400 text-xs">Weddings • Graduations • Corporate Events • Parties</p>
-        <p class="text-[#C9A24D] text-xs mt-2">10% discount on orders above KES 20,000</p>
+        <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-2 font-bold">Order Notice</p>
+        <p class="text-gray-400 text-xs">Custom cakes: 48 hours notice<br>Pizza orders: 3-4 hours notice</p>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="py-12 border-t border-white/5 bg-[#020305]">
-  <div class="max-w-6xl mx-auto px-4 md:px-6">
-    <div class="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 mb-8">
-      <div class="text-center md:text-left">
-        <img src="images/husseinbakes-logo.jpg" alt="Hussein Bakes Logo" class="h-10 md:h-12 mb-3 md:mb-4 mx-auto md:mx-0 object-contain" width="120" height="48">
-        <p class="text-gray-600 text-xs tracking-widest uppercase mb-1 md:mb-2">HUSSEIN BAKES • Kitui Town</p>
-        <p class="slogan text-gray-500 text-xs italic mb-1 md:mb-2">Crafted with Patience. Defined by Quality.</p>
-      </div>
-      <div class="text-center">
-        <p class="text-gray-400 text-sm mb-2">Follow our journey</p>
-        <div class="flex gap-4 justify-center">
-          <!-- Add your social media links when available -->
-          <span class="text-gray-500 text-sm">Social links coming soon</span>
-        </div>
-      </div>
-    </div>
-    <div class="pt-6 md:pt-8 border-t border-white/5">
-      <p class="text-gray-700 text-xs text-center">© 2026 Hussein Bakes. All rights reserved. • Made with ❤️ in Kitui, Kenya</p>
-    </div>
-  </div>
+<footer class="py-10 border-t border-white/5 text-center bg-[#020305]">
+  <!-- Fixed: Logo image in footer -->
+  <img src="images/husseinbakes-logo.jpg" alt="Hussein Bakes Logo" class="h-12 mx-auto mb-4 object-contain">
+  <p class="text-gray-600 text-xs tracking-widest uppercase mb-2">HUSSEIN BAKES • Kitui Town</p>
+  <p class="slogan text-gray-500 text-xs italic mb-2">Crafted with Patience. Defined by Quality.</p>
+  <p class="text-gray-700 text-[10px]">© 2026. All rights reserved.</p>
 </footer>
 
-<!-- Cart Overlay -->
 <div id="cartOverlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300" onclick="toggleCart()"></div>
-
-<!-- Cart Sidebar -->
 <div id="cartSidebar" class="fixed top-0 right-0 h-full w-full max-w-md bg-[#0B1320] border-l border-white/10 z-[70] transform translate-x-full transition-transform duration-300 flex flex-col shadow-2xl">
-  <div class="p-4 md:p-6 border-b border-white/5 flex justify-between items-center bg-[#0B1320]">
+  <div class="p-6 border-b border-white/5 flex justify-between items-center bg-[#0B1320]">
     <h2 class="serif text-xl text-white italic">Your Collection</h2>
-    <button onclick="toggleCart()" class="text-gray-400 hover:text-white text-xl touch-target" aria-label="Close cart">✕</button>
+    <button onclick="toggleCart()" class="text-gray-400 hover:text-white">✕</button>
   </div>
-  <div id="cartItems" class="flex-1 overflow-y-auto p-4 md:p-6 space-y-4"></div>
-  <div class="p-4 md:p-6 bg-[#080C14] border-t border-white/5 space-y-4">
+  <div id="cartItems" class="flex-1 overflow-y-auto p-6 space-y-4"></div>
+  <div class="p-6 bg-[#080C14] border-t border-white/5 space-y-4">
     <div class="flex justify-between items-center text-sm">
       <span class="text-gray-400">Total Estimate</span>
       <span id="cartTotal" class="text-[#C9A24D] text-xl font-bold">KES 0</span>
     </div>
-    <button onclick="checkoutWhatsApp()" class="w-full py-3 md:py-4 bg-[#C9A24D] hover:bg-white text-[#05090F] font-bold rounded-sm transition duration-300 text-sm uppercase tracking-widest shadow-lg touch-target">Order on WhatsApp</button>
+    <button onclick="checkoutWhatsApp()" class="w-full py-4 bg-[#C9A24D] hover:bg-white text-[#05090F] font-bold rounded-sm transition duration-300 text-sm uppercase tracking-widest shadow-lg">Order on WhatsApp</button>
   </div>
 </div>
 
-<!-- Product Detail Modal -->
 <div id="detailModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-[80] hidden flex items-center justify-center p-4">
   <div class="bg-[#0B1320] border border-[#C9A24D]/30 w-full max-w-lg rounded-xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
-    <div class="p-4 md:p-6 border-b border-white/5 flex justify-between items-start bg-[#05090F]">
+    <div class="p-6 border-b border-white/5 flex justify-between items-start bg-[#05090F]">
       <div>
-        <h3 id="modalTitle" class="text-xl md:text-2xl text-white serif italic">Product Name</h3>
+        <h3 id="modalTitle" class="text-2xl text-white serif italic">Product Name</h3>
         <span id="modalTag" class="text-[10px] text-[#C9A24D] uppercase tracking-widest mt-1 block">Tag</span>
       </div>
-      <button onclick="closeModal()" class="text-gray-500 hover:text-white text-xl touch-target" aria-label="Close modal">✕</button>
+      <button onclick="closeModal()" class="text-gray-500 hover:text-white text-xl">✕</button>
     </div>
-    <div class="p-4 md:p-6 overflow-y-auto">
-      <div class="mb-4 md:mb-6 flex justify-center" id="modalImg"></div>
-      <p id="modalDesc" class="text-gray-400 text-sm font-light mb-6 md:mb-8 leading-relaxed text-center">Description goes here.</p>
+    <div class="p-6 overflow-y-auto">
+      <div class="mb-6 flex justify-center" id="modalImg"></div>
+      <p id="modalDesc" class="text-gray-400 text-sm font-light mb-8 leading-relaxed text-center">Description goes here.</p>
       <div class="mb-6">
         <label class="text-xs text-gray-500 font-bold uppercase tracking-widest block mb-3">Select Size</label>
         <div id="modalSizes" class="space-y-2"></div>
@@ -982,91 +479,17 @@
         <div id="modalAddons" class="space-y-2"></div>
       </div>
     </div>
-    <div class="p-4 md:p-6 border-t border-white/5 bg-[#05090F] flex gap-3 md:gap-4">
-      <button onclick="closeModal()" class="flex-1 py-3 border border-white/10 text-gray-400 hover:text-white transition rounded-sm text-sm touch-target">CANCEL</button>
-      <button id="addToCartBtn" class="flex-1 py-3 bg-[#C9A24D] text-[#05090F] font-bold tracking-widest hover:bg-white transition rounded-sm text-sm touch-target">ADD TO ORDER</button>
-    </div>
-  </div>
-</div>
-
-<!-- Order Confirmation Modal -->
-<div id="confirmationModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-[90] hidden flex items-center justify-center p-4">
-  <div class="bg-[#0B1320] border border-[#C9A24D]/30 w-full max-w-md rounded-xl shadow-2xl overflow-hidden">
-    <div class="p-4 md:p-6 border-b border-white/5 bg-[#05090F] text-center">
-      <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#C9A24D]/20 flex items-center justify-center mx-auto mb-3 md:mb-4">
-        <span class="text-xl md:text-2xl text-[#C9A24D]">✓</span>
-      </div>
-      <h3 class="text-xl md:text-2xl text-white serif mb-1 md:mb-2">Added to Order!</h3>
-      <p class="text-gray-400 text-sm">Your item has been added to the cart.</p>
-    </div>
-    <div class="p-4 md:p-6">
-      <div id="confirmationDetails" class="text-center text-gray-300 text-sm mb-4 md:mb-6"></div>
-      <div class="flex gap-3 md:gap-4">
-        <button onclick="closeConfirmation()" class="flex-1 py-3 border border-white/10 text-gray-400 hover:text-white transition rounded-sm text-sm touch-target">CONTINUE SHOPPING</button>
-        <button onclick="toggleCart()" class="flex-1 py-3 bg-[#C9A24D] text-[#05090F] font-bold tracking-widest hover:bg-white transition rounded-sm text-sm touch-target">VIEW ORDER</button>
-      </div>
+    <div class="p-6 border-t border-white/5 bg-[#05090F] flex gap-4">
+      <button onclick="closeModal()" class="flex-1 py-3 border border-white/10 text-gray-400 hover:text-white transition rounded-sm text-sm">CANCEL</button>
+      <button id="addToCartBtn" class="flex-1 py-3 bg-[#C9A24D] text-[#05090F] font-bold tracking-widest hover:bg-white transition rounded-sm text-sm">ADD TO ORDER</button>
     </div>
   </div>
 </div>
 
 <script>
-// Enhanced inventory with bestsellers and seasonal items
-const inventory = [
-  { id: 1, type: 'cakes', name: 'Signature Vanilla', basePrice: 2500, desc: 'Soft vanilla sponge with premium buttercream.', img: 'images/best-vanilla-birthday-cake-kitui-town.jpg', tag: 'Classic', bestseller: true, sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Cream', price: 300}, {name: 'Chocolate Drizzle', price: 500}]},
-  { id: 2, type: 'cakes', name: 'Vanilla & Cardamom', basePrice: 2500, desc: 'Cardamom-infused masterpiece. Kitui specialty.', img: 'images/cardamom-spice-cake-specialty-bakery-kenya.jpg', tag: 'Signature', bestseller: true, sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Cream', price: 300}, {name: 'Gold Leaf', price: 800}]},
-  { id: 3, type: 'cakes', name: 'Midnight Chocolate', basePrice: 2500, desc: 'Rich chocolate with smooth ganache.', img: 'images/chocolate-cake-delivery-bondeni-kitui.jpg', tag: 'Best Seller', bestseller: true, sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Ganache', price: 500}]},
-  { id: 4, type: 'cakes', name: 'Red Velvet Dream', basePrice: 2500, desc: 'Classic with cream cheese frosting.', img: 'images/red-velvet-cake-cream-cheese-wedding-kitui.jpg', tag: 'Luxury', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Frosting', price: 400}]},
-  { id: 5, type: 'cakes', name: 'Black Forest Symphony', basePrice: 2500, desc: 'Chocolate, cream & fresh cherries.', img: 'images/black-forest-cake-price-kitui.jpg', tag: 'Classic', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Cherries', price: 500}]},
-  { id: 6, type: 'cakes', name: 'Golden Harvest', basePrice: 3000, desc: 'Spiced carrot cake with walnuts.', img: 'images/carrot-cake-walnuts-healthy-bakery-kitui.jpg', tag: 'New', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Walnuts', price: 400}]},
-  { id: 7, type: 'cakes', name: 'Citrus Sculpt', basePrice: 3000, desc: 'Zesty lemon with blueberries.', img: 'images/lemon-blueberry-cake-celebration-kenya.jpg', tag: 'Bright', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Blueberry Layer', price: 600}]},
-  { id: 8, type: 'cakes', name: 'Mocha Architecture', basePrice: 3000, desc: 'Espresso with salted caramel.', img: 'images/coffee-caramel-cake-custom-order-kitui.jpg', tag: 'Bold', bestseller: true, sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Caramel Drip', price: 600}]},
-  { id: 9, type: 'cakes', name: 'White Forest', basePrice: 2500, desc: 'Vanilla with chantilly & cherries.', img: 'images/white-forest-cake-anniversary-gift.jpg', tag: 'Light', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}]},
-  { id: 10, type: 'cakes', name: 'Strawberry Serenity', basePrice: 3000, desc: 'Fresh strawberry with mascarpone.', img: 'images/fresh-strawberry-cake-order-online-kitui.jpg', tag: 'Fresh', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Strawberries', price: 700}]},
-  { id: 11, type: 'cakes', name: 'Pistachio Elegance', basePrice: 3000, desc: 'Pistachio sponge with pistachio cream.', img: 'images/pistachio-gourmet-cake-luxury-kitui.jpg', tag: 'Gourmet', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}]},
-  { id: 12, type: 'cakes', name: 'Salted Caramel', basePrice: 3000, desc: 'Caramel sponge with caramel ganache.', img: 'images/salted-caramel-cake-best-bakery-bondeni.jpg', tag: 'Indulgent', bestseller: true, sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}]},
-  { id: 13, type: 'cakes', name: 'Lavender Dream', basePrice: 3000, desc: 'Lavender vanilla with lavender cream.', img: 'images/lavender-cake-unique-flavors-kenya.jpg', tag: 'Special', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}]},
-  { id: 14, type: 'cakes', name: 'Matcha & White Choco', basePrice: 3500, desc: 'Matcha sponge with white ganache.', img: 'images/matcha-white-chocolate-cake-trending.jpg', tag: 'Trending', sizes: {'1kg': 3500, '2kg': 6000, '3kg': 8000, '4kg': 10000}, addons: [{name: 'Custom Message', price: 0}]},
-  { id: 15, type: 'cakes', name: 'Ethereal Wedding Tier', basePrice: 8500, desc: 'Bespoke two-tier wedding cake.', img: 'images/custom-wedding-cake-kitui-two-tier.jpg', tag: 'Bridal', bestseller: true, sizes: {'Starting': 8500}, addons: [{name: 'Custom Message', price: 0}]},
-  { id: 16, type: 'cakes', name: 'Gallery Bites Box', basePrice: 1200, desc: 'Box of 6 assorted cupcakes.', img: 'images/cupcakes-gift-box-delivery-kitui.jpg', tag: 'Gift', sizes: {'Box of 6': 1200, 'Box of 12': 2200}, addons: []},
-  { id: 17, type: 'pizza', name: 'Beef Supremo', desc: 'Seasoned beef on our signature slow-fermented dough. Worth the wait.', img: 'images/beef-pizza-fast-delivery-kitui-town.jpg', tag: 'Friday Offer', bestseller: true, sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}, addons: [{name: 'Extra Cheese', price: 150}, {name: 'Chilli Sauce', price: 50}]},
-  { id: 18, type: 'pizza', name: 'Chicken Tikka', desc: 'Spiced tikka on precision-proofed crust. Baked to order.', img: 'images/chicken-tikka-pizza-halal-bondeni.jpg', tag: 'Spicy', bestseller: true, sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}, addons: [{name: 'Extra Cheese', price: 150}]},
-  { id: 19, type: 'pizza', name: 'Garden Veg', desc: 'Fresh peppers and tomatoes on artisanal dough. Hand-stretched.', img: 'images/fresh-vegetable-pizza-order-online.jpg', tag: 'Veggie', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}, addons: []},
-  { id: 20, type: 'pizza', name: 'Classic Cheese', desc: 'Premium mozzarella blend on our slow-fermented base.', img: 'images/classic-cheese-pizza-lunch-delivery-kitui.jpg', tag: 'Kids Love', sizes: {'Small (9")': 500, 'Medium (12")': 800, 'Large (14")': 1150}, addons: []},
-  { id: 21, type: 'seasonal', name: 'Christmas Fruit Cake', basePrice: 3500, desc: 'Rich, spiced fruit cake with brandy. Perfect for Christmas celebrations.', img: 'images/hussein-cake1.jpg', tag: 'Holiday Special', sizes: {'1kg': 3500, '2kg': 6500}, addons: [{name: 'Brandy Soaked', price: 500}, {name: 'Marzipan Layer', price: 800}]},
-  { id: 22, type: 'seasonal', name: 'Easter Hot Cross Buns', basePrice: 200, desc: 'Spiced buns with cross decoration. Traditional Easter treat.', img: 'images/hussein-cake1.jpg', tag: 'Easter Special', sizes: {'Per Bun': 200, 'Dozen': 2200}, addons: []},
-  { id: 23, type: 'seasonal', name: 'Summer Berry Tart', basePrice: 2800, desc: 'Fresh seasonal berries on vanilla pastry cream.', img: 'images/hussein-cake1.jpg', tag: 'Summer', sizes: {'Medium': 2800, 'Large': 4500}, addons: [{name: 'Extra Berries', price: 500}]},
-  { id: 24, type: 'seasonal', name: 'Pumpkin Spice Latte Cake', basePrice: 3200, desc: 'Autumn special with pumpkin, spice, and coffee flavors.', img: 'images/hussein-cake1.jpg', tag: 'Autumn', sizes: {'1kg': 3200, '2kg': 5800}, addons: [{name: 'Whipped Cream', price: 300}]}
-];
-
-// Enhanced order tracking with localStorage
-const orderTracker = {
-  pending: [],
-  completed: [],
-  addOrder: function(order) {
-    this.pending.push(order);
-    localStorage.setItem('pendingOrders', JSON.stringify(this.pending));
-    localStorage.setItem('cart', JSON.stringify(cart));
-  },
-  loadOrders: function() {
-    const saved = localStorage.getItem('pendingOrders');
-    const savedCart = localStorage.getItem('cart');
-    if (saved) this.pending = JSON.parse(saved);
-    if (savedCart) cart = JSON.parse(savedCart);
-    updateCartDisplay();
-  }
-};
-
-// Seasonal specials data
-const seasonalSpecials = [
-  { name: "Christmas Fruit Cake", available: "Dec 1-25", price: 3500 },
-  { name: "Easter Hot Cross Buns", available: "Mar 15-Apr 10", price: 200 },
-  { name: "Summer Berry Tart", available: "Jun-Aug", price: 2800 },
-  { name: "Pumpkin Spice Latte Cake", available: "Sep-Nov", price: 3200 }
-];
-
 const reviewsData = [
   { name: "Fatma Abdulkadir", initial: "FA", text: "Absolutely divine! Hussein Bakes is a hidden gem. The flawless buttercream finishes are unmatched." },
-  { name: "Abigail Teresia", initial: "AT", text: "Finally, proper pizza in Kitui! Freshly baked, not frozen. Definitely the best pizza place in town right now." },
+  { name: "Abigail Teresia", initial: "AT", text: "Finally, proper pizza in Kitui! Freshly baked, not frozen. Definitely the best pizza place in town." },
   { name: "Maryam Ore", initial: "MO", text: "I tried the Friday Buy-1-Get-1-Free offer and it was totally worth it! Fresh, hot, and delicious." },
   { name: "Jeanette Atieno", initial: "JA", text: "5 stars isn't enough! Flavors, presentation, and service - everything is top-notch!" },
   { name: "Leila Jams", initial: "LJ", text: "The wedding cake was the star of our special day! Exceeded all our expectations." },
@@ -1077,95 +500,36 @@ const reviewsData = [
   { name: "Zulekha Mutua", initial: "ZM", text: "One of the best decisions I've made. He engineered the cake with precision and creativity." }
 ];
 
+const inventory = [
+  { id: 1, type: 'cakes', name: 'Signature Vanilla', basePrice: 2500, desc: 'Soft vanilla sponge with premium buttercream.', img: 'images/best-vanilla-birthday-cake-kitui-town.jpg', tag: 'Classic', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Cream', price: 300}, {name: 'Chocolate Drizzle', price: 500}]},
+  { id: 2, type: 'cakes', name: 'Vanilla & Cardamom', basePrice: 2500, desc: 'Cardamom-infused masterpiece. Kitui specialty.', img: 'images/cardamom-spice-cake-specialty-bakery-kenya.jpg', tag: 'Signature', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Cream', price: 300}, {name: 'Gold Leaf', price: 800}]},
+  { id: 3, type: 'cakes', name: 'Midnight Chocolate', basePrice: 2500, desc: 'Rich chocolate with smooth ganache.', img: 'images/chocolate-cake-delivery-bondeni-kitui.jpg', tag: 'Best Seller', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Ganache', price: 500}]},
+  { id: 4, type: 'cakes', name: 'Red Velvet Dream', basePrice: 2500, desc: 'Classic with cream cheese frosting.', img: 'images/red-velvet-cake-cream-cheese-wedding-kitui.jpg', tag: 'Luxury', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Frosting', price: 400}]},
+  { id: 5, type: 'cakes', name: 'Black Forest Symphony', basePrice: 2500, desc: 'Chocolate, cream & fresh cherries.', img: 'images/black-forest-cake-price-kitui.jpg', tag: 'Classic', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Cherries', price: 500}]},
+  { id: 6, type: 'cakes', name: 'Golden Harvest', basePrice: 3000, desc: 'Spiced carrot cake with walnuts.', img: 'images/carrot-cake-walnuts-healthy-bakery-kitui.jpg', tag: 'New', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Walnuts', price: 400}]},
+  { id: 7, type: 'cakes', name: 'Citrus Sculpt', basePrice: 3000, desc: 'Zesty lemon with blueberries.', img: 'images/lemon-blueberry-cake-celebration-kenya.jpg', tag: 'Bright', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Blueberry Layer', price: 600}]},
+  { id: 8, type: 'cakes', name: 'Mocha Architecture', basePrice: 3000, desc: 'Espresso with salted caramel.', img: 'images/coffee-caramel-cake-custom-order-kitui.jpg', tag: 'Bold', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Caramel Drip', price: 600}]},
+  { id: 9, type: 'cakes', name: 'White Forest', basePrice: 2500, desc: 'Vanilla with chantilly & cherries.', img: 'images/white-forest-cake-anniversary-gift.jpg', tag: 'Light', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}]},
+  { id: 10, type: 'cakes', name: 'Strawberry Serenity', basePrice: 3000, desc: 'Fresh strawberry with mascarpone.', img: 'images/fresh-strawberry-cake-order-online-kitui.jpg', tag: 'Fresh', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Strawberries', price: 700}]},
+  { id: 11, type: 'cakes', name: 'Pistachio Elegance', basePrice: 3000, desc: 'Pistachio sponge with pistachio cream.', img: 'images/pistachio-gourmet-cake-luxury-kitui.jpg', tag: 'Gourmet', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}]},
+  { id: 12, type: 'cakes', name: 'Salted Caramel', basePrice: 3000, desc: 'Caramel sponge with caramel ganache.', img: 'images/salted-caramel-cake-best-bakery-bondeni.jpg', tag: 'Indulgent', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}]},
+  { id: 13, type: 'cakes', name: 'Lavender Dream', basePrice: 3000, desc: 'Lavender vanilla with lavender cream.', img: 'images/lavender-cake-unique-flavors-kenya.jpg', tag: 'Special', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}]},
+  { id: 14, type: 'cakes', name: 'Matcha & White Choco', basePrice: 3500, desc: 'Matcha sponge with white ganache.', img: 'images/matcha-white-chocolate-cake-trending.jpg', tag: 'Trending', sizes: {'1kg': 3500, '2kg': 6000, '3kg': 8000, '4kg': 10000}, addons: [{name: 'Custom Message', price: 0}]},
+  { id: 15, type: 'cakes', name: 'Ethereal Wedding Tier', basePrice: 8500, desc: 'Bespoke two-tier wedding cake.', img: 'images/custom-wedding-cake-kitui-two-tier.jpg', tag: 'Bridal', sizes: {'Starting': 8500}, addons: [{name: 'Custom Message', price: 0}]},
+  { id: 16, type: 'cakes', name: 'Gallery Bites Box', basePrice: 1200, desc: 'Box of 6 assorted cupcakes.', img: 'images/cupcakes-gift-box-delivery-kitui.jpg', tag: 'Gift', sizes: {'Box of 6': 1200, 'Box of 12': 2200}, addons: []},
+  { id: 17, type: 'pizza', name: 'Beef Supremo', desc: 'Seasoned beef on our signature slow-fermented dough. Worth the wait.', img: 'images/beef-pizza-fast-delivery-kitui-town.jpg', tag: 'Friday Offer', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}, addons: [{name: 'Extra Cheese', price: 150}, {name: 'Chilli Sauce', price: 50}]},
+  { id: 18, type: 'pizza', name: 'Chicken Tikka', desc: 'Spiced tikka on precision-proofed crust. Baked to order.', img: 'images/chicken-tikka-pizza-halal-bondeni.jpg', tag: 'Spicy', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}, addons: [{name: 'Extra Cheese', price: 150}]},
+  { id: 19, type: 'pizza', name: 'Garden Veg', desc: 'Fresh peppers and tomatoes on artisanal dough. Hand-stretched.', img: 'images/fresh-vegetable-pizza-order-online.jpg', tag: 'Veggie', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}, addons: []},
+  { id: 20, type: 'pizza', name: 'Classic Cheese', desc: 'Premium mozzarella blend on our slow-fermented base.', img: 'images/classic-cheese-pizza-lunch-delivery-kitui.jpg', tag: 'Kids Love', sizes: {'Small (9")': 500, 'Medium (12")': 800, 'Large (14")': 1150}, addons: []}
+];
+
 let cart = [];
 let currentItem = null;
 
-// Mobile menu toggle
-function toggleMobileMenu() {
-  const mobileMenu = document.getElementById('mobileMenu');
-  const isHidden = mobileMenu.classList.contains('hidden');
-  
-  if (isHidden) {
-    mobileMenu.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-  } else {
-    mobileMenu.classList.add('hidden');
-    document.body.style.overflow = '';
-  }
-}
-
-// Close mobile menu when clicking outside
-document.addEventListener('click', (event) => {
-  const mobileMenu = document.getElementById('mobileMenu');
-  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-  
-  if (!mobileMenu.classList.contains('hidden') && 
-      !mobileMenu.contains(event.target) && 
-      !mobileMenuBtn.contains(event.target)) {
-    mobileMenu.classList.add('hidden');
-    document.body.style.overflow = '';
-  }
-});
-
-// Loading functions
-function showLoading() {
-  document.getElementById('loadingOverlay').classList.remove('hidden');
-}
-
-function hideLoading() {
-  document.getElementById('loadingOverlay').style.opacity = '0';
-  setTimeout(() => {
-    document.getElementById('loadingOverlay').classList.add('hidden');
-  }, 300);
-}
-
-// Order confirmation modal
-function showOrderConfirmation(item) {
-  const modal = document.getElementById('confirmationModal');
-  const details = document.getElementById('confirmationDetails');
-  details.innerHTML = `
-    <p class="text-[#C9A24D] font-bold">${item.name}</p>
-    <p class="text-gray-400">${item.size} • KES ${item.price.toLocaleString()}</p>
-  `;
-  modal.classList.remove('hidden');
-}
-
-function closeConfirmation() {
-  document.getElementById('confirmationModal').classList.add('hidden');
-}
-
-// Updated initialization
 document.addEventListener('DOMContentLoaded', () => {
-  showLoading();
-  
-  // Simulate loading time
-  setTimeout(() => {
-    updateFridayTimer();
-    renderReviews();
-    orderTracker.loadOrders();
-    
-    // Initialize animations
-    const elements = document.querySelectorAll('.fade-in-up');
-    elements.forEach((el, index) => {
-      el.style.animationDelay = `${index * 0.1}s`;
-    });
-    
-    hideLoading();
-  }, 800);
-  
+  updateFridayTimer();
+  renderReviews();
   setInterval(updateFridayTimer, 60000);
-  
-  // Add keyboard navigation for modals
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      closeModal();
-      closeConfirmation();
-      const sidebar = document.getElementById('cartSidebar');
-      if (!sidebar.classList.contains('translate-x-full')) {
-        toggleCart();
-      }
-    }
-  });
 });
 
 function updateFridayTimer() {
@@ -1176,7 +540,7 @@ function updateFridayTimer() {
     el.innerHTML = '<span class="text-[#C9A24D]">🎉 Friday Special Active: Buy 1 Get 1 Free (Medium Pizza)</span>';
   } else {
     const daysLeft = (5 - day + 7) % 7 || 7;
-    el.innerHTML = `<span class="text-gray-400">Next Friday Special in <span class="text-[#C9A24D]">${daysLeft}</span> days</span>`;
+    el.innerText = `Next Friday Special in ${daysLeft} days`;
   }
 }
 
@@ -1185,9 +549,9 @@ function renderReviews() {
   const data = [...reviewsData, ...reviewsData];
   data.forEach(review => {
     const card = document.createElement('div');
-    card.className = 'glass-panel p-4 md:p-6 rounded-xl w-[280px] md:w-[350px] flex-shrink-0 flex flex-col justify-between';
+    card.className = 'glass-panel p-6 rounded-xl w-[350px] flex-shrink-0 flex flex-col justify-between';
     card.innerHTML = `
-      <div class="flex items-center gap-3 mb-3 md:mb-4">
+      <div class="flex items-center gap-3 mb-4">
         <div class="avatar">${review.initial}</div>
         <div>
           <h4 class="text-white text-sm font-bold">${review.name}</h4>
@@ -1211,45 +575,25 @@ function renderMenu(category) {
   document.getElementById('categoryView').classList.add('hidden');
   document.getElementById('productGrid').classList.remove('hidden');
   document.getElementById('backBtn').classList.remove('hidden');
-  
-  const titles = {
-    'cakes': 'Custom Cakes',
-    'pizza': 'Artisanal Pizza',
-    'seasonal': 'Seasonal Specials'
-  };
-  
-  document.getElementById('menuTitle').innerText = titles[category] || 'Collection';
+  const title = category === 'cakes' ? 'Custom Cakes' : 'Artisanal Pizza';
+  document.getElementById('menuTitle').innerText = title;
   const grid = document.getElementById('productGrid');
   grid.innerHTML = '';
-  
   const items = inventory.filter(i => i.type === category);
   items.forEach((item, index) => {
     const minPrice = Object.values(item.sizes)[0];
     const card = document.createElement('div');
-    card.className = 'glass-panel p-4 md:p-6 rounded-xl relative group cursor-pointer flex flex-col fade-in-up touch-target';
+    card.className = 'glass-panel p-6 rounded-xl relative group cursor-pointer flex flex-col fade-in-up';
     card.style.animationDelay = `${index * 0.05}s`;
     card.onclick = () => openModal(item.id);
-    card.setAttribute('role', 'button');
-    card.setAttribute('tabindex', '0');
-    card.setAttribute('aria-label', `View ${item.name}`);
-    
-    // Add bestseller badge if applicable
-    const bestsellerBadge = item.bestseller ? 
-      '<div class="bestseller-badge">Bestseller</div>' : '';
-    
     card.innerHTML = `
-      ${bestsellerBadge}
-      <div class="absolute top-3 md:top-4 right-3 md:right-4 z-10">
-        <span class="text-[9px] uppercase tracking-wider text-[#C9A24D] border border-[#C9A24D]/30 px-2 py-1 rounded-sm bg-[#05090F]">
-          ${item.tag}
-        </span>
+      <div class="absolute top-4 right-4 z-10"><span class="text-[9px] uppercase tracking-wider text-[#C9A24D] border border-[#C9A24D]/30 px-2 py-1 rounded-sm bg-[#05090F]">${item.tag}</span></div>
+      <div class="mb-6 flex justify-center h-32">
+        <img src="${item.img}" alt="${item.name} from Hussein Bakes Kitui" class="h-full object-contain rounded-lg">
       </div>
-      <div class="mb-4 md:mb-6 flex justify-center h-24 md:h-32">
-        <img src="${item.img}" alt="${item.name} from Hussein Bakes Kitui" class="h-full object-contain rounded-lg" loading="lazy">
-      </div>
-      <h3 class="text-white text-base md:text-lg serif group-hover:text-[#C9A24D] transition mb-2">${item.name}</h3>
-      <p class="text-gray-500 text-xs font-light mb-3 md:mb-4 line-clamp-2">${item.desc}</p>
-      <div class="mt-auto pt-3 md:pt-4 border-t border-white/5 flex justify-between items-center">
+      <h3 class="text-white text-lg serif group-hover:text-[#C9A24D] transition mb-2">${item.name}</h3>
+      <p class="text-gray-500 text-xs font-light mb-4 line-clamp-2">${item.desc}</p>
+      <div class="mt-auto pt-4 border-t border-white/5 flex justify-between items-center">
         <span class="text-gray-400 text-xs">From KES ${minPrice.toLocaleString()}</span>
         <span class="text-[#C9A24D] text-lg font-light">+</span>
       </div>
@@ -1261,19 +605,17 @@ function renderMenu(category) {
 function openModal(itemId) {
   currentItem = inventory.find(i => i.id === itemId);
   if (!currentItem) return;
-  
   document.getElementById('modalTitle').innerText = currentItem.name;
   document.getElementById('modalTag').innerText = currentItem.tag;
   document.getElementById('modalDesc').innerText = currentItem.desc;
-  document.getElementById('modalImg').innerHTML = 
-    `<img src="${currentItem.img}" alt="${currentItem.name} from Hussein Bakes Kitui" class="max-h-48 md:max-h-64 mx-auto object-contain rounded-lg" loading="lazy">`;
+  document.getElementById('modalImg').innerHTML = `<img src="${currentItem.img}" alt="${currentItem.name} from Hussein Bakes Kitui" class="max-h-64 mx-auto object-contain rounded-lg">`;
   
   const sizeContainer = document.getElementById('modalSizes');
   sizeContainer.innerHTML = '';
   Object.entries(currentItem.sizes).forEach(([size, price], idx) => {
     const checked = idx === 0 ? 'checked' : '';
     sizeContainer.innerHTML += `
-      <label class="flex items-center p-3 border border-white/10 rounded-sm hover:border-[#C9A24D]/50 cursor-pointer transition bg-white/5 touch-target">
+      <label class="flex items-center p-3 border border-white/10 rounded-sm hover:border-[#C9A24D]/50 cursor-pointer transition bg-white/5">
         <input type="radio" name="modal_size" value="${size}|${price}" class="mr-3 accent-[#C9A24D]" ${checked}>
         <span class="flex-1 text-gray-300 text-sm">${size}</span>
         <span class="text-[#C9A24D] font-mono text-sm">KES ${price.toLocaleString()}</span>
@@ -1284,77 +626,47 @@ function openModal(itemId) {
   const addonContainer = document.getElementById('modalAddons');
   const addonSection = document.getElementById('modalAddonsSection');
   addonContainer.innerHTML = '';
-  
   if (currentItem.addons && currentItem.addons.length > 0) {
     addonSection.classList.remove('hidden');
     currentItem.addons.forEach((addon, idx) => {
-      const priceDisplay = addon.price > 0 ? 
-        `+KES ${addon.price}` : 
-        '<span class="text-green-400 text-xs">Free</span>';
-      
       addonContainer.innerHTML += `
-        <label class="flex items-center p-3 border border-white/10 rounded-sm hover:border-[#C9A24D]/50 cursor-pointer transition bg-white/5 touch-target">
+        <label class="flex items-center p-3 border border-white/10 rounded-sm hover:border-[#C9A24D]/50 cursor-pointer transition bg-white/5">
           <input type="checkbox" id="addon-${idx}" data-name="${addon.name}" data-price="${addon.price}" class="modal-addon mr-3 accent-[#C9A24D]">
           <span class="flex-1 text-gray-300 text-sm">${addon.name}</span>
-          <span class="text-[#C9A24D] text-xs">${priceDisplay}</span>
+          ${addon.price > 0 ? `<span class="text-[#C9A24D] text-xs">+KES ${addon.price}</span>` : '<span class="text-gray-600 text-xs">Free</span>'}
         </label>
       `;
     });
   } else {
     addonSection.classList.add('hidden');
   }
-  
   document.getElementById('addToCartBtn').onclick = () => addToCartFromModal();
   document.getElementById('detailModal').classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
 }
 
 function closeModal() {
   document.getElementById('detailModal').classList.add('hidden');
-  document.body.style.overflow = '';
 }
 
 function addToCartFromModal() {
   if (!currentItem) return;
-  
   const sizeInput = document.querySelector('input[name="modal_size"]:checked');
-  if (!sizeInput) {
-    alert('Please select a size');
-    return;
-  }
-  
+  if (!sizeInput) return alert('Please select a size');
   const [size, priceRaw] = sizeInput.value.split('|');
   let finalPrice = parseInt(priceRaw);
   const addons = [];
-  
   document.querySelectorAll('.modal-addon:checked').forEach(cb => {
-    const price = parseInt(cb.dataset.price);
-    finalPrice += price;
-    addons.push({
-      name: cb.dataset.name,
-      price: price
-    });
+    finalPrice += parseInt(cb.dataset.price);
+    addons.push(cb.dataset.name);
   });
-  
-  const orderItem = {
-    id: Date.now(),
-    name: currentItem.name,
-    size: size,
-    addons: addons,
-    price: finalPrice,
-    type: currentItem.type
-  };
-  
-  cart.push(orderItem);
-  orderTracker.addOrder(orderItem);
+  cart.push({ id: Date.now(), name: currentItem.name, size: size, addons: addons, price: finalPrice });
   updateCartDisplay();
-  showOrderConfirmation(orderItem);
   closeModal();
+  toggleCart();
 }
 
 function removeFromCart(index) {
   cart.splice(index, 1);
-  orderTracker.addOrder({}); // Update localStorage
   updateCartDisplay();
 }
 
@@ -1362,149 +674,69 @@ function updateCartDisplay() {
   const badge = document.getElementById('cartBadge');
   const container = document.getElementById('cartItems');
   const totalEl = document.getElementById('cartTotal');
-  
   badge.innerText = cart.length;
   
   if (cart.length === 0) {
-    container.innerHTML = `
-      <div class="h-full flex flex-col items-center justify-center text-gray-600 p-8 md:p-12">
-        <div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-[#C9A24D]/10 flex items-center justify-center mb-4 md:mb-6">
-          <span class="text-2xl md:text-3xl text-[#C9A24D]/50">🎂</span>
-        </div>
-        <p class="text-sm text-gray-500">Your collection is empty</p>
-        <p class="text-xs text-gray-600 mt-1 md:mt-2">Add some delicious treats!</p>
-      </div>
-    `;
+    container.innerHTML = `<div class="h-full flex flex-col items-center justify-center text-gray-600"><p class="text-sm">Collection is empty.</p></div>`;
     totalEl.innerText = 'KES 0';
     return;
   }
   
   container.innerHTML = '';
   let total = 0;
-  
   cart.forEach((item, index) => {
     total += item.price;
-    
-    const addonsText = item.addons.length > 0 ? 
-      `<div class="mt-1">
-         <p class="text-[#C9A24D] text-[10px]">+ ${item.addons.map(a => a.name).join(', ')}</p>
-       </div>` : '';
-    
     container.innerHTML += `
-      <div class="flex justify-between items-start mb-4 md:mb-6 border-b border-white/5 pb-3 md:pb-4">
-        <div class="flex-1">
-          <div class="flex items-start gap-3">
-            <div class="w-8 h-8 md:w-10 md:h-10 rounded bg-[#C9A24D]/10 flex items-center justify-center flex-shrink-0">
-              <span class="text-[#C9A24D] text-sm">${item.type === 'cakes' ? '🎂' : '🍕'}</span>
-            </div>
-            <div>
-              <h4 class="text-white text-sm font-medium serif">${item.name}</h4>
-              <p class="text-gray-500 text-xs">${item.size}</p>
-              ${addonsText}
-            </div>
-          </div>
+      <div class="flex justify-between items-start mb-4 border-b border-white/5 pb-2">
+        <div>
+          <h4 class="text-white text-sm font-medium serif">${item.name}</h4>
+          <p class="text-gray-500 text-xs">${item.size}</p>
+          ${item.addons.length ? `<p class="text-[#C9A24D] text-[10px]">+ ${item.addons.join(', ')}</p>` : ''}
         </div>
         <div class="text-right">
-          <p class="text-gray-300 text-sm font-mono">KES ${item.price.toLocaleString()}</p>
-          <button onclick="removeFromCart(${index})" 
-                  class="text-[10px] text-red-400 hover:text-red-300 mt-1 px-2 py-1 hover:bg-red-400/10 rounded touch-target">
-            Remove
-          </button>
+          <p class="text-gray-300 text-sm">KES ${item.price.toLocaleString()}</p>
+          <button onclick="removeFromCart(${index})" class="text-[10px] text-red-400 hover:text-red-300 mt-1">Remove</button>
         </div>
       </div>
     `;
   });
-  
-  // Add bulk order discount notice
-  if (total >= 20000) {
-    const discount = total * 0.1;
-    total = total - discount;
-    container.innerHTML += `
-      <div class="mb-3 md:mb-4 p-3 bg-green-900/20 border border-green-800/30 rounded">
-        <p class="text-green-400 text-xs font-bold">🎉 10% Bulk Order Discount Applied!</p>
-        <p class="text-green-400/80 text-[10px]">Saved: KES ${discount.toLocaleString()}</p>
-      </div>
-    `;
-  }
-  
   totalEl.innerText = 'KES ' + total.toLocaleString();
 }
 
 function toggleCart() {
   const sidebar = document.getElementById('cartSidebar');
   const overlay = document.getElementById('cartOverlay');
-  
-  // Close mobile menu if open
-  const mobileMenu = document.getElementById('mobileMenu');
-  if (!mobileMenu.classList.contains('hidden')) {
-    mobileMenu.classList.add('hidden');
-    document.body.style.overflow = '';
-  }
-  
   if (sidebar.classList.contains('translate-x-full')) {
     sidebar.classList.remove('translate-x-full');
     overlay.classList.remove('hidden');
     setTimeout(() => overlay.classList.remove('opacity-0'), 10);
-    document.body.style.overflow = 'hidden';
   } else {
     sidebar.classList.add('translate-x-full');
     overlay.classList.add('opacity-0');
-    setTimeout(() => {
-      overlay.classList.add('hidden');
-      document.body.style.overflow = '';
-    }, 300);
+    setTimeout(() => overlay.classList.add('hidden'), 300);
   }
 }
 
 function checkoutWhatsApp() {
-  if (cart.length === 0) {
-    alert('Your cart is empty. Add some items first!');
-    return;
-  }
-  
+  if (cart.length === 0) return alert('Cart is empty');
   const phone = "254710975805";
   let msg = "👋 Hello Hussein Bakes! I would like to place an order:\n\n";
   let total = 0;
-  
   cart.forEach(item => {
     total += item.price;
     msg += `▪ ${item.name} (${item.size})\n`;
-    if (item.addons.length) {
-      msg += `   + ${item.addons.map(a => a.name).join(', ')}\n`;
-    }
-    msg += `   KES ${item.price.toLocaleString()}\n\n`;
+    if (item.addons.length) msg += `   + ${item.addons.join(', ')}\n`;
+    msg += `   KES ${item.price}\n\n`;
   });
-  
-  // Add delivery info
-  msg += `📍 **Delivery Address:** [Please provide your address]\n`;
-  msg += `📞 **Phone:** [Your phone number]\n`;
-  msg += `⏰ **Preferred Delivery Time:** [e.g., 2:00 PM]\n\n`;
-  msg += `💰 *TOTAL ESTIMATE: KES ${total.toLocaleString()}*\n\n`;
-  msg += `Please confirm availability and exact total. Thank you!`;
-  
+  msg += `💰 *TOTAL ESTIMATE: KES ${total.toLocaleString()}*\n`;
+  msg += `📍 Please confirm delivery availability.`;
   window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
 }
 
 function scrollToSection(id) {
   const element = document.getElementById(id);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
-    // Close cart if open
-    const sidebar = document.getElementById('cartSidebar');
-    if (!sidebar.classList.contains('translate-x-full')) {
-      toggleCart();
-    }
-    // Close mobile menu if open
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (!mobileMenu.classList.contains('hidden')) {
-      mobileMenu.classList.add('hidden');
-      document.body.style.overflow = '';
-    }
-  }
+  if (element) element.scrollIntoView({ behavior: 'smooth' });
 }
-
-// Add touch event listeners for better mobile experience
-document.addEventListener('touchstart', function() {}, {passive: true});
 </script>
 
 </body>
