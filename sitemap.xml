@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
   <url>
@@ -108,38 +111,6 @@
       <image:title>Lavender Cake Unique Flavors Kenya</image:title>
     </image:image>
     
-    <!-- ADD THESE MISSING IMAGES -->
-    <image:image>
-      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/chocolate-cake-delivery-bondeni-kitui.jpg</image:loc>
-      <image:title>Chocolate Cake Delivery Bondeni Kitui - Hussein Bakes</image:title>
-      <image:caption>Rich chocolate ganache cake with fast delivery in Bondeni area</image:caption>
-    </image:image>
-    
-    <image:image>
-      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/lemon-blueberry-cake-celebration-kenya.jpg</image:loc>
-      <image:title>Lemon Blueberry Celebration Cake Kenya - Hussein Bakes</image:title>
-      <image:caption>Zesty lemon with fresh blueberries - perfect for celebrations</image:caption>
-    </image:image>
-    
-    <image:image>
-      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/coffee-caramel-cake-custom-order-kitui.jpg</image:loc>
-      <image:title>Coffee Caramel Cake Custom Order Kitui - Hussein Bakes</image:title>
-      <image:caption>Espresso-infused cake with salted caramel drizzle - custom orders</image:caption>
-    </image:image>
-    
-    <image:image>
-      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/salted-caramel-cake-best-bakery-bondeni.jpg</image:loc>
-      <image:title>Salted Caramel Cake Best Bakery Bondeni - Hussein Bakes</image:title>
-      <image:caption>Indulgent salted caramel cake from Bondeni's best bakery</image:caption>
-    </image:image>
-    
-    <image:image>
-      <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/fresh-vegetable-pizza-order-online.jpg</image:loc>
-      <image:title>Fresh Vegetable Pizza Order Online Kitui - Hussein Bakes</image:title>
-      <image:caption>Hand-stretched vegetable pizza with fresh peppers and tomatoes</image:caption>
-    </image:image>
-    
-    <!-- WhatsApp icon -->
     <image:image>
       <image:loc>https://husseinbakes.github.io/husseinbakes_website/images/whatsapp-icon.webp</image:loc>
       <image:title>WhatsApp Contact Hussein Bakes Kitui</image:title>
