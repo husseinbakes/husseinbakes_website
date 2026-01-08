@@ -265,7 +265,7 @@
               "@type": "Product",
               "name": "Artisanal Pizza Collection Kitui",
               "description": "Fresh pizza collection from Hussein Bakes in Kitui Town",
-              "image": "https://husseinbakes.github.io/husseinbakes_website/images/hussein-pizza.jpg",
+              "image": "https://husseinbakes.github.io/husseinbakes_website/images/hussein-pizza1.jpg",
               "offers": {
                 "@type": "Offer",
                 "priceCurrency": "KES",
@@ -314,6 +314,7 @@
     .category-card { isolation: isolate; }
     img { -webkit-user-drag: none; user-select: none; }
     .slogan { font-family: 'Playfair Display', serif; font-style: italic; }
+    .logo-img { width: 40px; height: 40px; object-fit: contain; }
   </style>
 
 </head>
@@ -330,12 +331,12 @@
   <img src="images/carrot-cake-walnuts-healthy-bakery-kitui.jpg" alt="Carrot cake with walnuts from healthy bakery in Kitui - Fresh spiced cake from Hussein Bakes" width="800" height="800">
   <img src="images/lemon-blueberry-cake-celebration-kenya.jpg" alt="Lemon blueberry celebration cake in Kenya - Zesty fresh cake from Hussein Bakes Kitui" width="800" height="800">
   <img src="images/coffee-caramel-cake-custom-order-kitui.jpg" alt="Coffee caramel cake custom order in Kitui - Premium espresso cake from Hussein Bakes Bondeni" width="800" height="800">
-  <img src="images/white-forest-cake-anniversary-gift-kitui.jpg" alt="White forest anniversary cake gift in Kitui - Elegant vanilla celebration cake from Hussein Bakes" width="800" height="800">
+  <img src="images/white-forest-cake-anniversary-gift.jpg" alt="White forest anniversary cake gift in Kitui - Elegant vanilla celebration cake from Hussein Bakes" width="800" height="800">
   <img src="images/fresh-strawberry-cake-order-online-kitui.jpg" alt="Fresh strawberry cake order online in Kitui - Premium mascarpone cake from Hussein Bakes" width="800" height="800">
   <img src="images/pistachio-gourmet-cake-luxury-kitui.jpg" alt="Pistachio gourmet luxury cake in Kitui - Premium gourmet cake from Hussein Bakes bakery" width="800" height="800">
   <img src="images/salted-caramel-cake-best-bakery-bondeni.jpg" alt="Salted caramel cake from best bakery in Bondeni Kitui - Indulgent dessert from Hussein Bakes" width="800" height="800">
   <img src="images/lavender-cake-unique-flavors-kenya.jpg" alt="Lavender cake with unique flavors in Kenya - Specialty cake from Hussein Bakes Kitui town" width="800" height="800">
-  <img src="images/matcha-white-chocolate-cake-trending-kenya.jpg" alt="Matcha white chocolate cake trending in Kenya - Modern trending cake from Hussein Bakes" width="800" height="800">
+  <img src="images/matcha-white-chocolate-cake-trending.jpg" alt="Matcha white chocolate cake trending in Kenya - Modern trending cake from Hussein Bakes" width="800" height="800">
   <img src="images/custom-wedding-cake-kitui-two-tier.jpg" alt="Custom wedding cake two tier in Kitui - Bespoke wedding design from Hussein Bakes premium bakery" width="800" height="800">
   <img src="images/cupcakes-gift-box-delivery-kitui.jpg" alt="Cupcakes gift box delivery in Kitui - Assorted premium cupcakes from Hussein Bakes" width="800" height="800">
   <img src="images/beef-pizza-fast-delivery-kitui-town.jpg" alt="Beef pizza fast delivery in Kitui Town - Slow-fermented artisanal pizza from Hussein Bakes" width="800" height="800">
@@ -345,13 +346,14 @@
   <img src="images/husseinbakes-logo.jpg" alt="Hussein Bakes logo - Premium bakery and pizza in Kitui Town" width="200" height="200">
   <img src="images/whatsapp-icon.webp" alt="WhatsApp contact Hussein Bakes Kitui - Order custom cakes and pizza online" width="100" height="100">
   <img src="images/hussein-cake1.jpg" alt="Hussein Bakes custom cake collection Kitui Town" width="800" height="800">
-  <img src="images/hussein-pizza.jpg" alt="Hussein Bakes artisanal pizza collection Kitui Town" width="800" height="800">
+  <img src="images/hussein-pizza1.jpg" alt="Hussein Bakes artisanal pizza collection Kitui Town" width="800" height="800">
 </div>
 
 <nav class="fixed w-full z-50 border-b border-white/5 bg-[#05090F]/90 backdrop-blur-xl">
   <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
     <a href="#" onclick="showCategories()" class="flex items-center gap-3 group">
-      <div class="w-10 h-10 border border-[#C9A24D] flex items-center justify-center text-[#C9A24D] font-serif font-bold text-lg rounded-sm group-hover:bg-[#C9A24D] group-hover:text-[#05090F] transition-colors">HB</div>
+      <!-- Fixed: Logo image instead of text -->
+      <img src="images/husseinbakes-logo.jpg" alt="Hussein Bakes Logo" class="w-10 h-10 rounded-sm border border-[#C9A24D] object-cover">
       <div>
         <span class="serif text-xl text-white block leading-none tracking-wide">HUSSEIN BAKES</span>
         <span class="text-[10px] text-gray-500 uppercase tracking-[0.2em]">Kitui Town</span>
@@ -396,7 +398,7 @@
     </div>
     <div id="categoryView" class="grid grid-cols-1 md:grid-cols-2 gap-6 fade-in-up">
       <div onclick="renderMenu('cakes')" class="category-card h-[400px] rounded-xl bg-[#080C14] flex flex-col justify-end p-8 group relative overflow-hidden">
-        <!-- New Cake Image -->
+        <!-- Fixed: Cake Image -->
         <img src="images/hussein-cake1.jpg" alt="Premium custom cakes by Hussein Bakes Kitui" 
              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
              loading="lazy">
@@ -409,8 +411,8 @@
         </div>
       </div>
       <div onclick="renderMenu('pizza')" class="category-card h-[400px] rounded-xl bg-[#080C14] flex flex-col justify-end p-8 group relative overflow-hidden">
-        <!-- New Pizza Image -->
-        <img src="images/hussein-pizza.jpg" alt="Artisanal pizza by Hussein Bakes Kitui" 
+        <!-- Fixed: Pizza Image - changed to hussein-pizza1.jpg -->
+        <img src="images/hussein-pizza1.jpg" alt="Artisanal pizza by Hussein Bakes Kitui" 
              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
              loading="lazy">
         <!-- Gradient Overlay -->
@@ -487,7 +489,8 @@
 </section>
 
 <footer class="py-10 border-t border-white/5 text-center bg-[#020305]">
-  <div class="mb-4 text-[#C9A24D] font-bold serif text-xl">HB</div>
+  <!-- Fixed: Logo image in footer -->
+  <img src="images/husseinbakes-logo.jpg" alt="Hussein Bakes Logo" class="h-12 mx-auto mb-4 object-contain">
   <p class="text-gray-600 text-xs tracking-widest uppercase mb-2">HUSSEIN BAKES • Kitui Town</p>
   <p class="slogan text-gray-500 text-xs italic mb-2">Crafted with Patience. Defined by Quality.</p>
   <p class="text-gray-700 text-[10px]">© 2026. All rights reserved.</p>
@@ -560,12 +563,12 @@ const inventory = [
   { id: 6, type: 'cakes', name: 'Golden Harvest', basePrice: 3000, desc: 'Spiced carrot cake with walnuts.', img: 'images/carrot-cake-walnuts-healthy-bakery-kitui.jpg', tag: 'New', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Walnuts', price: 400}]},
   { id: 7, type: 'cakes', name: 'Citrus Sculpt', basePrice: 3000, desc: 'Zesty lemon with blueberries.', img: 'images/lemon-blueberry-cake-celebration-kenya.jpg', tag: 'Bright', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Blueberry Layer', price: 600}]},
   { id: 8, type: 'cakes', name: 'Mocha Architecture', basePrice: 3000, desc: 'Espresso with salted caramel.', img: 'images/coffee-caramel-cake-custom-order-kitui.jpg', tag: 'Bold', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Caramel Drip', price: 600}]},
-  { id: 9, type: 'cakes', name: 'White Forest', basePrice: 2500, desc: 'Vanilla with chantilly & cherries.', img: 'images/white-forest-cake-anniversary-gift-kitui.jpg', tag: 'Light', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}]},
+  { id: 9, type: 'cakes', name: 'White Forest', basePrice: 2500, desc: 'Vanilla with chantilly & cherries.', img: 'images/white-forest-cake-anniversary-gift.jpg', tag: 'Light', sizes: {'1kg': 2500, '2kg': 4500, '3kg': 6500, '4kg': 8500}, addons: [{name: 'Custom Message', price: 0}]},
   { id: 10, type: 'cakes', name: 'Strawberry Serenity', basePrice: 3000, desc: 'Fresh strawberry with mascarpone.', img: 'images/fresh-strawberry-cake-order-online-kitui.jpg', tag: 'Fresh', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}, {name: 'Extra Strawberries', price: 700}]},
   { id: 11, type: 'cakes', name: 'Pistachio Elegance', basePrice: 3000, desc: 'Pistachio sponge with pistachio cream.', img: 'images/pistachio-gourmet-cake-luxury-kitui.jpg', tag: 'Gourmet', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}]},
   { id: 12, type: 'cakes', name: 'Salted Caramel', basePrice: 3000, desc: 'Caramel sponge with caramel ganache.', img: 'images/salted-caramel-cake-best-bakery-bondeni.jpg', tag: 'Indulgent', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}]},
   { id: 13, type: 'cakes', name: 'Lavender Dream', basePrice: 3000, desc: 'Lavender vanilla with lavender cream.', img: 'images/lavender-cake-unique-flavors-kenya.jpg', tag: 'Special', sizes: {'1kg': 3000, '2kg': 5500, '3kg': 7500, '4kg': 9500}, addons: [{name: 'Custom Message', price: 0}]},
-  { id: 14, type: 'cakes', name: 'Matcha & White Choco', basePrice: 3500, desc: 'Matcha sponge with white ganache.', img: 'images/matcha-white-chocolate-cake-trending-kenya.jpg', tag: 'Trending', sizes: {'1kg': 3500, '2kg': 6000, '3kg': 8000, '4kg': 10000}, addons: [{name: 'Custom Message', price: 0}]},
+  { id: 14, type: 'cakes', name: 'Matcha & White Choco', basePrice: 3500, desc: 'Matcha sponge with white ganache.', img: 'images/matcha-white-chocolate-cake-trending.jpg', tag: 'Trending', sizes: {'1kg': 3500, '2kg': 6000, '3kg': 8000, '4kg': 10000}, addons: [{name: 'Custom Message', price: 0}]},
   { id: 15, type: 'cakes', name: 'Ethereal Wedding Tier', basePrice: 8500, desc: 'Bespoke two-tier wedding cake.', img: 'images/custom-wedding-cake-kitui-two-tier.jpg', tag: 'Bridal', sizes: {'Starting': 8500}, addons: [{name: 'Custom Message', price: 0}]},
   { id: 16, type: 'cakes', name: 'Gallery Bites Box', basePrice: 1200, desc: 'Box of 6 assorted cupcakes.', img: 'images/cupcakes-gift-box-delivery-kitui.jpg', tag: 'Gift', sizes: {'Box of 6': 1200, 'Box of 12': 2200}, addons: []},
   { id: 17, type: 'pizza', name: 'Beef Supremo', desc: 'Seasoned beef on our signature slow-fermented dough. Worth the wait.', img: 'images/beef-pizza-fast-delivery-kitui-town.jpg', tag: 'Friday Offer', sizes: {'Small (9")': 550, 'Medium (12")': 850, 'Large (14")': 1200}, addons: [{name: 'Extra Cheese', price: 150}, {name: 'Chilli Sauce', price: 50}]},
